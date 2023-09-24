@@ -23,8 +23,14 @@ else
 
     iWidth =1024;
 	iHeight=738;
-}
-var win=open("../common/iframeInitial.html?iWidth="+iWidth+"&iHeight="+iHeight,"_self","fullscreen=yes,left=0,top=0,toolbar=no,location=no,directories=yes,menubar=no,titlebar=no,scrollbars=no,status=yes,resizable=no,copyhistory=no,width=800px,height=600px",true);
+    }
+    if (window.document.URL.toString().toUpperCase().indexOf("://LOCALHOST")>=0) { //±¾»ú
+        var win = open("../common/iframeInitial.html?iWidth=" + iWidth + "&iHeight=" + iHeight, "_self", "fullscreen=yes,left=0,top=0,toolbar=no,location=no,directories=yes,menubar=no,titlebar=no,scrollbars=no,status=yes,resizable=no,copyhistory=no,width=800px,height=600px", true);
+    }
+    else {//ÍøÕ¾
+        var win = open("logoAdvertisement.html", "_self");
+    }
+
 win.focus();
 }
 </script>

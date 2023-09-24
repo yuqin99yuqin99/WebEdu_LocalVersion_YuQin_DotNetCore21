@@ -32,7 +32,7 @@ function fnOnLoad() {
     window.onmousewheel = fnMouseWheel;
     document.body.onmousedown = fnMouseDown;
     document.body.onmouseup = fnMouseUp;
-    //document.body.ondblclick=fnToggleScreen;
+    document.body.ondblclick=fnToggleScreen;
     document.body.onkeydown = fnKeyDown;
     //以上定义事件句柄
     document.body.scroll = "no";
@@ -220,13 +220,17 @@ function fnToggleScreen() {
     }
     finally {
         //if (parent.document.getElementById("sFramesetMiddle").cols == "1022,*") {
-        if (parent.document.getElementById("sFramesetMiddle").cols == "0%,*") {
-            parent.document.getElementById("sFramesetMiddle").cols = parent.sFramesetMiddleColsTemp;
-        }
-        else {
-            parent.sFramesetMiddleColsTemp = parent.document.getElementById("sFramesetMiddle").cols;
-            //parent.document.getElementById("sFramesetMiddle").cols = "1022,*";
+        
+        if (parent.document.getElementById("sFramesetBook").rows == "100,*,20") {
+            parent.sFramesetMiddleColsTemp = parent.document.getElementById("sFramesetMiddle").cols;           
+            parent.document.getElementById("sFramesetBook").rows = "0,*,20" 
             parent.document.getElementById("sFramesetMiddle").cols = "0%,*";
+        }
+        else {                       
+            parent.document.getElementById("sFramesetBook").rows = "100,*,20" 
+            parent.document.getElementById("sFramesetMiddle").cols = parent.sFramesetMiddleColsTemp;  
+            //parent.document.getElementById("sFramesetMiddle").cols = "1022,*";
+            //parent.document.getElementById("sFramesetMiddle").cols = "0%,*";           
         }
     }
 }
@@ -238,15 +242,16 @@ fnToggleScreen();
 }
 
 if(event.keyCode==38){
-event.returnValue=false; 
-if(parent.document.getElementById("sFramesetBook").rows=="0,*,0"){
-parent.frames.item("sIframeTitle").document.getElementById("previous").click();
+    if (parent.document.getElementById("sFramesetBook").rows == "0,*,20") {
+        event.returnValue = false; 
+    parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("previous").click();
 }
 }
 if(event.keyCode==40){
-event.returnValue=false; 
-if(parent.document.getElementById("sFramesetBook").rows=="0,*,0"){
-parent.frames.item("sIframeTitle").document.getElementById("next").click();
+
+    if (parent.document.getElementById("sFramesetBook").rows == "0,*,20") {
+        event.returnValue = false; 
+    parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("next").click();
 }
 }
 }

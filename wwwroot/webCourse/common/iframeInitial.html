@@ -1,11 +1,12 @@
-<!--<!DOCTYPE html>--><!--���˽���֧��frameset-->
+﻿<!--<!DOCTYPE html>--><!--加了将不支持frameset-->
 <html>
 
 <head>
     <link href="/manifest.json" rel="manifest" />
     <link rel="apple-touch-icon" sizes="512x512" href="/icon-512.png" />
+    <link rel="Shortcut Icon" href="../../favicon.ico" type="image/x-icon" />
     <script src="/pushNotifications.js"></script>
-    <title>����ѧ_������_YuQin</title>
+    <title>教与学_本机版_渔琴(Teaching&Learning_LocalVersion_YuQin)</title>
     <script language="javascript">
         function getPort() {
             var sUrl = document.location.href;
@@ -56,13 +57,15 @@
                 */
             }
         }
+        
+        
     </script>
 
 </head>
 
 <body style="background-color:rgb(0,0,0);border:0px none;padding:0;margin:0;text-align:center;" onload="navigator.serviceWorker.register('service-worker.js');
     RequestNotificationSubscriptionAsync();
-    fnOnload();" onunload="frames('sIframeBook').frames('sIframeContents').fnRemoveUnusedFiles();fnThanks();">
+    fnOnload(); " onunload="frames('sIframeBook').frames('sIframeContents').fnRemoveUnusedFiles();fnThanks();">
     <table style="border:0px;width:100%;height:100%;border:0px none;padding:0;margin:0;">
         <tr>
             <td style="text-align:center;vertical-align:middle;">
@@ -70,7 +73,7 @@
                     <tr id="sTrTitle">
                         <td style="width:100%;text-align:center" id="sTdTitle">
                             <iframe name="sIframeBook" src="initial.html" marginwidth="0" marginheight="0" height="100%" width="100%" scrolling="no" border="0" frameborder="0">
-                                �������֧��Ƕ��ʽ��ܣ�������Ϊ����ʾǶ��ʽ��ܡ�
+                                浏览器不支持嵌入式框架，或被配置为不显示嵌入式框架。
                             </iframe>
                         </td>
                     </tr>

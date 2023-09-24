@@ -1,4 +1,5 @@
 ﻿/////////////全局对象
+window.sWillHighLightedStringInContent = "";
 window.courseTextPathPart = "";
 window.presentationPathPart = "";
 window.oSrcElement = new Object();
@@ -3467,7 +3468,7 @@ function fnGeneral() {
 
     var win = open("../common/blank.html", "General", "scrollbars=yes,width=800,height=600,top=" + (screen.height - 600) / 2 + ",left=" + (screen.width - 800) / 2);
     // win.document.body.innerHTML=sRowOfGeneral;
-    win.document.write(sRowOfGeneral);
+    win.document.write(sRowOfGeneral);//实现了预期，但是好像违背了安全性封装规则？难道是open打开的窗口就可以违背？（因为此时的窗口菜单栏由浏览器控制，无法JS控制，而无法欺骗用户？）
     window.childWindow = win;
  
 }

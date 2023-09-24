@@ -1,0 +1,110 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Data</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c" />
+     <link rel="stylesheet" href="/WebApp1.styles.css?v=x1ANakPrgmSG3AyTZzfRgedD15dE_BdBTMbJDqXaRaA" />-->
+</head>
+<body>
+    <header>
+        <nav b-pu61qw1s5v class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div b-pu61qw1s5v class="container-fluid">
+             
+                <button b-pu61qw1s5v class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span b-pu61qw1s5v class="navbar-toggler-icon"></span>
+                </button>
+                <div b-pu61qw1s5v class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                   
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" title="Manage" href="../Manage.html">Hello 43930878@qq.com!</a>
+                        </li>
+                        <li class="nav-item">
+                            <form class="form-inline" action="/Identity/Account/Logout?returnUrl=%2F" method="post">
+                                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fw6bjwiq-BLsXOdFqlzjj5mkewfOt5-H5Ja6839QiD63gnMoHyC9plx3eI5Sow5oBCudmK1AxIZzDpLtYknViJ7eIeLCSPPCIlr76aXlGq_IyDuYR6BO5VfhQrRMLWgkGAyk2qfmNYbGt1jvTN-PZbkrVyht-RdsJs86oaLvGQX58QrbEsYe4LcclhTS7kOgg" />
+                            </form>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div b-pu61qw1s5v class="container">
+        <main b-pu61qw1s5v role="main" class="pb-3">
+
+            <h1>Manage your account</h1>
+
+            <div>
+                <h2>Change your account settings</h2>
+                <hr />
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-pills flex-column">
+                            <li class="nav-item"><a class="nav-link" id="profile" href="../Manage.html">Profile</a></li>
+                            <li class="nav-item"><a class="nav-link" id="email" href="Email.html">Email</a></li>
+                            <li class="nav-item"><a class="nav-link" id="change-password" href="ChangePassword.html">Password</a></li>
+                            <li class="nav-item"><a class="nav-link" id="two-factor" href="TwoFactorAuthentication.html">Two-factor authentication</a></li>
+                            <li class="nav-item"><a class="nav-link active" id="personal-data" aria-current="page" href="PersonalData.html">Personal data</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-9">
+
+                        <h3>Personal Data</h3>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Your account contains personal data that you have given us. This page allows you to download or delete that data.</p>
+                                <p>
+                                    <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
+                                </p>
+                                <form id="download-data" method="post" action="/Identity/Account/Manage/DownloadPersonalData">
+                                    <button class="btn btn-primary" type="submit">Download</button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fw6bjwiq-BLsXOdFqlzjj5mkewfOt5-H5Ja6839QiD63gnMoHyC9plx3eI5Sow5oBCudmK1AxIZzDpLtYknViJ7eIeLCSPPCIlr76aXlGq_IyDuYR6BO5VfhQrRMLWgkGAyk2qfmNYbGt1jvTN-PZbkrVyht-RdsJs86oaLvGQX58QrbEsYe4LcclhTS7kOgg" />
+                                </form>
+                                <p>
+                                    <a id="delete" class="btn btn-danger" href="/Identity/Account/Manage/DeletePersonalData.html">Delete</a>
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+
+    <footer b-pu61qw1s5v class="border-top footer text-muted">
+      
+    </footer>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+
+
+
+    <script src="/Identity/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+
+
+
+
+
+    <!-- Visual Studio Browser Link -->
+    <script type="text/javascript" src="/_vs/browserLink" async="async" id="__browserLink_initializationData" data-requestId="1fa8f09315e0410b996fdad25fa85a73" data-requestMappingFromServer="false" data-connectUrl="http://localhost:51999/5b5eef51b8bd47a29c6da063c9c42e86/browserLink"></script>
+    <!-- End Browser Link -->
+
+    <script src="/_framework/aspnetcore-browser-refresh.js"></script>
+</body>
+</html>

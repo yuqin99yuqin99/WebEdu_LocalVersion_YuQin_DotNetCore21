@@ -32,6 +32,8 @@ window.homeworkAndTestPathPart = "";
 ////////////////////
 
 ////////////////
+
+///////////////
 function fnAOnMouseOn() {
     var oObject = event.srcElement;
 
@@ -214,7 +216,7 @@ function fnOnLoad() {
     //document.body.oncontextmenu = fnContentsPopup;//边界会有右击菜单；
     window.oncontextmenu = fnContentsPopup;//边界不会有右击菜单
     window.onclick = fnWindowOnClick;
-    //document.body.ondblclick=fnOnDBLClick;////暂时改写，因为获取不到iframeTitle。
+    document.body.ondblclick=fnOnDBLClick;////暂时改写，因为获取不到iframeTitle。
     // document.body.onmousemove = fnPane;
     window.onmousemove = fnPane;
     document.body.onmousewheel = fnMouseWheel;
@@ -255,6 +257,38 @@ function fnOnLoad() {
     document.body.scroll = "no";
     fnInitailContents();//初始化目录
 }
+////////////
+/** function fnOnDBLClick(){//已暂时改写，因为获取不到siframeTitle
+if(parent.document.getElementById("sFramesetMiddle").cols=="2,*"){
+    parent.document.getElementById("sFramesetMiddle").cols=parent.sFramesetMiddleColsTemp;
+    parent.document.getElementById("sFramesetBook").rows=parent.sFramesetBookRowsDefault;
+                                                                    }
+else{
+    parent.sFramesetMiddleColsTemp=parent.document.getElementById("sFramesetMiddle").cols;
+    parent.document.getElementById("sFramesetMiddle").cols="2,*";
+    parent.document.getElementById("sFramesetBook").rows="0,*,0";
+}
+}**/
+function fnOnDBLClick() {//暂时改写，因为获取不到iframeTitle。
+    try {
+        window.event.returnValue = false;//去除双击时的默认选定文本效果
+    }
+    catch (e) {//考虑目录框架的右键菜单中的命令。
+        return;
+    }
+    finally {
+        //if (parent.document.getElementById("sFramesetMiddle").cols == "1022,*") {
+        if (parent.document.getElementById("sFramesetMiddle").cols == "100%,*") {
+            parent.document.getElementById("sFramesetMiddle").cols = parent.sFramesetMiddleColsTemp;
+        }
+        else {
+            parent.sFramesetMiddleColsTemp = parent.document.getElementById("sFramesetMiddle").cols;
+            //parent.document.getElementById("sFramesetMiddle").cols = "1022,*";
+            parent.document.getElementById("sFramesetMiddle").cols = "100%,*";
+        }
+    }
+}
+/////////////
 
 function fnRemoveDefaultEventHandler() {
     event.returnValue = false;
@@ -282,8 +316,8 @@ function fnInitailContents() {
     //cLi[0].getElementsByTagName("A").item(0).attributes.getNamedItem("sN").nodeValue=cLi[0].getElementsByTagName("SPAN").item(1).childNodes.item(0).nodeValue;//这样设置好象不行!!设置国语属性值等于节点值
     cLi[0].getElementsByTagName("A").item(0).setAttribute("sFId", "");//设置语言Id,默认为"",国语
     cLi[0].getElementsByTagName("A").item(0).addEventListener("click", fnRemoveDefaultEventHandler, false);//禁止自动编号的单击默认事件响应，因为其父节点是A
-    cLi[0].getElementsByTagName("SPAN").item(0).childNodes.item(0).nodeValue = "1.";
-
+   // cLi[0].getElementsByTagName("SPAN").item(0).childNodes.item(0).nodeValue = "1.";
+    cLi[0].getElementsByTagName("SPAN").item(0).childNodes.item(0).nodeValue = "0.";//修改为从0开始
 
     if (iLiLength > 1) {
         for (i = 1; i < iLiLength - 1; i++) {
@@ -396,8 +430,8 @@ function fnContentsRefreshAFromAlreadyAutoNumbered() {//准备改为fnContentsRe
     cLi[0].getElementsByTagName("SPAN").item(1).addEventListener("mouseover", fnAOnMouseOn, false);
     cLi[0].getElementsByTagName("SPAN").item(1).addEventListener("mouseout", fnAOnMouseOut, false);
     cLi[0].getElementsByTagName("A").item(0).addEventListener("click", fnRemoveDefaultEventHandler, false);
-    cLi[0].getElementsByTagName("SPAN").item(0).childNodes.item(0).nodeValue = "1.";
-
+    //cLi[0].getElementsByTagName("SPAN").item(0).childNodes.item(0).nodeValue = "1.";
+     cLi[0].getElementsByTagName("SPAN").item(0).childNodes.item(0).nodeValue = "0.";//修改为从0开始
 
     if (iLiLength > 1) {
         for (i = 1; i < iLiLength - 1; i++) {
@@ -3481,11 +3515,34 @@ function fnSearch() {
    //window.childWindow.focus();//子窗口获取焦点
 }
 
-function fnMargee() {
-    fnTooManyModelDialog();  
+function fnAdvertisement() {
+    fnTooManyModelDialog();
     //EV_modeAlert();//弹出屏蔽层.好像没起什么作用！
-    var win = open("../common/Marquee.html", "Marquee", "scrollbars=yes,width=400,height=300,top=" + (screen.height - 300) / 2 + ",left=" + (screen.width - 400) / 2);   
-    window.childWindow = win;
+    if (window.document.URL.toString().toUpperCase().indexOf("://LOCALHOST") >= 0) { //本机
+        var advertisement = open("../../../renshichu/lunwensongshen.htm", "advertisement");
+    }
+    else {
+        var advertisement = open("/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/renshichu/lunwensongshen.htm");//网站
+    }
+}
+function fnMargee() {
+    fnTooManyModelDialog();
+    //EV_modeAlert();//弹出屏蔽层.好像没起什么作用！
+   // var advertisement = open("../../../renshichu/lunwensongshen.htm", "advertisement");
+    if (window.confirm('挖呀挖江西师范大学人事处刘涛科长?')) {
+        if (window.document.URL.toString().toUpperCase().indexOf("://LOCALHOST")>=0) { //本机
+            var advertisement = open("../../../renshichu/lunwensongshen.htm", "advertisement");
+        }
+        else {
+            var advertisement = open("/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/renshichu/lunwensongshen.htm");//网站
+        }
+    }
+    else {
+    var winSearch = open('https://www.baidu.com/s?wd=%E6%95%99%E8%82%B2%E6%A1%86%E6%9E%B6%E4%B8%8E%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E2%80%9C%E6%95%B0%E5%AD%97%E5%8C%96%E8%AE%A1%E7%AE%97%E6%80%9D%E7%BB%B4%E2%80%9D%E2%80%9C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E2%80%9D%E7%BB%9F%E4%B8%80%E7%9A%84%E8%A7%86%E8%A7%92&rsv_bp=0&n=2&inputT=2611', "search");
+}
+       
+   // var win = open("../common/Marquee.html", "Marquee", "scrollbars=yes,width=400,height=300,top=" + (screen.height - 300) / 2 + ",left=" + (screen.width - 400) / 2);   
+    window.childWindow = winSearch;
     //window.childWindow.focus();//子窗口获取焦点
 }
 

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat and PushNotification</title>
+    <style type="text/css">
+        .container {
+            background-color: #99CCFF;
+            border: thick solid #808080;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="message" />
+        <input type="button" id="sendmessage" value="Send" />
+        <ul id="discussion"></ul>
+    </div>
+    <!--Script references. -->
+    <!--Reference the SignalR library. -->
+    <script type="text/javascript" src="script/SignalR/signalr.min.js"></script>
+    <!--Add script to update the page and send messages.-->
+    <script type="text/javascript">
+        function fnNotification(sStringTitle, sStringBody, sStringIcon) {  //不知为什么放在initial.html中的JS时，本地运行可以，但外网不行。所以只好移动到了title.html的JS，本地、外网都可以。
+            if (window.Notification) {
+
+                var popNotice = function () {
+                    if (Notification.permission == "granted") {
+                        // var notification = new Notification('欢迎使用：', { body: '若有疑问，请咨询：QQ：43930878；电话：18279142396。如果正使用手机，请设置横屏！', icon: '/favicon.ico' });
+                        var notification = new Notification(sStringTitle, { body: sStringBody, icon: sStringIcon });
+
+                        notification.onclick = function () {
+                            alert("如果正使用手机，请设置横屏！");
+                            notification.close();
+                        };
+                    }
+                };
+                if (Notification.permission == "granted") {
+                    popNotice();
+                }
+                else if (Notification.permission != "denied") {
+                    Notification.requestPermission(function (permission) {
+                        popNotice();
+                    });
+                }
+            }
+            else {
+                alert('浏览器不支持通知功能');
+            }
+        }
+        </script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+
+                var messageInput = document.getElementById('message');
+
+            // Get the user name and store it to prepend to messages.
+            var name = prompt('Enter your name:', '');
+            // Set initial focus to message input box.
+            messageInput.focus();
+
+            // Start the connection.
+            var connection = new signalR.HubConnectionBuilder()
+            .withUrl('/chat')
+            .build();
+
+            // Create a function that the hub can call to broadcast messages.
+            connection.on('broadcastMessage', function (name, message) {
+                    // Html encode display name and message.
+                    var encodedName = name;
+                var encodedMsg = message;
+                fnNotification('欢迎使用：', encodedMsg, '/favicon.ico');
+            // Add the message to the page.
+            var liElement = document.createElement('li');
+            liElement.innerHTML = '<strong>' + encodedName + '</strong>:&nbsp;&nbsp;' + encodedMsg;
+            document.getElementById('discussion').appendChild(liElement);
+                });
+
+            // Transport fallback functionality is now built into start.
+            connection.start()
+            .then(function () {
+                console.log('connection started');
+            document.getElementById('sendmessage').addEventListener('click', function (event) {
+                // Call the Send method on the hub.
+                connection.invoke('send', name, messageInput.value);
+
+            // Clear text box and reset focus for next comment.
+            messageInput.value = '';
+            messageInput.focus();
+            event.preventDefault();
+                        });
+                    })
+                    .catch(error => {
+                console.error(error.message);
+                    });
+                //fnNotification('欢迎使用：', messageInput.value, '/favicon.ico');
+            });
+            
+    </script>
+</body>
+</html>
