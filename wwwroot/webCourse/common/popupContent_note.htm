@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<style>
+.pop{
+position:relative;
+}
+
+body{
+margin:2px;
+border:1px;
+overflow: hidden;
+font-size:11px;
+cursor:n-resize;
+}
+</style>
+<SCRIPT LANGUAGE="JScript">
+function fnClosePopup(){
+parent.oPopup.hide();
+}
+
+function fnContextMenu(){
+event.returnValue=false;
+}
+
+function fnMouseOver(){
+event.srcElement.style.color="rgb(0,255,0)";
+}
+
+function fnMouseOut(){
+event.srcElement.style.color="rgb(0,0,0)";
+}
+</SCRIPT>
+<title>Popup Window</title>
+</HEAD>
+<body onclick="fnClosePopup();" oncontextmenu="fnContextMenu();">
+<div id="popupDiv">
+<div title='刷新内容框架' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.location.reload();">刷新</div>
+<div title='切换是否显示滚动条' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnToggleScrollBar();' id="sToggleScrollBar">滚动条切换</div>
+<div title='单击将切换为在线编辑课文的界面!' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnToggleEditNote();">编辑教/学笔记</div>
+</div>
+</BODY>
+</HTML>

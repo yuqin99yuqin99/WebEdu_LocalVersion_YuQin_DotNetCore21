@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<style>
+.pop{
+position:relative;
+}
+
+body{
+margin:2px;
+border:1px;
+overflow: hidden;
+font-size:11px;
+cursor:n-resize;
+}
+</style>
+<SCRIPT LANGUAGE="JScript">
+function fnClosePopup(){
+parent.oPopup.hide();
+}
+
+function fnContextMenu(){
+event.returnValue=false;
+}
+
+function fnMouseOver(){
+event.srcElement.style.color="rgb(0,255,0)";
+}
+
+function fnMouseOut(){
+event.srcElement.style.color="rgb(0,0,0)";
+}
+</SCRIPT>
+<title>Popup Window</title>
+</HEAD>
+<body onclick="fnClosePopup();" oncontextmenu="fnContextMenu();">
+<div id="popupDiv">
+<div title='撤消' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.format('undo');" id="sIdEditContent">撤消</div>
+<div title='恢复' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.format('redo');" id="sIdRefresh">恢复</div>
+<div title='剪切' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.format('cut');" id="sIdCut">剪切</div>
+<div title='复制' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.format("copy");' id="sIdCopy">复制</div>
+<div title='粘贴' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.format('paste');" id="sIdPaste">粘贴</div>
+<div title='删除' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.format("delete")' id="sIdDownload">删除</div>
+<div title='插入图像' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.ShowImgDialog();">插入图像</div>
+<div title='插入超链接' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.showHyperlink()">插入超链接</div>
+<div title='选定一个词组后,给它添加注释' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnAddNote()">添加词组注释</div>
+<div title='选定一段后,给它添加中文翻译' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnAddTranslate()">添加中文翻译</div>
+<div title='选定一段后,给它添加中文翻译' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnAddTranslateB()">批量添加中文翻译</div>
+<div title='插入录音文件' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnInsertMusic()">插入录音文件</div>
+<div title='插入录音文件' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnInsertMusic()">添加课文语音</div>
+<div title='插入录音文件' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.addParagraphsSound()">添加段落语音</div>
+<div title='插入录音文件' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.addParagraphsSoundB()">批量添加段落语音</div>
+<div title='插入录音文件' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.testSound()">试听语音</div>
+<div title='插入录音文件' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.ParagraphsNumber()">设置本段为添加语音开始段</div>
+
+<div title='插入试卷输入结束后的提交按扭' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnAddButton()">插入提交按扭</div>
+<div title='上标' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.format("superscript");' id="sIdSave">上标</div>
+<div title='下标' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.format('subscript')" >下标</div>
+<div title='保存编辑的内容' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.saveContent()" id="saveContent">保存</div>
+<div title='退出但不保存编辑的内容' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.Exit()' id="sIdRefresh">退出编辑</div>
+<div title='打开帮助' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.format('superscript');" id="sIdHelp">&#169;帮助</div>
+<div title='打开帮助' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.format('superscript');" id="sIdHelp">帮助hhhhhhh</div>
+</div>
+</BODY>
+</HTML>

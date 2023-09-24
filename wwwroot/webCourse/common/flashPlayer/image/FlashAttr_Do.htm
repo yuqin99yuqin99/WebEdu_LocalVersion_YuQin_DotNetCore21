@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0038)http://www.phd365.com/FlashAttr_Do.asp -->
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GB2312">
+<SCRIPT language=javascript>
+
+function doOK(arr0)
+{
+	form1.Txt.value = arr0.Txt;
+	form1.Con.value = arr0.Con;
+	form1.Size.value = arr0.Size;
+	form1.SpeedType.value = arr0.SpeedType;
+	form1.SpeedPace.value = arr0.SpeedPace;
+	form1.submit();
+}
+
+
+</SCRIPT>
+
+<SCRIPT language=javascript id=clientEventHandlersJS>
+
+function window_onload()
+{
+	if(form1.Status.value == "1")
+	{
+		alert("成功设置课件播放属性，请重新刷新窗口，以便设置生效！");
+	}
+}
+
+</SCRIPT>
+
+<META content="MSHTML 6.00.3790.1830" name=GENERATOR></HEAD>
+<BODY language=javascript onload="return window_onload()">
+<FORM id=form1 name=form1 action=FlashAttr_Do.asp method=post><INPUT id=Txt 
+name=Txt> <INPUT id=Con name=Con> <INPUT id=Size name=Size> <INPUT id=SpeedType 
+name=SpeedType> <INPUT id=SpeedPace name=SpeedPace> <INPUT id=Status value=0 
+name=Status> </FORM></BODY></HTML>
+

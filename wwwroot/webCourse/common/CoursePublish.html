@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>课程发布</title>
+    <style>
+        ::-webkit-scrollbar {
+            width: 2px; /*高宽分别对应横竖滚动条的尺寸*/
+            height: 2px;
+            display: none;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+          display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+             
+        }
+
+        #header {
+            width: 100%;
+            background: #333;
+            height: 30px;
+        }
+
+        #footer {
+            width: 100%;
+            background: #333;
+            height: 0px;
+        }
+
+        #middle {
+            width: 100%;
+            display: flex;
+            /*flex-direction: column;*/
+            flex-grow: 1;
+        }
+
+        #nav {
+            width: 50%;
+            background: #aaa;
+        }
+
+        #main {
+            background: #ccc;
+            flex-grow: 1;
+        }
+        iframe{
+            width:100%;
+            height:100%;
+        }
+    </style>
+    <script>
+        /**%
+        var sPath = Request.form("sPath")();
+        var oFSO = Server.createObject("Scripting.FileSystemObject");
+        var sPathBase = Server.MapPath("../lessons");//may changed!!
+        var sPathCurrent = sPathBase + "\\" + sPath;
+        var sImageElementHead = '<img src="../common/image/no-folder.gif" unselectable="on" style="cursor:default;">';
+        var sImageElementEnd = '</img>';
+        var sImageElementHeadFile = '<img src="../common/image/htmlFile.gif" unselectable="on" style="cursor:default;">';
+        var sFolderXML = "";
+
+        var oFolder = oFSO.getFolder(sPathCurrent);//may changed!!
+        var eSubFolders = new Enumerator(oFolder.subfolders);
+        for (; !eSubFolders.atEnd(); eSubFolders.moveNext()) {
+            var oFolderCurrentItem = oFSO.getFolder(sPathCurrent + "\\" + eSubFolders.item().name);
+            var eSubFoldersCurrentItem = new Enumerator(oFolderCurrentItem.subfolders);
+            var iCountCurrentItem = 0;
+            for (; !eSubFoldersCurrentItem.atEnd(); eSubFoldersCurrentItem.moveNext()) {
+                iCountCurrentItem = iCountCurrentItem + 1;
+            }
+
+            if (iCountCurrentItem == 0) {
+                sFolderXML = sFolderXML + '<LI><IMG src="../common/image/no-folder.gif" unselectable="on" onclick="fnDynOutline();" style="cursor:default;"><SPAN onmouseover="fnChangeColor();" onmouseout="fnResumeColor();" onclick="fnDynOpen()">' + eSubFolders.item().name + '</SPAN></IMG></LI>';
+            }
+            else {
+                sFolderXML = sFolderXML + '<LI><IMG src="../common/image/plus-folder.gif" unselectable="on" onclick="fnDynOutline();" style="cursor:default;"><SPAN onmouseover="fnChangeColor();" onmouseout="fnResumeColor();" onclick="fnDynOpen()">' + eSubFolders.item().name + '</SPAN></IMG></LI>';
+            }
+
+            Response.write(sImageElementHead + eSubFolders.item().name + sImageElementEnd);
+        }
+        %*/
+    </script>
+    <script>
+        /**
+        var sFolder = '<% =sFolderXML %>';
+        parent.frames.item("sIframeContents").oSrcLi.innerHTML = parent.frames.item("sIframeContents").oSrcLi.innerHTML + "<UL>" + sFolder + "</UL>";
+         //alert(parent.frames.item("sIframeContents").oSrcLi.innerHTML);
+        **/
+    </script>
+    <script>
+        function FnTry() {
+            //alert(document.getElementById("server").contentWindow.document.getElementById("sBody").innerHTML);
+            alert(document.getElementById("server").contentWindow.document.innerHTML);
+            window.fetch();
+            
+        }
+
+    </script>
+</head>
+
+
+<body onclick="FnTry();">
+    <div id="header">
+        课程发布（课程发布到服务器后将自动集成提问答疑、网络考试等功能）
+    </div>
+    <div id="middle">
+        <div id="nav">
+            本地机
+           <!--<iframe src="FileExplorer.html"></iframe>-->
+            <iframe src="/FileExplorer/get" id="local"></iframe>
+        </div>
+        <div id="main">
+            服务器
+            <!-- <iframe src="FileExplorer.html"></iframe>-->
+            <iframe src="https://yuqin.chinacloudsites.cn/FileExplorer/get" id="server"></iframe>
+            <!--<iframe src="http://172.21.94.17:59733/" id="server"></iframe>-->
+        </div>
+        </div>
+        <div id="footer">
+            底部
+        </div>
+    </body >
+                </html >
+

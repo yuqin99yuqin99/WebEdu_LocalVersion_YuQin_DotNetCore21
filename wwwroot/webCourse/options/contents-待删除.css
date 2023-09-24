@@ -1,0 +1,39 @@
+body{
+font-size:18;
+cursor:text;
+color:rgb(0,102,153);
+pading:0;
+}
+
+div{
+cursor:text;
+position:relative;
+left:-30;
+width:1024px;
+}
+
+li{
+cursor:text;
+color:rgb(0,102,153);
+list-style-type:none;
+}
+
+ul li{
+;
+}
+
+
+ul ul li{
+display:none;
+}
+
+a{
+text-decoration: none;
+color:rgb(0,102,153);
+}
+
+a:hover {
+position:relative;
+left:1px; 
+top:1px;
+}

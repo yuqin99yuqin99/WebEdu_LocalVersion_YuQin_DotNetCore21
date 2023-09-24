@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>上传课文：docx文件</title>
+    <script>
+        function fnForm() {            
+            document.getElementById("uploadCourseText").action = document.getElementById("uploadCourseText").action + opener.courseTextPathPart;
+        }
+    </script>
+</head>
+<body onload="fnForm();">
+    <select>
+        <option>查</option>
+        <option>增</option>
+        <option>改</option>
+        <option>删</option>
+    </select>
+    <div>
+
+        <form action="/UpDateAllCourseText/Post" method="post" id="GetAllCourseText">
+
+            <p>
+                <label>键入要查找的文本</label>
+                <input type="text" name="Getted" />
+            </p>
+            <p>
+                <label>键入要替换的文本</label>
+                <input type="text" name="Updated" />
+            </p>
+            <input type="submit" value="提交" />
+
+        </form>
+
+        <form action="/UpDateAllCourseText/Post" method="post" id="PostAllCourseText">
+
+            <p>
+                <label>键入要查找的文本</label>
+                <input type="text" name="Getted" />
+            </p>
+            <p>
+                <label>键入要替换的文本</label>
+                <input type="text" name="Updated" />
+            </p>
+            <input type="submit" value="提交" />
+
+        </form>
+        <form action="/UpDateAllCourseText/Post" method="post" id="UpDateAllCourseText">
+
+            <p>
+                <label>键入要查找的文本</label>
+                <input type="text" name="Getted" />
+            </p>
+            <p>
+                <label>键入要替换的文本</label>
+                <input type="text" name="Updated" />
+            </p>
+            <input type="submit" value="提交" />
+
+        </form>
+        <form action="/UpDateAllCourseText/Post" method="post" id="DeleteAllCourseText">
+            <p>
+                <label>键入要查找的文本</label>
+                <input type="text" name="Getted" />
+            </p>
+            <p>
+                <label>键入要替换的文本</label>
+                <input type="text" name="Updated" />
+            </p>
+            <input type="submit" value="提交" />
+
+        </form>
+    </div>
+</body>
+</html>

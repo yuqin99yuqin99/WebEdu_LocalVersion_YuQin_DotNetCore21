@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>上传演示：PPTX文件</title>
+    <script>
+        
+
+        function fnOnSubmit() {
+           // alert(document.getElementById("idFileUpload").value);
+             var sTemp = document.getElementById("idFileUpload").value; 
+            //alert(sTemp.subString(sTemp.lastIndexOf(".doc")));//无法执行，可能是路径安全性问题。
+          // alert(sTemp.lastIndexOf(".doc"));//可能是安全性问题，不允许使用一些路径字符串的操作？
+            if ( sTemp== ""||sTemp== null) {
+                alert("您可能没有选择文件！请选择文件");
+                event.returnValue = false;//事件调用函数时，用return返回值实际上是对event.returnValue进行设置而该值决定当前操作是否继续，true是继续 false中断
+                return;
+            }
+            else if (sTemp.lastIndexOf(".pptx") >0)
+            {
+                event.returnValue = true; 
+                document.getElementById("idSubmit").value = "正在提交，请耐心等待...";
+            }
+            else {
+                alert("您选择的文件可能不是.pptx文件！请选择.pptx文件");
+                event.returnValue = false;
+              return;
+            }
+            //document.getElementById("idTeachingEngineeringForm").submit();//事件绑定在form时不需要此代码。如果事件绑定在submit按钮就需要。
+        }
+        function fnForm() {
+            document.getElementById("uploadPresentation").onsubmit = fnOnSubmit;     
+            document.getElementById("uploadPresentation").action = document.getElementById("uploadPresentation").action + opener.presentationPathPart;
+            alert(document.getElementById("uploadPresentation").action)
+        }
+    </script>
+</head>
+<body onload="fnForm()">
+    <div>    
+        <form action="/Presentation/Post?FolderAndFileName=" method="post" enctype="multipart/form-data" id="uploadPresentation">
+            <p>
+                <label>选择文件(.pptx格式)： </label>
+                <input type="file" name="FileUpload" id="idFileUpload" />
+                <input type="submit" value="提交" id="idSubmit"/>
+            </p><label>请注意：上传的教学PPT默认在线查看，但将占用较多的磁盘空间。如果不想在线查看而节省磁盘空间，请勾选： </label> <input type="checkbox" name="IsSaveAsMP4" />“无需在线查看”
+
+        </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+.9pt {
+	FONT-SIZE: 9pt
+}
+BODY {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 14pt
+}
+.table {
+	BORDER-RIGHT: gray double; BORDER-TOP: gray double; FONT-SIZE: 9pt; BORDER-LEFT: gray double; BORDER-BOTTOM: gray double
+}
+TD {
+	FONT-SIZE: 9pt
+}
+HR {
+	size: 0
+}
+H3 {
+	FONT-SIZE: 12.5pt
+}
+U {
+	COLOR: #bf2b0b
+}
+TABLE {
+	FONT-SIZE: 9pt
+}
+FORM {
+	FONT-SIZE: 9pt
+}
+TEXTAREA {
+	FONT-SIZE: 9pt
+}
+INPUT {
+	FONT-SIZE: 9pt
+}
+SELECT {
+	FONT-SIZE: 9pt
+}
+P {
+	FONT-SIZE: 9pt
+}
+BODY {
+	FONT-SIZE: 9pt
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff6347; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #ff6347; TEXT-DECORATION: none
+}
+BODY {
+	BACKGROUND-COLOR: linen
+}
+.Bshadow {
+	FILTER: dropshadow(color=#000000, offx=1, offy=1); LEFT: 0px; VISIBILITY: inherit; WIDTH: 100%; POSITION: relative; TOP: 0px; font-color: #FF6600
+}

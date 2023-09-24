@@ -1,0 +1,82 @@
+#VRML V2.0 utf8
+WorldInfo {
+	info [
+		"By: jbh"
+	]
+}
+Background {
+	skyColor [
+		1 1 1
+	]
+	groundColor [
+		1 1 1
+	]
+}
+
+DirectionalLight {
+	direction -0.2 -0.8 -0.6
+	ambientIntensity 0.5
+}
+
+Viewpoint{
+	position 0 1 7
+}
+
+Transform{
+  children [
+Group { # children: 3
+	children [
+		DEF earth Transform { # children: 1
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 0 0 0
+						                  }
+						texture ImageTexture {
+							url "earthMap.jpg"
+						                      }
+                                                             }
+					geometry Sphere {radius 1.15}
+				      }
+			        ]
+		                   }
+		DEF Text Transform {
+                        translation 0 1.15 1.15
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 0 1 0
+						}
+					}
+					geometry Text {
+						string [
+							"World Wide Edu"
+						]
+						fontStyle FontStyle {
+							family "TYPEWRITER"
+							style "BOLD"
+							spacing 0
+                                                        justify "MIDDLE"
+						}
+					}
+				}
+			]
+		}
+	]
+}
+]
+}
+
+DEF orientInterp1 OrientationInterpolator{
+	key[0,.5,1]
+	keyValue[0 1 0 0,0 1 0 3.14,0 1 0 6.28]
+				}
+DEF timeSensor TimeSensor{
+	cycleInterval 10
+	loop TRUE
+			}
+ROUTE timeSensor.fraction_changed TO orientInterp1.set_fraction
+ROUTE orientInterp1.value_changed TO earth.set_rotation
+

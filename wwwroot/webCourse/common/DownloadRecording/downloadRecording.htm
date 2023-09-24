@@ -1,0 +1,31 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>下载录音文件</title>
+<script language="jscript" >
+function Download(){
+  var sUrl = document.location.href;
+      sUrl = sUrl.substring(sUrl.lastIndexOf("?n=")+3,sUrl.lastIndexOf("."));
+  var music = sUrl+".mp3";
+  open("download.asp?n="+music);
+  window.close();
+ }
+
+</script>
+</head>
+
+<body >
+
+
+<table border="0" width="100%" id="table1" height="100%">
+	<tr>
+		<td align="center"><input type="button" id="dd" onclick="Download()" value="点击下载录音文件">　</td>
+	</tr>
+</table>
+
+
+
+</body>
+
+</html>

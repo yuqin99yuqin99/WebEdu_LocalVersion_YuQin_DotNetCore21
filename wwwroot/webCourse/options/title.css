@@ -1,0 +1,21 @@
+body {
+    font-size: 10px;
+    background-color: transparent; /*和iframe的frameborder="0" allowTransparency="true"特性实现无缝集成。seamless属性是一个支持boolean值的属性，指定了该属性的<iframe>所生成的框架看上去是原文档的一部分，不再显示边框和进度条。不过到目前为止，好像没有什么浏览器完全支持这个属性。*/
+}
+
+td{
+text-align:center;
+font-size:12px;
+}
+
+a{
+text-decoration: none;
+color:rgb(0,102,153);/**0前面有个空格更兼容??*/
+}
+
+    a:hover {
+        position: relative;
+        left: 1px;
+        top: 1px;
+        color: rgb(0,255,0); /**0前面有个空格更兼容??*/
+    }

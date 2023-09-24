@@ -1,0 +1,12 @@
+body {
+    font-size: 24px;
+    background-attachment: fixed;
+    color: rgb(0,102,153);
+    /**position:relative;*/
+    /**left: -50px;*/
+}
+::-webkit-scrollbar { /*还有考虑rameset？被其控制*/
+    width: 2px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 2px;
+    display: none;
+}

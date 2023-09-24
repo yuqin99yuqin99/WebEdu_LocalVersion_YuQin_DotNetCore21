@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<style>
+.pop{
+position:relative;
+}
+
+body{
+margin:2px;
+border:1px;
+overflow: hidden;
+font-size:11px;
+cursor:n-resize;
+}
+</style>
+<SCRIPT LANGUAGE="JScript">
+function fnClosePopup(){
+ parent.oPopup.hide();
+}
+
+function fnContextMenu(){
+event.returnValue=false;
+}
+
+function fnMouseOver(){
+event.srcElement.style.color="rgb(0,255,0)";
+}
+
+function fnMouseOut(){
+event.srcElement.style.color="rgb(0,0,0)";
+}
+</SCRIPT>
+<title>Popup Window</title>
+</HEAD>
+<body  onclick="fnClosePopup();" oncontextmenu="fnContextMenu();">
+<div id="popupDiv">
+<div title='刷新内容框架' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.location.reload();//parent.fnRefresh();">刷新</div>
+<div title='单击将内容框架和目录框架的放缩还原为默认' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('sDefaultZoom').click();">默认放缩</div>
+<div title='单击将内容框架和目录框架的宽度还原为默认' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('sDefaultWidth').click();">默认宽度</div>
+<div title='按历史记录往前翻页' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('sForword').click();">前进</div>
+<div title='按历史记录往后翻页' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('sBackword').click();">后退</div>
+<div title='按目录中的条目往下翻页' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('next').click();">下翻</div>
+<div title='按目录中的条目往上翻页' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('previous').click();">上翻</div>
+<div title='在是否全屏显示内容之间切换' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnToggleScreen();'>内容全屏切换</div>
+<div title='在内容框架中查找' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.findContent()'>查找(在当前框架)</div>
+<div title='切换是否显示滚动条' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnToggleScrollBar();' id="sToggleScrollBar">滚动条切换</div>
+<div title='查看中文译文' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnTranslateAll();' id="sToggleScrollBar">查看中文翻译</div>
+<div title='查看全英文课文' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnEnglishOnlyAll();' id="sToggleScrollBar">查看全英文课文</div>
+<div title='单击将切换为在线编辑课文的界面!' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.hideText()">隐藏课文</div>
+
+<div title='单击将切换为在线编辑课文的界面!' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.showText();">显示课文</div>
+
+<div title='单击将切换为在线编辑课文的界面!' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('sContentEditable').click();">编辑课文</div>
+
+</div>
+</BODY>
+</HTML>

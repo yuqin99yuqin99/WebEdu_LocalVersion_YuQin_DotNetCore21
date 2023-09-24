@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>网络课程本机版</title>
+</head>
+<frameset rows="100,*,20"  id="sFramesetBook" name="sFramesetBook" style="border: 0px ; padding-bottom: 1px; border-collapse:collapse" framespacing="0" border="0" frameborder="0">
+    <frame src="title.html" name="sIFrameTitle" id="sIFrameTitle" scrolling="no" noresize target="sIframeContents" style="border: 0px dotted #008000; border-collapse:collapse">
+        <frameset cols="25%,*" id="sFramesetMiddle" name="sFramesetMiddle">
+            <frame src="../lessons/Tempcontents.htm" name="sIframeContents" id="sIframeContents" scrolling="yes" target="sIframeContent" style="border-right-style: dotted; border-right-width: 1px;border-right-color:#800000;">
+            <frame src="../options/TempcontentStart.htm" name="sIframeContent" id="sIframeContent" scrolling="yes" target="_self">
+        </frameset>
+        <!--<frame src="../options/bottom.aspx" name="sIframeBottom" id="sIframeBottom" scrolling="no" noresize target="_self">-->
+</frameset>
+<body>
+<script>
+ //alert(document.getElementById("sIframeContent").src);
+//function fnOnLoad(){
+	/**alert();
+	document.body.onunload=fnThanks;
+	document.body.scroll="no";
+	window.iNewZoom=screen.width/1024*100;
+	document.body.style.zoom=iNewZoom+"%";
+	window.sFramesetBookRows=document.getElementById("sFramesetBook").rows;
+	window.sFramesetMiddleCols=document.getElementById("sFramesetMiddle").cols;
+	alert(window.sFramesetMiddleCols);**/
+//					}
+
+//var sRunFrom=parent.sRunFrom;
+//var sPathContentsNow='<% //=sPathContentsNow %>'+document.getElementById("sIframeContents").src.substring(document.getElementById("sIframeContents").src.lastIndexOf("/")+1,document.getElementById("sIframeContents").src.length)+"/";//不放在onload事件函数中是因为onload事件函数中可能正装载时各框架无法获取。
+//var sHTTPHeader=document.URL.substring(0,document.URL.lastIndexOf("common/initial.asp"));//因为initial.asp是固定的，所以此时获得的sHTTPHeader是确定的，以便其它框架调用，便于虚拟目录的变动而便于维护,相关的文件夹名称也在此定义全局变量（但因时间关系，还未如此实现），但相对路径必须保持，webedusystem已在此屏蔽。不放在onload事件函数中是因为onload事件函数中可能正装载时各框架无法获取。
+//var sContentsPath="lessons/";
+//var sTitlePath="common/";
+//var sLessonsPath="content"+document.getElementById("sIframeContents").src.substring(document.getElementById("sIframeContents").src.lastIndexOf("contents")+8,document.getElementById("sIframeContents").src.lastIndexOf("."))+"/";//为多个分课作准备。
+//var sOptionsPath="options/";
+//var sContentsName=document.getElementById("sIframeContents").src.substring(document.getElementById("sIframeContents").src.lastIndexOf("/")+1,document.getElementById("sIframeContents").src.length);
+//var sContentStartName=document.getElementById("sIframeContent").src.substring(document.getElementById("sIframeContent").src.lastIndexOf("/")+1,document.getElementById("sIframeContent").src.length);
+</script>
+</body>
+
+</html>

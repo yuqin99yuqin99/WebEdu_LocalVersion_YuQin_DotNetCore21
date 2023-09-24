@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul,a{
+            font-size: 20px;
+            list-style: none;
+            text-decoration: none;
+            background-color: #3C3C3C;
+            color: #FFFFFF;
+            width: 100px;
+            text-align: center;
+            border: 0px solid black;
+            border-radius: 5px;
+            margin-top: 1px;
+        }
+        a{
+            display: block;
+        }
+
+        .plat{
+            display: none;
+        }
+        .nav{
+             float: left;
+             margin-left: 1px;
+         }
+        .nav:hover .plat{
+            display: block;
+            clear: both;
+        }
+        .plat li:hover>a{
+            background-color: dimgrey;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav">
+    <a href="#">服装</a>
+    <ul class="plat">
+        <li><a href="#">衬衫</a></li>
+        <li><a href="#">棉袄</a></li>
+        <li><a href="#">裤衩</a></li>
+    </ul>
+</ul>
+<ul class="nav">
+    <a href="#">服装</a>
+    <ul class="plat">
+        <li><a href="#">衬衫</a></li>
+        <li><a href="#">棉袄</a></li>
+        <li><a href="#">裤衩</a></li>
+    </ul>
+</ul>
+<ul class="nav">
+    <a href="#">服装</a>
+    <ul class="plat">
+        <li><a href="#">衬衫</a></li>
+        <li><a href="#">棉袄</a></li>
+        <li><a href="#">裤衩</a></li>
+    </ul>
+</ul>
+</body>
+</html>

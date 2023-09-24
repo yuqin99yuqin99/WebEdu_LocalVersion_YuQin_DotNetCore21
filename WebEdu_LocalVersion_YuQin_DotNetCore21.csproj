@@ -1,0 +1,238 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>教与学_本机版_YuQin_DotNetCore21</AssemblyName>
+    <ApplicationIcon>渔琴.ico</ApplicationIcon>
+    <Description>本软件属于B/S模式的软件（“浏览器”/“服务器”模式的软件）。不过，“浏览器”、“服务器”都位于本机之中，而不是分布于不同的机器之中（注：本软件需要本机已安装“浏览器”，但不需要本机已安装“服务器”。也就是说，“浏览器”是本机现有的，而“服务器”是本软件所提供的、无需事先安装的、可以移动运行的）。
+当前，您默认处于“浏览器”窗口。请在Windows文件资源管理器中，双击运行根目录中唯一的一个扩展名为“.exe”的文件（将启动“服务器”窗口。请注意此“服务器”窗口不能关闭！）
+“服务器”窗口中，将显示“服务器”的URL地址（例如：http://localhost:5000）（注:该URL地址中的数字，或者说端口号，在每次运行时是动态变化的，这样设计的目的是软件可以同时运行为多个软件实例，而不发生URL地址冲突）。在“浏览器”地址栏中，键入该URL地址（注：也可复制“服务器”窗口中的URL地址，然后粘贴到“浏览器”地址栏中），按回车键，访问“服务器”。
+（注：后续将开发一键启动软件。即：将开发一个.exe文件，双击运行该.exe文件，将自动启动“服务器”窗口、“浏览器”窗口，“浏览器”自动获取“服务器”的URL地址，并访问“服务器”！）
+mkdir "$(ProjectDir)"
+mkdir "\Areas\RBAC\Views"
+xcopy /S/E/C/Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Views" "\())
+)\Areas\RBAC\Views“
+mkdir "\Areas\RBAC\Views"
+xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Views" "\Areas\RBAC\Views"
+
+mkdir "\Areas\RBAC\Content"
+xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Content" "\Areas\RBAC\Content"
+
+mkdir "\Areas\RBAC\Scripts"
+xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Areas\RBAC\Scripts"</Description>
+    <Copyright>渔琴</Copyright>
+    <PackageReleaseNotes>（注：后续将开发一键启动软件。即：将开发一个.exe文件，双击运行该.exe文件，将自动启动“服务器”窗口、“浏览器”窗口，“浏览器”自动获取“服务器”的URL地址，并访问“服务器”！）</PackageReleaseNotes>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE;NOTPUBLISHASSELFCONTAINED;LOCALVERSION;SERVERVERSION;NETCORE21;NETCORE30;</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\samples\**" />
+    <Compile Remove="StudyHardDayDayUp\**" />
+    <Compile Remove="wwwroot\webCourse\common\File_Transfer\**" />
+    <Compile Remove="wwwroot\webCourse\common\Templates\WholeCourse\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\book-待删除\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content\book_foreign\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content\book_origin\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content\book_origin_foreign\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content\CoursewareRecording\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content\note\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content\play\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content\play_foreign\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content\play_origin\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content\play_origin_foreign\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content\teachingPlan_foreign\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin_foreign\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\CoursewareRecording\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\itemsbankRef\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\note\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\play\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\play_foreign\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\play_origin\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\play_origin_foreign\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\sample\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\teachingPlan\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\teachingPlan_foreign\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\teachingPlan_origin\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\teachingPlan_origin_foreign\**" />
+    <Compile Remove="wwwroot\webCourse\lessons\webCourseCommon\**" />
+    <Content Remove="Controllers\samples\**" />
+    <Content Remove="StudyHardDayDayUp\**" />
+    <Content Remove="wwwroot\webCourse\common\File_Transfer\**" />
+    <Content Remove="wwwroot\webCourse\common\Templates\WholeCourse\**" />
+    <Content Remove="wwwroot\webCourse\lessons\book-待删除\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content\book_foreign\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content\book_origin\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content\book_origin_foreign\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content\CoursewareRecording\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content\note\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content\play\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content\play_foreign\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content\play_origin\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content\play_origin_foreign\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content\teachingPlan_foreign\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin_foreign\**" />
+    <Content Remove="wwwroot\webCourse\lessons\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
+    <Content Remove="wwwroot\webCourse\lessons\CoursewareRecording\**" />
+    <Content Remove="wwwroot\webCourse\lessons\itemsbankRef\**" />
+    <Content Remove="wwwroot\webCourse\lessons\note\**" />
+    <Content Remove="wwwroot\webCourse\lessons\play\**" />
+    <Content Remove="wwwroot\webCourse\lessons\play_foreign\**" />
+    <Content Remove="wwwroot\webCourse\lessons\play_origin\**" />
+    <Content Remove="wwwroot\webCourse\lessons\play_origin_foreign\**" />
+    <Content Remove="wwwroot\webCourse\lessons\sample\**" />
+    <Content Remove="wwwroot\webCourse\lessons\teachingPlan\**" />
+    <Content Remove="wwwroot\webCourse\lessons\teachingPlan_foreign\**" />
+    <Content Remove="wwwroot\webCourse\lessons\teachingPlan_origin\**" />
+    <Content Remove="wwwroot\webCourse\lessons\teachingPlan_origin_foreign\**" />
+    <Content Remove="wwwroot\webCourse\lessons\webCourseCommon\**" />
+    <EmbeddedResource Remove="Controllers\samples\**" />
+    <EmbeddedResource Remove="StudyHardDayDayUp\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\common\File_Transfer\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\common\Templates\WholeCourse\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\book-待删除\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\book_foreign\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\book_origin\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\book_origin_foreign\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\CoursewareRecording\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\note\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\play\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\play_foreign\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\play_origin\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\play_origin_foreign\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\teachingPlan_foreign\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin_foreign\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\CoursewareRecording\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\itemsbankRef\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\note\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\play\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\play_foreign\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\play_origin\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\play_origin_foreign\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\sample\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\teachingPlan\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\teachingPlan_foreign\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\teachingPlan_origin\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\teachingPlan_origin_foreign\**" />
+    <EmbeddedResource Remove="wwwroot\webCourse\lessons\webCourseCommon\**" />
+    <None Remove="Controllers\samples\**" />
+    <None Remove="StudyHardDayDayUp\**" />
+    <None Remove="wwwroot\webCourse\common\File_Transfer\**" />
+    <None Remove="wwwroot\webCourse\common\Templates\WholeCourse\**" />
+    <None Remove="wwwroot\webCourse\lessons\book-待删除\**" />
+    <None Remove="wwwroot\webCourse\lessons\content\book_foreign\**" />
+    <None Remove="wwwroot\webCourse\lessons\content\book_origin\**" />
+    <None Remove="wwwroot\webCourse\lessons\content\book_origin_foreign\**" />
+    <None Remove="wwwroot\webCourse\lessons\content\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
+    <None Remove="wwwroot\webCourse\lessons\content\CoursewareRecording\**" />
+    <None Remove="wwwroot\webCourse\lessons\content\note\**" />
+    <None Remove="wwwroot\webCourse\lessons\content\play\**" />
+    <None Remove="wwwroot\webCourse\lessons\content\play_foreign\**" />
+    <None Remove="wwwroot\webCourse\lessons\content\play_origin\**" />
+    <None Remove="wwwroot\webCourse\lessons\content\play_origin_foreign\**" />
+    <None Remove="wwwroot\webCourse\lessons\content\teachingPlan_foreign\**" />
+    <None Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin\**" />
+    <None Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin_foreign\**" />
+    <None Remove="wwwroot\webCourse\lessons\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
+    <None Remove="wwwroot\webCourse\lessons\CoursewareRecording\**" />
+    <None Remove="wwwroot\webCourse\lessons\itemsbankRef\**" />
+    <None Remove="wwwroot\webCourse\lessons\note\**" />
+    <None Remove="wwwroot\webCourse\lessons\play\**" />
+    <None Remove="wwwroot\webCourse\lessons\play_foreign\**" />
+    <None Remove="wwwroot\webCourse\lessons\play_origin\**" />
+    <None Remove="wwwroot\webCourse\lessons\play_origin_foreign\**" />
+    <None Remove="wwwroot\webCourse\lessons\sample\**" />
+    <None Remove="wwwroot\webCourse\lessons\teachingPlan\**" />
+    <None Remove="wwwroot\webCourse\lessons\teachingPlan_foreign\**" />
+    <None Remove="wwwroot\webCourse\lessons\teachingPlan_origin\**" />
+    <None Remove="wwwroot\webCourse\lessons\teachingPlan_origin_foreign\**" />
+    <None Remove="wwwroot\webCourse\lessons\webCourseCommon\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\Interop_CSInteropCPPCOMTry.cs" />
+    <Compile Remove="Controllers\Interop_CSInteropCPPDLLTry.cs" />
+    <Compile Remove="Models\MovieDateFixed.cs" />
+    <Compile Remove="Models\MovieDateRating.cs" />
+    <Compile Remove="Program  - Copy.cs" />
+    <Compile Remove="Startup.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="web.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\MoviesController.csold" />
+    <None Remove="Controllers\PresentationController - Copy.csOrigin" />
+    <None Remove="Controllers\UploadHomeworkAndTestController - Copy.csold" />
+    <None Remove="Controllers\UploadHomeworkAndTestController - Copy.csOrigin" />
+    <None Remove="Models\Movie.csNEW" />
+    <None Remove="Models\Movie.csold" />
+    <None Remove="Models\SeedDataRating.csNew" />
+    <None Remove="Models\SeedDataRating.csold" />
+    <None Remove="Program - Copy.csold" />
+    <None Remove="Program - Copy.csorigin" />
+    <None Remove="Program - Copy.cs去除StartUp时" />
+    <None Remove="Program - Copy.cs合为一个文件后" />
+    <None Remove="Program.csnew" />
+    <None Remove="Startup - Copy.csold" />
+    <None Remove="Startup - Copy.cs去除StartUp时" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Controllers\samples\AbstractClassController.cs" />
+    <Compile Include="Controllers\samples\TryBooleanTypeController.cs" />
+    <Compile Include="Controllers\samples\TryClassPropertyMethod.cs" />
+    <Compile Include="Controllers\samples\TryClass_Interface_Struct_Enum_Delegate_Attribute.cs" />
+    <Compile Include="Controllers\samples\TryCSFileBasicFramework.cs" />
+    <Compile Include="Controllers\samples\TryGenicType.cs" />
+    <Compile Include="Controllers\samples\TryIfElse.cs" />
+    <Compile Include="Controllers\samples\TrySwitch.cs" />
+    <Compile Include="Controllers\samples\TrySystemDotObject.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bundle.Microsoft.Office.Interop" Version="15.0.4569" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="wwwroot\webCourse\lessons\content\HomeworkAndTest\" />
+    <Folder Include="wwwroot\webCourse\lessons\content\TeachingEngineering\" />
+    <Folder Include="wwwroot\webCourse\lessons\content\TeachingVideo\" />
+    <Folder Include="wwwroot\webCourse\Templates\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\BroweringOfTextbook\Create.cshtml" />
+    <None Include="Views\BroweringOfTextbook\Delete.cshtml" />
+    <None Include="Views\BroweringOfTextbook\Details.cshtml" />
+    <None Include="Views\BroweringOfTextbook\Edit.cshtml" />
+    <None Include="Views\BroweringOfTextbook\Index.cshtml" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command=":: 是注释&#xD;&#xA;::打开 powershell控制台（按住Shift键右击鼠标）。打开DOS控制台(同时按Windows+R，然后键入cmd，回车)&#xD;&#xA;:: powershell命令帮助：man mkdir。DOS命令帮助：mkdir /?&#xD;&#xA;::****（必须设置 publish的delete existing files为false，不然拷贝过去后又会被删除）此部分是为了自动把”开始-使用说明（该文件请拷贝到系统根目录以便查看）.html“文件拷贝到最终的发布软件中。&#xD;&#xA;rmdir  /q  &quot;$(ProjectDir)bin\Release\netcoreapp2.1\publish&quot; ::删除目录&#xD;&#xA;mkdir  &quot;$(ProjectDir)bin\Release\netcoreapp2.1\publish&quot;  ::新建目录&#xD;&#xA;::xcopy  /S /E /C /Y &quot;$(ProjectDir)wwwroot&quot;  &quot;$(ProjectDir)bin\Release\netcoreapp2.1\publish&quot;&#xD;&#xA;copy  /Y &quot;$(ProjectDir)wwwroot\开始-使用说明（该文件请拷贝到系统根目录以便查看）.html&quot;  &quot;$(ProjectDir)bin\Release\netcoreapp2.1\publish\开始-使用说明（该文件请拷贝到系统根目录以便查看）.html&quot;&#xD;&#xA;::****" />
+  </Target>
+
+</Project>

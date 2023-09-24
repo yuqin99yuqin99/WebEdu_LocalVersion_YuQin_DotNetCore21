@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #box {
+            margin: 200px 0 0 50px;
+            text-align: center;
+            color: #ccc;
+        }
+        ul {
+            list-style: none;
+            float: left;
+        }
+        li {
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #124520;
+            border: 1px solid #eee;
+            position: relative;
+        }
+        li span {
+            position: absolute;
+            top: 0;
+            right: 10px;
+        }
+        li:hover {
+            background-color: #666;
+            transition: background-color .5s;
+        }
+        ul {
+            display: none;
+        }
+        ul.first {
+            display: block;
+        }
+        .relative {
+            position:relative;
+            top: 0;
+            left: 0;
+        }
+        .absolute {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .show {
+            display: block;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul class="first">
+            <li>一级菜单
+                <span>></span>
+            </li>
+            <li>一级菜单
+                <span>></span>
+                <ul>
+                    <li>二级菜单
+                        <span>></span>
+                        <ul>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>二级菜单
+                        <span>></span>
+                        <ul>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>二级菜单
+                        <span>></span>
+                    </li>
+                    <li>二级菜单
+                        <span>></span>
+                        <ul>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>一级菜单
+                <span>></span>
+                <ul>
+                    <li>二级菜单
+                        <span>></span>
+                    </li>
+                    <li>二级菜单
+                        <span>></span>
+                        <ul>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>二级菜单
+                        <span>></span>
+                        <ul>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>二级菜单
+                        <span>></span>
+                        <ul>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                            <li>三级菜单
+                                <span>></span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>一级菜单
+                <span>></span>
+            </li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript">
+let uls = document.querySelectorAll("ul"); //获取所有的ul
+let lis = document.querySelectorAll("li"); //获取所有的li
+let liWidth = document.querySelector("#box ul").offsetWidth-2  //li的宽度 -2是为了好看
+
+/*  布局start  */
+/*
+ * 
+ * 通过下面布局中代码实现每个 li.children.length 要么为0 要么为2
+ * 0 无下级菜单
+ * 2 有下级菜单
+ * 
+ */
+for (let i = uls.length - 1; i >= 0; i--) {
+    if(uls[i].parentNode.nodeName === "LI") {
+        uls[i].parentNode.classList.add("relative"); //相对定位
+        uls[i].classList.add("absolute");  // 绝对定位
+        uls[i].style.left = liWidth + "px"; 
+    }
+}
+for (var i = 0; i < lis.length; i++) {
+    if( lis[i].children.length === 1) { //没有下一级菜单直接删除
+        lis[i].children[0].outerHTML = "";
+    };
+}
+
+/*  布局end  */
+
+
+
+for (let i = 0; i < lis.length; i++) { // 控制每一个li
+
+    lis[i].onmouseover = function() {
+        if( lis[i].children.length === 2) {
+            this.children[1].classList.remove("hide");
+            this.children[1].classList.add("show");
+        } 
+    }
+    lis[i].onmouseout = function() {
+
+        if( lis[i].children.length === 2) {
+            this.children[1].classList.remove("show");
+            this.children[1].classList.add("hide");
+        }
+    }
+}
+
+
+</script>
+</html>

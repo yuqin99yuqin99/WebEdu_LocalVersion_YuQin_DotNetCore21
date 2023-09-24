@@ -1,0 +1,19 @@
+{
+  "name": "WebEdu_LocalVersion_YuQin_DotNetCore21PWA",
+  "short_name": "WebEdu_LocalVersion_YuQin_DotNetCore21PWA",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#03173d",
+  "icons": [
+    {
+      //"src": "icon-512-origin.png",
+      "src": "icon-512-originnew.png",
+      //  "src": "icon-512.png",
+      //"type": "image/png",
+      "type": "image/png",
+      "sizes": "512x512"
+      // "sizes": "90x90"
+    }
+  ]
+}

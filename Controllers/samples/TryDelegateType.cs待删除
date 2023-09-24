@@ -1,0 +1,59 @@
+﻿using System;
+using System.Web.Mvc;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace EDSS.Controllers
+{
+    public class TryDelegateTypeController : Controller
+    {
+        //String stringTempForActionDelegateFromLambdaExpression = "";
+        //String stringTempForActionDelegateFromLambdaExpressionOnlyLambdaExpression = "";
+        // String stringTempForActionDelegateFromAnoymousMethod = "";
+        // String stringTempForActionDelegateFromAnoymousMethodOnlyAnoymousMethod = "";
+
+        public ContentResult TryDelegateFromAnoymousMethodLambdaExpression()//基于匿名方法、Lambda表达式创建的委托示例
+        {
+            String stringTempForActionDelegateFromLambdaExpression = "";
+            //String stringTempForActionDelegateFromLambdaExpressionOnlyLambdaExpression = "";
+            // String stringTempForActionDelegateFromAnoymousMethod = "";
+            // String stringTempForActionDelegateFromAnoymousMethodOnlyAnoymousMethod = "";
+
+            Func<String, String> funcDelegateFromLambdaExpression = new Func<String, String>((String stringX) => { return stringX + "当前传入的参数是" + stringX.GetType().Name + "类型的stringX对象"; });
+            Func<String, String> funcDelegateFromLambdaExpressionOnlyLambdaExpression = (String stringX) => { return stringX + "当前传入的参数是" + stringX.GetType().Name + "类型的stringX对象"; };
+            Func<String, String> funcDelegateFromAnoymousMethod = new Func<String, String>(delegate(String stringX) { return stringX + "当前传入的参数是" + stringX.GetType().Name + "类型的stringX对象"; });
+            Func<String, String> funcDelegateFromAnoymousMethodOnlynAnoymousMethod = delegate(String stringX) { return stringX + "当前传入的参数是" + stringX.GetType().Name + "类型的stringX对象"; };
+
+
+            Action<String> actionDelegateFromLambdaExpression = new Action<String>((String stringY) => { stringTempForActionDelegateFromLambdaExpression = "这是基于Lambda表达式实例化的具有一个参数无返回值的委托类型对象的运行结果" + ";当前传入的参数是" + stringY.GetType().Name + "类型的stringY对象"; });
+            actionDelegateFromLambdaExpression("");
+            //Action<T>系列也有上述 Func<T, T>系列的语法演变，在此省略。
+
+            Func<String, string> funcDelegateFromLambdaExpressionLink = funcDelegateFromLambdaExpression + funcDelegateFromLambdaExpression - funcDelegateFromLambdaExpression;
+
+            return Content(funcDelegateFromLambdaExpression(";new!!!!!!!!!!!!!!!!!!!!!1这是基于Lambda表达式实例化的具有一个参数一个返回值的委托类型对象的运行结果") + "。" + stringTempForActionDelegateFromLambdaExpression + "。" + funcDelegateFromLambdaExpressionLink("这是委托类型对象通过+-运算而实现委托链连接与截断的测试") + "。");
+        }
+        public ContentResult TryDelegateFromNamedMethod()//基于命名方法创建的委托示例
+        {
+            Customer customer = new Customer();
+            Customer customer2 = new Customer();
+            Func<Int32> func = new Func<Int32>(customer.Test);//注意只使用方法名称，无()
+            Func<Int32> func2 = new Func<Int32>(customer2.Test);//注意只使用方法名称，无()
+            List<Customer> customList = new List<Customer>();
+            customList.Add(new Customer() { ID = 1 });
+            customList.Add(new Customer() { ID = 5 });
+              // customList.First(new Func<Customer, bool>(delegate(Customer x) { return x.ID == 5; })); //预定义方法，而是即时定义匿名方法的委托对象化。所有语句将上述类中的public static bool Test(Customer x) { return x.ID == 5; }这一方法的预定义代码可省略，而转移到了下述语句中,即在需要时即时编写代码使用。与以下简化代码获得同样代码：custs.First(new Func<Customer, bool>((Customer x) => x.ID == 5)); custs.First(delegate(Customer x) { return x.ID == 5; }); custs.First((Customer x) => x.ID == 5); custs.First(x => x.ID == 5); 
+            return Content(func().ToString() + "、" + func2().ToString());
+        }
+    }
+    class Customer
+    {
+        public Int32 ID { get; set; }
+        public static Int32 Test(Customer customer) { return customer.ID; }
+        public Int32 Test(Int32 int32) { return int32; }
+       public Int32 Test() { return 3; }
+    }
+
+
+}
+

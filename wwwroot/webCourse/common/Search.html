@@ -1,0 +1,130 @@
+﻿<HTML>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="Script/ShowModelDiallog.js"></script><!--引用遮罩层JS-->
+    <title>搜索</title>
+</head>
+<body>
+    <div>
+        <input type="text" value="教育计算互动系统" style="width:90%" id="idSearchedKeywords" />
+        <input type="button" value="确定" onclick='fnAjaxForGet();' />
+        <!--<iframe src="blank.html" name="nameSearchingResult" id="idSearchingResult"  style="width:90%;height:90%" scrolling="auto" />-->
+    </div>
+    <div id="idSerchReturned"></div>
+    <script>
+
+
+
+        function fnAjaxForGet() {
+            var sSearchedKeywords = document.getElementById("idSearchedKeywords").value;
+            var sURL = "/Search/Get?SearchedKeywords=" + sSearchedKeywords;
+            // var sSearched = "";
+            var xmlHttpRequest = new XMLHttpRequest();
+            xmlHttpRequest.open('GET', sURL, true);//如果是post：xmlHttpRequest.open('POST',sURL , true);
+            // sSearched = xhr.responseText;
+            xmlHttpRequest.send();////如果是post：xmlHttpRequest.setRequestHeader('content-type', 'application/x-www-form-urlencoded');  //设置请求头说明文档类型   xhr.send(data);  //send里传递数据
+            xmlHttpRequest.onreadystatechange = function () {  //如果readyState发生变化的时候执行的函数
+
+                if (xmlHttpRequest.readyState == 4) {  //ajax为4说明执行完了
+
+                    if (xmlHttpRequest.status == 200) { //如果是200说明成功
+                        //如果函数存在的话执行
+                        var sTemp = xmlHttpRequest.responseText;
+                        var oTemp = opener.document.getElementById("sDiv");
+                        var cLi = oTemp.getElementsByTagName("LI");
+                        var iCLiLength = cLi.length;
+                        var sSearched = "";
+
+                        for (var i = 0; i < iCLiLength; i++) {
+                            if (sTemp.indexOf(cLi[i].getElementsByTagName("A").item(0).getAttribute("text")) > 0) {
+
+                                sSearched += "<a onclick=\"fnOnclikForSearchedResult()\" href=\"\" TextbookRes=\"" + cLi[i].getElementsByTagName("A").item(0).getAttribute("text") + "\" >" + cLi[i].getElementsByTagName("A").item(0).textContent + "</a></br>";
+                            }
+                        }
+
+                        document.getElementById("idSerchReturned").innerHTML = sSearched;
+
+                    }
+                    else {
+                        alert('出错了,Err：' + xmlHttpRequest.status);
+                    }
+                }
+
+            }
+        }
+
+        /**
+           function fnAjaxForGet() { //没成功
+            var sSearchedKeywords = document.getElementById("idSearchedKeywords").value;
+            var sURL = "/Search/Get?SearchedKeywords=" + sSearchedKeywords;
+            alert(sURL);
+           // var sSearched = "";
+var xmlHttpRequest = new XMLHttpRequest();
+xmlHttpRequest.open('GET',sURL , true);
+           // sSearched = xhr.responseText;
+            xmlHttpRequest.send();////如果是post方法xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');  //设置请求头说明文档类型   xhr.send(data);  //send里传递数据
+               xmlHttpRequest.onreadystatechange = fnForAJAX(xmlHttpRequest);  //如果readyState发生变化的时候执行的函数
+        }
+
+        function fnForAJAX(oXMLHttpRequest) {
+
+
+        if ( oXMLHttpRequest.readyState == 4 ) {  //ajax为4说明执行完了
+
+            if ( oXMLHttpRequest.status == 200 ) { //如果是200说明成功
+          //如果函数存在的话执行
+            alert(oXMLHttpRequest.responseText);
+            document.getElementById("idSerchReturned").innerHTML =oXMLHttpRequest.responseText;
+            }
+            else {
+                alert('出错了,Err：' + oXMLHttpRequest.status);
+            }
+        }
+
+}
+         **/
+
+
+        /** async function fnOnClickForFetch()//没实现，不知道是不是kestrel服务器不支持？
+      {
+          var sSearchedKeywords = document.getElementById("idSearchedKeywords").value;
+         var oResponse = await fetch("/Search/Get?SearchedKeywords=" + sSearchedKeywords);
+          alert(oResponse.text());
+        // console.log(oResponse.json());
+        // document.getElementById("idSerchReturned").innerHTML = oResponse.json();
+        // console.log(oResponse.text());
+        document.getElementById("idSerchReturned").innerHTML = oResponse.text();
+      }
+
+      function fnOnClickForFetch2() {
+          alert(fetch("/appsettings.json").then(function (response) {
+             return response.json();
+         }));
+      }**/
+        function fnOnclikForSearchedResult() {
+            event.returnValue = false;
+            opener.sWillHighLightedStringInContent = document.getElementById("idSearchedKeywords").value;
+            opener.fnFindAndView('text', event.srcElement.getAttribute("TextbookRes"), '教材资源', ".htm");
+
+            /**
+            var sTemp = opener.parent.document.getElementById("sIframeContent").contentWindow.document.body.innerHTML;
+            var sTempReplaced = sTemp.replace(document.getElementById("idSearchedKeywords").value, "<span style=\"color:red\" >" + document.getElementById("idSearchedKeywords").value + "</span>");
+            //alert(sTempReplaced);
+            opener.parent.document.getElementById("sIframeContent").contentWindow.document.body.innerHTML = sTempReplaced;
+            opener.parent.document.getElementById("sIframeContent").contentWindow.document.body.innerHTML = "";
+           // alert(opener.parent.document.getElementById("sIframeContent").contentWindow.document.body.innerHTML);//被查询的字符变变红色，不知为什么没实现。违反了安全性吗？把相关功能放置到教材资源自身JS中？
+            **/
+
+            //opener.parent.document.getElementById("sIframeContent").contentWindow.fnHighLight(sString);
+            //alert("内容面板的教材资源中被查询的字符串将变红色，高亮演示以便查看，可惜不知为什么没能正常实现！");
+        }
+        function fnBeforeunload() {
+            opener.sWillHighLightedStringInContent = "";
+           // alert(opener.sWillHighLightedStringInContent);
+        }
+        window.onunload = function () { EV_closeAlert(); }//窗口关闭时去掉遮罩效果;
+        window.addEventListener("beforeunload", fnBeforeunload, false);
+    </script>
+</body>
+
+</html>

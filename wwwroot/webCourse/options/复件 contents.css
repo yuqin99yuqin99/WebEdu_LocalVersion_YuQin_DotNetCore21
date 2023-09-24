@@ -1,0 +1,60 @@
+body{
+font-size:24;
+cursor:text;
+/*font-weight:bold;*/
+color:rgb(0,102,153);
+pading:0;
+/*line-height:500%;
+margin:0;
+*/
+}
+
+div{
+/*margin:0;*/
+cursor:text;
+position:relative;
+left:-30;
+width:1024px;
+}
+
+li{
+/*line-height:500%;
+margin:0;*/
+cursor:text;
+color:rgb(0,102,153);
+list-style-type:none;
+}
+
+ul li{
+/*font-family:仿宋_gb2312;*/
+}
+
+
+ul ul li{
+/*font-family:楷体_gb2312;*/
+display:none;
+}
+
+ul ul ul li{
+/*font-family:华文新魏;*/
+}
+
+ul ul ul ul li{
+/*font-family:方正舒体;*/
+}
+
+ul ul ul ul ul li{
+/*font-family:隶书;*/
+}
+
+
+a{
+text-decoration: none;
+color:rgb(0,102,153);
+}
+
+a:hover {
+position:relative;
+left:1px; 
+top:1px;
+}

@@ -1,0 +1,20 @@
+body{
+font-size:10px;
+}
+
+td{
+text-align:center;
+font-size:12px;
+}
+
+a{
+text-decoration: none;
+color:rgb(0,102,153);/**0前面有个空格更兼容??*/
+}
+
+    a:hover {
+        position: relative;
+        left: 1px;
+        top: 1px;
+        color: rgb(0,255,0); /**0前面有个空格更兼容??*/
+    }

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<script>
+//window.oObject=new Object();
+
+function fnClick(){
+
+if(event.srcElement.previousSibling.src.lastIndexOf("no-folder.gif")<0){
+	var cSpan=document.getElementsByTagName("Span");
+	var iLength=cSpan.length;
+	for(var i=0;i<iLength;i++){
+	if(cSpan.item(i).style.backgroundColor=="rgb(0,0,255)"){
+	cSpan.item(i).style.backgroundColor="transparent";
+	break;
+}
+}
+	event.srcElement.style.backgroundColor="rgb(0,0,255)";
+	var aTemp=new Array();
+	aTemp=parent.frames.item("sIframeContents").window.sPath.split("\\");
+	var iLength=aTemp.length;
+	var sRelativeURLHead="";
+	for(var i=0;i<iLength-1;i++){
+	sRelativeURLHead=sRelativeURLHead+aTemp[i]+"/";
+	}
+	//parent.document.getElementById("sPathDisplay").value=parent.frames.item("sIframeContents").window.sPath+event.srcElement.childNodes.item(0).nodeValue;
+	parent.document.getElementById("sRelativeURLDisplay").value=sRelativeURLHead.substring(1,sRelativeURLHead.length)+event.srcElement.childNodes.item(0).nodeValue;
+	parent.fnOnchange();
+}
+}
+</script>
+<title>课程发布</title>
+</head>
+
+<body>
+
+<%
+var sPath=Request.form("sPath")();
+var oFSO=Server.createObject("Scripting.FileSystemObject");
+var sPathBase=Server.MapPath("../lessons");
+var sPathCurrent=sPathBase+"\\"+sPath;
+var sImageElementHead='<img src="../common/image/no-folder.gif" unselectable="on" style="cursor:default;"/><span onclick="fnClick();">';
+var sFolderXML="";
+//Response.write(sPathCurrent);
+
+var oFolder=oFSO.getFolder(sPathCurrent);//may changed!!
+var eSubFolders=new Enumerator(oFolder.subfolders);
+for(; !eSubFolders.atEnd(); eSubFolders.moveNext()){
+	Response.write(sImageElementHead+eSubFolders.item().name+"</span>");
+	Response.write("&nbsp;");	
+}
+
+var eSubfiles=new Enumerator(oFolder.files);
+for(; !eSubfiles.atEnd(); eSubfiles.moveNext()){
+	if(eSubfiles.item().name.lastIndexOf("AutoCreateForTemp.htm")<0){
+		var sFileName=eSubfiles.item().name;
+		var sExtentsion=sFileName.substring(sFileName.lastIndexOf(".")+1,sFileName.length).toLowerCase();
+		var sIcon="";
+		if(sExtentsion=="htm"||sExtentsion=="html"||sExtentsion=="svg"||sExtentsion=="svgz"){
+			sIcon="htmlFile.gif";
+			}
+		else if(sExtentsion=="asp"){
+			sIcon="aspFile.gif";
+		}
+		else if(sExtentsion=="swf"){
+			sIcon="swfFile.gif";
+			}
+		else if(sExtentsion=="rmvb"||sExtentsion=="mp3"||sExtentsion=="rm"||sExtentsion=="ram"||sExtentsion=="smil"||sExtentsion=="smi"||sExtentsion=="wmv"||sExtentsion=="asf"||sExtentsion=="dat"||sExtentsion=="avi"||sExtentsion=="mpg"||sExtentsion=="mpeg"||sExtentsion=="mov" ){
+			sIcon="videoFile.gif";
+			}
+		else if(sExtentsion=="gif"||sExtentsion=="jpg"||sExtentsion=="jpeg"||sExtentsion=="png"||sExtentsion=="wmf"||sExtentsion=="emf"){
+			sIcon="imageFile.gif";
+		}
+		else if(sExtentsion=="wrl"||sExtentsion=="wrlz"){
+			sIcon="x3dFile.gif";
+			}
+		else if(sExtentsion=="ppt"){
+			sIcon="pptFile.gif";
+			}
+		else if(sExtentsion=="doc"){
+			sIcon="wordFile.gif";
+			}
+
+		else{
+			sIcon="unknownFile.gif";
+			}
+		var sImageElementHeadFile='<img src="../common/image/'+sIcon+'" unselectable="on" style="cursor:default;"/><span onclick="fnClick();">';
+		
+		Response.write(sImageElementHeadFile+sFileName+"</span>");
+		Response.write("&nbsp;");
+	}
+}
+
+ %>
+</body>
+
+</html>
+

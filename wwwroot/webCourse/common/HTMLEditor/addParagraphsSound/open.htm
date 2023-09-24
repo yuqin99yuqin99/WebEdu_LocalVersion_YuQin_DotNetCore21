@@ -1,0 +1,41 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>新建网页 1</title>
+<script >
+function fnok()
+{
+    var textID = "343434";
+    var NodeP = dialogArguments.document.getElementsByTagName("P");
+    alert(NodeP.length);
+    for (var i = 0; i < NodeP.length; i++) 
+    {
+        alert(NodeP[i].innerHTML)
+		var oImg = document.createElement("img");
+        oImg.onclick = "parent.frames('sIFrameTitle').SoundPlay('" + textID + "_" + i + "')";
+        oImg.src = "../../../../common/image/Sound.gif";
+        oImg.title = "单击播放段落语音";
+        oImg.style.cursor = "hand";
+        //dialogArguments.getPObject().parent.
+        NodeP[i].insertBefore(oImg, NodeP[i].firstChild);
+    }
+    //dialogArguments.getPObject().style.color = "";
+    window.close();
+}
+
+function addParagraphsSoundB()
+{
+	showModalDialog('addParagraphsSound/ParagraphsSoundB.aspx?sSoundPath=<%=docPath%>',window,"help:0;resizable:1;dialogWidth:400px;dialogHeight:250px;status:0");
+}
+
+
+</script>
+
+</head>
+
+<body>
+<input onclick="fnok()" type="button" value="测试">
+</body>
+
+</html>

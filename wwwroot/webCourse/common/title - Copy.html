@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="styleSheet" href="../options/title.css" type="text/css">
+    <script src="script/title.js"></script>
+    <script src="script/Popup.js"></script>
+    <bgsound id="idBackgroundSound" src="" loop="-1" volume="-1500">
+        <base target="_blank">
+
+        <title>Web远程教学技术</title>
+        <style>
+            .blink {
+                font-weight: bolder;
+                color:lightcyan;
+               animation: blink 5s linear infinite;
+                -webkit-animation: blink 5s linear infinite;
+            }
+
+            @keyframes blink {
+                0% {
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: 0.5;
+                }
+
+                100% {
+                    opacity: 0.8;
+                }
+            }
+
+            @-webkit-keyframes blink {
+                0% {
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: 0.5;
+                }
+
+                100% {
+                    opacity: 0.8;
+                }
+            }
+            
+   </style>
+</head>
+
+<body style="height:100px;padding:0;margin:0" onload="fnOnload();">
+    <div style="position: absolute; width: 100%; height: 100px; left: 0px; top: 0px;text-align:right;background-image:url(../options/background_title.gif);background-repeat:no-repeat;background-size:cover">
+        <div style="position: static; width: 100%; height: 20px; left: 0px; top: 0px">
+            <marquee id="sMarqueeLogo" direction="left" scrolldelay="200" style="left:-50%;font-weight:bold;font-size:13px;color:rgb(0,255,0)" onMouseOut="this.start()" onmouseover='this.stop()' onclick='open("Marquee.html","_blank","channelmode=yes,width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes")'>
+                <span class="blink"><sapn style="font-size:18px">请使用<a href="https://browser.360.cn/ee/" title="单击可下载安装360极速浏览器">“360极速浏览器”浏览</a>（默认webkit内核）！！！今日箴言：“博学之,审问之,慎思之,明辨之,笃行之...”（辨之、乐之、研之、用之、行之...）（哲学、情意、科学、技术、实践...）“浏览器使用：F11键可全屏！Ctrl+滚动鼠标可放缩内容！Shift+滚动鼠标可左右滚动未见的内容”</sapn>
+    <!--您好，欢迎您！939977175@qq.com 教育计算思维研究工作室<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=43930878&amp;site=qq&amp;menu=yes" target="_blank" title="点击这里给我发消息">联系方式：43930878@qq.com</a><a href="WeiXinGongZhongHao.html" target="_blank" title="扫一扫关注微信公众号">微信公众号</a><a href="http://blog.sina.com.cn/jiaoyuxinxijishu" target="_blank" title="点击这里查看博客">博客：教育信息技术</a></span>-->
+</marquee>
+        </div>
+
+        <div style="position: static; width: 100%; height: 80px; margin-left:0px;margin-top: 20px; color:brown;">
+            <div style="cursor:default;font-size:15px;margin-left:0px;margin-top: 0px;" onmouseover='
+    //event.srcElement.style.marginLeft = parseInt(event.srcElement.style.marginLeft) + 20 + "px";
+    //event.srcElement.style.marginTop = parseInt(event.srcElement.style.marginTop) + 20 + "px";
+    event.srcElement.style.fontWeight = "bold";'
+                 onMouseOut='
+    //event.srcElement.style.marginLeft = parseInt(event.srcElement.style.marginLeft) - 20 + "px";
+    //event.srcElement.style.marginTop = parseInt(event.srcElement.style.marginTop) - 20 + "px";//没实现
+    event.srcElement.style.fontWeight = "normal";'>
+                <label id="help" style="margin-left:0px;margin-top:0px" onclick='alert("需要连接服务版！");//open("https://yuqin.chinacloudsites.cn/index.html","_blank","channelmode=yes,width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes")' title="单击将打开关于本系统使用的帮助文档">帮助</label><!--原来http://116.62.103.103:8084/-->
+                <label id="Options" style="margin-left:0px;margin-top:0px" onclick='alert("需要连接服务版！");//open("https://yuqin.chinacloudsites.cn/index.html","_blank","channelmode=yes,width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes")' title="单击将打开本系统的配置选项界面">配置</label>               
+                <label style="margin-left:0px;margin-top:0px" onclick='alert("需要连接服务版！");//open("https://yuqin.chinacloudsites.cn/index.html","_blank","channelmode=yes,width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes")' id="sGoServer" title="单击将连接服务版。注册成为正式用户。开发完善之中！">服务版</label>
+                <label style="margin-left:0px;margin-top:0px" onclick='alert("需要连接服务版！");//open("https://yuqin.chinacloudsites.cn/index.html","_blank","channelmode=yes,width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes")' title="单击将连接服务版注册">注册</label>
+                <label style="margin-left:0px;margin-top:0px" onclick='alert("需要连接服务版！");//open("https://yuqin.chinacloudsites.cn/index.html","_blank","channelmode=yes,width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes")' id="sOnlineUpdate" title="单击将在线升级本机版。开发完善之中！">在线升级</label>
+                <label id="studyTime" style="color:green">0</label>
+            </div>
+            <div>
+                <a href="" id="sIdToggleAutoNumber" title="目录切换是否显示自动编号。本系统主界面分为目录面板、内容面板、标题面板。目录为导航。" onclick="window.event.returnValue=false;parent.document.getElementById('sIframeContents').contentWindow.fnToggleContentsAutoNumber();" unselectable="on">目录编号</a>
+                <a href="" id="sIdfnToggleScreenStepByStep" title="目录面板随单击逐渐变宽。本系统主界面分为目录面板、内容面板、标题面板。目录为导航。" onclick="window.event.returnValue=false;fnToggleScreenStepByStep();" unselectable="on">目录渐宽</a>
+                <a href="" id="sIdToggleContentsScreen" title="目录面板切换是否全屏。本系统主界面分为目录面板、内容面板、标题面板。目录为导航。" onclick="window.event.returnValue=false;fnOnDBLClick();" unselectable="on">目录全屏</a>
+                <a href="" id="sIdToggleContentScreen" title="内容面板（教材资源）切换是否全屏。" onclick="window.event.returnValue=false;fnToggleScreen();" unselectable="on">内容全屏</a>
+                <a href="" id="sDefaultWidth" onclick="fnDefaultScreen();" title="单击将目录面板恢复到默认宽度。拖曳目录和内容之间的边界可自由调整目录和内容的宽度!（此功能浏览器兼容性问题有待解决！）">默认宽度</a>
+                <lable style="font-weight:bold">|</lable>
+                <a href="" id="sDefaultZoom" onclick="fnDefaultZoom();" title="单击将教学系统的放缩恢复为默认（请注意：本系统的放缩是基于浏览器放缩之上的放缩！）" unselectable="on">默认放缩</a>
+                <!--<lable style="font-weight:bold">|</lable>
+    <img border="1" src="image/vertical.gif" width="24" height="19" id="sScrollIcon" onclick="fnChangeIcon();" title="单击将在鼠标中键滚动方式之间切换,也可直接使用快捷键:Alt+鼠标滚动将上下移动视图!Shift+鼠标滚动将左右平移视图!Ctrl+鼠标滚动将放缩视图!">-->
+                <lable style="font-weight:bold">|</lable>
+                <!--<a href="" id="idEnlargeVolume" onclick="fnEnlargeVolume();" title="如果还没有打开默认的背景音乐,单击将打开背景音乐,注意音乐的打开根据网速的情况可能会有一定的延迟!如果已经打开了默认的背景音乐,单击将逐渐增加背景音乐的音量，双击将音量增到最大" ondblclick="fnLoudestSound();" unselectable="on">  音量增 </a>
+    <a href="" id="idReduceVolume" onclick="fnReduceVolume();" title="单击逐渐减弱背景音乐的音量，双击将音量减到最弱" ondblclick="fnWeakestSound();" unselectable="on">音量降</a>
+    <lable style="font-weight:bold">|</lable>-->
+                <a href="" id="next" title="单击按照目录条目，逐次向下查看资源" onclick="fnNext();" unselectable="on">下翻</a>
+                <a href="" id="previous" title="单击按照目录条目，逐次向上查看资源" onclick="fnPre();" unselectable="on">上翻</a>
+                <lable style="font-weight:bold">|</lable>
+                <a href="" id="sBackword" onclick="fnBackword();" title="单击将按照浏览资源的历史记录，往后重看资源。此功能类似浏览器的后退功能！">后退</a>
+                <a href="" id="sForword" onclick="fnForword();" title="单击将按照浏览资源的历史记录，往前重看资源。此功能类似浏览器的前进功能！">前进</a>
+                <lable style="font-weight:bold">|</lable>
+                <a href="" id="idSearch" onclick='event.returnValue=false;parent.document.getElementById("sIframeContents").contentWindow.fnSearch();' title="搜索查找系统内的资源，主要搜索教材资源中的文本资源，搜索到的资源关联目录条目，然后可进一步导航到教学视频、教学PPT、作业与测试、教学工程文档等各种资源">搜索</a>
+                <!-- <a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E7%BD%91%E7%BB%9C%E6%95%99%E4%B8%8E%E5%AD%A6&oq=%25E7%25B3%25BB%25E7%25BB%259F%25E5%258F%258A%25E5%2585%25B6%25E6%2589%25A9%25E5%25B1%2595&rsv_pq=814a72a200009c9a&rsv_t=2e55rtiHp0QrJdZmVa%2F%2FavGwZnKned4DwQqw0vYe3vdiuBA3fGPTeHbh3%2Fc&rqlang=cn&rsv_enter=0&rsv_sug3=58&rsv_sug1=47&rsv_sug7=101&rsv_sug2=0&inputT=5884&rsv_sug4=5884" target="_blank" title="本系统追求系统化资源，整个互联网则是扩展式资源，两种资源互为补充">扩展资源搜索</a>-->
+                <lable style="font-weight:bold">|</lable>
+                <a href="" id="idGeneral" onclick='event.returnValue=false,parent.document.getElementById("sIframeContents").contentWindow.fnGeneral();' title="概览所有资源。概览资源关联目录条目，然后可进一步导航到教学视频、教学PPT、作业与测试、教学工程文档等各种资源（开发优化之中！）">概览</a>
+                <!--<a href="" id="idGeneral" onclick='event.returnValue=false,fnGeneral();' title="概览所有资源。概览资源关联目录条目，然后可进一步导航到教学视频、教学PPT、作业与测试、教学工程文档等各种资源（开发优化之中！）">概览</a>-->
+                <a href="" id="idClean" onclick='event.returnValue=false,parent.document.getElementById("sIframeContents").contentWindow.fnClean();' title="清楚未使用的残余资源">清理</a>
+                <lable style="font-weight:bold">|</lable>
+                <a href="" id="idReload" onclick="event.returnValue=false,location.reload();" title="单击将依次重载刷新标题、目录、内容三个面板">刷新</a>
+            </div>
+            <div style="color:#800000" id="idForPanelToolbar">
+                <!--
+    <a href="" id="sContentsEditable" onclick="alert(this.title);event.returnValue=false;" title="单击教材目录的图标将可动态伸缩地查看整个教材目录！单击教材目录条目，将可查看条目的教材资源，右击菜单提供了其他查看、编辑的功能。也可基于.doc模板，编辑上传目录">教材目录(查看编辑)</a>
+    <a href="" id="sContentEditable" onclick="alert(this.title);event.returnValue=false;" title="单击目录条目，将可查看条目的教材资源，右击菜单提供了其他查看、编辑的功能。也可基于.doc模板，编辑上传当前条目的教材资源">教材资源(查看编辑)</a>
+    <a href="" id="sTeachingVideoEditable" onclick="alert(this.title);event.returnValue=false;//fnToggleEditAnimation();" title="目录的右击菜单中选择“教学动画”将可查看当前条目的教学动画。右击菜单提供了其他查看、编辑的功能。也可编辑上传当前条目的教学动画">教学动画(查看编辑)</a>
+    <a href="" id="sTeachingPPTEditable" onclick="alert(this.title);event.returnValue=false;//fnToggleEditAnimation();" title="目录的右击菜单中选择“演示”将可查看当前条目的PPT演示，或，PPT相关的视频动画形式的演示。右击菜单提供了其他查看、编辑的功能。也可基于.ppt模板，编辑上传当前条目的演示">教学PPT(查看编辑)</a>
+    <a href="" id="sTestItemBankEditable" onclick="alert(this.title);event.returnValue=false;//fnToggleEditTestItemBank();" title="目录的右击菜单中选择“作业与测验”将可进行当前条目的作业与测验题库。右击菜单提供了其他查看、编辑的功能。也可基于.doc模板，编辑上传当前条目的作业与测验">作业与测验(查看编辑)</a>
+    <lable style="font-weight:bold">|</lable>
+    <a href="" id="sAllEditable" onclick="alert('开发完善之中！'+this.title);event.returnValue=false;" title="单击将基于整门课程的文件夹及其文件的模板，编辑上传整门课程教材">整体编辑</a>
+    <lable style="font-weight:bold">|</lable>
+    <a href="" onclick='open("CoursePublish.html","_blank","channelmode=yes,width =300,height =200,menubar =no,toolbar =no, status=no,scrollbars =yes");event.returnValue =false;' title="整门课程上传发布到服务版，并集成服务器的考试、提问答疑等功能，为他人提供课程服务！">课程发布并集成提问答疑、考试功能</a>
+                               -->
+            </div>
+        </div>
+    </div>
+    <!--右键菜单开始 -->
+
+        <div id="popupDiv" onclick="fnPopupClosePopup();" oncontextmenu="fnPopupContextMenu();" style="position:fixed;z-Index:1000;margin: 2px; border: 1px;   overflow:visible;  font-size: 11px; cursor: default;display:none;">
+            <div style="position: relative;" onmouseover="fnPopupMouseOver();" onmouseout="fnPopupMouseOut();">
+                <div title='刷新标题面板' onclick="parent.location.reload();">刷新</div>
+                <div title='转到服务版' onclick= "alert('开发之中.......');//document.getElementById('sGoServer').click();">服务版</div>
+                <div title='打开帮助' onclick="alert('开发之中.......');//parent.document.getElementById('help').click();">&#169;帮助</div>
+            </div>
+        </div>
+        <!--右键菜单结束-->
+    </body>
+
+    </html>

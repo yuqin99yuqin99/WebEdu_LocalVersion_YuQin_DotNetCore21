@@ -1,0 +1,47 @@
+﻿using System;
+using System.Web.Mvc;
+
+namespace EDSS.Controllers
+{
+    public class TryStructureTypeController : Controller
+    {
+
+        public ContentResult Index()
+        {
+            //TryStructure tryStructure = new TryStructure(10, "结构类型的属性默认值示例");
+            TryStructure tryStructure = new TryStructure();
+            tryStructure.TryStructureAutoProperty = 1;
+            return this.Content(tryStructure.TryStructureAutoProperty.ToString() + ";" + tryStructure.TryStructureMethod()+";"
+                +(tryStructure is ValueType).ToString());
+        }   
+    }
+    internal struct TryStructure//此部分代码建议转化为internal class TryStructure:ValueType进行理解，有利于理解结构类型（在此是TryStructure）乃是由System.Objecet←System.ValueType方式继承扩展而来的特殊类类型，因为结构类型的父类是System.ValueType，所以结构类型属于拷贝类型，而且不允许被进一步继承扩展。
+    {
+        public Int32 TryStructureAutoProperty { get; set; }
+        public String TryStructureAutoPropertyTemp { get; set; }
+        public String TryStructureNunAutoProperty
+        {
+            get {
+                if (this.TryStructureAutoPropertyTemp.Length <= 6) { return this.TryStructureAutoPropertyTemp; }
+                else { return "字符数不允许超过6个"; }
+            } 
+            set {
+                if (value.Length <= 6) { this.TryStructureAutoPropertyTemp = value; }
+                else { this.TryStructureAutoPropertyTemp = "字符数不允许超过6个";}
+                } 
+        }
+        public String TryStructureMethod()
+        {
+            return "结构类型的方法示例,此处可以添加复杂的代码";
+        }
+        //public TryStructure(Int32 int32Para,String stringPara)//struct不能有无参数的构造方法!
+        //{
+           // this.TryStructureAutoProperty =10;
+            //this.TryStructureAutoPropertyTemp = "结构类型的属性默认值示例";
+            //TryStructureAutoProperty = int32Para;
+            //TryStructureAutoPropertyTemp = stringPara;
+        //}
+    }
+
+}
+

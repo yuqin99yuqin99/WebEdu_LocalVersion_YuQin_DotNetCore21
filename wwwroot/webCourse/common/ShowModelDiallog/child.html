@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <script src="Scripts/ShowModelDiallog.js"></script><!--引用遮罩层JS-->
+    <title>子页面</title>
+    <script language="javascript">
+        window.onunload = function () { EV_closeAlert(); }//窗口关闭时去掉遮罩效果
+        
+
+        
+        function fnGetFocus() {
+            try {         
+                alert();
+                window.self.focus();
+            }
+            catch (e) { return;}
+        }
+        window.onblur = fnGetFocus;
+    </script>
+</head>
+<body>
+</body>
+</html>

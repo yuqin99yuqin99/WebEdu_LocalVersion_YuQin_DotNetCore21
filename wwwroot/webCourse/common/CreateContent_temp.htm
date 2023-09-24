@@ -1,0 +1,23 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>新建网页 1</title>
+<script>
+var textid=document.location.href.substring(document.location.href.indexOf("?textid=")+8)
+function fnToSearch()
+{
+
+	document.location.href="../lessons/content/book/"+textid+"/"+textid+".htm";
+}
+var t_id = setInterval(fnToSearch,2000);  
+</script>
+</head>
+
+<body >
+
+<p>  </p>
+
+</body>
+
+</html>

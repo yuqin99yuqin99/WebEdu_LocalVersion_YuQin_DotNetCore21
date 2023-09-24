@@ -1,0 +1,49 @@
+<%@ Page language="c#" validateRequest=false%>
+
+<script language="C#" runat="server">
+	public string hl;
+	void Page_Load(object sender, EventArgs e)
+	{
+	  hl=Request.QueryString["hl"];
+	}
+</script>
+
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>批量上传动画</title>
+<script>
+var hl="<%=hl%>";
+function fnTitle()
+{
+	if(hl=="en")
+	{
+		document.title="批量上传课文(外语)";
+	}
+	else
+	{
+		document.title="批量上传课文(国语)";
+	}
+
+}
+</script>
+</head>
+
+<body onload="fnTitle()" topmargin="0" style="border:0px none;padding:0;margin:0;">
+<table style="border:0px;width:100%;height:100%;border:0px none;padding:0;margin:0;">
+<tr>
+<td style="text-align:center;vertical-align:top;">
+<object classid="clsid:DCF8A54C-C9BC-4D7D-92E4-FC90F49A7B91" id="openPPT1">
+</object>
+<object classid="clsid:45DB2335-E916-4DEA-8867-EDB34BF098CA" id="pptplayer1">
+</object>
+</td>
+</tr>
+</table>
+
+</body>
+
+</html>

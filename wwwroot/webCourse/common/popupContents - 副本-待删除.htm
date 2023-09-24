@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<style>
+.pop{
+position:relative;
+}
+
+body{
+margin:2px;
+border:1px;
+overflow: hidden;
+font-size:11px;
+cursor:default;
+}
+</style>
+
+<SCRIPT LANGUAGE="JScript">
+function fnClosePopup(){
+parent.oPopup.hide();
+}
+
+function fnContextMenu(){
+event.returnValue=false;
+}
+
+function fnMouseOver(){
+event.srcElement.style.color="rgb(0,255,0)";
+}
+
+function fnMouseOut(){
+event.srcElement.style.color="rgb(0,0,0)";
+}
+</SCRIPT>
+<TITLE>Popup Window</TITLE>
+</HEAD>
+<body onclick="fnClosePopup();" oncontextmenu="fnContextMenu();">
+<div id="popupDiv">
+<div  title='切换到编辑目录的状态和功能' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.parent.frames('sIframeTitle').document.getElementById('sContentsEditable').click();" id="sIdEditContents_div">目录右击菜单切换</div>
+<div  title='刷新目录框架' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.location.reload();" id="sIdRefresh_div">刷新</div>
+<div title='在是否全屏显示目录之间切换' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnOnDBLClick();' id="sIdToggleScreen_div">目录全屏切换</div>
+<div title='在是否显示目录的自动编号之间切换' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnToggleContentsAutoNumber();' id="sIdToggleContentsAutoNumber_div">目录自动编号切换</div>
+<div title='该条目在英语和汉语内容之间切换' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnToggleLanguage();" id="sIdDualLanguage_div">双语切换</div>
+<div title='整个目录切换到英文' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnAllNativeLanguage();" id="sIdAllNativeLanguage_div">全国语</div>
+<div title='整个目录切换到中文' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnAllForeignLanguage();" id="sIdAllForeignLanguage_div">全外语</div>
+<div title='在新窗口中查看当前条目的课文，在新窗口中,用快捷键实现放缩等功能仍然可使用，但其它功能可能不再可用！' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnViewText();//parent.parent.frames('sIframeContent').fnDynOpenNewWindow();" id="sIdTextInNewWindow_div">查看课文(新窗口)</div>
+<div title='在新窗口中查看当前条目教案' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnViewTeachingPlan();" id="sIdTeachingPlan_div">查看教案</div>
+<div title='在新窗口中播放当前条目的动画' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnViewAnimation();//将改为fnViewAnimation()" id="sIdPlay_div">查看动画</div>
+<div title='从当前条目处自动逐条目播放所有条目的动画，动画必须自身没有设置自动停止功能！' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnViewAnimationAll();//alert('光盘版或网站版才提供循环播放全部动画的功能！');" id="sIdPlayAllAnimation_div">查看全部动画</div>
+<div title='查看编辑教学或学习笔记!' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnNote();" id="sIdNote_div">查看教/学笔记</div>
+<div title='查看编辑教学或学习笔记!' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnRecordingView();" id="sIdNote_div">查看音频课件</div>
+<div title='朗读当前条目' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='alert("光盘版或网站版才提供单元测验的功能！");//parent.fnReadItem();' id="sReadItem_div">朗读条目</div>
+<div title='朗读目录框架的全文' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='alert("光盘版或网站版才提供单元测验的功能！");//parent.fnReadAll();' id="sReadAll_div">朗读全文</div>
+<div title='停止朗读' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='alert("光盘版或网站版才提供单元测验的功能！");//parent.fnStopRead();' id="sStopRead_div">停止朗读</div>
+<div title='打开进行该条目相关部分知识点测试的界面' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="alert('光盘版或网站版才提供单元测验的功能！')" id="sIdQuiz_div">在线测试</div>
+<div title='打开进行该条目相关部分知识点测试的界面' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="alert('网站版才有作业提交的功能！')" id="sIdQuiz_div">作业提交</div>
+<div title='打开进行该条目相关部分知识点提问的界面' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="alert('网站版才有我要提问的功能！')" id="sIdQuiz_div">我要提问</div>
+<div title='根据目录中的条目进行查找' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnSearch()' id="sIdSearch_div">查找(在当前框架)</div>
+<div title='切换是否显示滚动条' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnToggleScrollBar();' id="sToggleScrollBar_div">滚动条切换</div>
+<div title='切换到非编辑目录的状态和功能' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.parent.frames('sIframeTitle').document.getElementById('sContentsEditable').click();" id="sIdNotEditContents">目录右击菜单切换</div>
+<div title='刷新目录框架' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.location.reload();" id="sIdRefresh">刷新</div>
+<div title='上传公用文件' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnUploadCommon();" id="sIdUploadCommon()">公用文件管理</div>
+<div title='生成动画源文件目录' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnMakeFlashDir();" id="sIdMakeFlashDir()">按目录创建文件夹</div>
+<div title='将一个具备目录的Word文档拆分为以目录条目为单位的课文' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnWordToText();' id="sIdWordToText">拆分上传课文</div>
+<div title='上传课文到该条目,必须是.doc或.htm格式的文档上传' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnBatchUploadText();" id="sIdUploadText">上传课文</div>
+<div title='上传教案到该条目,必须是.ppt格式的文档上传' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnUploadTeachingPlan();" id="sIdUploadTeachingPlan">上传该条目的教案</div>
+<div title='批量上传PowerPoint教案和源文件,' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnBatchUploadTeachingPlan();" id="sIdBatchUploadTeachingPlan">批量上传教案</div>
+<div title='上传动画到该条目,必须是.swf格式的文档上传' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnUploadAnimation()" id="sIdUploadPlay">上传该条目的动画</div>
+<div title='批量上传Flash动画和动画源文件' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnBatchUploadFlash();" id="sIdBatchUploadFlash()">批量上传动画</div>
+<div title='批量上传题目' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnBatchUploadItems();" id="sIdBatchUploadFlash()">批量上传题库题目</div>
+<div title='批量上传听力课程' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnBatchUploadListeningCourse();" id="sIdBatchUploadFlash()">批量上传听力课程</div>
+<div title='将系统中指定条目的课文合并成一个Word文档' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnTextToWord();//alert("网站版才提供该功能！")' id="sIdTextToWord">合并下载课文</div>
+<div title='删除该条目的课文及课文源文件' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnRemoveText();" id="sIdUploadText">删除该条目的课文</div>
+<div title='删除该条目的教案及教案源文件' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnRemoveTeachingPlan();" id="sIdUploadTeachingPlan">删除该条目的教案</div>
+<div title='删除该条目的动画及动画源文件' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnRemoveAnimation()" id="sIdUploadPlay">删除该条目的动画</div>
+<div title='删除教学或学习笔记!' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnRemoveNote();" id="sIdRemoveNote">删除该条目的教/学笔记</div>
+<div title='修改条目国语文本' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnModifyValue();" id="sIdModifyText">修改条目国语文本</div>
+<div title='修改条目外语文本' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnModifyValue_Foreign();" id="sIdModifyText_Foreign">修改条目外语文本</div>
+<div title='当前位置新建一新子条目' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnCreateChild();" id="sIdAppendChild">当前位置新建一新子条目</div>
+<div title='前面插入一同级新条目' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnInsertBefore();" id="sIdInsertNew">前面插入一同级新条目</div>
+<div title='最后附加一同级新条目' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnAppend();" id="sIdAppendNew">最后附加一同级新条目</div>
+<div title='升级该条目一级' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnPromote();" id="sIdPromote">升级该条目一级</div>
+<div title='降级该条目一级' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnDemote();" id="sIdDemote">降级该条目一级</div>
+<div title='删除该条目' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnDel();" id="sIdDel">删除该条目</div>
+<div title='复制该条目' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnCopy();" id="sIdCopy">复制该条目</div>
+<div title='剪切该条目' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnCut();" id="sIdCut">剪切该条目</div>
+<div title='前面插入粘贴' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnInsertCopied();" id="sIdInsertCopied">前面插入粘贴</div>
+<div title='最后附加粘贴' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnAppendCopied();" id="sIdAppendCopied">最后附加粘贴</div>
+<div title='撤消前一编辑操作,注意目前只支持撤消一次!' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnUndo();" id="sIdUndo">撤消前一编辑操作</div>
+<div title='重做前一编辑操作,注意目前只支持重做一次!' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnRedo();" id="sIdRedo">重做前一编辑操作</div>
+<div title='保存目录' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnSave();" id="sIdSave">保存</div>
+<div title='清除冗余文件' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnRemoveUnusedFiles();" id="sIdRemoveUnusedFiles">清除冗余文件</div>
+<div title='当系统容量太大而不便于通过U盘等移动时,可复制系统中的部分资源进行移动运行' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnCopyPartResource();" id="sIdCopyPartResource">复制部分资源</div>
+<div title='当有其他基于"网络远程教学系统"的资源时,可进行合并' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnMergePartResource();" id="sIdMergePartResource">合并外部资源</div>
+<div title='课件录制' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnRecording();//alert("网站版才提供该功能！")' id="sIdRecording">课件录制</div>
+<div title='将本机版的资源上传到网络版' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnLocalhostToWeb();//alert("网站版才提供该功能！")' id="sIdTextToWord">上传课程到网站版</div>
+<div title='将本机版的资源上传到网络版' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnDownLoadCourse();//alert("网站版才提供该功能！")' id="sIdTextToWord">下载课程到本机版</div>
+<div  title='给该篇文章的单词添加定义和词频标签' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnAdd();//alert("网站版才提供该功能！")' id="sIdTextToWord">添加词频和定义标签</div>
+<div  title='作为复合听写' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnDictation();//alert("网站版才提供该功能！")' id="sIdTextToWord">将课文转为复合听写课文</div>
+<div title='将本机版的资源上传到网络版' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnNero();//alert("网站版才提供该功能！")' id="sIdTextToWord">本机版刻录光盘</div>
+<div title='和网站版连接，升级系统' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.fnUpdateSystem();" id="sIdUpdateSystem">升级系统</div>
+<div title='切换是否显示滚动条' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnToggleScrollBar();' id="sToggleScrollBar">滚动条切换</div>
+</div>
+</BODY>
+</HTML>

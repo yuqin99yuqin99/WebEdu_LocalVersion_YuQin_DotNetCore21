@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../common/script/content.js"></script>
+    <script src="../common/script/Popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <title>�½���ҳ 1</title>
+</head>
+
+<body onload="fnOnLoad();">
+
+    <table style="width:100%;height:100%;border:0" id="table1">
+        <tr>
+            <td align="center">
+                <img border="0" src="contentStart.jpg" style="width:100%;height:100%">
+            </td>
+        </tr>
+    </table>
+    <!--�Ҽ��˵���ʼ -->
+
+    <div id="popupDiv" onclick="fnPopupClosePopup();" oncontextmenu="fnPopupContextMenu();" style="position:fixed;z-Index:1000;margin: 2px; border: 1px;   overflow:visible;  font-size: 11px; cursor: default;display:none;">
+        <div style="position: relative;" onmouseover="fnPopupMouseOver();" onmouseout="fnPopupMouseOut();">
+            <div title='ˢ�±������' onclick="location.reload();">ˢ��</div>
+            <div title='ת�������' onclick='parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("sGoServer").click();'>�����</div>
+            <div title='���������ݿ�ܺ�Ŀ¼��ܵķ�����ԭΪĬ��' onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('sDefaultZoom').click();">Ĭ�Ϸ���</div>
+            <div title='���������ݿ�ܺ�Ŀ¼��ܵĿ�Ȼ�ԭΪĬ��' onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('sDefaultWidth').click();">Ĭ�Ͽ��</div>
+            <div title='����ʷ��¼��ǰ��ҳ' onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('sForword').click();">ǰ��</div>
+            <div title='����ʷ��¼����ҳ' onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('sBackword').click();">����</div>
+            <div title='��Ŀ¼�е���Ŀ���·�ҳ' onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('next').click();">�·�</div>
+            <div title='��Ŀ¼�е���Ŀ���Ϸ�ҳ' onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('previous').click();">�Ϸ�</div>
+            <div title='���Ƿ�ȫ����ʾ����֮���л�' onclick='parent.fnToggleScreen();'>����ȫ���л�</div>
+            <div title='�����ݿ���в���' onclick='parent.findContent()'>����(�ڵ�ǰ���)</div>
+            <div title='�л��Ƿ���ʾ������'  onclick='parent.fnToggleScrollBar();' id="sToggleScrollBar">�������л�</div>
+            <div title='�򿪰���' onclick='parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("help").click();'>&#169;����</div>
+        </div>
+    </div>
+    <!--�Ҽ��˵�����-->
+
+</body>
+
+</html>
+

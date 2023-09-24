@@ -1,0 +1,42 @@
+﻿<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>正在保存</title>
+    <script>
+        function fnForm() {
+            console.log(opener.ptContents);
+            
+            document.getElementById("idContents").value = opener.ptContents;
+           // alert(document.getElementById("idContents").value);
+            document.getElementById("idSubMit").click();
+        }
+    </script>
+</head>
+
+<body onload="fnForm();">
+
+    <table border="0" width="100%" id="table1" height="100%">
+        <tr>
+            <td>
+                <p align="center">正在保存...
+            </td>
+        </tr>
+    </table>
+
+    <div style="display:none">
+
+        <form action="/SaveContents/Post" method="post" target="saving" id="idSendContents">
+            <p>
+               
+                <input type="text" name="Contents" id="idContents"/>
+            </p>
+            <input type="submit" value="提交" id="idSubMit"/>
+
+        </form>
+    </div>
+</body>
+
+</html>
+

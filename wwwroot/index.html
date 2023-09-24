@@ -1,0 +1,163 @@
+﻿<HTML>
+<head>
+	<meta http-equiv="Content-Language" content="zh-cn">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="manifest.json" rel="manifest" />
+	<link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+	<!--<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />-->
+	<!-- <link href="css/app.css" rel="stylesheet" />-->
+	<title>渔琴教与学_本机版，欢迎您！</title>
+
+	<script>
+		var sPromptString = "";
+
+		function fnCreateGUID() {
+			//var TypeLib = new ActiveXObject( "Scriptlet.TypeLib" );
+			//strGUID = TypeLib.Guid;
+			//alert ( strGUID );
+		}
+
+
+
+
+
+		/**function fnDetectActiveXControl(sControlName) {
+			 var oControl;
+			 try{
+			 oControl=new ActiveXObject(sControlName);
+			 if(oControl==null)
+			 return false;
+			 else return true;
+			 }
+			 catch(e){
+			 return false;
+			 }
+		}
+		**/
+
+		function fnClientInfo() {
+			
+			//var oRegistry=new ActiveXObject("Wscript.Shell");
+			//oRegistry.RegWrite("HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\International\\Scripts\\3\\Default_IEFontSize","2","REG_SZ");
+			//oRegistry.RegWrite("HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\International\\Scripts\\26\\IEFontSize",0x02,"REG_BINARY");//仅作为示例！
+			//oRegistry.RegWrite("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\\HideFileExt",0,"REG_DWORD");
+			//IE选项尚未实现
+			//检查ActiveX是否安装尚未实现
+
+			//oRegistry.RegWrite("HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\International\\Scripts\\26\\IEFontSize",1,"REG_DWORD");//仅作为示例！
+
+			//alert(oRegistry.regRead("HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\International\\Scripts\\26\\IEFontSize"));
+			var sString = navigator.userAgent.toUpperCase();
+			var iPlace = sString.indexOf("MSIE");
+			var sVersion = sString.substring(iPlace + 5, iPlace + 5 + 1);
+			var iVersion = parseInt(sVersion);
+			if (iVersion < 6) {
+				//alert("该系统要求IE6.0以上版本的浏览器！您将继续，但不能确保正常运行！");
+				sPromptString = sPromptString + "<li>网络远程教学系统要求IE6.0以上版本的浏览器！而您正使用的是IE" + sVersion + "版本！您将继续，但不能确保正常运行！</li>";
+			}
+
+			if (screen.width != 1024 && screen.height != 768) {
+				//alert("该系统默认的屏幕分辨率为1024*768，您正使用的计算机的屏幕分辨率是"+screen.width+"*"+screen.height+"！强烈建议您修改您将屏幕分辨率重设为1024*768，如果不设置，您将继续，但图象等媒体的清晰度可能受损！");
+				sPromptString = sPromptString + "<li>网络远程教学系统默认的屏幕分辨率为1024*768，您正使用的计算机的屏幕分辨率是" + screen.width + "*" + screen.height + "！建议您将屏幕分辨率重设为1024*768！</li>";
+			}
+			if (screen.height != screen.availHeight) {
+				//alert('Windows任务栏可能没有设置为自动隐藏，最好将Windows任务栏设置为自动隐藏后运行该网络课程基本模型！');
+				sPromptString = sPromptString + '<li>您正使用的Windows的任务栏可能没有设置为自动隐藏，最好将Windows任务栏设置为自动隐藏后运行网络远程教学系统！</li>';
+			}
+			/**
+			if(!fnDetectActiveXControl('QuickTimeCheckObject.QuickTimeCheck.1')){
+			alert('没有安装播放.mov系列媒体的插件(Apple QuickTime Player),请参看下面的链接帮助文档!');
+			}
+			if(!fnDetectActiveXControl('MediaPlayer.MediaPlayer.1')){
+			alert('没有安装播放.wmv系列媒体的插件(Windows Media Player),请参看下面的链接帮助文档!');
+			}
+			if(!(fnDetectActiveXControl('rmocx.RealPlayer G2 Control')||fnDetectActiveXControl('RealPlayer.RealPlayer(tm) ActiveX Control (32-bit)')||fnDetectActiveXControl('RealVideo.RealVideo(tm) ActiveX Control (32-bit)'))){
+			alert('没有安装播放.rm系列媒体的插件(RealNetwork Realone Player),请参看下面的链接帮助文档!');
+			}
+			if(!fnDetectActiveXControl('ShockwaveFlash.ShockwaveFlash.1')){
+			alert('没有安装播放.swf系列媒体的插件(Macromedia Flash Player),请参看下面的链接帮助文档!');
+			}
+
+			if(!fnDetectActiveXControl('SVG Document')){
+			alert('没有安装播放.svg系列媒体的插件(Adobe SVG Player)!');
+			}
+			if(!fnDetectActiveXControl('ParallelGraphics Cortona Console')){
+			alert('没有安装播放.wrl系列媒体的插件(ParallelGraphics Cortona vrml client)!');
+			}
+			//fnCreateWebVirtualRoots('sString');
+			//fnCreateFTPVirtualRoots('sString');
+			//启动Web和FTP服务
+
+			**/
+
+			/**if(!fnDetectActiveXControl('webEdu.pptplayer'))
+			{
+				 //alert('“网络远程教学系统”的使用需要安装客户端组件，请点击安装!');
+				sPromptString=sPromptString+"<li>网络远程教学系统的使用需要安装客户端组件，请<a href=/plugIns/setup_webEduSystem_local.exe>下载</a>并安装!</li>";
+			}
+			else
+			{
+			try{
+				if(oCheckVersion.HasNewVersion()==true)
+					if(confirm("查检到本机版有新版本,请下载安装.按\"确定\"前往下载页面."))
+					{
+					  window.showModelessDialog('webCourse/common/update/update.aspx',window,'scroll:0;status:0;help:0;resizable:0;dialogWidth:500px;dialogHeight:255px')
+					}
+				}
+				catch(e)
+				{
+					;
+				}
+
+			}**/
+
+			if (sPromptString != "") {
+				//showModalDialog("webCourse/common/systemInfo.html?sPromptString="+sPromptString,window,"help:0;resizable:1;scroll:1;dialogWidth:400px;dialogHeight:300px;status:0;");
+			}
+			//var win=open('webCourse/options/logo.html',"webEduSystem_local_"+getPort(),"fullscreen=0,left=0,top=0,toolbar=no,location=no,directories=no,menubar=no,titlebar=no,scrollbars=no,status=no,resizable=1,copyhistory=no,width="+(screen.width-10)+",height="+(screen.height-30));
+			var win = open('webCourse/options/logo.html', "_self", "fullscreen=0,left=0,top=0,toolbar=no,location=no,directories=no,menubar=no,titlebar=no,scrollbars=no,status=no,resizable=1,copyhistory=no,width=" + (screen.width - 10) + ",height=" + (screen.height - 30));
+			win.focus();
+			//document.all.WebBrowser.ExecWB(45,1);
+			//window.returnValue = null;
+			//window.close();
+			document.getElementById("start1").innerHTML = "\"教与学系统\"本机版已启动,该窗口暂时保留";
+			//var idt=window.setTimeout("interval();",1000);
+
+		}
+		function getPort() {
+			var sUrl = document.location.href;
+			var sPartUrl = sUrl.substring(sUrl.lastIndexOf(":"));
+			return sUrl.substring(sUrl.lastIndexOf(":") + 1, sUrl.lastIndexOf(":") + sPartUrl.indexOf("/"));
+		}
+
+		function interval() {
+			window.close();
+		}
+
+
+
+	</script>
+
+</head>
+
+<body scroll="no" onload="fnClientInfo();">
+	<!--<object id="WebBrowser" width=0 height=0 classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2">
+	</object>-->
+	<table border="0" width="100%" height="100%" id="table1">
+		<tr>
+			<td>
+				<p align="center">
+					<object style="display:none" classid="clsid:1AFF7096-E32D-4993-AA05-4851A6D17849" id="oCheckVersion" width="142" height="8">
+					</object>
+					<br>
+					<span id="start1">正在启动&quot;教与学系统&quot;本机版...
+				<p align="center">
+					正在检查是否有升级,根据网络状况可能需要一定的时间,请耐心等待...
+				<p align="center"></span>
+			</td>
+		</tr>
+	</table>
+	<script>navigator.serviceWorker.register('service-worker.js');</script>
+</body>
+
+</html>

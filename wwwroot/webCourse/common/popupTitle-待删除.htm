@@ -1,0 +1,40 @@
+/**右键菜单开始 **/
+<style>
+    .pop {
+        position: relative;
+    }
+
+    body {
+        margin: 2px;
+        border: 1px;
+        overflow: hidden;
+        font-size: 11px;
+        cursor: default;
+    }
+</style>
+<SCRIPT>
+    function fnClosePopup() {
+        parent.oPopup.hide();
+    }
+
+    function fnContextMenu() {
+        event.returnValue = false;
+    }
+
+    function fnMouseOver() {
+        event.srcElement.style.color = "rgb(0,255,0)";
+    }
+
+    function fnMouseOut() {
+        event.srcElement.style.color = "rgb(0,0,0)";
+    }
+</SCRIPT>
+<div id="popupDiv" onclick="fnClosePopup();" oncontextmenu="fnContextMenu();">
+
+    <div title='刷新标题框架' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.location.reload();">刷新</div>
+    <div title='对滚动字幕等进行配置！' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnShowSettingMarqueeModalDialog();'>设置滚动字幕</div>
+    <div title='上传新的背景音乐！' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick='parent.fnUploadBackgroundMusic();'>上传背景音乐</div>
+    <div title='打开帮助' class="pop" onmouseover="fnMouseOver();" onmouseout="fnMouseOut();" onclick="parent.document.getElementById('help').click();">&#169;帮助</div>
+</div>
+/**右键菜单结束 **/
+

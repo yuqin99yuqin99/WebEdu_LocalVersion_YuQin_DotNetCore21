@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>上传教学视频：.mp4文件</title>
+    <script>
+                
+        function fnOnSubmit() {
+           // alert(document.getElementById("idFileUpload").value);
+             var sTemp = document.getElementById("idFileUpload").value; 
+            //alert(sTemp.subString(sTemp.lastIndexOf(".doc")));//无法执行，可能是路径安全性问题。
+          // alert(sTemp.lastIndexOf(".doc"));//可能是安全性问题，不允许使用一些路径字符串的操作？
+            if ( sTemp== ""||sTemp== null) {
+                alert("您可能没有选择文件！请选择文件");
+                event.returnValue = false;//事件调用函数时，用return返回值实际上是对event.returnValue进行设置而该值决定当前操作是否继续，true是继续 false中断
+                return;
+            }
+            else if (sTemp.lastIndexOf(".mp4") >0)
+            {
+                event.returnValue = true;
+                document.getElementById("idFileSubmit").value = "正在提交，请耐心等待...";               
+            }
+            else {
+                alert("您选择的文件可能不是.mp4文件！请选择.mp4文件");
+                event.returnValue = false;
+              return;
+            }
+            //document.getElementById("idTeachingEngineeringForm").submit();//事件绑定在form时不需要此代码。如果事件绑定在submit按钮就需要。
+        }
+
+        function fnForm() {
+            document.getElementById("idUpLoadTeachingVideo").onsubmit = fnOnSubmit;   
+            document.getElementById("idUpLoadTeachingVideo").action = document.getElementById("idUpLoadTeachingVideo").action + opener.TeachingVideoPathPart;
+            alert(document.getElementById("idUpLoadTeachingVideo").action)
+        }
+
+    </script>
+</head>
+<body onload="fnForm()">
+    <div>    
+       <form action="/UpLoadTeachingVideo/Post?FolderAndFileName=" method="post" enctype="multipart/form-data" id="idUpLoadTeachingVideo">
+             <p>
+                <label>选择文件（.mp4格式）： </label>
+                <input type="file" name="FileUpload" id="idFileUpload"/>
+            </p>
+            <input type="submit" value="提交" id="idFileSubmit" />
+
+        </form>
+</div>
+</body>
+</html>

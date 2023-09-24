@@ -1,0 +1,26 @@
+﻿using System;
+using System.Web.Mvc;
+
+namespace EDSS.Controllers
+{
+    public class TryEnumerationTypeController : Controller
+    {
+
+        public ContentResult Index()
+        {
+            return this.Content(
+                TryEnumWeekDays.Sunday.ToString()+"是"+((Int32)TryEnumWeekDays.Sunday).ToString()
+                + ";" + TryEnumWeekDays.Monday.ToString() + "是" + ((Int32)TryEnumWeekDays.Monday).ToString()
+                + ";" + TryEnumWeekDays.Tuesday.ToString()+"是"+((Int32)TryEnumWeekDays.Tuesday).ToString()
+                + ";" + TryEnumWeekDays.Wednesday.ToString()+"是"+((Int32)TryEnumWeekDays.Wednesday).ToString()
+                + ";" + TryEnumWeekDays.Thursday.ToString()+"是"+((Int32)TryEnumWeekDays.Thursday).ToString()
+                + ";" + TryEnumWeekDays.Friday.ToString()+"是"+((Int32)TryEnumWeekDays.Friday).ToString()
+                + ";" + TryEnumWeekDays.Saturday.ToString()+"是"+((Int32)TryEnumWeekDays.Saturday).ToString()
+            );
+        }   
+    }
+    internal enum TryEnumWeekDays { Sunday = 0, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday } //此部分代码建议转化为internal class TryEnumWeekDays:Enum进行理解，有利于理解枚举类型（在此是TryEnumWeekDays）乃是由System.Objecet←System.ValueType←System.Enum方式继承扩展而来的特殊类类型，因为枚举类型的父类是System.Enum，所以枚举类型继承了System.Enum类型的一切特点，同时，因为枚举类型的父父类是System.ValueType，所以属于拷贝类型，而且不允许被进一步继承扩展。 
+  
+
+}
+

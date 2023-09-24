@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>3级联动菜单</title>
+  <script>
+    var region = {
+      广东:
+      {
+        "广州":["广州1","广州2","广州3"],
+ 
+        "珠海":["珠海1","珠海2","珠海3"],
+ 
+        "佛山":["佛山1"]
+      },
+      湖南:
+      {
+        "常德":["石门","桃源","临澧","汉寿"],
+ 
+        "益阳":["益阳1","益阳2","益阳3"]
+      }
+    }
+  </script>
+</head>
+  <body>
+ 
+    <select id="province" onchange="change(this.value);">
+      <option>请选择省份</option>
+    </select>
+ 
+    <select id="city" onchange="countyChange(this.value);">
+      <option>请选择地市</option>
+    </select>
+ 
+    <select id="county">
+      <option>请选择县城</option>
+    </select>
+  <script src='test.js'></script>
+  </body>
+</html>

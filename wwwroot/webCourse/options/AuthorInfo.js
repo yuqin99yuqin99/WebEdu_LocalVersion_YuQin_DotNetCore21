@@ -1,0 +1,1 @@
+function fnAuthorInfo(){ document.write("教育计算思维研究工作室<BR>43930878@qq.com<BR>");}

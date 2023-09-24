@@ -1,0 +1,43 @@
+﻿<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>正在保存内容</title>
+    <script>
+        function fnForm() {
+            console.log(opener.ptContents);
+            
+            document.getElementById("idContent").value = opener.ptContent;
+            document.getElementById("idContentFileNamePart").value = opener.ptContentFileNamePart;
+           // alert(document.getElementById("idContents").value);
+            document.getElementById("idSubMit").click();
+        }
+    </script>
+</head>
+
+<body onload="fnForm();">
+
+    <table border="0" width="100%" id="table1" height="100%">
+        <tr>
+            <td>
+                <p align="center">正在保存内容...
+            </td>
+        </tr>
+    </table>
+
+    <div style="display:none">
+
+        <form action="/SaveContent/Post" method="post" target="savingContent" id="idSendContent">
+            <p>
+                <input type="text" name="ContentFileNamePart" id="idContentFileNamePart" />
+                <input type="text" name="Content" id="idContent"/>
+            </p>
+            <input type="submit" value="提交" id="idSubMit"/>
+
+        </form>
+    </div>
+</body>
+
+</html>
+
