@@ -971,7 +971,7 @@ function fnContentFrameworkNotification(sStringTitle, sStringBody, sStringIcon) 
 				var notification = new Notification(sStringTitle, { body: sStringBody, icon: sStringIcon });
 
 				notification.onclick = function () {
-					open("https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/",target="_blank");
+					open("https://jbhuang99.github.io/webedu_localversion_yuqin_dotnetcore21/wwwroot/",target="_blank");
 					notification.close();
 				};
 			}
@@ -990,7 +990,7 @@ function fnContentFrameworkNotification(sStringTitle, sStringBody, sStringIcon) 
 	}
 }
 function fnHelp() {
-	open("https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/", target = "_blank");
+	open("https://jbhuang99.github.io/webedu_localversion_yuqin_dotnetcore21/wwwroot/", target = "_blank");
 }
 //document.getElementsByTagName("body").item(0).onload = fnOnLoad;
 document.getElementsByTagName("body").item(0).onload = fnOnLoad;

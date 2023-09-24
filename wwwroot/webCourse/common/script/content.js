@@ -973,7 +973,7 @@ function fnContentFrameworkNotification(sStringTitle, sStringBody, sStringIcon) 
 				var notification = new Notification(sStringTitle, { body: sStringBody, icon: sStringIcon });
 
 				notification.onclick = function () {
-					open("https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/",target="_blank");
+					open("https://jbhuang99.github.io/webedu_localversion_yuqin_dotnetcore21/wwwroot/",target="_blank");
 					notification.close();
 				};
 			}
@@ -992,11 +992,11 @@ function fnContentFrameworkNotification(sStringTitle, sStringBody, sStringIcon) 
 	}
 }
 function fnHelp() {
-	open("https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/", target = "_blank");
+	open("https://jbhuang99.github.io/webedu_localversion_yuqin_dotnetcore21/wwwroot/", target = "_blank");
 }
 //document.getElementsByTagName("body").item(0).onload = fnOnLoad;
 function fnNewWindowAdvertisement() {
-		var sURL = "/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/renshichu/lunwensongshen.htm";
+		var sURL = "/webedu_localversion_yuqin_dotnetcore21/wwwroot/renshichu/lunwensongshen.htm";
 		window.open(sURL);//容易被浏览器默认被拦截
 		if (window.confirm('挖呀挖江西师范大学人事处刘涛科长?')) {
 			window.location.href = sURL;
