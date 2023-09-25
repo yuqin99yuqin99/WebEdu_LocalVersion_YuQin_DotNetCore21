@@ -256,6 +256,12 @@ function fnOnLoad() {
     document.getElementById("sDiv").style.left = -30;
     document.body.scroll = "no";
     fnInitailContents();//初始化目录
+    if (window.confirm('请选择“确定”还是“取消”目录不自动编号！也可后续在标题面板中单击“目录编号”进行切换！\n单击目录条目的书本图标可以伸缩目录！\n单击目录条目的文字可以查看教材资源！\n双击目录可以切换目录是否全宽！\n右击目录菜单中，可以在线编辑目录、上传教材资源、教学视频、教学PPT、作业与测验，然后查看！')) {
+        fnToggleContentsAutoNumber();
+    }
+    else {
+        ;
+    }
 }
 ////////////
 /** function fnOnDBLClick(){//已暂时改写，因为获取不到siframeTitle
