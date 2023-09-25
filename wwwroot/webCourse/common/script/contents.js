@@ -3540,7 +3540,7 @@ function fnMargee() {
             var advertisement = open("../../../renshichu/lunwensongshen.htm", "advertisement");
         }
         else {
-            var advertisement = open("/webedu_localversion_yuqin_dotnetcore21/wwwroot/renshichu/lunwensongshen.htm");//网站
+            var advertisement = open("/WebEdu_LocalVersion_YuQin_DotNetCore21/wwwroot/renshichu/lunwensongshen.htm");//网站
         }
     }
     else {
