@@ -80,12 +80,13 @@ text-justify-trim:punctuation'>
 
 <h1 style='margin-left:36.0pt;text-indent:-18.0pt;line-height:normal;
 layout-grid-mode:char'><a name="_Ref129250803"></a><a name="_Ref136074927"></a><a
-name="_Toc148269442"><span lang=EN-US style='font-size:17.0pt;font-family:黑体'>附录B<span
+name="_Toc149239406"><span lang=EN-US style='font-size:17.0pt;font-family:黑体'>附录B<span
 style='font:7.0pt "Times New Roman"'> </span></span><span style='font-size:
-17.0pt;font-family:黑体'>教育数字思维视角的重要工具软件：<span lang=EN-US>C#</span>开发工具软件</span></a></h1>
+17.0pt;font-family:黑体'>教育数字思维视角的重要工具软件：<span lang=EN-US>C#</span>实现工具软件</span></a></h1>
 
 <p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
 margin-left:0cm;layout-grid-mode:char;word-break:break-all'><span style='font-size:11.0pt;font-family:宋体'>表 <span lang=EN-US>3‑7</span></span><span
+style='font-size:11.0pt;font-family:宋体'>、</span><span style='font-size:11.0pt;font-family:宋体'>线性结构二维数据读写表 <span lang=EN-US>3‑1</span></span><span
 style='font-size:11.0pt;font-family:宋体'>、</span><span style='font-size:11.0pt;font-family:宋体'>案例 <span lang=EN-US>4‑1</span></span><span
 lang=EN-US style='font-size:11.0pt;font-family:宋体'> </span><span
 style='font-size:11.0pt;font-family:宋体'>、</span><span style='font-size:11.0pt;font-family:宋体'>案例 <span lang=EN-US>4‑2</span></span><span
@@ -93,617 +94,931 @@ style='font-size:11.0pt;font-family:宋体'>、</span><span style='font-size:11.
 style='font-size:10.0pt;font-family:宋体'>所示，本书的教育软件的“客户端<span lang=EN-US>MVC</span>、互动<span
 lang=EN-US>MVC</span>、服务端<span lang=EN-US>MVC</span>”，选用第四平台语言<span lang=EN-US>.Net</span>平台<span
 lang=EN-US>C#</span>语言，映射各种平台语言。“</span><span
-style='font-size:10.0pt;font-family:宋体'>教育数字思维视角的重要工具软件：<span lang=EN-US>C#</span>开发工具软件</span><span
+style='font-size:10.0pt;font-family:宋体'>教育数字思维视角的重要工具软件：<span lang=EN-US>C#</span>实现工具软件</span><span
 lang=EN-US style='font-size:10.0pt;font-family:宋体'>”</span><span
 style='font-size:10.0pt;font-family:宋体'>，则是本书的探究思路之一。</span></p>
 
 <p class=MsoNormal align=center style='text-align:center;text-indent:0cm;
-layout-grid-mode:char;word-break:break-all'><a name="_Toc148269482"><span
+layout-grid-mode:char;word-break:break-all'><a name="_Toc149239447"><span
 style='font-family:黑体'>表 </span></a><span
 lang=EN-US style='font-family:黑体'>B</span><span lang=EN-US style='font-family:
 黑体'>-</span><span
 lang=EN-US style='font-family:黑体'>1</span><span lang=EN-US style='font-family:
 黑体'> </span><span
-style='font-family:黑体'>教育数字思维视角的重要工具软件：<span lang=EN-US>C#</span>开发工具软件</span><span
+style='font-family:黑体'>教育数字思维视角的重要工具软件：<span lang=EN-US>C#</span>实现工具软件</span><span
 lang=EN-US style='font-family:黑体'> </span></p>
 
 <div align=center>
 
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none'>
- <tr>
-  <td width=274 valign=top style='width:205.3pt;border:solid windowtext 1.0pt;
-  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm;
-  line-height:16.0pt;layout-grid-mode:char'><span style='font-size:10.0pt;
-  font-family:宋体;color:black'>客户端<span lang=EN-US>MVC</span></span><span
-  style='font-size:10.0pt;font-family:宋体;color:black'>架构</span><span
-  style='font-size:10.0pt;font-family:宋体;color:black'>的视图<span lang=EN-US>V</span></span></p>
-  </td>
-  <td width=76 valign=top style='width:2.0cm;border:solid windowtext 1.0pt;
-  border-left:none;background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm;
-  line-height:16.0pt;layout-grid-mode:char'><span style='font-size:10.0pt;
-  font-family:宋体;color:black'>互动<span lang=EN-US>MVC</span></span><span
-  style='font-size:10.0pt;font-family:宋体;color:black'>架构</span><span
-  style='font-size:10.0pt;font-family:宋体;color:black'>的控制<span lang=EN-US>C</span></span></p>
-  </td>
-  <td width=274 valign=top style='width:205.75pt;border:solid windowtext 1.0pt;
-  border-left:none;background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm;
-  line-height:16.0pt;layout-grid-mode:char'><span style='font-size:10.0pt;
-  font-family:宋体;color:black'>服务端<span lang=EN-US>MVC</span></span><span
-  style='font-size:10.0pt;font-family:宋体;color:black'>架构</span><span
-  style='font-size:10.0pt;font-family:宋体;color:black'>的模型<span lang=EN-US>M</span></span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=642
+ style='width:481.45pt;background:#E7E6E6;border-collapse:collapse;border:none'>
+ <tr style='height:17.25pt'>
+  <td width=642 valign=top style='width:481.45pt;border:dashed windowtext 1.0pt;
+  padding:0cm 0cm 0cm 0cm;height:17.25pt'>
+  <p class=MsoNormal align=left style='margin-top:6.0pt;margin-right:0cm;
+  margin-bottom:6.0pt;margin-left:0cm;text-align:left;text-indent:0cm;
+  layout-grid-mode:char;word-break:break-all'><b><span style='font-size:10.0pt;
+  font-family:宋体;color:#C00000'>“教育整体”的“开始”事件</span></b><span style='font-size:
+  10.0pt;font-family:宋体;color:#C00000'>中的“<b>四个平台语言计算的客户端<span lang=EN-US>MVC(</span>架构<span
+  lang=EN-US>/</span>模式<span lang=EN-US>/</span>关系<span lang=EN-US>/</span>结构<span
+  lang=EN-US>)</span>、四个平台语言计算的互动<span lang=EN-US>MVC(</span>架构<span
+  lang=EN-US>/</span>模式<span lang=EN-US>/</span>关系<span lang=EN-US>/</span>结构<span
+  lang=EN-US>)</span>、四个平台语言计算的服务端<span lang=EN-US>MVC(</span>架构<span
+  lang=EN-US>/</span>模式<span lang=EN-US>/</span>关系<span lang=EN-US>/</span>结构<span
+  lang=EN-US>)</span></b>”的<b>“工程四个环节<span lang=EN-US>(</span>需求→设计→开发→交付<span
+  lang=EN-US>)</span>”</b> </span><span style='font-size:9.0pt;font-family:
+  黑体;color:#C00000'>：</span></p>
   </td>
  </tr>
- <tr>
-  <td width=274 valign=top style='width:205.3pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
-  char'><span style='font-size:10.0pt;font-family:宋体;color:black;background:
-  #D9D9D9'>第四平台语言</span><span lang=EN-US style='font-size:10.0pt;font-family:
-  宋体;color:black;background:#D9D9D9'>.Net</span><span style='font-size:10.0pt;
-  font-family:宋体;color:black;background:#D9D9D9'>平台<span lang=EN-US>C#</span>语言开发工具软件</span><span
-  style='font-size:10.0pt;font-family:宋体'>（本书选用）（</span><span
-  lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.7</span><span
-  lang=EN-US style='font-size:10.0pt;font-family:宋体'> </span><span
-  style='font-size:10.0pt;font-family:宋体'>节）（本书选用<span lang=EN-US>“.Net</span>平台<span
-  lang=EN-US>C#</span>语言<span lang=EN-US>”</span>开发教育工具软件）</span></p>
-  </td>
-  <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
-  break-all'><span style='font-size:10.0pt;font-family:宋体'>（</span><span
-  lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
-  style='font-size:10.0pt;font-family:宋体'>节）</span></p>
-  </td>
-  <td width=274 valign=top style='width:205.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
-  char'><span style='font-size:10.0pt;font-family:宋体;color:black;background:
-  #D9D9D9'>第四平台语言</span><span lang=EN-US style='font-size:10.0pt;font-family:
-  宋体;color:black;background:#D9D9D9'>.Net</span><span style='font-size:10.0pt;
-  font-family:宋体;color:black;background:#D9D9D9'>平台</span><span lang=EN-US
-  style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>C#</span><span
-  style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>语言</span><span
-  style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>开发工具软件</span><span
-  style='font-size:10.0pt;font-family:宋体'>（本书选用）（</span><span
-  lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.9</span><span
-  lang=EN-US style='font-size:10.0pt;font-family:宋体'> </span><span
-  style='font-size:10.0pt;font-family:宋体'>节）（本书选用<span lang=EN-US>“.Net</span>平台<span
-  lang=EN-US>C#</span>语言<span lang=EN-US>”</span>开发教育工具软件<span lang=EN-US>”</span>）</span></p>
-  </td>
- </tr>
- <tr style='height:32.75pt'>
-  <td width=274 valign=top style='width:205.3pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:32.75pt'>
-  <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
-  char'><span style='font-size:10.0pt;font-family:宋体;color:black;background:
-  #D9D9D9'>第三平台语言<span lang=EN-US>OS</span>平台<span lang=EN-US>C/C++</span>语言</span><span
-  style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>开发工具软</span><span
-  style='font-size:10.0pt;font-family:宋体'>（本书未选用）（本书选用的<span lang=EN-US>“.Net</span>平台<span
-  lang=EN-US>C#</span>语言<span lang=EN-US>”</span>可以隐喻<span lang=EN-US>“OS</span>平台<span
-  lang=EN-US>C/C++</span>语言<span lang=EN-US>”</span>开发如下工具软件）</span></p>
-  </td>
-  <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:32.75pt'>
-  <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
-  break-all'><span style='font-size:10.0pt;font-family:宋体'>（</span><span lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
-  style='font-size:10.0pt;font-family:宋体'>节）</span></p>
-  </td>
-  <td width=274 valign=top style='width:205.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:32.75pt'>
-  <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
-  char'><span style='font-size:10.0pt;font-family:宋体;color:black;background:
-  #D9D9D9'>第三平台语言<span lang=EN-US>OS</span>平台<span lang=EN-US>C/C++</span>语言</span><span
-  style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>开发工具软件</span><span
-  style='font-size:10.0pt;font-family:宋体'>（本书未选用）（本书选用的<span lang=EN-US>“.Net</span>平台<span
-  lang=EN-US>C#</span>语言<span lang=EN-US>”</span>可以隐喻<span lang=EN-US>“OS</span>平台<span
-  lang=EN-US>C/C++</span>语言<span lang=EN-US>”</span>开发如下工具软件）</span></p>
-  </td>
- </tr>
- <tr style='height:32.75pt'>
-  <td width=624 colspan=3 valign=top style='width:467.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:32.75pt'>
-  <p class=MsoListParagraph align=center style='margin-top:6.0pt;margin-right:
-  0cm;margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:center;
-  text-indent:0cm;layout-grid-mode:char'><b><span lang=EN-US style='font-size:
-  11.0pt'>A</span></b><b><span lang=EN-US style='font-size:11.0pt'>.</span></b><b><span
-  style='font-size:11.0pt'>视图<span lang=EN-US>V</span>控制<span lang=EN-US>C</span>模型<span
-  lang=EN-US>M</span>的集成开发环境<span lang=EN-US>IDE</span></span></b></p>
+ <tr style='height:17.25pt'>
+  <td width=642 valign=top style='width:481.45pt;border:dashed windowtext 1.0pt;
+  border-top:none;background:transparent;padding:0cm 0cm 0cm 0cm;height:17.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm;
+  layout-grid-mode:char;word-break:break-all'><b><span lang=EN-US
+  style='font-size:2.0pt;font-family:宋体;color:#C00000'>  </span></b></p>
   <div align=center>
   <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
    style='border-collapse:collapse;border:none'>
    <tr>
-    <td width=399 valign=top style='width:298.9pt;border:dashed windowtext 1.0pt;
+    <td width=274 valign=top style='width:205.3pt;border:dashed windowtext 1.0pt;
     padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>客户端</span></b></p>
-    </td>
-    <td width=38 valign=top style='width:28.45pt;border:dashed windowtext 1.0pt;
-    border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>互动</span></b></p>
-    </td>
-    <td width=172 valign=top style='width:129.1pt;border:dashed windowtext 1.0pt;
-    border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>服务端</span></b></p>
-    </td>
-   </tr>
-   <tr>
-    <td width=399 valign=top style='width:298.9pt;border:dashed windowtext 1.0pt;
-    border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=left style='margin-top:6.0pt;text-align:left;
+    <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
+    char'><a name=附录的客户端1><span style='font-size:10.0pt;font-family:宋体;
+    color:black;background:#D9D9D9'>一、<span lang=EN-US>“</span>客户端<span
+    lang=EN-US>MVC”</span>的计算可以选用的<span lang=EN-US>(</span>客户端数字思维的本质<span
+    lang=EN-US>):</span></span></a></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
     text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
-    10.0pt;font-family:宋体'>VS-Git</span><span style='font-size:10.0pt;
-    font-family:宋体'>客户端<span lang=EN-US>IDE</span>工具、文件协同工具；</span><span
-    lang=EN-US style='font-size:10.0pt'><a
-    href="https://learn.microsoft.com/en-us/visualstudio"><span
-    style='font-family:宋体'>https://learn.microsoft.com/en-us/visualstudio</span></a></span><span
-    style='font-size:10.0pt;font-family:宋体'>、</span><span lang=EN-US
-    style='font-size:10.0pt'><a
-    href="https://learn.microsoft.com/en-us/visualstudio/version-control/?view=vs-2022"><span
-    style='font-family:宋体'>https://learn.microsoft.com/en-us/visualstudio/version-control/?view=vs-2022</span></a></span></p>
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“CPU</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>平台的<span
+    lang=EN-US>0/1</span>的数字语言计算<span lang=EN-US>”</span></span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体;color:black;background:#D9D9D9'>↓隐喻</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>人脑平台的字符<span
+    lang=EN-US>/</span>非字符的多媒体语言计算<span lang=EN-US>”</span></span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体'>（本书未选用）</span></p>
     </td>
-    <td width=38 valign=top style='width:28.45pt;border-top:none;border-left:
-    none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
-    padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal style='margin-top:6.0pt;text-indent:0cm;layout-grid-mode:
-    char'><span style='font-size:10.0pt;font-family:宋体'>（</span><span
-    lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
-    style='font-size:10.0pt;font-family:宋体'>节）</span></p>
-    </td>
-    <td width=172 valign=top style='width:129.1pt;border-top:none;border-left:
-    none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
-    padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal style='margin-top:6.0pt;text-indent:0cm;layout-grid-mode:
-    char'><span lang=EN-US style='font-size:10.0pt;font-family:宋体'>GitHub</span><span
-    style='font-size:10.0pt;font-family:宋体'>万维网服务端<span lang=EN-US>IDE</span>工具、文件协同工具：</span><span
-    lang=EN-US style='font-size:10.0pt'><a href="http://www.github.com"><span
-    style='font-family:宋体'>www.github.com</span></a></span></p>
-    </td>
-   </tr>
-  </table>
-  </div>
-  <p class=MsoListParagraph align=center style='margin-top:6.0pt;margin-right:
-  0cm;margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:center;
-  text-indent:0cm;layout-grid-mode:char'><b><span lang=EN-US style='font-size:
-  11.0pt'>B</span></b><b><span lang=EN-US style='font-size:11.0pt'>.</span></b><b><span
-  style='font-size:11.0pt'>视图<span lang=EN-US>V</span>的编辑工具（辅助<span lang=EN-US>IDE</span>）</span></b></p>
-  <div align=center>
-  <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
-   style='border-collapse:collapse;border:none'>
-   <tr>
-    <td width=484 valign=top style='width:362.65pt;border:dashed windowtext 1.0pt;
-    padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>客户端</span></b></p>
-    </td>
-    <td width=45 valign=top style='width:33.4pt;border:dashed windowtext 1.0pt;
+    <td width=76 valign=top style='width:2.0cm;border:dashed windowtext 1.0pt;
     border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>互动</span></b></p>
+    <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
+    break-all'><span style='font-size:10.0pt;font-family:宋体;color:red'>（</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体;color:red'>5.8</span><span
+    style='font-size:10.0pt;font-family:宋体;color:red'>节）</span></p>
     </td>
-    <td width=81 valign=top style='width:60.4pt;border:dashed windowtext 1.0pt;
+    <td width=274 valign=top style='width:205.75pt;border:dashed windowtext 1.0pt;
     border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>服务端</span></b></p>
+    <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
+    char'><a name=附录的服务端1><span style='font-size:10.0pt;font-family:宋体;
+    color:black;background:#D9D9D9'>一、<span lang=EN-US>“</span>服务端<span
+    lang=EN-US>MVC” </span>的计算可以选用的<span lang=EN-US>(</span>服务端数字思维的本质<span
+    lang=EN-US>):</span></span></a></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“CPU</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>平台的<span
+    lang=EN-US>0/1</span>的数字语言计算<span lang=EN-US>”</span></span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体;color:black;background:#D9D9D9'>↓隐喻</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>人脑平台的字符<span
+    lang=EN-US>/</span>非字符的多媒体语言计算<span lang=EN-US>”</span></span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体'>（本书未选用）</span></p>
     </td>
    </tr>
    <tr>
-    <td width=484 valign=top style='width:362.65pt;border:dashed windowtext 1.0pt;
+    <td width=274 valign=top style='width:205.3pt;border:dashed windowtext 1.0pt;
     border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    word-break:break-all'><span lang=EN-US style='font-size:10.0pt;font-family:
-    宋体'>Word-</span><span style='font-size:10.0pt;font-family:宋体'>字符<span
-    lang=EN-US>-</span>客户端：</span><span lang=EN-US style='font-size:10.0pt'><a
-    href="https://www.microsoft.com/en-us/microsoft-365/word"><span
-    style='font-family:宋体'>https://www.microsoft.com/en-us/microsoft-365/word</span></a></span><span
-    style='font-size:10.0pt;font-family:宋体'>（<span lang=EN-US>Word 2016</span>开始，支持<span
-    lang=EN-US>PowerBI</span>的数据导入<span lang=EN-US>,</span></span><span
-    lang=EN-US style='font-size:10.0pt'> <a
-    href="https://learn.microsoft.com/en-us/power-bi/paginated-reports/report-builder/export-microsoft-word-report-builder">https://learn.microsoft.com/en-us/power-bi/paginated-reports/report-builder/export-microsoft-word-report-builder</a></span><span
-    style='font-size:10.0pt;font-family:宋体'>）</span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>&nbsp;</span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>PS-</span><span style='font-size:
-    10.0pt;font-family:宋体'>图像<span lang=EN-US>-</span>客户端：</span><span
-    lang=EN-US style='font-size:10.0pt'><a
-    href="https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/"><span
-    style='font-family:宋体'>https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/</span></a></span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span class=MsoHyperlink><span
-    lang=EN-US style='font-size:10.0pt'><span style='text-decoration:none'>&nbsp;</span></span></span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>PR-</span><span style='font-size:
-    10.0pt;font-family:宋体'>视频<span lang=EN-US>-</span>客户端：</span><span
-    lang=EN-US style='font-size:10.0pt'><a
-    href="https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/"><span
-    style='font-family:宋体'>https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/</span></a></span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span class=MsoHyperlink><span
-    lang=EN-US style='font-size:10.0pt'><span style='text-decoration:none'>&nbsp;</span></span></span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>PPT-2D-3D-</span><span
-    style='font-size:10.0pt;font-family:宋体'>客户端：</span><span lang=EN-US
-    style='font-size:10.0pt'><a
-    href="https://www.microsoft.com/en-us/microsoft-365/Powerpoint"><span
-    style='font-family:宋体'>https://www.microsoft.com/en-us/microsoft-365/Powerpoint</span></a></span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span class=MsoHyperlink><span
-    lang=EN-US style='font-size:10.0pt'><span style='text-decoration:none'>&nbsp;</span></span></span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>Excel-PowerBI-</span><span
-    style='font-size:10.0pt;font-family:宋体'>客户端（<span lang=EN-US>Excel 2016</span>开始，集成了<span
-    lang=EN-US>PowerBI</span>的数据导入的<span lang=EN-US>PowerQuery</span>、数据建模的<span
-    lang=EN-US>PowerPivot</span>、数据报表的<span lang=EN-US>PowerView</span>、数据地图的<span
-    lang=EN-US>PowerMap</span>）：</span><span lang=EN-US style='font-size:10.0pt'><a
-    href="https://www.microsoft.com/en-us/microsoft-365/Excel"><span
-    style='font-family:宋体'>https://www.microsoft.com/en-us/microsoft-365/Excel</span></a></span><span
-    style='font-size:10.0pt;font-family:宋体'>、</span><span lang=EN-US
-    style='font-size:10.0pt'><a
-    href="https://learn.microsoft.com/en-us/power-bi"><span style='font-family:
-    宋体'>https://learn.microsoft.com/en-us/power-bi</span></a></span><span
-    style='font-size:10.0pt;font-family:宋体'>、</span><span lang=EN-US
-    style='font-size:10.0pt'><a
-    href="https://www.nuget.org/packages/Microsoft.PowerBI.Api/">https://www.nuget.org/packages/Microsoft.PowerBI.Api/</a></span><span
-    style='font-size:10.0pt;font-family:宋体'>、</span><span lang=EN-US
-    style='font-size:10.0pt'><a
-    href="https://learn.microsoft.com/en-us/dotnet/api/overview/azure/power-bi?view=azure-dotnet">https://learn.microsoft.com/en-us/dotnet/api/overview/azure/power-bi?view=azure-dotnet</a></span></p>
+    <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
+    char'><a name=附录的客户端2><span style='font-size:10.0pt;font-family:宋体;
+    color:black;background:#D9D9D9'>二、<span lang=EN-US>“</span>客户端<span
+    lang=EN-US>MVC”</span>的计算可以选用的：</span></a></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>计算机输入输出硬件的数据读写平台的<span
+    lang=EN-US>ASM</span>汇编语言计算<span lang=EN-US>”</span></span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体;color:black;background:#D9D9D9'>↓隐喻</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>人体肢体表情语言计算<span
+    lang=EN-US>”</span></span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体'>（本书未选用）</span></p>
     </td>
-    <td width=45 valign=top style='width:33.4pt;border-top:none;border-left:
-    none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
-    padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal style='margin-top:6.0pt;text-indent:0cm;layout-grid-mode:
-    char'><span style='font-size:10.0pt;font-family:宋体'>（</span><span
-    lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
-    style='font-size:10.0pt;font-family:宋体'>节）</span></p>
-    </td>
-    <td width=81 valign=top style='width:60.4pt;border-top:none;border-left:
-    none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
-    padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal style='margin-top:6.0pt;text-indent:0cm;layout-grid-mode:
-    char'><span style='font-size:10.0pt;font-family:宋体'>本书不涉及。</span></p>
-    </td>
-   </tr>
-  </table>
-  </div>
-  <p class=MsoListParagraph align=center style='margin-top:6.0pt;margin-right:
-  0cm;margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:center;
-  text-indent:0cm;layout-grid-mode:char'><b><span lang=EN-US style='font-size:
-  11.0pt'>C</span></b><b><span lang=EN-US style='font-size:11.0pt'>.</span></b><b><span
-  style='font-size:11.0pt'>模型<span lang=EN-US>M</span>的编辑工具（辅助<span lang=EN-US>IDE</span>）</span></b></p>
-  <div align=center>
-  <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
-   style='border-collapse:collapse;border:none'>
-   <tr>
-    <td width=221 valign=top style='width:165.8pt;border:dashed windowtext 1.0pt;
-    padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>客户端</span></b></p>
-    </td>
-    <td width=55 valign=top style='width:40.95pt;border:dashed windowtext 1.0pt;
-    border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>互动</span></b></p>
-    </td>
-    <td width=333 valign=top style='width:249.7pt;border:dashed windowtext 1.0pt;
-    border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>服务端</span></b></p>
-    </td>
-   </tr>
-   <tr>
-    <td width=221 valign=top style='width:165.8pt;border:dashed windowtext 1.0pt;
-    border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal style='margin-top:6.0pt;text-indent:0cm;layout-grid-mode:
-    char'><span lang=EN-US style='font-size:10.0pt;font-family:宋体'>SSMS</span><span
-    style='font-size:10.0pt;font-family:宋体'>客户端：</span><span lang=EN-US
-    style='font-size:10.0pt'><a
-    href="https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16"><span
-    style='font-family:宋体'>https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16</span></a></span></p>
-    </td>
-    <td width=55 valign=top style='width:40.95pt;border-top:none;border-left:
+    <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:
     none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
     padding:0cm 5.4pt 0cm 5.4pt'>
     <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
-    break-all'><span style='font-size:10.0pt;font-family:宋体'>（</span><span
-    lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
-    style='font-size:10.0pt;font-family:宋体'>节）</span></p>
+    break-all'><span style='font-size:10.0pt;font-family:宋体;color:red'>（</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体;color:red'>5.8</span><span
+    style='font-size:10.0pt;font-family:宋体;color:red'>节）</span></p>
     </td>
-    <td width=333 valign=top style='width:249.7pt;border-top:none;border-left:
+    <td width=274 valign=top style='width:205.75pt;border-top:none;border-left:
     none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
     padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>SS</span><span style='font-size:
-    10.0pt;font-family:宋体'>服务端：</span><span lang=EN-US style='font-size:10.0pt'><a
-    href="https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16"><span
-    style='font-family:宋体'>https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16</span></a></span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span class=MsoHyperlink><span
-    lang=EN-US style='font-size:10.0pt'><span style='text-decoration:none'>&nbsp;</span></span></span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>SQLite</span><span
-    style='font-size:10.0pt;font-family:宋体'>数据库服务器：</span><span lang=EN-US
-    style='font-size:10.0pt'><a
-    href="https://mp.weixin.qq.com/s/4IuUXesoWu1tKf6sMRt2Pg"><span
-    style='font-family:宋体'>https://mp.weixin.qq.com/s/4IuUXesoWu1tKf6sMRt2Pg</span></a></span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span class=MsoHyperlink><span
-    lang=EN-US style='font-size:10.0pt;font-family:宋体'><span style='text-decoration:
-     none'>&nbsp;</span></span></span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>ChatGPT</span><span
-    style='font-size:10.0pt;font-family:宋体'>服务端开源版本的本机版：</span><span
-    lang=EN-US style='font-size:10.0pt'><a
-    href="https://huggingface.co/meta-llama/Llama-2-7b/tree/main"><span
-    style='font-family:宋体'>https://huggingface.co/meta-llama/Llama-2-7b/tree/main</span></a></span></p>
-    </td>
-   </tr>
-  </table>
-  </div>
-  <p class=MsoListParagraph align=center style='margin-top:6.0pt;margin-right:
-  0cm;margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:center;
-  text-indent:0cm;layout-grid-mode:char'><b><span lang=EN-US style='font-size:
-  11.0pt'>D</span></b><b><span lang=EN-US style='font-size:11.0pt'>.</span></b><b><span
-  style='font-size:11.0pt'>视图<span lang=EN-US>V</span>控制<span lang=EN-US>C</span>模型<span
-  lang=EN-US>M</span>的运行宿主</span></b></p>
-  <div align=center>
-  <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
-   style='border-collapse:collapse;border:none'>
-   <tr>
-    <td width=129 valign=top style='width:97.1pt;border:dashed windowtext 1.0pt;
-    padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>客户端</span></b></p>
-    </td>
-    <td width=52 valign=top style='width:38.75pt;border:dashed windowtext 1.0pt;
-    border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>互动</span></b></p>
-    </td>
-    <td width=427 valign=top style='width:320.6pt;border:dashed windowtext 1.0pt;
-    border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>服务端</span></b></p>
+    <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
+    char'><a name=附录的服务端2><span style='font-size:10.0pt;font-family:宋体;
+    color:black;background:#D9D9D9'>二、<span lang=EN-US>“</span>服务端<span
+    lang=EN-US>MVC”</span>的计算可以选用的：</span></a></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>计算机输入输出硬件的数据读写平台的<span
+    lang=EN-US>ASM</span>汇编语言计算<span lang=EN-US>”</span></span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体;color:black;background:#D9D9D9'>↓隐喻</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>人体肢体表情语言计算<span
+    lang=EN-US>”</span></span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体'>（本书未选用）</span></p>
     </td>
    </tr>
    <tr>
-    <td width=129 valign=top style='width:97.1pt;border:dashed windowtext 1.0pt;
+    <td width=274 valign=top style='width:205.3pt;border:dashed windowtext 1.0pt;
     border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>Edge</span><span style='font-size:
-    10.0pt;font-family:宋体'>万维网客户端浏览器宿主：</span><span lang=EN-US
-    style='font-size:10.0pt'><a
-    href="https://learn.microsoft.com/en-us/microsoft-edge/"><span
-    style='font-family:宋体'>https://learn.microsoft.com/en-us/microsoft-edge/</span></a></span></p>
-    <p class=MsoNormal style='margin-top:6.0pt;text-indent:0cm;layout-grid-mode:
-    char'><b><span lang=EN-US style='font-size:11.0pt;font-family:宋体'>&nbsp;</span></b></p>
+    <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
+    char'><a name=附录的客户端3><span style='font-size:10.0pt;font-family:宋体;
+    color:black;background:#D9D9D9'>三、<span lang=EN-US>“</span>客户端<span
+    lang=EN-US>MVC”</span>的计算可以选用的：</span></a></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>计算机</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体;color:black;background:
+    #D9D9D9'>OS</span><span style='font-size:10.0pt;font-family:宋体;color:black;
+    background:#D9D9D9'>平台<span lang=EN-US>C/C++</span>语言</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>计算<span
+    lang=EN-US>”</span></span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体;color:black;background:#D9D9D9'>↓隐喻</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>人的专业术语语言计算</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体;color:black;background:
+    #D9D9D9'>”</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体'>（本书未选用）</span></p>
     </td>
-    <td width=52 valign=top style='width:38.75pt;border-top:none;border-left:
+    <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:
     none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
     padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span style='font-size:10.0pt;
-    font-family:宋体'>（</span><span
-    lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
-    style='font-size:10.0pt;font-family:宋体'>节）</span></p>
+    <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
+    break-all'><span style='font-size:10.0pt;font-family:宋体;color:red'>（</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体;color:red'>5.8</span><span
+    style='font-size:10.0pt;font-family:宋体;color:red'>节）</span></p>
     </td>
-    <td width=427 valign=top style='width:320.6pt;border-top:none;border-left:
+    <td width=274 valign=top style='width:205.75pt;border-top:none;border-left:
     none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
     padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>IIS</span><span style='font-size:
-    10.0pt;font-family:宋体'>万维网服务器宿主：</span><span lang=EN-US style='font-size:
-    10.0pt'><a
-    href="https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-7.0"><span
-    style='font-family:宋体'>https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-7.0</span></a></span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>&nbsp;</span></p>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>Kestrel</span><span
-    style='font-size:10.0pt;font-family:宋体'>万维网服务器宿主：</span><span lang=EN-US
-    style='font-size:10.0pt'><a
-    href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-7.0"><span
-    style='font-family:宋体'>https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-7.0</span></a></span></p>
-    </td>
-   </tr>
-  </table>
-  </div>
-  <p class=MsoListParagraph align=center style='margin-top:6.0pt;margin-right:
-  0cm;margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:center;
-  text-indent:0cm;layout-grid-mode:char'><b><span lang=EN-US style='font-size:
-  11.0pt'>E</span></b><b><span lang=EN-US style='font-size:11.0pt'>.</span></b><b><span
-  style='font-size:11.0pt'>视图<span lang=EN-US>V</span>控制<span lang=EN-US>C</span>模型<span
-  lang=EN-US>M</span>的操作系统<span lang=EN-US>OS</span></span></b></p>
-  <div align=center>
-  <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
-   style='border-collapse:collapse;border:none'>
-   <tr>
-    <td width=247 valign=top style='width:185.5pt;border:dashed windowtext 1.0pt;
-    padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>客户端</span></b></p>
-    </td>
-    <td width=57 valign=top style='width:42.5pt;border:dashed windowtext 1.0pt;
-    border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>互动</span></b></p>
-    </td>
-    <td width=305 valign=top style='width:228.45pt;border:dashed windowtext 1.0pt;
-    border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-    text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
-    font-family:宋体'>服务端</span></b></p>
+    <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
+    char'><a name=附录的服务端3><span style='font-size:10.0pt;font-family:宋体;
+    color:black;background:#D9D9D9'>三、<span lang=EN-US>“</span>服务端<span
+    lang=EN-US>MVC”</span>的计算可以选用的：</span></a></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>计算机</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体;color:black;background:
+    #D9D9D9'>OS</span><span style='font-size:10.0pt;font-family:宋体;color:black;
+    background:#D9D9D9'>平台<span lang=EN-US>C/C++</span>语言</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>计算<span
+    lang=EN-US>”</span></span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体;color:black;background:#D9D9D9'>↓隐喻</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>人的专业术语语言计算</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体;color:black;background:
+    #D9D9D9'>”</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体'>（本书未选用）</span></p>
     </td>
    </tr>
    <tr>
-    <td width=247 valign=top style='width:185.5pt;border:dashed windowtext 1.0pt;
+    <td width=274 valign=top style='width:205.3pt;border:dashed windowtext 1.0pt;
     border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>Windows</span><span
-    style='font-size:10.0pt;font-family:宋体'>操作系统<span lang=EN-US>OS</span>客户端：</span><span
-    lang=EN-US style='font-size:10.0pt'><a
-    href="https://learn.microsoft.com/en-us/windows/"><span style='font-family:
-    宋体'>https://learn.microsoft.com/en-us/windows/</span></a></span></p>
-    </td>
-    <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:
-    none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
-    padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span style='font-size:10.0pt;
+    <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
+    char'><a name=附录的客户端4><span style='font-size:10.0pt;font-family:宋体;
+    color:black;background:#D9D9D9'>四、<span lang=EN-US>“</span>客户端<span
+    lang=EN-US>MVC”</span>的计算可以选用的：</span></a></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>计算机</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体;color:black;background:
+    #D9D9D9'>.Net</span><span style='font-size:10.0pt;font-family:宋体;
+    color:black;background:#D9D9D9'>平台<span lang=EN-US>C#</span>语言</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>计算<span
+    lang=EN-US>”</span></span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体;color:black;background:#D9D9D9'>↓隐喻</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>人的日常词汇语言计算</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体;color:black;background:
+    #D9D9D9'>”</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体'>（本书选用）</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
     font-family:宋体'>（</span><span
-    lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
-    style='font-size:10.0pt;font-family:宋体'>节）</span></p>
+    lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.7</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体'> </span><span
+    style='font-size:10.0pt;font-family:宋体'>节）（本书选用<span lang=EN-US>“.Net</span>平台<span
+    lang=EN-US>C#</span>语言<span lang=EN-US>”</span>开发教育工具软件）</span></p>
     </td>
-    <td width=305 valign=top style='width:228.45pt;border-top:none;border-left:
+    <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:
     none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
     padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-    layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-    style='font-size:10.0pt;font-family:宋体'>Azure</span><span style='font-size:
-    10.0pt;font-family:宋体'>云服务端：</span><span lang=EN-US style='font-size:10.0pt'><a
-    href="https://learn.microsoft.com/en-us/azure/?product=popular"><span
-    style='font-family:宋体'>https://learn.microsoft.com/en-us/azure/?product=popular</span></a></span></p>
+    <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
+    break-all'><span style='font-size:10.0pt;font-family:宋体;color:red'>（</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体;color:red'>5.8</span><span
+    style='font-size:10.0pt;font-family:宋体;color:red'>节）</span></p>
+    </td>
+    <td width=274 valign=top style='width:205.75pt;border-top:none;border-left:
+    none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
+    char'><a name=附录的服务端4><span style='font-size:10.0pt;font-family:宋体;
+    color:black;background:#D9D9D9'>四、<span lang=EN-US>“</span>服务端<span
+    lang=EN-US>MVC”</span>的计算可以选用的：</span></a></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>计算机</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体;color:black;background:
+    #D9D9D9'>.Net</span><span style='font-size:10.0pt;font-family:宋体;
+    color:black;background:#D9D9D9'>平台<span lang=EN-US>C#</span>语言</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>计算<span
+    lang=EN-US>”</span></span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体;color:black;background:#D9D9D9'>↓隐喻</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'>“</span><span
+    style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>人的日常词汇语言计算</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体;color:black;background:
+    #D9D9D9'>”</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体'>（本书选用）</span></p>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
+    font-family:宋体'>（</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.9</span><span
+    lang=EN-US style='font-size:10.0pt;font-family:宋体'> </span><span
+    style='font-size:10.0pt;font-family:宋体'>节）（本书选用<span lang=EN-US>“.Net</span>平台<span
+    lang=EN-US>C#</span>语言<span lang=EN-US>”</span>开发教育工具软件）</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=624 colspan=3 valign=top style='width:467.75pt;border:dashed windowtext 1.0pt;
+    border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoListParagraph style='margin-top:6.0pt;layout-grid-mode:char;
+    word-break:break-all'>涉及如下工具软件。如下工具软件目前大多是<span lang=EN-US>OS</span>平台<span
+    lang=EN-US>C/C++</span>语言实现的，建议思考尝试<span lang=EN-US>.Net</span>平台<span
+    lang=EN-US>C#</span>语言实现如下工具软件，非常有利于自我提高。</p>
+    <p class=MsoListParagraph align=center style='margin-top:6.0pt;margin-right:
+    0cm;margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:
+    center;text-indent:0cm;layout-grid-mode:char'><b><span lang=EN-US
+    style='font-size:11.0pt'>A</span></b><span lang=EN-US>.</span><b><span
+    style='font-size:11.0pt'>视图<span lang=EN-US>V</span>控制<span lang=EN-US>C</span>模型<span
+    lang=EN-US>M</span>的<span lang=EN-US>CPU</span>仿真</span></b></p>
+    <div align=center>
+    <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+     style='border-collapse:collapse;border:none'>
+     <tr>
+      <td width=247 valign=top style='width:185.5pt;border:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>客户端</span></b></p>
+      </td>
+      <td width=57 valign=top style='width:42.5pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>互动</span></b></p>
+      </td>
+      <td width=305 valign=top style='width:228.45pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>服务端</span></b></p>
+      </td>
+     </tr>
+     <tr>
+      <td width=247 valign=top style='width:185.5pt;border:dashed windowtext 1.0pt;
+      border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>CPU</span><span style='font-size:
+      10.0pt;font-family:宋体'>硬件仿真的客户端<span lang=EN-US>SimulIDE</span>：</span><span
+      lang=EN-US style='font-size:10.0pt'><a
+      href="https://simulide.blogspot.com/">https://simulide.blogspot.com/</a></span></p>
+      </td>
+      <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:
+      none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span style='font-size:10.0pt;
+      font-family:宋体'>（</span><span
+      lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
+      style='font-size:10.0pt;font-family:宋体'>节）</span></p>
+      </td>
+      <td width=305 valign=top style='width:228.45pt;border-top:none;
+      border-left:none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>CPU</span><span style='font-size:
+      10.0pt;font-family:宋体'>硬件仿真的服务端<span lang=EN-US>SimulIDE</span>：</span><span
+      lang=EN-US style='font-size:10.0pt'><a
+      href="https://simulide.blogspot.com/">https://simulide.blogspot.com/</a></span></p>
+      </td>
+     </tr>
+    </table>
+    </div>
+    <p class=MsoListParagraph align=center style='margin-top:6.0pt;margin-right:
+    0cm;margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:
+    center;text-indent:0cm;layout-grid-mode:char'><b><span lang=EN-US
+    style='font-size:11.0pt'>B</span></b><b><span lang=EN-US style='font-size:
+    11.0pt'>. </span></b><b><span style='font-size:11.0pt'>视图<span lang=EN-US>V</span>控制<span
+    lang=EN-US>C</span>模型<span lang=EN-US>M</span>的输入输出硬件仿真</span></b></p>
+    <div align=center>
+    <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+     style='border-collapse:collapse;border:none'>
+     <tr>
+      <td width=247 valign=top style='width:185.5pt;border:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>客户端</span></b></p>
+      </td>
+      <td width=57 valign=top style='width:42.5pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>互动</span></b></p>
+      </td>
+      <td width=305 valign=top style='width:228.45pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>服务端</span></b></p>
+      </td>
+     </tr>
+     <tr>
+      <td width=247 valign=top style='width:185.5pt;border:dashed windowtext 1.0pt;
+      border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span style='font-size:10.0pt;
+      font-family:宋体'>输入输出硬件仿真的客户端<span lang=EN-US>SimulIDE</span>：</span><span
+      lang=EN-US style='font-size:10.0pt'><a
+      href="https://simulide.blogspot.com/">https://simulide.blogspot.com/</a></span></p>
+      </td>
+      <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:
+      none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span style='font-size:10.0pt;
+      font-family:宋体'>（</span><span
+      lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
+      style='font-size:10.0pt;font-family:宋体'>节）</span></p>
+      </td>
+      <td width=305 valign=top style='width:228.45pt;border-top:none;
+      border-left:none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span style='font-size:10.0pt;
+      font-family:宋体'>输入输出硬件仿真的服务端<span lang=EN-US>SimulIDE</span>：</span><span
+      lang=EN-US style='font-size:10.0pt'><a
+      href="https://simulide.blogspot.com/">https://simulide.blogspot.com/</a></span></p>
+      </td>
+     </tr>
+    </table>
+    </div>
+    <p class=MsoListParagraph align=center style='margin-top:6.0pt;margin-right:
+    0cm;margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:
+    center;text-indent:0cm;layout-grid-mode:char'><b><span lang=EN-US
+    style='font-size:11.0pt'>C</span></b><b><span lang=EN-US style='font-size:
+    11.0pt'>.</span></b><b><span style='font-size:11.0pt'>视图<span lang=EN-US>V</span>控制<span
+    lang=EN-US>C</span>模型<span lang=EN-US>M</span>的操作系统<span lang=EN-US>OS</span></span></b></p>
+    <div align=center>
+    <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+     style='border-collapse:collapse;border:none'>
+     <tr>
+      <td width=247 valign=top style='width:185.5pt;border:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>客户端</span></b></p>
+      </td>
+      <td width=57 valign=top style='width:42.5pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>互动</span></b></p>
+      </td>
+      <td width=305 valign=top style='width:228.45pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>服务端</span></b></p>
+      </td>
+     </tr>
+     <tr>
+      <td width=247 valign=top style='width:185.5pt;border:dashed windowtext 1.0pt;
+      border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>Windows</span><span
+      style='font-size:10.0pt;font-family:宋体'>操作系统<span lang=EN-US>OS</span>客户端：</span><span
+      lang=EN-US style='font-size:10.0pt'><a
+      href="https://learn.microsoft.com/en-us/windows/"><span style='font-family:
+      宋体'>https://learn.microsoft.com/en-us/windows/</span></a></span></p>
+      </td>
+      <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:
+      none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span style='font-size:10.0pt;
+      font-family:宋体'>（</span><span
+      lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
+      style='font-size:10.0pt;font-family:宋体'>节）</span></p>
+      </td>
+      <td width=305 valign=top style='width:228.45pt;border-top:none;
+      border-left:none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>Azure</span><span
+      style='font-size:10.0pt;font-family:宋体'>云服务端：</span><span lang=EN-US
+      style='font-size:10.0pt'><a
+      href="https://learn.microsoft.com/en-us/azure/?product=popular"><span
+      style='font-family:宋体'>https://learn.microsoft.com/en-us/azure/?product=popular</span></a></span></p>
+      </td>
+     </tr>
+    </table>
+    </div>
+    <p class=MsoListParagraph align=center style='margin-top:6.0pt;margin-right:
+    0cm;margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:
+    center;text-indent:0cm;layout-grid-mode:char'><b><span lang=EN-US
+    style='font-size:11.0pt'>D</span></b><b><span lang=EN-US style='font-size:
+    11.0pt'>.</span></b><b><span style='font-size:11.0pt'>视图<span lang=EN-US>V</span>控制<span
+    lang=EN-US>C</span>模型<span lang=EN-US>M</span>的运行宿主、即时交流宿主</span></b></p>
+    <div align=center>
+    <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+     style='border-collapse:collapse;border:none'>
+     <tr>
+      <td width=129 valign=top style='width:97.1pt;border:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>客户端</span></b></p>
+      </td>
+      <td width=52 valign=top style='width:38.75pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>互动</span></b></p>
+      </td>
+      <td width=427 valign=top style='width:320.6pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>服务端</span></b></p>
+      </td>
+     </tr>
+     <tr>
+      <td width=129 valign=top style='width:97.1pt;border:dashed windowtext 1.0pt;
+      border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>Edge</span><span
+      style='font-size:10.0pt;font-family:宋体'>万维网客户端浏览器宿主：</span><span
+      lang=EN-US style='font-size:10.0pt'><a
+      href="https://learn.microsoft.com/en-us/microsoft-edge/"><span
+      style='font-family:宋体'>https://learn.microsoft.com/en-us/microsoft-edge/</span></a></span></p>
+      </td>
+      <td width=52 valign=top style='width:38.75pt;border-top:none;border-left:
+      none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span style='font-size:10.0pt;
+      font-family:宋体'>（</span><span
+      lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
+      style='font-size:10.0pt;font-family:宋体'>节）</span></p>
+      </td>
+      <td width=427 valign=top style='width:320.6pt;border-top:none;border-left:
+      none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>IIS</span><span style='font-size:
+      10.0pt;font-family:宋体'>万维网服务器宿主：</span><span lang=EN-US style='font-size:
+      10.0pt'><a
+      href="https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-7.0"><span
+      style='font-family:宋体'>https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-7.0</span></a></span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>&nbsp;</span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>Kestrel</span><span
+      style='font-size:10.0pt;font-family:宋体'>万维网服务器宿主：</span><span lang=EN-US
+      style='font-size:10.0pt'><a
+      href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-7.0"><span
+      style='font-family:宋体'>https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-7.0</span></a></span></p>
+      </td>
+     </tr>
+     <tr>
+      <td width=129 valign=top style='width:97.1pt;border:dashed windowtext 1.0pt;
+      border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>Teams</span><span
+      style='font-size:10.0pt;font-family:宋体'>即时交流的客户端宿主：</span><span
+      lang=EN-US style='font-size:10.0pt'><a
+      href="https://learn.microsoft.com/en-us/microsoftteams/"><span
+      style='font-family:宋体'>https://learn.microsoft.com/en-us/microsoftteams/</span></a></span></p>
+      </td>
+      <td width=52 valign=top style='width:38.75pt;border-top:none;border-left:
+      none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span style='font-size:10.0pt;
+      font-family:宋体'>（</span><span
+      lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
+      style='font-size:10.0pt;font-family:宋体'>节）</span></p>
+      </td>
+      <td width=427 valign=top style='width:320.6pt;border-top:none;border-left:
+      none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>Teams</span><span
+      style='font-size:10.0pt;font-family:宋体'>即时交流的服务端宿主：</span><span
+      lang=EN-US style='font-size:10.0pt'><a
+      href="https://learn.microsoft.com/en-us/microsoftteams/"><span
+      style='font-family:宋体'>https://learn.microsoft.com/en-us/microsoftteams/</span></a></span></p>
+      </td>
+     </tr>
+    </table>
+    </div>
+    <p class=MsoListParagraph align=center style='margin-top:6.0pt;margin-right:
+    0cm;margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:
+    center;text-indent:0cm;layout-grid-mode:char'><b><span lang=EN-US
+    style='font-size:11.0pt'>E</span></b><b><span lang=EN-US style='font-size:
+    11.0pt'>.</span></b><b><span style='font-size:11.0pt'>视图<span lang=EN-US>V</span>控制<span
+    lang=EN-US>C</span>模型<span lang=EN-US>M</span>的集成开发环境<span lang=EN-US>IDE</span></span></b></p>
+    <div align=center>
+    <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+     style='border-collapse:collapse;border:none'>
+     <tr>
+      <td width=399 valign=top style='width:298.9pt;border:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>客户端</span></b></p>
+      </td>
+      <td width=38 valign=top style='width:28.45pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>互动</span></b></p>
+      </td>
+      <td width=172 valign=top style='width:129.1pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>服务端</span></b></p>
+      </td>
+     </tr>
+     <tr>
+      <td width=399 valign=top style='width:298.9pt;border:dashed windowtext 1.0pt;
+      border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='margin-top:6.0pt;text-align:left;
+      text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+      10.0pt;font-family:宋体'>VS-Git</span><span style='font-size:10.0pt;
+      font-family:宋体'>客户端<span lang=EN-US>IDE</span>工具、文件协同工具；</span><span
+      lang=EN-US style='font-size:10.0pt'><a
+      href="https://learn.microsoft.com/en-us/visualstudio"><span
+      style='font-family:宋体'>https://learn.microsoft.com/en-us/visualstudio</span></a></span><span
+      style='font-size:10.0pt;font-family:宋体'>、</span><span lang=EN-US
+      style='font-size:10.0pt'><a
+      href="https://learn.microsoft.com/en-us/visualstudio/version-control/?view=vs-2022"><span
+      style='font-family:宋体'>https://learn.microsoft.com/en-us/visualstudio/version-control/?view=vs-2022</span></a></span></p>
+      </td>
+      <td width=38 valign=top style='width:28.45pt;border-top:none;border-left:
+      none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal style='margin-top:6.0pt;text-indent:0cm;layout-grid-mode:
+      char'><span style='font-size:10.0pt;font-family:宋体'>（</span><span
+      lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
+      style='font-size:10.0pt;font-family:宋体'>节）</span></p>
+      </td>
+      <td width=172 valign=top style='width:129.1pt;border-top:none;border-left:
+      none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal style='margin-top:6.0pt;text-indent:0cm;layout-grid-mode:
+      char'><span lang=EN-US style='font-size:10.0pt;font-family:宋体'>GitHub</span><span
+      style='font-size:10.0pt;font-family:宋体'>万维网服务端<span lang=EN-US>IDE</span>工具、文件协同工具：</span><span
+      lang=EN-US style='font-size:10.0pt'><a href="http://www.github.com"><span
+      style='font-family:宋体'>www.github.com</span></a></span></p>
+      </td>
+     </tr>
+    </table>
+    </div>
+    <p class=MsoListParagraph align=center style='margin-top:6.0pt;margin-right:
+    0cm;margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:
+    center;text-indent:0cm;layout-grid-mode:char'><b><span lang=EN-US
+    style='font-size:11.0pt'>F</span></b><b><span lang=EN-US style='font-size:
+    11.0pt'>.</span></b><b><span style='font-size:11.0pt'>视图<span lang=EN-US>V</span>的编辑工具（辅助<span
+    lang=EN-US>IDE</span>）</span></b></p>
+    <div align=center>
+    <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+     style='border-collapse:collapse;border:none'>
+     <tr>
+      <td width=484 valign=top style='width:362.65pt;border:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>客户端</span></b></p>
+      </td>
+      <td width=45 valign=top style='width:33.4pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>互动</span></b></p>
+      </td>
+      <td width=81 valign=top style='width:60.4pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>服务端</span></b></p>
+      </td>
+     </tr>
+     <tr>
+      <td width=484 valign=top style='width:362.65pt;border:dashed windowtext 1.0pt;
+      border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      word-break:break-all'><span lang=EN-US style='font-size:10.0pt;
+      font-family:宋体'>Word-</span><span style='font-size:10.0pt;font-family:
+      宋体'>字符<span lang=EN-US>-</span>客户端：</span><span lang=EN-US
+      style='font-size:10.0pt'><a
+      href="https://www.microsoft.com/en-us/microsoft-365/word"><span
+      style='font-family:宋体'>https://www.microsoft.com/en-us/microsoft-365/word</span></a></span><span
+      style='font-size:10.0pt;font-family:宋体'>（<span lang=EN-US>Word 2016</span>开始，支持<span
+      lang=EN-US>PowerBI</span>的数据导入<span lang=EN-US>,</span></span><span
+      lang=EN-US style='font-size:10.0pt'> <a
+      href="https://learn.microsoft.com/en-us/power-bi/paginated-reports/report-builder/export-microsoft-word-report-builder">https://learn.microsoft.com/en-us/power-bi/paginated-reports/report-builder/export-microsoft-word-report-builder</a></span><span
+      style='font-size:10.0pt;font-family:宋体'>）</span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>&nbsp;</span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>PS-</span><span style='font-size:
+      10.0pt;font-family:宋体'>图像<span lang=EN-US>-</span>客户端：</span><span
+      lang=EN-US style='font-size:10.0pt'><a
+      href="https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/"><span
+      style='font-family:宋体'>https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/</span></a></span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span class=MsoHyperlink><span
+      lang=EN-US style='font-size:10.0pt'><span style='text-decoration:none'>&nbsp;</span></span></span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>PR-</span><span style='font-size:
+      10.0pt;font-family:宋体'>视频<span lang=EN-US>-</span>客户端：</span><span
+      lang=EN-US style='font-size:10.0pt'><a
+      href="https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/"><span
+      style='font-family:宋体'>https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/</span></a></span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span class=MsoHyperlink><span
+      lang=EN-US style='font-size:10.0pt'><span style='text-decoration:none'>&nbsp;</span></span></span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>PPT-2D-3D-</span><span
+      style='font-size:10.0pt;font-family:宋体'>客户端：</span><span lang=EN-US
+      style='font-size:10.0pt'><a
+      href="https://www.microsoft.com/en-us/microsoft-365/Powerpoint"><span
+      style='font-family:宋体'>https://www.microsoft.com/en-us/microsoft-365/Powerpoint</span></a></span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span class=MsoHyperlink><span
+      lang=EN-US style='font-size:10.0pt'><span style='text-decoration:none'>&nbsp;</span></span></span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>Excel-PowerBI-</span><span
+      style='font-size:10.0pt;font-family:宋体'>客户端（<span lang=EN-US>Excel 2016</span>开始，集成了<span
+      lang=EN-US>PowerBI</span>的数据导入的<span lang=EN-US>PowerQuery</span>、数据建模的<span
+      lang=EN-US>PowerPivot</span>、数据报表的<span lang=EN-US>PowerView</span>、数据地图的<span
+      lang=EN-US>PowerMap</span>）：</span><span lang=EN-US style='font-size:
+      10.0pt'><a href="https://www.microsoft.com/en-us/microsoft-365/Excel"><span
+      style='font-family:宋体'>https://www.microsoft.com/en-us/microsoft-365/Excel</span></a></span><span
+      style='font-size:10.0pt;font-family:宋体'>、</span><span lang=EN-US
+      style='font-size:10.0pt'><a
+      href="https://learn.microsoft.com/en-us/power-bi"><span style='font-family:
+      宋体'>https://learn.microsoft.com/en-us/power-bi</span></a></span><span
+      style='font-size:10.0pt;font-family:宋体'>、</span><span lang=EN-US
+      style='font-size:10.0pt'><a
+      href="https://www.nuget.org/packages/Microsoft.PowerBI.Api/">https://www.nuget.org/packages/Microsoft.PowerBI.Api/</a></span><span
+      style='font-size:10.0pt;font-family:宋体'>、</span><span lang=EN-US
+      style='font-size:10.0pt'><a
+      href="https://learn.microsoft.com/en-us/dotnet/api/overview/azure/power-bi?view=azure-dotnet">https://learn.microsoft.com/en-us/dotnet/api/overview/azure/power-bi?view=azure-dotnet</a></span></p>
+      </td>
+      <td width=45 valign=top style='width:33.4pt;border-top:none;border-left:
+      none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal style='margin-top:6.0pt;text-indent:0cm;layout-grid-mode:
+      char'><span style='font-size:10.0pt;font-family:宋体'>（</span><span
+      lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
+      style='font-size:10.0pt;font-family:宋体'>节）</span></p>
+      </td>
+      <td width=81 valign=top style='width:60.4pt;border-top:none;border-left:
+      none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal style='margin-top:6.0pt;text-indent:0cm;layout-grid-mode:
+      char'><span style='font-size:10.0pt;font-family:宋体'>本书不涉及。</span></p>
+      </td>
+     </tr>
+    </table>
+    </div>
+    <p class=MsoListParagraph align=center style='margin-top:6.0pt;margin-right:
+    0cm;margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:
+    center;text-indent:0cm;layout-grid-mode:char'><b><span lang=EN-US
+    style='font-size:11.0pt'>G</span></b><b><span lang=EN-US style='font-size:
+    11.0pt'>.</span></b><b><span style='font-size:11.0pt'>模型<span lang=EN-US>M</span>的编辑工具（辅助<span
+    lang=EN-US>IDE</span>）</span></b></p>
+    <div align=center>
+    <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+     style='border-collapse:collapse;border:none'>
+     <tr>
+      <td width=221 valign=top style='width:165.8pt;border:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>客户端</span></b></p>
+      </td>
+      <td width=55 valign=top style='width:40.95pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>互动</span></b></p>
+      </td>
+      <td width=333 valign=top style='width:249.7pt;border:dashed windowtext 1.0pt;
+      border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+      text-indent:0cm;layout-grid-mode:char'><b><span style='font-size:11.0pt;
+      font-family:宋体'>服务端</span></b></p>
+      </td>
+     </tr>
+     <tr>
+      <td width=221 valign=top style='width:165.8pt;border:dashed windowtext 1.0pt;
+      border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal style='margin-top:6.0pt;text-indent:0cm;layout-grid-mode:
+      char'><span lang=EN-US style='font-size:10.0pt;font-family:宋体'>SSMS</span><span
+      style='font-size:10.0pt;font-family:宋体'>客户端：</span><span lang=EN-US
+      style='font-size:10.0pt'><a
+      href="https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16"><span
+      style='font-family:宋体'>https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16</span></a></span></p>
+      </td>
+      <td width=55 valign=top style='width:40.95pt;border-top:none;border-left:
+      none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;
+      word-break:break-all'><span style='font-size:10.0pt;font-family:宋体'>（</span><span
+      lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
+      style='font-size:10.0pt;font-family:宋体'>节）</span></p>
+      </td>
+      <td width=333 valign=top style='width:249.7pt;border-top:none;border-left:
+      none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+      padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>SS</span><span style='font-size:
+      10.0pt;font-family:宋体'>服务端：</span><span lang=EN-US style='font-size:10.0pt'><a
+      href="https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16"><span
+      style='font-family:宋体'>https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16</span></a></span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span class=MsoHyperlink><span
+      lang=EN-US style='font-size:10.0pt'><span style='text-decoration:none'>&nbsp;</span></span></span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>SQLite</span><span
+      style='font-size:10.0pt;font-family:宋体'>数据库服务器：</span><span lang=EN-US
+      style='font-size:10.0pt'><a
+      href="https://mp.weixin.qq.com/s/4IuUXesoWu1tKf6sMRt2Pg"><span
+      style='font-family:宋体'>https://mp.weixin.qq.com/s/4IuUXesoWu1tKf6sMRt2Pg</span></a></span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span class=MsoHyperlink><span
+      lang=EN-US style='font-size:10.0pt;font-family:宋体'><span
+       style='text-decoration:none'>&nbsp;</span></span></span></p>
+      <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+      layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+      style='font-size:10.0pt;font-family:宋体'>ChatGPT</span><span
+      style='font-size:10.0pt;font-family:宋体'>服务端开源版本的本机版：</span><span
+      lang=EN-US style='font-size:10.0pt'><a
+      href="https://huggingface.co/meta-llama/Llama-2-7b/tree/main"><span
+      style='font-family:宋体'>https://huggingface.co/meta-llama/Llama-2-7b/tree/main</span></a></span></p>
+      </td>
+     </tr>
+    </table>
+    </div>
+    <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
+    text-indent:0cm;layout-grid-mode:char'><span lang=EN-US style='font-size:
+    10.0pt;font-family:宋体;color:black;background:#D9D9D9'> </span></p>
     </td>
    </tr>
   </table>
   </div>
-  <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
-  text-indent:0cm;layout-grid-mode:char'><b><span lang=EN-US style='font-size:
-  11.0pt;font-family:宋体'>  </span></b></p>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm;
+  layout-grid-mode:char;word-break:break-all'><b><span lang=EN-US
+  style='font-size:2.0pt;font-family:宋体;color:#C00000'>    </span></b></p>
+  </td>
+ </tr>
+ <tr style='height:17.25pt'>
+  <td width=642 style='width:481.45pt;border:dashed windowtext 1.0pt;
+  border-top:none;padding:0cm 0cm 0cm 0cm;height:17.25pt'>
+  <p class=MsoNormal align=left style='margin-top:6.0pt;margin-right:0cm;
+  margin-bottom:6.0pt;margin-left:0cm;text-align:left;text-indent:0cm;
+  layout-grid-mode:char;word-break:break-all'><b><span style='font-size:10.0pt;
+  font-family:宋体;color:#C00000'>“教育整体”的“中途”事件</span></b><span style='font-size:
+  10.0pt;font-family:宋体;color:#C00000'>中的“<b>四个平台语言计算的客户端<span lang=EN-US>MVC(</span>架构<span
+  lang=EN-US>/</span>模式<span lang=EN-US>/</span>关系<span lang=EN-US>/</span>结构<span
+  lang=EN-US>)</span>、四个平台语言计算的互动<span lang=EN-US>MVC(</span>架构<span
+  lang=EN-US>/</span>模式<span lang=EN-US>/</span>关系<span lang=EN-US>/</span>结构<span
+  lang=EN-US>)</span>、四个平台语言计算的服务端<span lang=EN-US>MVC(</span>架构<span
+  lang=EN-US>/</span>模式<span lang=EN-US>/</span>关系<span lang=EN-US>/</span>结构<span
+  lang=EN-US>)</span></b>”的<b>“工程四个环节<span lang=EN-US>(</span>需求→设计→开发→交付<span
+  lang=EN-US>)</span>”</b>：</span></p>
+  <p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0cm;
+  margin-bottom:6.0pt;margin-left:0cm;text-align:center;text-indent:0cm;
+  layout-grid-mode:char;background:white;word-break:break-all'><span
+  style='font-size:10.0pt;font-family:黑体;color:black'>（省略以免重复累赘<span
+  lang=EN-US>……</span>）</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.25pt'>
+  <td width=642 valign=top style='width:481.45pt;border:dashed windowtext 1.0pt;
+  border-top:none;padding:0cm 0cm 0cm 0cm;height:17.25pt'>
+  <p class=MsoNormal align=left style='margin-top:6.0pt;margin-right:0cm;
+  margin-bottom:6.0pt;margin-left:0cm;text-align:left;text-indent:0cm;
+  layout-grid-mode:char;word-break:break-all'><b><span lang=EN-US
+  style='font-size:10.0pt;font-family:宋体;color:#C00000'>“</span></b><b><span
+  style='font-size:10.0pt;font-family:宋体;color:#C00000'>教育整体<span lang=EN-US>”</span>的“结束”事件</span></b><span
+  style='font-size:10.0pt;font-family:宋体;color:#C00000'>中的“<b>四个平台语言计算的客户端<span
+  lang=EN-US>MVC(</span>架构<span lang=EN-US>/</span>模式<span lang=EN-US>/</span>关系<span
+  lang=EN-US>/</span>结构<span lang=EN-US>)</span>、四个平台语言计算的互动<span lang=EN-US>MVC(</span>架构<span
+  lang=EN-US>/</span>模式<span lang=EN-US>/</span>关系<span lang=EN-US>/</span>结构<span
+  lang=EN-US>)</span>、四个平台语言计算的服务端<span lang=EN-US>MVC(</span>架构<span
+  lang=EN-US>/</span>模式<span lang=EN-US>/</span>关系<span lang=EN-US>/</span>结构<span
+  lang=EN-US>)</span></b>”的<b>“工程四个环节<span lang=EN-US>(</span>需求→设计→开发→交付<span
+  lang=EN-US>)</span>”</b>：</span></p>
+  <p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0cm;
+  margin-bottom:6.0pt;margin-left:0cm;text-align:center;text-indent:0cm;
+  layout-grid-mode:char;background:white;word-break:break-all'><span
+  style='font-size:10.0pt;font-family:黑体;color:black'>（</span><span
+  style='font-size:10.0pt;font-family:宋体;color:black'>省略</span><span
+  style='font-size:10.0pt;font-family:黑体;color:black'>以免重复累赘<span lang=EN-US>……</span>）</span></p>
   </td>
  </tr>
  <tr>
-  <td width=274 valign=top style='width:205.3pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
-  char'><span style='font-size:10.0pt;font-family:宋体;color:black;background:
-  #D9D9D9'>第二平台语言输入输出硬件的数据读写平台的<span lang=EN-US>ASM</span>汇编语言</span><span
-  style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>开发工具软件</span><span
-  style='font-size:10.0pt;font-family:宋体'>（本书未选用）（本书选用的<span lang=EN-US>“.Net</span>平台<span
-  lang=EN-US>C#</span>语言<span lang=EN-US>”</span>可以隐喻<span lang=EN-US>“</span>输入输出硬件平台<span
-  lang=EN-US>ASM</span>汇编语言<span lang=EN-US>”</span>开发如下工具软件）</span></p>
-  <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
-  char'><span lang=EN-US style='font-size:10.0pt;font-family:宋体;background:
-  #D9D9D9'>&nbsp;</span></p>
-  <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
-  break-all'><span style='font-size:10.0pt;font-family:宋体'>硬件仿真的客户端<span
-  lang=EN-US>SimulIDE</span>：</span><span class=MsoHyperlink><span lang=EN-US
-  style='font-size:10.0pt'>https://simulide.blogspot.com/</span></span></p>
-  </td>
-  <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
-  break-all'><span style='font-size:10.0pt;font-family:宋体'>（</span><span
-  lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
-  style='font-size:10.0pt;font-family:宋体'>节）</span></p>
-  </td>
-  <td width=274 valign=top style='width:205.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
-  char'><span style='font-size:10.0pt;font-family:宋体;color:black;background:
-  #D9D9D9'>第二平台语言输入输出硬件的数据读写平台的<span lang=EN-US>ASM</span>汇编语言</span><span
-  style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>开发工具软件</span><span
-  style='font-size:10.0pt;font-family:宋体'>（本书未选用）（本书选用的<span lang=EN-US>“.Net</span>平台<span
-  lang=EN-US>C#</span>语言<span lang=EN-US>”</span>可以隐喻<span lang=EN-US>“</span>输入输出硬件平台<span
-  lang=EN-US>ASM</span>汇编语言<span lang=EN-US>”</span>开发如下工具软件）</span></p>
-  <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
-  char'><span lang=EN-US style='font-size:10.0pt;font-family:宋体;background:
-  #D9D9D9'>&nbsp;</span></p>
-  <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-  layout-grid-mode:char;word-break:break-all'><span style='font-size:10.0pt;
-  font-family:宋体'>硬件仿真的服务端<span lang=EN-US>SimulIDE</span>：</span><span
-  class=MsoHyperlink><span lang=EN-US style='font-size:10.0pt'>https://simulide.blogspot.com/</span></span></p>
-  </td>
- </tr>
- <tr>
-  <td width=274 valign=top style='width:205.3pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
-  char'><span style='font-size:10.0pt;font-family:宋体;color:black;background:
-  #D9D9D9'>第一平台语言<span lang=EN-US>CPU</span>平台的<span lang=EN-US>0/1</span>语言</span><span
-  style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>开发工具软件</span><span
-  lang=EN-US style='font-size:10.0pt;font-family:宋体;color:black;background:
-  #D9D9D9'>(</span><span style='font-size:10.0pt;font-family:宋体;color:black;
-  background:#D9D9D9'>客户端数字思维的本质<span lang=EN-US>)</span></span><span
-  lang=EN-US style='font-size:10.0pt;font-family:宋体'> </span><span
-  style='font-size:10.0pt;font-family:宋体'>（本书未选用）（本书选用的<span lang=EN-US>“.Net</span>平台<span
-  lang=EN-US>C#</span>语言<span lang=EN-US>”</span>可以隐喻<span lang=EN-US>“CPU</span>平台<span
-  lang=EN-US>0/1</span>语言<span lang=EN-US>”</span>开发如下工具软件）</span></p>
-  <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
-  break-all'><span lang=EN-US style='font-size:10.0pt;font-family:宋体'>&nbsp;</span></p>
-  <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
-  break-all'><span style='font-size:10.0pt;font-family:宋体'>硬件仿真的客户端<span
-  lang=EN-US>SimulIDE</span>：</span><span lang=EN-US style='font-size:10.0pt'><a
-  href="https://simulide.blogspot.com/">https://simulide.blogspot.com/</a></span></p>
-  </td>
-  <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-  layout-grid-mode:char;word-break:break-all'><span style='font-size:10.0pt;
-  font-family:宋体'>（</span><span
-  lang=EN-US style='font-size:10.0pt;font-family:宋体'>5.8</span><span
-  style='font-size:10.0pt;font-family:宋体'>节）</span></p>
-  </td>
-  <td width=274 valign=top style='width:205.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
-  char'><span style='font-size:10.0pt;font-family:宋体;color:black;background:
-  #D9D9D9'>第一平台语言<span lang=EN-US>CPU</span>平台的<span lang=EN-US>0/1</span>语言</span><span
-  style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>开发工具软件</span><span
-  lang=EN-US style='font-size:10.0pt;font-family:宋体;color:black;background:
-  #D9D9D9'>(</span><span style='font-size:10.0pt;font-family:宋体;color:black;
-  background:#D9D9D9'>服务端数字思维的本质<span lang=EN-US>)</span></span><span
-  lang=EN-US style='font-size:10.0pt;font-family:宋体'> </span><span
-  style='font-size:10.0pt;font-family:宋体'>（本书未选用）（本书选用的<span lang=EN-US>“.Net</span>平台<span
-  lang=EN-US>C#</span>语言<span lang=EN-US>”</span>可以隐喻<span lang=EN-US>“CPU</span>平台<span
-  lang=EN-US>0/1</span>语言<span lang=EN-US>”</span>开发如下工具软件）</span></p>
-  <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
-  char'><span lang=EN-US style='font-size:10.0pt;font-family:宋体;background:
-  #D9D9D9'>&nbsp;</span></p>
-  <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
-  break-all'><span style='font-size:10.0pt;font-family:宋体'>硬件仿真的服务端<span
-  lang=EN-US>SimulIDE</span>：</span><span class=MsoHyperlink><span lang=EN-US
-  style='font-size:10.0pt'>https://simulide.blogspot.com/</span></span></p>
+  <td width=642 style='width:481.45pt;border:dashed windowtext 1.0pt;
+  border-top:none;background:transparent;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm;
+  layout-grid-mode:char;word-break:break-all'><span lang=EN-US
+  style='font-size:2.0pt'>  </span></p>
   </td>
  </tr>
 </table>
@@ -711,36 +1026,24 @@ lang=EN-US style='font-family:黑体'> </span></p>
 </div>
 
 <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
-break-all'><span lang=EN-US style='font-size:10.0pt;font-family:宋体'>&nbsp;</span></p>
-
-<p class=MsoNormal align=center style='text-align:center;text-indent:0cm;
-layout-grid-mode:char;word-break:break-all'><span lang=EN-US style='font-size:
-10.0pt;font-family:宋体'>&nbsp;</span></p>
-
-<p class=MsoNormal style='margin-left:21.3pt;text-indent:0cm;layout-grid-mode:
-char;word-break:break-all'><span lang=EN-US style='font-size:10.0pt;font-family:
-宋体'>&nbsp;</span></p>
-
-<p class=MsoNormal style='margin-left:21.3pt;text-indent:0cm;layout-grid-mode:
-char;word-break:break-all'><span lang=EN-US style='font-size:10.0pt;font-family:
-宋体'>&nbsp;</span></p>
+break-all'><span lang=EN-US style='font-family:黑体'>&nbsp;</span></p>
 
 <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
 break-all'><span lang=EN-US style='font-size:10.0pt;font-family:宋体'>&nbsp;</span></p>
 
-<p class=MsoNormal style='text-indent:0cm;line-height:16.0pt;layout-grid-mode:
-char'><span lang=EN-US style='font-size:10.0pt;font-family:黑体'>&nbsp;</span></p>
+<span lang=EN-US style='font-size:10.0pt;font-family:黑体'><br clear=all
+style='page-break-before:always'>
+</span>
 
 <p class=MsoNormal style='margin-right:14.15pt;text-indent:0cm;layout-grid-mode:
 char;word-break:break-all'><span lang=EN-US style='font-size:10.0pt;font-family:
 黑体'>&nbsp;</span></p>
 
-<p class=MsoNormal align=center style='margin-top:0cm;margin-right:14.15pt;
-margin-bottom:0cm;margin-left:35.45pt;margin-bottom:.0001pt;text-align:center;
-text-indent:0cm;layout-grid-mode:char;word-break:break-all'><span lang=EN-US
-style='font-size:10.0pt;font-family:黑体'>&nbsp;</span></p>
+<p class=MsoNormal style='margin-right:14.15pt;text-indent:0cm;layout-grid-mode:
+char;word-break:break-all'><span lang=EN-US style='font-size:10.0pt;font-family:
+黑体'>&nbsp;</span></p>
 
-<p class=MsoNormal style='text-indent:0cm'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 </div>
 
