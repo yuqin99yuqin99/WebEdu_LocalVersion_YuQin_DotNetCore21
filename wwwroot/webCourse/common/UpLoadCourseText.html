@@ -36,12 +36,15 @@
     <div>  
         
         <form action="/CreateText/Post?FolderAndFileName=" method="post" enctype="multipart/form-data" id="uploadCourseText">
-             <p>
-                 <label>选择文件(.doc或docx文件)： </label>
-                <input type="file" name="FileUpload" id="idFileUpload"/>
-            </p>
-            <input type="submit" value="提交" id="idSubmit"/>
+            <p>
+                <label>选择文件(.doc或docx文件)： </label>
+                <input type="file" name="FileUpload" id="idFileUpload" />
+                <input type="submit" value="提交" id="idSubmit" />
 
+                <div />
+                <div />
+                <div>注：课文最好基于长文档模板编辑制作好以便维护<a href="/webCourse/Templates/LongDocNavigatorWithContents_Book.doc" target="_blank">（长文档模板之一）</a>、<a href="/webCourse/Templates/LongDocNavigatorWithContents_Paper.doc" target="_blank">（长文档模板之二）</a></div>
+            </p>
         </form>
 </div>
 </body>
