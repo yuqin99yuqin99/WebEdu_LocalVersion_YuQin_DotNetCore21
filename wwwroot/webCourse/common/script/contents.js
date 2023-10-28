@@ -3528,7 +3528,7 @@ function fnAdvertisement() {
         var advertisement = open("../../../renshichu/lunwensongshen.htm", "advertisement");
     }
     else {
-        var advertisement = open("/webedu_localversion_yuqin_dotnetcore21/wwwroot/renshichu/lunwensongshen.htm");//网站
+        var advertisement = open("/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/renshichu/lunwensongshen.htm");//网站
     }
 }
 function fnMargee() {
@@ -3540,7 +3540,7 @@ function fnMargee() {
             var advertisement = open("../../../renshichu/lunwensongshen.htm", "advertisement");
         }
         else {
-            var advertisement = open("/WebEdu_LocalVersion_YuQin_DotNetCore21/wwwroot/renshichu/lunwensongshen.htm");//网站
+            var advertisement = open("/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/renshichu/lunwensongshen.htm");//网站
         }
     }
     else {
@@ -3599,6 +3599,14 @@ function fnGetFocus() {//模式窗口使用//本系统中所有模式窗口必�
     catch (e) { return; }
     
    // parent.document.getElementById("sIframeTitle").contentWindow.fnGetFocus();
+}
+
+function fnEduResourceTemplates() {
+
+    fnTooManyModelDialog();
+    window.oSrcElement.click();
+    var win = open("../common/EduResourceTemplates.html", "EduResourceTemplates", "width=500,height=350,top=" + (screen.height - 350) / 2 + ",left=" + (screen.width - 500) / 2);
+    window.childWindow = win;
 }
 
 document.getElementsByTagName("body").item(0).onload = fnOnLoad;
