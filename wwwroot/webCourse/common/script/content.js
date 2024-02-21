@@ -24,17 +24,17 @@ function fnOnLoad() {
 		}
 		else {
 			fnNewWindowAdvertisement();
-			fnContentFrameworkNotification('欢迎浏览：', '单击此处可浏览整个系统。使用帮助，请咨询：QQ：43930878；电话：18279142396。EMail:43930878@qq.com', '/favicon.ico');
+			fnContentFrameworkNotification('欢迎浏览：', '单击此处可浏览整个系统。使用帮助，请咨询：QQ：43930878；。EMail:43930878@qq.com', '/favicon.ico');
 		}
 	}
 	catch (e) {
 		fnNewWindowAdvertisement();
-		fnContentFrameworkNotification('欢迎浏览：', '单击此处可浏览整个系统。使用帮助，请咨询：QQ：43930878；电话：18279142396。EMail:43930878@qq.com', '/favicon.ico');
+		fnContentFrameworkNotification('欢迎浏览：', '单击此处可浏览整个系统。使用帮助，请咨询：QQ：43930878；。EMail:43930878@qq.com', '/favicon.ico');
 
 	}
 	/**
 	finally {
-		fnContentFrameworkNotification('欢迎使用内容：', '使用帮助，请咨询：QQ：43930878；电话：18279142396。EMail:43930878@qq.com', '/favicon.ico');
+		fnContentFrameworkNotification('欢迎使用内容：', '使用帮助，请咨询：QQ：43930878；。EMail:43930878@qq.com', '/favicon.ico');
     }
 	**/
 	
