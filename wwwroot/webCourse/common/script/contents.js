@@ -3535,7 +3535,7 @@ function fnMargee() {
     fnTooManyModelDialog();
     //EV_modeAlert();//弹出屏蔽层.好像没起什么作用！
    // var advertisement = open("../../../renshichu/lunwensongshen.htm", "advertisement");
-    if (window.confirm('挖呀挖江西师范大学人事处刘涛科长?')) {
+    if (window.confirm('搜素相关资源?')) {
         if (window.document.URL.toString().toUpperCase().indexOf("://LOCALHOST")>=0) { //本机
             var advertisement = open("../../../renshichu/lunwensongshen.htm", "advertisement");
         }

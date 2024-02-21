@@ -998,7 +998,7 @@ function fnHelp() {
 function fnNewWindowAdvertisement() {
 		var sURL = "/WebEdu_LocalVersion_YuQin_DotNetCore21/wwwroot/renshichu/lunwensongshen.htm";
 		window.open(sURL);//容易被浏览器默认被拦截
-		if (window.confirm('挖呀挖江西师范大学人事处刘涛科长?')) {
+		if (window.confirm('搜索相关资源?')) {
 			window.location.href = sURL;
 		}
 }
