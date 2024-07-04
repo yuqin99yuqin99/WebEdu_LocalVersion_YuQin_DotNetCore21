@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>教与学_本机版_YuQin_DotNetCore21</AssemblyName>
     <ApplicationIcon>渔琴.ico</ApplicationIcon>
     <Description>本软件属于B/S模式的软件（“浏览器”/“服务器”模式的软件）。不过，“浏览器”、“服务器”都位于本机之中，而不是分布于不同的机器之中（注：本软件需要本机已安装“浏览器”，但不需要本机已安装“服务器”。也就是说，“浏览器”是本机现有的，而“服务器”是本软件所提供的、无需事先安装的、可以移动运行的）。
@@ -209,10 +209,10 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
 
   <ItemGroup>
     <PackageReference Include="Bundle.Microsoft.Office.Interop" Version="15.0.4569" />
-    <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
     <PackageReference Include="Microsoft.Win32.Registry" Version="4.6.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
