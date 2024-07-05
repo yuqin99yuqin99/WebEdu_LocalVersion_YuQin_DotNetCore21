@@ -9,10 +9,12 @@ using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace WebEdu_LocalVersion_YuQin_DotNetCore21.Controllers
 {
+    [Authorize()]
     public class SearchController : Controller
     {
         private IHostingEnvironment _hostingEnvironment { get; }
