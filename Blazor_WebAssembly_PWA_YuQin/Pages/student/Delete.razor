@@ -1,0 +1,49 @@
+﻿@page "/student/delete/{id:int}"
+
+
+@using Blazor_WebAssembly_PWA_YuQin.Model
+@using BlazorWebAssemblyExampleApi.Model
+
+@inject HttpClient httpClientInjected
+@inject StudentRepository StudentStoreInjected
+@inject NavigationManager navigationManagerInjected
+@inject IJSRuntime iJSRuntimeInjected
+
+<h1>Delete</h1>
+
+<h3>
+    确定删除（@_Student.Id）@_Student.Name ？
+</h3>
+
+<button class="btn btn-danger" @onclick="OnDeleteAsync">
+    删除
+</button>
+
+<button class="btn btn-info" @onclick="OnCancel">取消</button>
+
+@code {
+    [Parameter]
+    public Int32 Id { get; set; }
+
+    private Student _Student { get; set; }
+
+    protected override void OnInitialized()
+    {
+        _Student = StudentStoreInjected.GetStudentById(Id);
+    }
+
+    private async Task OnDeleteAsync()
+    {
+        //var result = await httpClientInjected.DeleteAsync("/student/" + Id);
+        HttpResponseMessage httpResponseMessage = await httpClientInjected.DeleteAsync("/student/" + Id);
+        if (httpResponseMessage.IsSuccessStatusCode)
+        {
+            navigationManagerInjected.NavigateTo("/student/list");
+        }
+    }
+
+    private void OnCancel()
+    {
+        iJSRuntimeInjected.InvokeVoidAsync("history.back");
+    }
+}

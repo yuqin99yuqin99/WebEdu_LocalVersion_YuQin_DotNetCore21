@@ -1,0 +1,47 @@
+﻿@page "/student/read/{Id:int}"
+
+
+@using Blazor_WebAssembly_PWA_YuQin.Model
+@using BlazorWebAssemblyExampleApi.Model
+
+@inject HttpClient httpClientInjected
+@inject NavigationManager navigationManagerInjected
+@inject StudentRepository StudentStoreInjected
+
+<h1>Read</h1>
+
+<Details _Student="this._Student"></Details>
+
+<div class="text-danger">
+    @_errmsg
+</div>
+
+@code {
+    [Parameter]
+    public Int32 Id { get; set; }
+
+    private Student _Student { get; set; }
+
+    private String _errmsg;
+
+    protected override void OnInitialized()
+    {
+        _Student = StudentStoreInjected.GetStudentById(Id);
+    }
+
+    private async Task OnSaveAsync(Student student)
+    {
+        _Student = student;
+
+        HttpResponseMessage httpResponseMessage = await httpClientInjected.PutAsJsonAsync("/student", _Student);
+
+        if (httpResponseMessage.IsSuccessStatusCode)
+        {
+            navigationManagerInjected.NavigateTo("/student/list");
+        }
+        else
+        {
+            _errmsg = "保存失败";
+        }
+    }
+}

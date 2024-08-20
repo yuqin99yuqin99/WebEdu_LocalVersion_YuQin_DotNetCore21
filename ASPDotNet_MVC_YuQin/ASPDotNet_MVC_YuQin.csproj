@@ -248,6 +248,10 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <Folder Include="wwwroot\webCourse\Templates\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SharedCS\SharedCS.csproj" />
+  </ItemGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command=":: 是注释&#xD;&#xA;::打开 powershell控制台（按住Shift键右击鼠标）。打开DOS控制台(同时按Windows+R，然后键入cmd，回车)&#xD;&#xA;:: powershell命令帮助：man mkdir。DOS命令帮助：mkdir /?&#xD;&#xA;::****（必须设置 publish的delete existing files为false，不然拷贝过去后又会被删除）此部分是为了自动把”开始-使用说明（该文件请拷贝到系统根目录以便查看）.html“文件拷贝到最终的发布软件中。&#xD;&#xA;rmdir  /q  &quot;$(ProjectDir)bin\Release\netcoreapp2.1\publish&quot; ::删除目录&#xD;&#xA;mkdir  &quot;$(ProjectDir)bin\Release\netcoreapp2.1\publish&quot;  ::新建目录&#xD;&#xA;::xcopy  /S /E /C /Y &quot;$(ProjectDir)wwwroot&quot;  &quot;$(ProjectDir)bin\Release\netcoreapp2.1\publish&quot;&#xD;&#xA;copy  /Y &quot;$(ProjectDir)wwwroot\开始-使用说明（该文件请拷贝到系统根目录以便查看）.html&quot;  &quot;$(ProjectDir)bin\Release\netcoreapp2.1\publish\开始-使用说明（该文件请拷贝到系统根目录以便查看）.html&quot;&#xD;&#xA;::****" />
   </Target>

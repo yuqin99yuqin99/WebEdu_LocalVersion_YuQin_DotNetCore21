@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\ModelsForPages\Student.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\student\Shared\Detail.razor" />
+    <Content Remove="Pages\student\Shared\Edit.razor" />
+    <Content Remove="wwwroot\css\CounterPartialClass.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\student\Add.razor" />
+    <None Include="Pages\student\Delete.razor" />
+    <None Include="Pages\student\List.razor" />
+    <None Include="Pages\student\Modify.razor" />
+    <None Include="Pages\student\Shared\CancelBtn.razor" />
+    <None Include="Pages\student\Shared\Edit.razor" />
+    <None Include="wwwroot\css\CounterPartialClass.css" />
+    <None Include="wwwroot\css\MainLayout.css" />
+    <None Include="wwwroot\css\open-iconic\FONT-LICENSE" />
+    <None Include="wwwroot\css\open-iconic\font\fonts\open-iconic.svg" />
+    <None Include="wwwroot\css\open-iconic\ICON-LICENSE" />
+    <None Include="wwwroot\css\open-iconic\README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SharedCS\SharedCS.csproj" />
+    <ProjectReference Include="..\SharedRazorClassLibrary\SharedRazorCS.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+  </ItemGroup>
+
+</Project>

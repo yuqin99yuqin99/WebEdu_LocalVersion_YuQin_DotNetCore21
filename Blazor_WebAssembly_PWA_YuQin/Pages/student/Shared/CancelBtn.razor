@@ -1,0 +1,16 @@
+﻿@inject IJSRuntime iJSRuntimeInjected
+
+<button class="btn btn-info" @onclick="OnCancel">
+    @Name
+</button>
+
+@code{
+
+    [Parameter]
+    public string Name { get; set; }
+
+    private void OnCancel()
+    {
+        iJSRuntimeInjected.InvokeVoidAsync("history.back");
+    }
+}

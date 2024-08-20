@@ -1,0 +1,53 @@
+﻿@page "/student/list"
+
+@using Blazor_WebAssembly_PWA_YuQin.Model
+@using BlazorWebAssemblyExampleApi.Model
+
+@inject HttpClient httpClientInjected
+@inject StudentRepository studentStoreInjected
+
+<h1>List</h1>
+
+<p class="text-right">
+    <a class="btn btn-primary" href="/student/add">增</a>
+</p>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Sex</th>
+        <th>Class</th>
+        <th></th>
+    </tr>
+    @if (_stutdents != null)
+    {
+        foreach (Student student in _stutdents)
+        {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.Name</td>
+                <td>@student.Age</td>
+                <td>@student.Sex</td>
+                <td>@student.Class</td>
+                <td>
+                    <a class="btn btn-primary" href="/student/read/@student.Id">读</a>
+                    <a class="btn btn-primary" href="/student/modify/@student.Id">改</a>
+                    <a class="btn btn-danger" href="/student/delete/@student.Id">删</a>
+                </td>
+            </tr>
+        }
+    }
+
+</table>
+
+@code {
+    private List<Student> _stutdents => studentStoreInjected.GetStudents();
+
+    protected override async Task OnInitializedAsync()
+    {
+        List<Student> students = await httpClientInjected.GetFromJsonAsync<List<Student>>("/student");
+        studentStoreInjected.SetStudents(students);
+    }
+}

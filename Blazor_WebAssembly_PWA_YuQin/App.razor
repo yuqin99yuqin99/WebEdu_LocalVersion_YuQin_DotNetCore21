@@ -1,0 +1,31 @@
+﻿<!--
+
+本文件是一个Razor组件，定义了一个子组件Router。 Router有两个RenderFragments, Found和NotFound。 如果Router找到了一条路由，也即是找到了一个IComponent类，它会呈现RouteView组件，并将路由类类型和默认的Layout类一起传递给它。 如果没有找到路由，它将呈现一个LayoutView，并在其Body中呈现定义的内容。
+
+RouteView检查RouteData组件是否定义了一个特定的布局类。 如果是，它使用这个特定的布局类，否则它使用默认布局。 它呈现布局，并传递给它要添加到Body RenderFragment的组件类型。
+
+这段话的原文是：RouteViewchecks if theRouteDatacomponent has a specific layout class defined. If so, it uses it, otherwise it uses the default layout. It renders the layout and passes it the type of the component to add to theBodyRenderFragment.
+-->
+<!--
+    The root component of the app that sets up client-side routing using the Router component. The Router component intercepts browser navigation and renders the page that matches the requested address.
+-->
+@*
+    @{
+        /* C# comment */
+        // Another C# comment
+    }
+    <!-- HTML comment -->
+*@
+<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p role="alert">Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+
