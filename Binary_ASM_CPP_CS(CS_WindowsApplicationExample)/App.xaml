@@ -1,0 +1,9 @@
+﻿<Application x:Class="Binary_ASM__CPP_CSWindowsApplicationExample.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Binary_ASM__CPP_CSWindowsApplicationExample"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
