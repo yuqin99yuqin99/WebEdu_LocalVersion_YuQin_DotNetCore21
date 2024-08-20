@@ -35,6 +35,9 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
 
   <ItemGroup>
     <Compile Remove="Areas\Admin\**" />
+    <Compile Remove="Controllers\RESTless\Examples\**" />
+    <Compile Remove="Controllers\RESTless\Identity\**" />
+    <Compile Remove="Controllers\RESTless\samples\**" />
     <Compile Remove="Controllers\samples\**" />
     <Compile Remove="StudyHardDayDayUp\**" />
     <Compile Remove="Views\BroweringOfTextbook\**" />
@@ -70,6 +73,9 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <Compile Remove="wwwroot\webCourse\lessons\teachingPlan_origin_foreign\**" />
     <Compile Remove="wwwroot\webCourse\lessons\webCourseCommon\**" />
     <Content Remove="Areas\Admin\**" />
+    <Content Remove="Controllers\RESTless\Examples\**" />
+    <Content Remove="Controllers\RESTless\Identity\**" />
+    <Content Remove="Controllers\RESTless\samples\**" />
     <Content Remove="Controllers\samples\**" />
     <Content Remove="StudyHardDayDayUp\**" />
     <Content Remove="Views\BroweringOfTextbook\**" />
@@ -105,6 +111,9 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <Content Remove="wwwroot\webCourse\lessons\teachingPlan_origin_foreign\**" />
     <Content Remove="wwwroot\webCourse\lessons\webCourseCommon\**" />
     <EmbeddedResource Remove="Areas\Admin\**" />
+    <EmbeddedResource Remove="Controllers\RESTless\Examples\**" />
+    <EmbeddedResource Remove="Controllers\RESTless\Identity\**" />
+    <EmbeddedResource Remove="Controllers\RESTless\samples\**" />
     <EmbeddedResource Remove="Controllers\samples\**" />
     <EmbeddedResource Remove="StudyHardDayDayUp\**" />
     <EmbeddedResource Remove="Views\BroweringOfTextbook\**" />
@@ -140,6 +149,9 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <EmbeddedResource Remove="wwwroot\webCourse\lessons\teachingPlan_origin_foreign\**" />
     <EmbeddedResource Remove="wwwroot\webCourse\lessons\webCourseCommon\**" />
     <None Remove="Areas\Admin\**" />
+    <None Remove="Controllers\RESTless\Examples\**" />
+    <None Remove="Controllers\RESTless\Identity\**" />
+    <None Remove="Controllers\RESTless\samples\**" />
     <None Remove="Controllers\samples\**" />
     <None Remove="StudyHardDayDayUp\**" />
     <None Remove="Views\BroweringOfTextbook\**" />
@@ -212,18 +224,6 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Controllers\samples\AbstractClassController.cs" />
-    <Compile Include="Controllers\samples\TryBooleanTypeController.cs" />
-    <Compile Include="Controllers\samples\TryClassPropertyMethod.cs" />
-    <Compile Include="Controllers\samples\TryClass_Interface_Struct_Enum_Delegate_Attribute.cs" />
-    <Compile Include="Controllers\samples\TryCSFileBasicFramework.cs" />
-    <Compile Include="Controllers\samples\TryGenicType.cs" />
-    <Compile Include="Controllers\samples\TryIfElse.cs" />
-    <Compile Include="Controllers\samples\TrySwitch.cs" />
-    <Compile Include="Controllers\samples\TrySystemDotObject.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Bundle.Microsoft.Office.Interop" Version="15.0.4569" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.6" />
@@ -241,6 +241,7 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
 
   <ItemGroup>
     <Folder Include="Areas\" />
+    <Folder Include="Controllers\RESTless\" />
     <Folder Include="Views\" />
     <Folder Include="wwwroot\webCourse\lessons\content\HomeworkAndTest\" />
     <Folder Include="wwwroot\webCourse\lessons\content\TeachingEngineering\" />

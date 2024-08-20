@@ -263,14 +263,20 @@ applicationBuilder.UseSignalR(routes =>
 **/
 /////////////////////////////////////////////////////////////////
 
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.IO;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using WebEdu_LocalVersion_YuQin_DotNetCore21.Data;
+using Microsoft.AspNetCore.Mvc;
+using BlazorWebAssemblyExampleApi.Model;
 
 namespace WebEdu_LocalVersion_YuQin_DotNetCore21
 {
@@ -278,45 +284,69 @@ namespace WebEdu_LocalVersion_YuQin_DotNetCore21
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            /**
+            WebApplicationOptions webApplicationOptions = new WebApplicationOptions {
+                Args = args,
+                //ApplicationName ="MyApp",
+                //ContentRootPath = Path.Combine(Directory.GetCurrentDirectory(),"contents"),
+                // WebRootPath =Path.Combine(Directory.GetCurrentDirectory(), "wwwroot-with-CSharp-for-Blazor-WebAssembly-ClientSide-Views"),//目前好像无法从appsettings.json的JIT配置获取。因为这些代码必须放在最前面，此时无法启动WebApplicationBuilder.Configuration["wwwrootPathModify"]。以便修改默认的wwwroot作为客户端浏览器视图V宿客。
+                //WebRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot-with-JScript-for-Chromium-Webkit-ClientSide-Views"),
+                //EnvironmentName = "staging" 
+            };
+            WebApplicationBuilder webApplicationBuilder = WebApplication.CreateBuilder(webApplicationOptions);
+            **/
+            WebApplicationBuilder webApplicationBuilder = WebApplication.CreateBuilder(args);
+            Console.WriteLine(webApplicationBuilder.Environment.WebRootPath);
+ 
+              // Add services to the container.
+              String connectionString = webApplicationBuilder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+            webApplicationBuilder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
-            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+            webApplicationBuilder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            webApplicationBuilder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            builder.Services.AddControllersWithViews();
+            webApplicationBuilder.Services.AddControllersWithViews().AddJsonOptions(delegate (JsonOptions jsonOptions)
+            {
+                jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = null;
+            }
+                );
+            webApplicationBuilder.Services.AddScoped<IStudentRepository, StudentRepository>();
 
-            var app = builder.Build();
+            WebApplication webApplication = webApplicationBuilder.Build();
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
+            if (webApplication.Environment.IsDevelopment())
             {
-                app.UseMigrationsEndPoint();
+                webApplication.UseMigrationsEndPoint();
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                webApplication.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+                webApplication.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            webApplication.UseHttpsRedirection();
+            webApplication.UseStaticFiles();
+            
+            webApplication.UseCors(delegate(CorsPolicyBuilder corsPolicyBuilder)
+            {
+                corsPolicyBuilder.AllowAnyOrigin();
+                corsPolicyBuilder.AllowAnyMethod();
+                corsPolicyBuilder.AllowAnyHeader();
+            });
+            
+            webApplication.UseRouting();
 
-            app.UseRouting();
+            webApplication.UseAuthorization();
 
-            app.UseAuthorization();
-
-            app.MapControllerRoute(
+            webApplication.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-            app.MapRazorPages();
+            webApplication.MapRazorPages();
 
-            app.Run();
+            webApplication.Run();
         }
     }
 }
