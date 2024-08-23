@@ -35,169 +35,64 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
 
   <ItemGroup>
     <Compile Remove="Areas\Admin\**" />
-    <Compile Remove="Controllers\RESTless\Examples\**" />
     <Compile Remove="Controllers\RESTless\Identity\**" />
     <Compile Remove="Controllers\RESTless\samples\**" />
-    <Compile Remove="Controllers\samples\**" />
+    <Compile Remove="Models\DatabaseForPortable\**" />
+    <Compile Remove="Models\DataForIdentity\**" />
+    <Compile Remove="Models\ExtensionsForIdentity\**" />
+    <Compile Remove="Models\Identity\**" />
+    <Compile Remove="Models\ServicesForIdentity\**" />
     <Compile Remove="StudyHardDayDayUp\**" />
     <Compile Remove="Views\BroweringOfTextbook\**" />
-    <Compile Remove="wwwroot\Identity\**" />
-    <Compile Remove="wwwroot\webCourse\common\File_Transfer\**" />
-    <Compile Remove="wwwroot\webCourse\common\Templates\WholeCourse\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\book-待删除\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content\book_foreign\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content\book_origin\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content\book_origin_foreign\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content\CoursewareRecording\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content\note\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content\play\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content\play_foreign\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content\play_origin\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content\play_origin_foreign\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content\teachingPlan_foreign\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin_foreign\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\CoursewareRecording\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\itemsbankRef\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\note\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\play\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\play_foreign\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\play_origin\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\play_origin_foreign\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\sample\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\teachingPlan\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\teachingPlan_foreign\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\teachingPlan_origin\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\teachingPlan_origin_foreign\**" />
-    <Compile Remove="wwwroot\webCourse\lessons\webCourseCommon\**" />
     <Content Remove="Areas\Admin\**" />
-    <Content Remove="Controllers\RESTless\Examples\**" />
     <Content Remove="Controllers\RESTless\Identity\**" />
     <Content Remove="Controllers\RESTless\samples\**" />
-    <Content Remove="Controllers\samples\**" />
+    <Content Remove="Models\DatabaseForPortable\**" />
+    <Content Remove="Models\DataForIdentity\**" />
+    <Content Remove="Models\ExtensionsForIdentity\**" />
+    <Content Remove="Models\Identity\**" />
+    <Content Remove="Models\ServicesForIdentity\**" />
     <Content Remove="StudyHardDayDayUp\**" />
     <Content Remove="Views\BroweringOfTextbook\**" />
-    <Content Remove="wwwroot\Identity\**" />
-    <Content Remove="wwwroot\webCourse\common\File_Transfer\**" />
-    <Content Remove="wwwroot\webCourse\common\Templates\WholeCourse\**" />
-    <Content Remove="wwwroot\webCourse\lessons\book-待删除\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content\book_foreign\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content\book_origin\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content\book_origin_foreign\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content\CoursewareRecording\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content\note\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content\play\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content\play_foreign\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content\play_origin\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content\play_origin_foreign\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content\teachingPlan_foreign\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin_foreign\**" />
-    <Content Remove="wwwroot\webCourse\lessons\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
-    <Content Remove="wwwroot\webCourse\lessons\CoursewareRecording\**" />
-    <Content Remove="wwwroot\webCourse\lessons\itemsbankRef\**" />
-    <Content Remove="wwwroot\webCourse\lessons\note\**" />
-    <Content Remove="wwwroot\webCourse\lessons\play\**" />
-    <Content Remove="wwwroot\webCourse\lessons\play_foreign\**" />
-    <Content Remove="wwwroot\webCourse\lessons\play_origin\**" />
-    <Content Remove="wwwroot\webCourse\lessons\play_origin_foreign\**" />
-    <Content Remove="wwwroot\webCourse\lessons\sample\**" />
-    <Content Remove="wwwroot\webCourse\lessons\teachingPlan\**" />
-    <Content Remove="wwwroot\webCourse\lessons\teachingPlan_foreign\**" />
-    <Content Remove="wwwroot\webCourse\lessons\teachingPlan_origin\**" />
-    <Content Remove="wwwroot\webCourse\lessons\teachingPlan_origin_foreign\**" />
-    <Content Remove="wwwroot\webCourse\lessons\webCourseCommon\**" />
     <EmbeddedResource Remove="Areas\Admin\**" />
-    <EmbeddedResource Remove="Controllers\RESTless\Examples\**" />
     <EmbeddedResource Remove="Controllers\RESTless\Identity\**" />
     <EmbeddedResource Remove="Controllers\RESTless\samples\**" />
-    <EmbeddedResource Remove="Controllers\samples\**" />
+    <EmbeddedResource Remove="Models\DatabaseForPortable\**" />
+    <EmbeddedResource Remove="Models\DataForIdentity\**" />
+    <EmbeddedResource Remove="Models\ExtensionsForIdentity\**" />
+    <EmbeddedResource Remove="Models\Identity\**" />
+    <EmbeddedResource Remove="Models\ServicesForIdentity\**" />
     <EmbeddedResource Remove="StudyHardDayDayUp\**" />
     <EmbeddedResource Remove="Views\BroweringOfTextbook\**" />
-    <EmbeddedResource Remove="wwwroot\Identity\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\common\File_Transfer\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\common\Templates\WholeCourse\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\book-待删除\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\book_foreign\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\book_origin\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\book_origin_foreign\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\CoursewareRecording\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\note\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\play\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\play_foreign\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\play_origin\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\play_origin_foreign\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\teachingPlan_foreign\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin_foreign\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\CoursewareRecording\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\itemsbankRef\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\note\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\play\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\play_foreign\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\play_origin\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\play_origin_foreign\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\sample\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\teachingPlan\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\teachingPlan_foreign\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\teachingPlan_origin\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\teachingPlan_origin_foreign\**" />
-    <EmbeddedResource Remove="wwwroot\webCourse\lessons\webCourseCommon\**" />
     <None Remove="Areas\Admin\**" />
-    <None Remove="Controllers\RESTless\Examples\**" />
     <None Remove="Controllers\RESTless\Identity\**" />
     <None Remove="Controllers\RESTless\samples\**" />
-    <None Remove="Controllers\samples\**" />
+    <None Remove="Models\DatabaseForPortable\**" />
+    <None Remove="Models\DataForIdentity\**" />
+    <None Remove="Models\ExtensionsForIdentity\**" />
+    <None Remove="Models\Identity\**" />
+    <None Remove="Models\ServicesForIdentity\**" />
     <None Remove="StudyHardDayDayUp\**" />
     <None Remove="Views\BroweringOfTextbook\**" />
-    <None Remove="wwwroot\Identity\**" />
-    <None Remove="wwwroot\webCourse\common\File_Transfer\**" />
-    <None Remove="wwwroot\webCourse\common\Templates\WholeCourse\**" />
-    <None Remove="wwwroot\webCourse\lessons\book-待删除\**" />
-    <None Remove="wwwroot\webCourse\lessons\content\book_foreign\**" />
-    <None Remove="wwwroot\webCourse\lessons\content\book_origin\**" />
-    <None Remove="wwwroot\webCourse\lessons\content\book_origin_foreign\**" />
-    <None Remove="wwwroot\webCourse\lessons\content\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
-    <None Remove="wwwroot\webCourse\lessons\content\CoursewareRecording\**" />
-    <None Remove="wwwroot\webCourse\lessons\content\note\**" />
-    <None Remove="wwwroot\webCourse\lessons\content\play\**" />
-    <None Remove="wwwroot\webCourse\lessons\content\play_foreign\**" />
-    <None Remove="wwwroot\webCourse\lessons\content\play_origin\**" />
-    <None Remove="wwwroot\webCourse\lessons\content\play_origin_foreign\**" />
-    <None Remove="wwwroot\webCourse\lessons\content\teachingPlan_foreign\**" />
-    <None Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin\**" />
-    <None Remove="wwwroot\webCourse\lessons\content\teachingPlan_origin_foreign\**" />
-    <None Remove="wwwroot\webCourse\lessons\content_课程学习_新概念英语%28New Concept English%29_第一册\**" />
-    <None Remove="wwwroot\webCourse\lessons\CoursewareRecording\**" />
-    <None Remove="wwwroot\webCourse\lessons\itemsbankRef\**" />
-    <None Remove="wwwroot\webCourse\lessons\note\**" />
-    <None Remove="wwwroot\webCourse\lessons\play\**" />
-    <None Remove="wwwroot\webCourse\lessons\play_foreign\**" />
-    <None Remove="wwwroot\webCourse\lessons\play_origin\**" />
-    <None Remove="wwwroot\webCourse\lessons\play_origin_foreign\**" />
-    <None Remove="wwwroot\webCourse\lessons\sample\**" />
-    <None Remove="wwwroot\webCourse\lessons\teachingPlan\**" />
-    <None Remove="wwwroot\webCourse\lessons\teachingPlan_foreign\**" />
-    <None Remove="wwwroot\webCourse\lessons\teachingPlan_origin\**" />
-    <None Remove="wwwroot\webCourse\lessons\teachingPlan_origin_foreign\**" />
-    <None Remove="wwwroot\webCourse\lessons\webCourseCommon\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Controllers\BroweringOfTextbookController.cs" />
     <Compile Remove="Controllers\Interop_CSInteropCPPCOMTry.cs" />
     <Compile Remove="Controllers\Interop_CSInteropCPPDLLTry.cs" />
+    <Compile Remove="Models\Blazor_WebAssembly_PWA_YuQin_API\Student.cs" />
+    <Compile Remove="Models\BroweringOfTextbook.cs" />
+    <Compile Remove="Models\BroweringOfTextbookDbContext.cs" />
+    <Compile Remove="Models\BroweringOfTextbookSeedData.cs" />
+    <Compile Remove="Models\MovieDateFixed.cs" />
+    <Compile Remove="Models\MovieDateRating.cs" />
     <Compile Remove="Program  - Copy.cs" />
     <Compile Remove="Startup.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Remove="web.config" />
+    <Content Remove="wwwroot\webCourse\common\script\content - Copy %283%29.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -205,6 +100,10 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <None Remove="Controllers\PresentationController - Copy.csOrigin" />
     <None Remove="Controllers\UploadHomeworkAndTestController - Copy.csold" />
     <None Remove="Controllers\UploadHomeworkAndTestController - Copy.csOrigin" />
+    <None Remove="Models\Movie.csNEW" />
+    <None Remove="Models\Movie.csold" />
+    <None Remove="Models\SeedDataRating.csNew" />
+    <None Remove="Models\SeedDataRating.csold" />
     <None Remove="Program - Copy.csold" />
     <None Remove="Program - Copy.csorigin" />
     <None Remove="Program - Copy.cs去除StartUp时" />
@@ -215,35 +114,653 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="Controllers\RESTless\samples\AbstractClassController.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryAcceptFormDataFromBrowser.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryBooleanTypeController.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryClassPropertyMethod.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryClass_Interface_Struct_Enum_Delegate_Attribute.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryConstantE.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryConstantΠ.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryControllerController.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryCSFileBasicFramework.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryGenicType.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryIfElse.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryLinearStructureByCustomClass.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryLinearStructureByNonCustomClass.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryLoop_DoWhile.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryLoop_For.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryLoop_ForEach.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryLoop_While.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryNetworkStructureByCustomClass.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryRegExpression.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryString.cs" />
+    <Compile Include="Controllers\RESTless\samples\TrySwitch.cs" />
+    <Compile Include="Controllers\RESTless\samples\TrySystemDotObject.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryTechnologyInformationExtractionApplication.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryTreeStructureByCustomClass.cs" />
+    <Compile Include="Controllers\RESTless\samples\TryTreeStructureByNonCustomClass.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Bundle.Microsoft.Office.Interop" Version="15.0.4569" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.6" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.6" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
     <PackageReference Include="Microsoft.Win32.Registry" Version="4.6.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\" />
-    <Folder Include="Controllers\RESTless\" />
-    <Folder Include="Views\" />
-    <Folder Include="wwwroot\webCourse\lessons\content\HomeworkAndTest\" />
+    <Folder Include="Areas\Identity\" />
+    <Folder Include="Views\ModelsForViews\" />
+    <Folder Include="wwwroot\webCourse\lessons\content\Teaching2D\" />
+    <Folder Include="wwwroot\webCourse\lessons\content\Teaching3D\" />
     <Folder Include="wwwroot\webCourse\lessons\content\TeachingEngineering\" />
-    <Folder Include="wwwroot\webCourse\lessons\content\TeachingVideo\" />
-    <Folder Include="wwwroot\webCourse\Templates\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="wwwroot\2D3D\Audio.x3d" />
+    <None Include="wwwroot\2D3D\BasicStructure.x3d" />
+    <None Include="wwwroot\2D3D\Box.x3d" />
+    <None Include="wwwroot\2D3D\coordinateInterpolator.x3d" />
+    <None Include="wwwroot\2D3D\DOM_SVGDOM.svg" />
+    <None Include="wwwroot\2D3D\engine.wrl" />
+    <None Include="wwwroot\2D3D\engine.x3d" />
+    <None Include="wwwroot\2D3D\engine.x3dv" />
+    <None Include="wwwroot\2D3D\Hyperlink.x3d" />
+    <None Include="wwwroot\2D3D\indexedFaceSet.x3d" />
+    <None Include="wwwroot\2D3D\IndexedLineSet.x3d" />
+    <None Include="wwwroot\2D3D\JScript_Try.js" />
+    <None Include="wwwroot\2D3D\Material.x3d" />
+    <None Include="wwwroot\2D3D\pencil.wrl" />
+    <None Include="wwwroot\2D3D\pencil.x3d" />
+    <None Include="wwwroot\2D3D\pencil.x3dv" />
+    <None Include="wwwroot\2D3D\PointSet.x3d" />
+    <None Include="wwwroot\2D3D\Sample.svg" />
+    <None Include="wwwroot\2D3D\sample.swf" />
+    <None Include="wwwroot\2D3D\Sample.vrml" />
+    <None Include="wwwroot\2D3D\sample.x3d" />
+    <None Include="wwwroot\2D3D\sample.xap" />
+    <None Include="wwwroot\2D3D\SVG_AnimateTransformRotate.svg" />
+    <None Include="wwwroot\2D3D\SVG_Animation.svg" />
+    <None Include="wwwroot\2D3D\SVG_BasicStructure.svg" />
+    <None Include="wwwroot\2D3D\SVG_Circle.svg" />
+    <None Include="wwwroot\2D3D\SVG_Filter.svg" />
+    <None Include="wwwroot\2D3D\SVG_Gradient.svg" />
+    <None Include="wwwroot\2D3D\SVG_hyperLink.svg" />
+    <None Include="wwwroot\2D3D\SVG_InlineCSS.svg" />
+    <None Include="wwwroot\2D3D\SVG_InternalStyle.svg" />
+    <None Include="wwwroot\2D3D\SVG_Pattern.svg" />
+    <None Include="wwwroot\2D3D\SVG_referencImage.svg" />
+    <None Include="wwwroot\2D3D\SVG_RoundRect.svg" />
+    <None Include="wwwroot\2D3D\SVG_StrokeAndFill.svg" />
+    <None Include="wwwroot\2D3D\SVG_Text.svg" />
+    <None Include="wwwroot\2D3D\Text.x3d" />
+    <None Include="wwwroot\2D3D\Texture.x3d" />
+    <None Include="wwwroot\2D3D\TextureTransform.x3d" />
+    <None Include="wwwroot\2D3D\track.wrl" />
+    <None Include="wwwroot\2D3D\track.x3d" />
+    <None Include="wwwroot\2D3D\track.x3dv" />
+    <None Include="wwwroot\2D3D\traffic.wrl" />
+    <None Include="wwwroot\2D3D\traffic.x3d" />
+    <None Include="wwwroot\2D3D\traffic.x3dv" />
+    <None Include="wwwroot\2D3D\train.wrl" />
+    <None Include="wwwroot\2D3D\train.x3d" />
+    <None Include="wwwroot\2D3D\train.x3dv" />
+    <None Include="wwwroot\2D3D\Transform.x3d" />
+    <None Include="wwwroot\2D3D\Viewpoint.x3d" />
+    <None Include="wwwroot\2D3D\wagon.wrl" />
+    <None Include="wwwroot\2D3D\wagon.x3d" />
+    <None Include="wwwroot\2D3D\wagon.x3dv" />
+    <None Include="wwwroot\2D3D\X3DBrowsing.x3d" />
+    <None Include="wwwroot\2D3D\XML_Quiz.xsd" />
+    <None Include="wwwroot\2D3D\习题.x3d" />
+    <None Include="wwwroot\2D3D\复件 BasicStructure.x3d" />
+    <None Include="wwwroot\CSTA_Computer_Science_Standards_Revised_2017.pdf" />
+    <None Include="wwwroot\CSTA_K-12_CSS.pdf" />
+    <None Include="wwwroot\Database\Admin - Copy.sqlite" />
+    <None Include="wwwroot\Database\Admin.sqlite" />
+    <None Include="wwwroot\Database\MyWebEdu.db" />
+    <None Include="wwwroot\Database\WebEdu_LocalVersion_YuQin - Copy.sqlite" />
+    <None Include="wwwroot\Database\WebEdu_LocalVersion_YuQin.sqlite" />
+    <None Include="wwwroot\deliveryMap.js" />
+    <None Include="wwwroot\Digital-Intelligence-Calendar-Driven-TeachingProcessManagement.pdf" />
+    <None Include="wwwroot\ExcellentTeachingCasesofIdeologicalandPoliticalCoursesinJiangxiNormalUniversity.docx" />
+    <None Include="wwwroot\jiaoyujishuxinshengdaolun.docx" />
+    <None Include="wwwroot\jiaoyujishuxinshengdaolun_files\themedata.thmx" />
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\leaflet\leaflet.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\LICENSE" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+    <None Include="wwwroot\linyunlutao.pdf" />
+    <None Include="wwwroot\localStorage.js" />
+    <None Include="wwwroot\lutaolinyun.pdf" />
+    <None Include="wwwroot\OINOIIOI.ppt" />
+    <None Include="wwwroot\PrincipalLineofEducationalComputingThinking.docx" />
+    <None Include="wwwroot\pushNotifications.js" />
+    <None Include="wwwroot\renshichu\lunwensongshen.docx" />
+    <None Include="wwwroot\service-worker.js" />
+    <None Include="wwwroot\service-worker.published.js" />
+    <None Include="wwwroot\sxyt\sxyt_files\themedata.thmx" />
+    <None Include="wwwroot\TeachingEngineers.mht" />
+    <None Include="wwwroot\TheEssenceOfEducationIsToConstructHumanBrain.pdf" />
+    <None Include="wwwroot\TryPWA\images\Home.svg" />
+    <None Include="wwwroot\TryPWA\images\ic_refresh_white_24px.svg" />
+    <None Include="wwwroot\TryPWA\js\app.js" />
+    <None Include="wwwroot\TryPWA\js\latest.js" />
+    <None Include="wwwroot\TryPWA\js\menu.js" />
+    <None Include="wwwroot\TryPWA\js\notification.js" />
+    <None Include="wwwroot\TryPWA\js\offline.js" />
+    <None Include="wwwroot\TryPWA\js\toast.js" />
+    <None Include="wwwroot\TryPWA\ServiceWorkers.js" />
+    <None Include="wwwroot\webCourse\common\addNote\addnote.aspx" />
+    <None Include="wwwroot\webCourse\common\addNote\img.asp" />
+    <None Include="wwwroot\webCourse\common\addNote\upImage.asp" />
+    <None Include="wwwroot\webCourse\common\add\add.asp" />
+    <None Include="wwwroot\webCourse\common\add\add.aspx" />
+    <None Include="wwwroot\webCourse\common\batchUploadFlash\batchUploadFlash.aspx" />
+    <None Include="wwwroot\webCourse\common\batchUploadFlash\batchUploadFlashInterface.aspx" />
+    <None Include="wwwroot\webCourse\common\batchUploadFlash\batchUploadFlashSaveContents.aspx" />
+    <None Include="wwwroot\webCourse\common\batchUploadFlash\batchUploadFlashTitleFrame.aspx" />
+    <None Include="wwwroot\webCourse\common\batchUploadFlash\uploading.aspx" />
+    <None Include="wwwroot\webCourse\common\batchUploadTeachingPlan\batchUploadTeachingPlan.asp" />
+    <None Include="wwwroot\webCourse\common\batchUploadTeachingPlan\batchUploadTeachingPlanInterface.aspx" />
+    <None Include="wwwroot\webCourse\common\batchUploadTeachingPlan\batchUploadTeachingPlanSaveContents.aspx" />
+    <None Include="wwwroot\webCourse\common\batchUploadTeachingPlan\batchUploadTeachingPlanTitleFrame.aspx" />
+    <None Include="wwwroot\webCourse\common\batchUploadTeachingPlan\uploading.asp" />
+    <None Include="wwwroot\webCourse\common\batchUploadText\batchUploadText.asp" />
+    <None Include="wwwroot\webCourse\common\batchUploadText\batchUploadTextInterface.aspx" />
+    <None Include="wwwroot\webCourse\common\batchUploadText\batchUploadTextInterface1.aspx" />
+    <None Include="wwwroot\webCourse\common\batchUploadText\batchUploadTextSaveContents.aspx" />
+    <None Include="wwwroot\webCourse\common\batchUploadText\batchUploadTextTitleFrame.aspx" />
+    <None Include="wwwroot\webCourse\common\batchUploadText\uploading.asp" />
+    <None Include="wwwroot\webCourse\common\checkMp3\t.asp" />
+    <None Include="wwwroot\webCourse\common\configure.aspx" />
+    <None Include="wwwroot\webCourse\common\copyPartResource\copying.aspx" />
+    <None Include="wwwroot\webCourse\common\copyPartResource\copyPartResource.asp" />
+    <None Include="wwwroot\webCourse\common\copyPartResource\copyPartResource.aspx" />
+    <None Include="wwwroot\webCourse\common\copyPartResource\copyPartResourceInterface.asp" />
+    <None Include="wwwroot\webCourse\common\copyPartResource\copyPartResourceInterface.aspx" />
+    <None Include="wwwroot\webCourse\common\copyPartResource\copyPartResourceSaveContents.asp" />
+    <None Include="wwwroot\webCourse\common\copyPartResource\copyPartResourceSaveContents.aspx" />
+    <None Include="wwwroot\webCourse\common\copyPartResource\copyPartResourceTitleFrame.asp" />
+    <None Include="wwwroot\webCourse\common\copyPartResource\copyPartResourceTitleFrame.aspx" />
+    <None Include="wwwroot\webCourse\common\CoursewareRecording\Recording.aspx" />
+    <None Include="wwwroot\webCourse\common\createTextForeign.aspx" />
+    <None Include="wwwroot\webCourse\common\Dictation\Dictation.asp" />
+    <None Include="wwwroot\webCourse\common\Dictation\Dictation.aspx" />
+    <None Include="wwwroot\webCourse\common\downloadAnimation\downloadAnimation.asp" />
+    <None Include="wwwroot\webCourse\common\downloadcourse\index.aspx" />
+    <None Include="wwwroot\webCourse\common\DownloadRecording\download.asp" />
+    <None Include="wwwroot\webCourse\common\DownloadRecording\downloadRecording.asp" />
+    <None Include="wwwroot\webCourse\common\downloadTeachingPlan\downloadteachingPlan.asp" />
+    <None Include="wwwroot\webCourse\common\downloadText\downloadText.asp" />
+    <None Include="wwwroot\webCourse\common\download\download.asp" />
+    <None Include="wwwroot\webCourse\common\download\downloadRecording.asp" />
+    <None Include="wwwroot\webCourse\common\flashPlayer\closePlayWindow.asp" />
+    <None Include="wwwroot\webCourse\common\flashPlayer\flash.js" />
+    <None Include="wwwroot\webCourse\common\flashPlayer\flashPlayer.rar" />
+    <None Include="wwwroot\webCourse\common\flashPlayer\flashPlayerFullScreen.asp" />
+    <None Include="wwwroot\webCourse\common\flashPlayer\flashPlayerFullScreen1.asp" />
+    <None Include="wwwroot\webCourse\common\flashPlayer\flashPlayerOnce.aspx" />
+    <None Include="wwwroot\webCourse\common\flashPlayer\flashPlayerReplayFullScreen.asp" />
+    <None Include="wwwroot\webCourse\common\flashPlayer\flashPlayerReplayold.asp" />
+    <None Include="wwwroot\webCourse\common\flashPlayer\flashPlayerReplayWindow.aspx" />
+    <None Include="wwwroot\webCourse\common\flashPlayer\flashPlayerWindow.aspx" />
+    <None Include="wwwroot\webCourse\common\flashPlayer\flashPlayerWindow1.aspx" />
+    <None Include="wwwroot\webCourse\common\flashPlayer\fullScreenPlay.asp" />
+    <None Include="wwwroot\webCourse\common\flashPlayer\复件 flashPlayerWindow1.asp" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addItem\addListen.asp" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addItem\music.asp" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addItem\music.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addItem\uploadmusic.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addItem\uploadmusic1.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addItem\upMusic.asp" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addParagraphsSound\addParagraphsSound.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addParagraphsSound\addParagraphsSoundB.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addParagraphsSound\addSound.js" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addParagraphsSound\addSound.rar" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addParagraphsSound\ParagraphsSound.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addParagraphsSound\ParagraphsSoundB.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addParagraphsSound\Untitled JS 1.js" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addtextSound\addTextSound.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addtextSound\textSound.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addTranslate\cn.js" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addTranslate\Translate.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addTranslate\TranslateB.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addTranslate\TranslateB.js" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\addTranslate\TranslateB.rar" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\ButtonImage\Thumbs.db" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\DownloadFile.asp" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\flash.asp" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\flash.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\hyperlink.asp" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\hyperlink.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\img.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\upFile.asp" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\upflash.asp" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\upImage.asp" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\upImge.asp" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\UploadFlash.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\uploadhyperlink.asp" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\uploadhyperlink.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Dialog\uploadpicture.aspx" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\HTMLEditor.rar" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\popup.js" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\save.asp" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\Thumbs.db" />
+    <None Include="wwwroot\webCourse\common\HTMLEditor\复件 webEditor-勿删 %28原来蓝天的备份%29.asp" />
+    <None Include="wwwroot\webCourse\common\image\Thumbs.db" />
+    <None Include="wwwroot\webCourse\common\initial - 副本.aspx" />
+    <None Include="wwwroot\webCourse\common\localUploadWeb.aspx" />
+    <None Include="wwwroot\webCourse\common\MakeAnimationDir\MakeAnimationDir.aspx" />
+    <None Include="wwwroot\webCourse\common\mergePartResource\merge.asp" />
+    <None Include="wwwroot\webCourse\common\mergePartResource\merge.aspx" />
+    <None Include="wwwroot\webCourse\common\mergePartResource\mergePartResourceIframeInitial.asp" />
+    <None Include="wwwroot\webCourse\common\mergePartResource\mergePartResourceIframeInitial.aspx" />
+    <None Include="wwwroot\webCourse\common\mergePartResource\mergePartResourceInitial.aspx" />
+    <None Include="wwwroot\webCourse\common\mergePartResource\mergePartResourceTitle.asp" />
+    <None Include="wwwroot\webCourse\common\mergePartResource\mergePartResourceTitle.aspx" />
+    <None Include="wwwroot\webCourse\common\mergePartResource\PreviewContents.aspx" />
+    <None Include="wwwroot\webCourse\common\noteIframe.aspx" />
+    <None Include="wwwroot\webCourse\common\PPTPlayer\fullscreenframe.asp" />
+    <None Include="wwwroot\webCourse\common\PPTPlayer\install.asp" />
+    <None Include="wwwroot\webCourse\common\PPTPlayer\PPTPlayer.aspx" />
+    <None Include="wwwroot\webCourse\common\PPTPlayer\PPTPlayerIFrame.aspx" />
+    <None Include="wwwroot\webCourse\common\registersoft.aspx" />
+    <None Include="wwwroot\webCourse\common\removeUnusedFiles.aspx" />
+    <None Include="wwwroot\webCourse\common\saveContent.asp" />
+    <None Include="wwwroot\webCourse\common\saveContent.aspx" />
+    <None Include="wwwroot\webCourse\common\saveContents.aspx" />
+    <None Include="wwwroot\webCourse\common\saveSettings.aspx" />
+    <None Include="wwwroot\webCourse\common\script\bottom.js" />
+    <None Include="wwwroot\webCourse\common\script\content - Copy %282%29.js" />
+    <None Include="wwwroot\webCourse\common\script\content - Copy (3).js" />
+    <None Include="wwwroot\webCourse\common\script\content - Copy.js" />
+    <None Include="wwwroot\webCourse\common\script\content-非UTF-8.js" />
+    <None Include="wwwroot\webCourse\common\script\content.js" />
+    <None Include="wwwroot\webCourse\common\script\contentExtented.js" />
+    <None Include="wwwroot\webCourse\common\script\contents - Copy.js" />
+    <None Include="wwwroot\webCourse\common\script\contents - 勿删.js" />
+    <None Include="wwwroot\webCourse\common\script\contents.js" />
+    <None Include="wwwroot\webCourse\common\script\contentsForBatchUploadFlash.js" />
+    <None Include="wwwroot\webCourse\common\script\contentsForBatchUploadTeachingPlan.js" />
+    <None Include="wwwroot\webCourse\common\script\contentsForBatchUploadText.js" />
+    <None Include="wwwroot\webCourse\common\script\contentsForCopyPartResource.js" />
+    <None Include="wwwroot\webCourse\common\script\contents_explorer.js" />
+    <None Include="wwwroot\webCourse\common\script\content_explorer.js" />
+    <None Include="wwwroot\webCourse\common\script\content_forPPT.js" />
+    <None Include="wwwroot\webCourse\common\script\content_note.js" />
+    <None Include="wwwroot\webCourse\common\script\ContextMenu - 副本.js" />
+    <None Include="wwwroot\webCourse\common\script\HomeworkAndTest - Copy %282%29.js" />
+    <None Include="wwwroot\webCourse\common\script\HomeworkAndTest - Copy.js" />
+    <None Include="wwwroot\webCourse\common\script\HomeworkAndTest.js" />
+    <None Include="wwwroot\webCourse\common\script\IsLocalRun.js" />
+    <None Include="wwwroot\webCourse\common\script\Popup - 副本.js" />
+    <None Include="wwwroot\webCourse\common\script\Popup - 非UTF-8.js" />
+    <None Include="wwwroot\webCourse\common\script\Popup.js" />
+    <None Include="wwwroot\webCourse\common\script\run.js" />
+    <None Include="wwwroot\webCourse\common\script\showActiveX.js" />
+    <None Include="wwwroot\webCourse\common\script\ShowModelDiallog.js" />
+    <None Include="wwwroot\webCourse\common\script\SignalR\signalr.js" />
+    <None Include="wwwroot\webCourse\common\script\SignalR\signalr.min.js" />
+    <None Include="wwwroot\webCourse\common\script\title - Copy %282%29.js" />
+    <None Include="wwwroot\webCourse\common\script\title - 副本.js" />
+    <None Include="wwwroot\webCourse\common\script\title.js" />
+    <None Include="wwwroot\webCourse\common\script\wordToWebcourse.js" />
+    <None Include="wwwroot\webCourse\common\script\wordToWebcourseContents.js" />
+    <None Include="wwwroot\webCourse\common\script\复件  title.js" />
+    <None Include="wwwroot\webCourse\common\script\复件 bottom.js" />
+    <None Include="wwwroot\webCourse\common\script\复件 content.js" />
+    <None Include="wwwroot\webCourse\common\script\复件 contentExtented.js" />
+    <None Include="wwwroot\webCourse\common\script\复件 contents.js" />
+    <None Include="wwwroot\webCourse\common\script\复件 contentsForCopyPartResource.js" />
+    <None Include="wwwroot\webCourse\common\script\复件 contents_explorer.js" />
+    <None Include="wwwroot\webCourse\common\script\复件 content_explorer.js" />
+    <None Include="wwwroot\webCourse\common\script\复件 content_forPPT.js" />
+    <None Include="wwwroot\webCourse\common\script\复件 run.js" />
+    <None Include="wwwroot\webCourse\common\script\复件 showActiveX.js" />
+    <None Include="wwwroot\webCourse\common\search.aspx" />
+    <None Include="wwwroot\webCourse\common\search\searchPath\searchPath\temp.asp" />
+    <None Include="wwwroot\webCourse\common\ShowCascadingSelect\test.js" />
+    <None Include="wwwroot\webCourse\common\ShowModelDiallog\Scripts\ShowModelDiallog.js" />
+    <None Include="wwwroot\webCourse\common\ShowModelDiallog_Origin勿删\Scripts\ShowModelDiallog.js" />
+    <None Include="wwwroot\webCourse\common\sound.aspx" />
+    <None Include="wwwroot\webCourse\common\systemInfo.aspx" />
+    <None Include="wwwroot\webCourse\common\Templates\ContentsAndDoc.doc" />
+    <None Include="wwwroot\webCourse\common\Templates\ExamatianItembank.docx" />
+    <None Include="wwwroot\webCourse\common\Templates\HomeworkAndTestItembank.docx" />
+    <None Include="wwwroot\webCourse\common\Templates\presentation.pptx" />
+    <None Include="wwwroot\webCourse\common\Templates\WholeCourse.zip" />
+    <None Include="wwwroot\webCourse\common\textPlayer\textPlayer.asp" />
+    <None Include="wwwroot\webCourse\common\textToWord\textToWord.asp" />
+    <None Include="wwwroot\webCourse\common\textToWord\textToWordIframeInitial.aspx" />
+    <None Include="wwwroot\webCourse\common\textToWord\textToWordInitial.aspx" />
+    <None Include="wwwroot\webCourse\common\textToWord\textToWordTitle.aspx" />
+    <None Include="wwwroot\webCourse\common\thanks.aspx" />
+    <None Include="wwwroot\webCourse\common\title - 副本.aspx" />
+    <None Include="wwwroot\webCourse\common\Translate\AddChina.asp" />
+    <None Include="wwwroot\webCourse\common\Translate\frame.asp" />
+    <None Include="wwwroot\webCourse\common\Translate\save.asp" />
+    <None Include="wwwroot\webCourse\common\Translate\Translate.asp" />
+    <None Include="wwwroot\webCourse\common\update\update.asp" />
+    <None Include="wwwroot\webCourse\common\update\update.aspx" />
+    <None Include="wwwroot\webCourse\common\UploadAnimation\UploadAnimation.asp" />
+    <None Include="wwwroot\webCourse\common\UploadAnimation\UploadAnimation.aspx" />
+    <None Include="wwwroot\webCourse\common\UploadCommon\FilesList.aspx" />
+    <None Include="wwwroot\webCourse\common\UploadCommon\image\Thumbs.db" />
+    <None Include="wwwroot\webCourse\common\UploadCommon\ListFile.aspx" />
+    <None Include="wwwroot\webCourse\common\UploadCommon\localDriver.aspx" />
+    <None Include="wwwroot\webCourse\common\UploadCommon\popup.js" />
+    <None Include="wwwroot\webCourse\common\UploadCommon\Thumbs.db" />
+    <None Include="wwwroot\webCourse\common\UploadCommon\UploadCommon.aspx" />
+    <None Include="wwwroot\webCourse\common\UploadCommon\WebDriver.aspx" />
+    <None Include="wwwroot\webCourse\common\uploadFile.aspx" />
+    <None Include="wwwroot\webCourse\common\uploadFileInterface.aspx" />
+    <None Include="wwwroot\webCourse\common\uploadlocal\frame.asp" />
+    <None Include="wwwroot\webCourse\common\uploadlocal\localContents.asp" />
+    <None Include="wwwroot\webCourse\common\uploadlocal\menu.asp" />
+    <None Include="wwwroot\webCourse\common\uploadlocal\webContents.asp" />
+    <None Include="wwwroot\webCourse\common\UploadRecording\UploadRecording.asp" />
+    <None Include="wwwroot\webCourse\common\uploadTeachingPlan\uploadTeachingPlan.asp" />
+    <None Include="wwwroot\webCourse\common\uploadTeachingPlan\uploadTeachingPlan.aspx" />
+    <None Include="wwwroot\webCourse\common\uploadText\uploadText.asp" />
+    <None Include="wwwroot\webCourse\common\windowOrFullScreen_Animation.aspx" />
+    <None Include="wwwroot\webCourse\common\windowOrFullScreen_techingPlan.aspx" />
+    <None Include="wwwroot\webCourse\common\wordToText\wordToTextIframeInitial.aspx" />
+    <None Include="wwwroot\webCourse\common\wordToText\wordToTextInitial.aspx" />
+    <None Include="wwwroot\webCourse\common\wordToText\wordToTextTitle.aspx" />
+    <None Include="wwwroot\webCourse\lessons\contentsForCopyPartResource.asp" />
+    <None Include="wwwroot\webCourse\lessons\contentsFormergePartResource.asp" />
+    <None Include="wwwroot\webCourse\lessons\content\teachingPlan\1190967377078\1190967377078.pptx" />
+    <None Include="wwwroot\webCourse\lessons\content\teachingPlan\1679411946833\1679411946833.pptx" />
+    <None Include="wwwroot\webCourse\lessons\content\teachingPlan\1679413375897\1679413375897.pptx" />
+    <None Include="wwwroot\webCourse\lessons\content\teachingPlan\1679413409185\1679413409185.pptx" />
+    <None Include="wwwroot\webCourse\lessons\复件 contents.asp" />
+    <None Include="wwwroot\webCourse\options\AuthorInfo.js" />
+    <None Include="wwwroot\webCourse\options\book.doc" />
+    <None Include="wwwroot\webCourse\options\bottom - 副本.aspx" />
+    <None Include="wwwroot\webCourse\options\bottom.aspx" />
+    <None Include="wwwroot\webCourse\options\contentStart - 副本.aspx" />
+    <None Include="wwwroot\webCourse\options\contentStart.psd" />
+    <None Include="wwwroot\webCourse\options\contentStart.swf" />
+    <None Include="wwwroot\webCourse\options\contentStartForeign.psd" />
+    <None Include="wwwroot\webCourse\options\contentStart_foreign.asp" />
+    <None Include="wwwroot\webCourse\options\logo - 副本.aspx" />
+    <None Include="wwwroot\webCourse\options\logo.fla" />
+    <None Include="wwwroot\webCourse\options\logo.swf" />
+    <None Include="wwwroot\webCourse\options\logo.wrl" />
+    <None Include="wwwroot\webCourse\options\logoWithHyperLink.wrl" />
+    <None Include="wwwroot\webCourse\options\pause.asp" />
+    <None Include="wwwroot\webCourse\options\pause.wrl" />
+    <None Include="wwwroot\webCourse\options\Thumbs.db" />
+    <None Include="wwwroot\ZHDC\sxyt_files\themedata.thmx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="wwwroot\2D3D\animation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\BasicShape- Ellipse.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\BasicStructure-SilverlightApp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\BasicStructure-SilverlightControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\BasicStructure-SilverlightSketchFlow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\BasicStructure-WPFApp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\BasicStructure-WPFControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\BasicStructure-WPFSketchFlow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\BasicStructure.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\Border.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\Clip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\effect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\gradientBrush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\hyperlink.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\ImageBrushOrVideoBrush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\imageold.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\ImageReferenc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\LayoutCompare.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\MediaElementReferenc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\navigationFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\Oacityold.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\OpacityMask.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\opcity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\path-Ellipse.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\path.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\scrollviewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\SolidColorBrush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\strokeAndFill.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\text.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\transform.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\zIndex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\内插帧-DoubleAnimationUsingKeyFrames.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wwwroot\2D3D\持续帧-DoubleAnimationUsingKeyFrames.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter\src\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.csproj" />
     <ProjectReference Include="..\..\Microsoft.AspNetCore.Components.QuickGrid\src\Microsoft.AspNetCore.Components.QuickGrid.csproj" />
     <ProjectReference Include="..\SharedCS\SharedCS.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\2D3D\animation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\BasicShape- Ellipse.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\BasicStructure-SilverlightApp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\BasicStructure-SilverlightControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\BasicStructure-SilverlightSketchFlow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\BasicStructure-WPFApp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\BasicStructure-WPFControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\BasicStructure-WPFSketchFlow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\BasicStructure.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\Border.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\Clip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\effect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\gradientBrush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\hyperlink.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\ImageBrushOrVideoBrush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\imageold.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\ImageReferenc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\LayoutCompare.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\MediaElementReferenc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\navigationFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\Oacityold.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\OpacityMask.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\opcity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\path-Ellipse.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\path.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\scrollviewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\SolidColorBrush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\strokeAndFill.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\text.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\transform.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\zIndex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\内插帧-DoubleAnimationUsingKeyFrames.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Update="wwwroot\2D3D\持续帧-DoubleAnimationUsingKeyFrames.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

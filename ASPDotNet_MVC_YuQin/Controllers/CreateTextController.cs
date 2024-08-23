@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebEdu_LocalVersion_YuQin_DotNetCore21.Models;
+//using WebEdu_LocalVersion_YuQin_DotNetCore21.Models;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
@@ -30,8 +30,8 @@ namespace WebEdu_LocalVersion_YuQin_DotNetCore21.Controllers
         [HttpGet]
         public IActionResult Get(String sFileName)
         {
-           // sFileName准备用作文件读取；
-            return Content("<HTML><HEAD><TITLE>课文</TITLE><BODY><div contenteditable='true' style='width:100%;height:100%;text-align:center;vertical-align:middle;'><span style='line-height: 400px;'>该条目尚没有对应的课文，这是自动创建的文本，请编辑</span></div></BODY ></HTM>", "text/html",System.Text.Encoding.UTF8);//不知为什么，必须""嵌套''，否则提示“字符文本中字符太多”错误
+            // sFileName准备用作文件读取；
+            return Content("<HTML><HEAD><TITLE>课文</TITLE><BODY><div contenteditable='true' style='width:100%;height:100%;text-align:center;vertical-align:middle;'><span style='line-height: 400px;'>该条目尚没有对应的课文，这是自动创建的文本，请编辑</span></div></BODY ></HTM>", "text/html", System.Text.Encoding.UTF8);//不知为什么，必须""嵌套''，否则提示“字符文本中字符太多”错误
         }
         // GET api/values
         /**
@@ -59,8 +59,8 @@ public ActionResult<string> Get(int id)
         {
             // return (Content(Request.Query["FolderAndFileName"]));
             //判断是本机版还是服务器版，服务器不允许上传
-            
-            if (new LocalVersionOrServerVersion().IsLocalVersion(this.Request.Host.ToUriComponent())) 
+
+            if (new LocalVersionOrServerVersion().IsLocalVersion(this.Request.Host.ToUriComponent()))
             {
                 IFormFileCollection files = Request.Form.Files;
                 long size = files.Sum(f => f.Length);
@@ -92,7 +92,7 @@ public ActionResult<string> Get(int id)
                             //必须设置为不可见 
                             WordApp.Visible = false;
                             Document document = WordApp.Documents.Open(filePath);
-                           document.WebOptions.Encoding = MsoEncoding.msoEncodingUTF8;
+                            document.WebOptions.Encoding = MsoEncoding.msoEncodingUTF8;
                             //document.SaveAs2(FolderPath + "\\" + Request.Query["FolderAndFileName"] + ".htm", Encoding.UTF8, WdSaveFormat.wdFormatFilteredHTML);//无法调用.net的编码
                             //document.SaveAs2(FolderPath + "\\" + Request.Query["FolderAndFileName"] + ".htm", WdSaveFormat.wdFormatFilteredHTML, MsoEncoding.msoEncodingUTF8);
                             document.SaveAs2(FolderPath + "\\" + Request.Query["FolderAndFileName"] + ".htm", WdSaveFormat.wdFormatFilteredHTML);
@@ -147,31 +147,31 @@ public ActionResult<string> Get(int id)
                 StreamReader streamReader = new StreamReader(FolderPath + "\\" + Request.Query["FolderAndFileName"] + ".htm", new TexFileEncodeType().GetFileEncodeType(FolderPath + "\\" + Request.Query["FolderAndFileName"] + ".htm"));// 创建文本的读取流(会检查字节码标记确定编码格式)
                 String stringFromFile = streamReader.ReadToEnd(); //读取文本中的所有字符
                                                                   // String stringFromFileProcessedTemp = stringFromFile.Replace("charset=gb2312", "charset=utf-8");//尚无法实现.docx转.htm时utf-8编码
-                String stringFromFileProcessed = stringFromFile.Replace("</body>", "<!--右键菜单开始 --><div id='popupDiv' onclick='fnPopupClosePopup();' oncontextmenu='fnPopupContextMenu();' style='position:fixed;z-Index:1000;margin: 2px; border: 1px;   overflow:visible;  font-size: 11px; cursor: default;display:none;'><div style='position: relative;' onmouseover='fnPopupMouseOver();' onmouseout='fnPopupMouseOut();'><div title='刷新标题面' onclick='location.reload();'>刷新</div><div title='单击将在是否可以在线编辑课文的之间切换!' onclick='if(document.body.contentEditable==true) { document.body.contentEditable = false; } else { document.body.contentEditable = true;}'>课文编辑切换</div><div title='编辑后可保存编辑结果' onclick='fnSave();'>保存</div><div>帮助</div></div></div><!--右键菜单结束--><script id=sIdScriptAutoAddedForDynFunction1 src='../../../../common/script/content.js'></script><script id=sIdScriptAutoAddedForDynFunction2 src='../../../../common/script/Popup.js'></script><script id=sIdScriptAutoAddedForDynFunction3>document.body.onload=fnOnLoad;</script>" + "</body>");
+                String stringFromFileProcessed = stringFromFile.Replace("</body>", "<!--右键菜单开始 --><div id='popupDiv' onclick='fnPopupClosePopup();' oncontextmenu='fnPopupContextMenu();' style='position:fixed;z-Index:1000;margin: 2px; border: 1px;   overflow:visible;  font-size: 11px; cursor: default;display:none;'><div style='position: relative;' onmouseover='fnPopupMouseOver();' onmouseout='fnPopupMouseOut();'><div title='刷新标题面' onclick='location.reload();'>刷新</div><div title='单击将在是否可以在线编辑课文的之间切换!' onclick='if(document.body.contentEditable==true) { document.body.contentEditable = false; } else { document.body.contentEditable = true;}'>课文编辑切换</div><div title='编辑后可保存编辑结果' onclick='fnSave();'>保存</div><div title='打开帮助文档' onclick='fnHelp();'>帮助</div></div></div><!--右键菜单结束--><script id=sIdScriptAutoAddedForDynFunction1 src='../../../../common/script/content.js'></script><script id=sIdScriptAutoAddedForDynFunction2 src='../../../../common/script/Popup.js'></script><script id=sIdScriptAutoAddedForDynFunction3>document.body.onload=fnOnLoad;</script>" + "</body>");
                 streamReader.Close();
-                StreamWriter streamWriter = new StreamWriter(FolderPath + "\\" + Request.Query["FolderAndFileName"] + ".htm",false,Encoding.UTF8);//修改为了UTF8编码，可以运行。但还未检验。因为windows系统使用了utf8，需要在windows系统没有使用utf8的机器检验。
+                StreamWriter streamWriter = new StreamWriter(FolderPath + "\\" + Request.Query["FolderAndFileName"] + ".htm", false, Encoding.UTF8);//修改为了UTF8编码，可以运行。但还未检验。因为windows系统使用了utf8，需要在windows系统没有使用utf8的机器检验。
 
                 // streamWriter.Write(stringFromFileProcessed,,Encoding.UTF8);//出错。
                 streamWriter.Write(stringFromFileProcessed);
                 streamWriter.Close();
 
-                return Ok(new { count = files.Count, size, filePathAll, host=this.Request.Host.ToUriComponent() }) ;
+                return Ok(new { count = files.Count, size, filePathAll, host = this.Request.Host.ToUriComponent() });
             }
             else { return Ok("这是服务器版（或者是本机版发布为了服务器版的方式运行），不允许直接上传！请在本机版制作好后（本机版无需登录）,连接服务器版（课程资源管理员的账号登录连接服务器版），上传本机版中的资源到服务器版!" + this.Request.Host.ToUriComponent()); }
-            
+
         }
 
-// PUT api/values/5
+        // PUT api/values/5
         [HttpPut("{id}")]
-public void Put(int id, [FromBody] string value)
-{
-}
+        public void Put(int id, [FromBody] string value)
+        {
+        }
 
-// DELETE api/values/5
-[HttpDelete("{id}")]
-public void Delete(int id)
-{
-}
+        // DELETE api/values/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+        }
 
-}   
+    }
 }

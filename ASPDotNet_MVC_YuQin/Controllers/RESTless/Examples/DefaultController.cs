@@ -34,7 +34,7 @@ namespace WebEdu_LocalVersion_YuQin_DotNetCore21.Controllers.Examples
         {
             try
             {
-                // TODO: Add insert logic here
+                // Add insert logic here
 
                 return RedirectToAction(nameof(Index));
             }
@@ -57,7 +57,7 @@ namespace WebEdu_LocalVersion_YuQin_DotNetCore21.Controllers.Examples
         {
             try
             {
-                // TODO: Add update logic here
+                // Add update logic here
 
                 return RedirectToAction(nameof(Index));
             }
@@ -80,7 +80,7 @@ namespace WebEdu_LocalVersion_YuQin_DotNetCore21.Controllers.Examples
         {
             try
             {
-                // TODO: Add delete logic here
+                // Add delete logic here
 
                 return RedirectToAction(nameof(Index));
             }

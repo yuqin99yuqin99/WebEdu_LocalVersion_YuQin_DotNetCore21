@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebEdu_LocalVersion_YuQin_DotNetCore21.Models;
+//using WebEdu_LocalVersion_YuQin_DotNetCore21.Models;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
