@@ -1,0 +1,62 @@
+﻿@page "/paging"
+@using Microsoft.AspNetCore.Components.QuickGrid
+
+@inject DataSource Data
+<style>
+
+    ::deep th.country-name {
+        width: 14rem;
+    }
+
+    /* Subtle stripe effect */
+    ::deep tr:nth-child(even) {
+        background: rgba(255,255,255,0.4);
+    }
+
+    /* Don't collapse rows even if they are empty */
+    ::deep tbody tr {
+        height: 1.8rem;
+    }
+
+    .page-size-chooser {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+        .page-size-chooser select {
+            margin: 0 1rem;
+            padding: 0.25rem 0.5rem;
+        }
+</style>
+
+<div class="page-size-chooser">
+    Items per page:
+    <select @bind="@pagination.ItemsPerPage">
+        <option>5</option>
+        <option>10</option>
+        <option>20</option>
+        <option>50</option>
+    </select>
+</div>
+
+<div class="grid">
+    <QuickGrid Items="@itemsQueryable" Pagination="@pagination">
+        <PropertyColumn Property="@(c => c.Name)" Sortable="true" Class="country-name" />
+        <PropertyColumn Property="@(c => c.Medals.Gold)" Sortable="true" Align="Align.Right" />
+        <PropertyColumn Property="@(c => c.Medals.Silver)" Sortable="true" Align="Align.Right" />
+        <PropertyColumn Property="@(c => c.Medals.Bronze)" Sortable="true" Align="Align.Right" />
+    </QuickGrid>
+</div>
+
+<Paginator State="@pagination" />
+
+@code {
+    PaginationState pagination = new PaginationState { ItemsPerPage = 10 };
+    IQueryable<Country>? itemsQueryable;
+
+    protected override async Task OnInitializedAsync()
+    {
+        itemsQueryable = (await Data.GetCountriesAsync()).AsQueryable();
+    }
+}

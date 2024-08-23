@@ -8,10 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\QuickGrid\DataSources\**" />
+    <Content Remove="Pages\QuickGrid\DataSources\**" />
+    <EmbeddedResource Remove="Pages\QuickGrid\DataSources\**" />
+    <None Remove="Pages\QuickGrid\DataSources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Pages\ModelsForPages\Student.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\QuickGrid\Paging.razor" />
     <Content Remove="Pages\student\Shared\Detail.razor" />
     <Content Remove="Pages\student\Shared\Edit.razor" />
     <Content Remove="wwwroot\css\CounterPartialClass.css" />
@@ -38,6 +46,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter\src\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.csproj" />
+    <ProjectReference Include="..\..\Microsoft.AspNetCore.Components.QuickGrid\src\Microsoft.AspNetCore.Components.QuickGrid.csproj" />
     <ProjectReference Include="..\SharedCS\SharedCS.csproj" />
     <ProjectReference Include="..\SharedRazorClassLibrary\SharedRazorCS.csproj" />
   </ItemGroup>

@@ -1,0 +1,92 @@
+﻿@page "/DataSources/WebAPIData"
+@using Microsoft.AspNetCore.Components.QuickGrid
+
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<style>
+
+    /* Fix height and enable scrolling */
+    .grid {
+        height: 16.5rem;
+        overflow-y: auto;
+    }
+
+        .grid ::deep table {
+            min-width: 100%;
+        }
+
+    /* Sticky header while scrolling */
+    ::deep thead {
+        position: sticky;
+        top: 0;
+        background-color: #eee;
+        z-index: 1;
+    }
+
+    /* For virtualized grids, it's essential that all rows have the same known height */
+    ::deep tr {
+        height: 30px;
+    }
+
+    ::deep tbody td {
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 0;
+        text-overflow: ellipsis;
+    }
+</style>
+
+<div class="grid" tabindex="-1">
+    <QuickGrid ItemsProvider="@foodRecallProvider" Virtualize="true">
+        <PropertyColumn Title="ID" Property="@(c => c.Event_Id)" />
+        <PropertyColumn Property="@(c => c.State)" />
+        <PropertyColumn Property="@(c => c.City)" />
+        <PropertyColumn Title="Company" Property="@(c => c.Recalling_Firm)" />
+        <PropertyColumn Property="@(c => c.Status)" />
+    </QuickGrid>
+</div>
+
+<p>Total: <strong>@numResults results found</strong></p>
+
+@code {
+    GridItemsProvider<FoodRecall>? foodRecallProvider;
+    int numResults;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Define the GridItemsProvider. Its job is to convert QuickGrid's GridItemsProviderRequest into a query against
+        // an arbitrary data soure. In this example, we need to translate query parameters into the particular URL format
+        // supported by the external JSON API. It's only possible to perform whatever sorting/filtering/etc is supported
+        // by the external API.
+        foodRecallProvider = async req =>
+        {
+            var url = NavManager.GetUriWithQueryParameters("https://api.fda.gov/food/enforcement.json", new Dictionary<string, object?>
+                {
+                { "skip", req.StartIndex },
+                { "limit", req.Count },
+                });
+
+            var response = await Http.GetFromJsonAsync<FoodRecallQueryResult>(url, req.CancellationToken);
+            return GridItemsProviderResult.From(
+                items: response!.Results,
+                totalItemCount: response!.Meta.Results.Total);
+        };
+
+        // Display the number of results just for information. This is completely separate from the grid.
+        numResults = (await Http.GetFromJsonAsync<FoodRecallQueryResult>("https://api.fda.gov/food/enforcement.json"))!.Meta.Results.Total;
+    }
+
+    public class FoodRecallQueryResult
+    {
+        public Int32 ID { get; set; }
+
+        public String? State { get; set; }
+
+        public String? City { get; set; }
+
+        public String? Company { get; set; }
+        public String? Status { get; set; }
+
+    }
+}

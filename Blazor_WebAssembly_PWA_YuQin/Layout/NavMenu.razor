@@ -8,25 +8,65 @@
 </div>
 
 <div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    
     <nav class="flex-column">
         <div class="nav-item px-3">
+            <NavLink class="nav-link" href="">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span>
+            </NavLink>
+        </div>      
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span>
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <div>
+                <a class="nav-link" href="https://localhost:5001/Identity/Account/LogIn" target="_blank">登录</a>
+            </div>
+            <div>
+                <a class="nav-link" href="https://localhost:5001/Identity/Account/Register" target="_blank">注册</a>
+            </div>
+           <!--
+
+           <NavLink class="nav-link" href="https://localhost:5001/Identity/Account/LogIn">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> 登录
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="https://localhost:5001/Identity/Account/Register">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> 注册
+            </NavLink>
+                -->
+        </div>
+        <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span>主页
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>互动计数示例
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span>数据查询示例（气象数据）
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="counter_partial_class">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span>组件复用示例
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="student/list">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> student
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span>学生数据库示例
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="promotion-grid">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span>数据分页示例
             </NavLink>
         </div>
     </nav>

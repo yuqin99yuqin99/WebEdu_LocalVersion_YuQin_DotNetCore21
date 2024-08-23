@@ -19,7 +19,7 @@ namespace Blazor_WebAssembly_PWA_YuQin.Pages
         static private Int32 CurrentCount = 0;
         static private String MyHTML ="hi! MyHTML";
         static private String MyRawHTML = "hi! MyRawHTML";
-
+        static private String MyHTMLContent = "hi! MyHTMLContent";
         static private void IncrementCount()
         {
             CurrentCount++;
@@ -27,10 +27,17 @@ namespace Blazor_WebAssembly_PWA_YuQin.Pages
         static private void ToggleHTML()
         {
             MyHTML = "<h1>" + MyHTML+"</h1>";
+
         }
         static private void ToggleRawHTML()
         {
-            MyRawHTML= "<h1>" + MyRawHTML + "</h1>";
+           // MyRawHTML = System.Web.WebPages.Html.HtmlHelper.Raw( "<h1>" + MyRawHTML + "</h1>");
+            MyRawHTML =  "<h1>" + MyRawHTML + "</h1>";
+        }
+        static private void ToggleMyHTMLContent()
+        {
+            // MyRawHTML = IHtmlContent.WriteTo( "<h1>" + MyHTMLContent  + "</h1>");
+            MyHTMLContent = "<h1>" + MyHTMLContent + "</h1>";
         }
         protected override void OnInitialized()
         {

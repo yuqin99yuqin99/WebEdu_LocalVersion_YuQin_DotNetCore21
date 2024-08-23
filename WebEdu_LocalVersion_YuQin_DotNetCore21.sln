@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPDotNet_MVC_YuQin", "ASPDotNet_MVC_YuQin\ASPDotNet_MVC_YuQin.csproj", "{DBBAEA6A-47AA-47F7-8FD6-8D4101A3D4FB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Binary_ASM_CPP_CS(FourPlatformExpansionLangugeExamples)", "Binary_ASM_CPP_CS(FourPlatformExpansionLangugeExamples)", "{4285530C-3F76-408D-97CD-836BC240041C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)", "Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)", "{4285530C-3F76-408D-97CD-836BC240041C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Binary_ASM_CPP_CS(ASM_ConsoleApplicationExample)", "Binary_ASM_CPP_CS(ASM_ConsoleApplicationExample)\CPP_ASM_Binary_Application.vcxproj", "{1165E11F-3D77-4B49-AE5F-1B3FCA8FDCAC}"
 EndProject
@@ -23,7 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedRazorCS", "SharedRazo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_WebAssembly_PWA_YuQin", "Blazor_WebAssembly_PWA_YuQin\Blazor_WebAssembly_PWA_YuQin.csproj", "{0E2E66FE-7682-42DB-AE84-5CBB4D435DF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Word_AddIn_YuQin", "Word_AddIn_YuQin\Word_AddIn_YuQin.csproj", "{93B451EB-85B7-4FCA-9B2A-B0A473C1504D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedCS(Examples)", "SharedCS(Examples)", "{B36C2C5E-990D-41F0-99CA-6B54C1B443A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedRazor_SharedCSHTML(Examples)", "SharedRazor_SharedCSHTML(Examples)", "{E0AFF528-C89C-4E83-97CD-DB2023EEBDD7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Components.QuickGrid", "..\Microsoft.AspNetCore.Components.QuickGrid\src\Microsoft.AspNetCore.Components.QuickGrid.csproj", "{DEF471BD-0500-443B-BDA5-8442B634E66D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter", "..\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter\src\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.csproj", "{FB1878CE-02C2-4A06-9590-0D52F26BEF39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,18 +149,30 @@ Global
 		{0E2E66FE-7682-42DB-AE84-5CBB4D435DF2}.Release|x64.Build.0 = Release|Any CPU
 		{0E2E66FE-7682-42DB-AE84-5CBB4D435DF2}.Release|x86.ActiveCfg = Release|Any CPU
 		{0E2E66FE-7682-42DB-AE84-5CBB4D435DF2}.Release|x86.Build.0 = Release|Any CPU
-		{93B451EB-85B7-4FCA-9B2A-B0A473C1504D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93B451EB-85B7-4FCA-9B2A-B0A473C1504D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93B451EB-85B7-4FCA-9B2A-B0A473C1504D}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{93B451EB-85B7-4FCA-9B2A-B0A473C1504D}.Debug|x64.Build.0 = Debug|Any CPU
-		{93B451EB-85B7-4FCA-9B2A-B0A473C1504D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{93B451EB-85B7-4FCA-9B2A-B0A473C1504D}.Debug|x86.Build.0 = Debug|Any CPU
-		{93B451EB-85B7-4FCA-9B2A-B0A473C1504D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93B451EB-85B7-4FCA-9B2A-B0A473C1504D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{93B451EB-85B7-4FCA-9B2A-B0A473C1504D}.Release|x64.ActiveCfg = Release|Any CPU
-		{93B451EB-85B7-4FCA-9B2A-B0A473C1504D}.Release|x64.Build.0 = Release|Any CPU
-		{93B451EB-85B7-4FCA-9B2A-B0A473C1504D}.Release|x86.ActiveCfg = Release|Any CPU
-		{93B451EB-85B7-4FCA-9B2A-B0A473C1504D}.Release|x86.Build.0 = Release|Any CPU
+		{DEF471BD-0500-443B-BDA5-8442B634E66D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEF471BD-0500-443B-BDA5-8442B634E66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEF471BD-0500-443B-BDA5-8442B634E66D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DEF471BD-0500-443B-BDA5-8442B634E66D}.Debug|x64.Build.0 = Debug|Any CPU
+		{DEF471BD-0500-443B-BDA5-8442B634E66D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DEF471BD-0500-443B-BDA5-8442B634E66D}.Debug|x86.Build.0 = Debug|Any CPU
+		{DEF471BD-0500-443B-BDA5-8442B634E66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEF471BD-0500-443B-BDA5-8442B634E66D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEF471BD-0500-443B-BDA5-8442B634E66D}.Release|x64.ActiveCfg = Release|Any CPU
+		{DEF471BD-0500-443B-BDA5-8442B634E66D}.Release|x64.Build.0 = Release|Any CPU
+		{DEF471BD-0500-443B-BDA5-8442B634E66D}.Release|x86.ActiveCfg = Release|Any CPU
+		{DEF471BD-0500-443B-BDA5-8442B634E66D}.Release|x86.Build.0 = Release|Any CPU
+		{FB1878CE-02C2-4A06-9590-0D52F26BEF39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB1878CE-02C2-4A06-9590-0D52F26BEF39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB1878CE-02C2-4A06-9590-0D52F26BEF39}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FB1878CE-02C2-4A06-9590-0D52F26BEF39}.Debug|x64.Build.0 = Debug|Any CPU
+		{FB1878CE-02C2-4A06-9590-0D52F26BEF39}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FB1878CE-02C2-4A06-9590-0D52F26BEF39}.Debug|x86.Build.0 = Debug|Any CPU
+		{FB1878CE-02C2-4A06-9590-0D52F26BEF39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB1878CE-02C2-4A06-9590-0D52F26BEF39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB1878CE-02C2-4A06-9590-0D52F26BEF39}.Release|x64.ActiveCfg = Release|Any CPU
+		{FB1878CE-02C2-4A06-9590-0D52F26BEF39}.Release|x64.Build.0 = Release|Any CPU
+		{FB1878CE-02C2-4A06-9590-0D52F26BEF39}.Release|x86.ActiveCfg = Release|Any CPU
+		{FB1878CE-02C2-4A06-9590-0D52F26BEF39}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -165,6 +183,10 @@ Global
 		{1A843230-8224-4FCC-88F2-883E71E1A82E} = {4285530C-3F76-408D-97CD-836BC240041C}
 		{2CC327D2-53DA-49B8-A208-68EFA7277A32} = {4285530C-3F76-408D-97CD-836BC240041C}
 		{7B6C88AB-37F9-41F8-B5E6-14B21EF9455F} = {4285530C-3F76-408D-97CD-836BC240041C}
+		{F67EAA73-E1FE-4338-9CD2-60FC3ED83AF4} = {B36C2C5E-990D-41F0-99CA-6B54C1B443A3}
+		{2EFFE7F0-C9D7-4901-A1D6-632504E406A5} = {E0AFF528-C89C-4E83-97CD-DB2023EEBDD7}
+		{DEF471BD-0500-443B-BDA5-8442B634E66D} = {E0AFF528-C89C-4E83-97CD-DB2023EEBDD7}
+		{FB1878CE-02C2-4A06-9590-0D52F26BEF39} = {E0AFF528-C89C-4E83-97CD-DB2023EEBDD7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3704B709-ACA0-443A-9D6F-6359321FB596}

@@ -192,11 +192,6 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <Compile Remove="Controllers\BroweringOfTextbookController.cs" />
     <Compile Remove="Controllers\Interop_CSInteropCPPCOMTry.cs" />
     <Compile Remove="Controllers\Interop_CSInteropCPPDLLTry.cs" />
-    <Compile Remove="Models\BroweringOfTextbook.cs" />
-    <Compile Remove="Models\BroweringOfTextbookDbContext.cs" />
-    <Compile Remove="Models\BroweringOfTextbookSeedData.cs" />
-    <Compile Remove="Models\MovieDateFixed.cs" />
-    <Compile Remove="Models\MovieDateRating.cs" />
     <Compile Remove="Program  - Copy.cs" />
     <Compile Remove="Startup.cs" />
   </ItemGroup>
@@ -210,10 +205,6 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <None Remove="Controllers\PresentationController - Copy.csOrigin" />
     <None Remove="Controllers\UploadHomeworkAndTestController - Copy.csold" />
     <None Remove="Controllers\UploadHomeworkAndTestController - Copy.csOrigin" />
-    <None Remove="Models\Movie.csNEW" />
-    <None Remove="Models\Movie.csold" />
-    <None Remove="Models\SeedDataRating.csNew" />
-    <None Remove="Models\SeedDataRating.csold" />
     <None Remove="Program - Copy.csold" />
     <None Remove="Program - Copy.csorigin" />
     <None Remove="Program - Copy.cs去除StartUp时" />
@@ -250,6 +241,8 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter\src\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.csproj" />
+    <ProjectReference Include="..\..\Microsoft.AspNetCore.Components.QuickGrid\src\Microsoft.AspNetCore.Components.QuickGrid.csproj" />
     <ProjectReference Include="..\SharedCS\SharedCS.csproj" />
   </ItemGroup>
 
