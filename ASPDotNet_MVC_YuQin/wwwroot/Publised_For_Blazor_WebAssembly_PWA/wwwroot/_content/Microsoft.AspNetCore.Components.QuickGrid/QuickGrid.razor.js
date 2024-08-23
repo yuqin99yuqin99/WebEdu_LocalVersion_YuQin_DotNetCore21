@@ -1,3 +1,4 @@
+
 export function init(tableElement) {
 
     const bodyClickHandler = event => {
