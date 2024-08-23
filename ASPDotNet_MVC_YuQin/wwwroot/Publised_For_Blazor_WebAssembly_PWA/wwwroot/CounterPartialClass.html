@@ -1,0 +1,23 @@
+﻿@page "/counter_partial_class"
+@using Blazor_WebAssembly_Sample.Pages
+
+<!--
+<style>
+h1 {
+    color: brown;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+</style>
+-->
+<link rel='stylesheet' type='text/css' href="/css/CounterPartialClass.css" />
+<PageTitle>Counter</PageTitle>
+
+
+<h1>Counter</h1>
+<h1 style=" color: brown;font-family: Tahoma, Geneva, Verdana, sans-serif;">Scoped CSS Example:@Blazor_WebAssembly_Sample.SharedCS.TyrClass.TrySharedProperty</h1>
+<h1 style=" color: brown;font-family: Tahoma, Geneva, Verdana, sans-serif;">Scoped CSS Example:@SharedRazorCSLibrary.TryRazorClass.TrySharedProperty</h1>
+<h1 style=" color: brown;font-family: Tahoma, Geneva, Verdana, sans-serif;">Scoped CSS Example:@SharedCSLibrary.TryClass.TrySharedProperty</h1>
+<p role="status">Current count: @CounterPartialClass.currentCount</p>
+
+<button class="btn btn-primary" @onclick="CounterPartialClass.IncrementCount">Click me</button>
+<TryCSSExample></TryCSSExample>
