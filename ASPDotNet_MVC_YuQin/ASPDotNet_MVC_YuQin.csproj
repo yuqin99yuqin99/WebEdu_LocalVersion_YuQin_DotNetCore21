@@ -92,6 +92,7 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
 
   <ItemGroup>
     <Content Remove="web.config" />
+    <Content Remove="wwwroot\Publised_For_Blazor_WebAssembly_PWA\wwwroot\index.html" />
     <Content Remove="wwwroot\webCourse\common\script\content - Copy %283%29.js" />
   </ItemGroup>
 
@@ -287,6 +288,7 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <None Include="wwwroot\lutaolinyun.pdf" />
     <None Include="wwwroot\OINOIIOI.ppt" />
     <None Include="wwwroot\PrincipalLineofEducationalComputingThinking.docx" />
+    <None Include="wwwroot\Publised_For_Blazor_WebAssembly_PWA\wwwroot\index.html" />
     <None Include="wwwroot\pushNotifications.js" />
     <None Include="wwwroot\renshichu\lunwensongshen.docx" />
     <None Include="wwwroot\service-worker.js" />
