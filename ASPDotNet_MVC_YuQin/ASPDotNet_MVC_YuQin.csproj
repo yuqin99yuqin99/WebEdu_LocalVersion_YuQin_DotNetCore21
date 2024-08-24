@@ -44,6 +44,8 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <Compile Remove="Models\ServicesForIdentity\**" />
     <Compile Remove="StudyHardDayDayUp\**" />
     <Compile Remove="Views\BroweringOfTextbook\**" />
+    <Compile Remove="wwwroot\jiaoyujishuxinshengdaolun_files\**" />
+    <Compile Remove="wwwroot\Publised_For_Blazor_WebAssembly_PWA\**" />
     <Content Remove="Areas\Admin\**" />
     <Content Remove="Controllers\RESTless\Identity\**" />
     <Content Remove="Controllers\RESTless\samples\**" />
@@ -54,6 +56,8 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <Content Remove="Models\ServicesForIdentity\**" />
     <Content Remove="StudyHardDayDayUp\**" />
     <Content Remove="Views\BroweringOfTextbook\**" />
+    <Content Remove="wwwroot\jiaoyujishuxinshengdaolun_files\**" />
+    <Content Remove="wwwroot\Publised_For_Blazor_WebAssembly_PWA\**" />
     <EmbeddedResource Remove="Areas\Admin\**" />
     <EmbeddedResource Remove="Controllers\RESTless\Identity\**" />
     <EmbeddedResource Remove="Controllers\RESTless\samples\**" />
@@ -64,6 +68,8 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <EmbeddedResource Remove="Models\ServicesForIdentity\**" />
     <EmbeddedResource Remove="StudyHardDayDayUp\**" />
     <EmbeddedResource Remove="Views\BroweringOfTextbook\**" />
+    <EmbeddedResource Remove="wwwroot\jiaoyujishuxinshengdaolun_files\**" />
+    <EmbeddedResource Remove="wwwroot\Publised_For_Blazor_WebAssembly_PWA\**" />
     <None Remove="Areas\Admin\**" />
     <None Remove="Controllers\RESTless\Identity\**" />
     <None Remove="Controllers\RESTless\samples\**" />
@@ -74,6 +80,8 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <None Remove="Models\ServicesForIdentity\**" />
     <None Remove="StudyHardDayDayUp\**" />
     <None Remove="Views\BroweringOfTextbook\**" />
+    <None Remove="wwwroot\jiaoyujishuxinshengdaolun_files\**" />
+    <None Remove="wwwroot\Publised_For_Blazor_WebAssembly_PWA\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -92,7 +100,6 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
 
   <ItemGroup>
     <Content Remove="web.config" />
-    <Content Remove="wwwroot\Publised_For_Blazor_WebAssembly_PWA\wwwroot\404.html" />
     <Content Remove="wwwroot\webCourse\common\script\content - Copy %283%29.js" />
   </ItemGroup>
 
@@ -240,8 +247,6 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <None Include="wwwroot\deliveryMap.js" />
     <None Include="wwwroot\Digital-Intelligence-Calendar-Driven-TeachingProcessManagement.pdf" />
     <None Include="wwwroot\ExcellentTeachingCasesofIdeologicalandPoliticalCoursesinJiangxiNormalUniversity.docx" />
-    <None Include="wwwroot\jiaoyujishuxinshengdaolun.docx" />
-    <None Include="wwwroot\jiaoyujishuxinshengdaolun_files\themedata.thmx" />
     <None Include="wwwroot\js\site.js" />
     <None Include="wwwroot\leaflet\leaflet.js" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
@@ -288,7 +293,6 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <None Include="wwwroot\lutaolinyun.pdf" />
     <None Include="wwwroot\OINOIIOI.ppt" />
     <None Include="wwwroot\PrincipalLineofEducationalComputingThinking.docx" />
-    <None Include="wwwroot\Publised_For_Blazor_WebAssembly_PWA\wwwroot\404.html" />
     <None Include="wwwroot\pushNotifications.js" />
     <None Include="wwwroot\renshichu\lunwensongshen.docx" />
     <None Include="wwwroot\service-worker.js" />
