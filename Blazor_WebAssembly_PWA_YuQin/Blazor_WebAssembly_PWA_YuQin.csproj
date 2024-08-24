@@ -26,17 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="index.html" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="index.html">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="Pages\student\Add.razor" />
     <None Include="Pages\student\Delete.razor" />
     <None Include="Pages\student\List.razor" />
