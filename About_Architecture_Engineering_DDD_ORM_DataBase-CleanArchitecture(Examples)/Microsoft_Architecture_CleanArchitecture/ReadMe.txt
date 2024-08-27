@@ -1,0 +1,2 @@
+请了解原理：https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles、https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures
+请下载源码了解：https://github.com/dotnet-architecture/eShopOnWeb

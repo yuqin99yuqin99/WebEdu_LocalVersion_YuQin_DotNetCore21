@@ -42,21 +42,59 @@ In the preceding example, the {TFM} placeholder is the Target Framework Moniker 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blazor_WebAssembly_PWA_Sample</title>
-    <base href="/" />
+    <title>Blazor_WebAssembly_PWA_YuQin</title>
+    <base href="/Blazor_WebAssembly_PWA_YuQin/" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
-
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="Blazor_WebAssembly_PWA_Sample.styles.css" rel="stylesheet" />
+    <link href="Blazor_WebAssembly_PWA_YuQin.styles.css" rel="stylesheet" />
     <link href="manifest.webmanifest" rel="manifest" />
     <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+
+
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+        // Single Page Apps for GitHub Pages
+        // https://github.com/rafrex/spa-github-pages
+        // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+        // ----------------------------------------------------------------------
+        // This script checks to see if a redirect is present in the query string
+        // and converts it back into the correct url and adds it to the
+        // browser's history using window.history.replaceState(...),
+        // which won't cause the browser to attempt to load the new url.
+        // When the single page app is loaded further down in this file,
+        // the correct url will be waiting in the browser's history for
+        // the single page app to route accordingly.
+        (function (l) {
+            if (l.search) {
+                var q = {};
+                l.search.slice(1).split('&').forEach(function (v) {
+                    var a = v.split('=');
+                    q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+                });
+                if (q.p !== undefined) {
+                    window.history.replaceState(null, null,
+                        l.pathname.slice(0, -1) + (q.p || '') +
+                        (q.q ? ('?' + q.q) : '') +
+                        l.hash
+                    );
+                }
+            }
+        }(window.location))
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
 </head>
 
 <body>
+    <div>
+        下述是.html/.svg/.x3d/.css/.js文件的视图V，将不断尝试改写成为.html/.svg/.x3d/.css/.js/.razor.cs文件的视图V。
+    </div>
+    <div>
+        <iframe src="https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/iframeInitial.html?iWidth=1024&iHeight=738" width="100%" height="768" align="middle"></iframe>
+    </div>
+    <!--承接Blazor WebAssembly的.dll文件入口文件program.cs中的如下代码：builder.RootComponents.Add<App>("#app")-->
     <div id="app">
-        <!--承接Blazor WebAssembly的.dll文件入口文件program.cs中的如下代码：builder.RootComponents.Add<App>("#app")-->
         <svg class="loading-progress">
             <circle r="40%" cx="50%" cy="50%" />
             <circle r="40%" cx="50%" cy="50%" />
@@ -69,10 +107,33 @@ In the preceding example, the {TFM} placeholder is the Target Framework Moniker 
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
+    <script src="decode.js"></script>
+    <script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
     <!--加载Blazor WebAssembly的.dll文件。一旦Blazor WebAssembly代码加载完成，就会运行入口文件program.cs中的如下代码：builder.RootComponents.Add<App>("#app");告诉Renderer，App类组件是RenderTree的根组件，并将它的DOM加载到浏览器DOM中的App元素（Id为App的元素）-->
     <script src="_framework/blazor.webassembly.js"></script>
     <!--加载PWA相关的环境-->
     <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script>
+        Blazor.start({
+            loadBootResource: function (type, name, defaultUri, integrity) {
+                // For framework resources, use the precompressed .br files for faster downloads
+                // This is needed only because GitHub pages doesn't natively support Brotli (or even gzip for .dll files)
+                if (type !== 'dotnetjs' && location.hostname !== 'localhost') {
+                    return (async function () {
+                        const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
+                        if (!response.ok) {
+                            throw new Error(response.statusText);
+                        }
+                        const originalResponseBuffer = await response.arrayBuffer();
+                        const originalResponseArray = new Int8Array(originalResponseBuffer);
+                        const decompressedResponseArray = BrotliDecode(originalResponseArray);
+                        const contentType = type === 'dotnetwasm' ? 'application/wasm' : 'application/octet-stream';
+                        return new Response(decompressedResponseArray, { headers: { 'content-type': contentType } });
+                    })();
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
