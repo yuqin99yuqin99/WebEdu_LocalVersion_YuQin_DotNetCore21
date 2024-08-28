@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedCS", "SharedCS\Shared
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedRazorCS", "SharedRazorClassLibrary\SharedRazorCS.csproj", "{2C2152E7-5F24-4AB7-8A4E-E92CBB080BAD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)", "Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)", "{D75B38BA-5641-449F-8738-93F318875D39}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About-Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)", "About-Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)", "{D75B38BA-5641-449F-8738-93F318875D39}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_WebAssembly_PWA_YuQin", "Blazor_WebAssembly_PWA_YuQin\Blazor_WebAssembly_PWA_YuQin.csproj", "{01B9A6D6-C7ED-460E-9F8F-2F4E82F61A66}"
 EndProject
@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Compon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter", "..\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter\src\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.csproj", "{AE9210B8-181D-4218-BAA9-1A06C3486505}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About_Architecture_Engineering_DDD_ORM_DataBase(CleanArchitecture)(Examples)", "About_Architecture_Engineering_DDD_ORM_DataBase(CleanArchitecture)(Examples)", "{1D44C7F6-B7EB-4E7A-99CC-FCE4161D7347}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About-Architecture_Engineering_DDD_ORM_DataBase(CleanArchitecture)(Examples)", "About-Architecture_Engineering_DDD_ORM_DataBase(CleanArchitecture)(Examples)", "{1D44C7F6-B7EB-4E7A-99CC-FCE4161D7347}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microsoft_eShopOnWeb(Example)", "Microsoft_eShopOnWeb(Example)", "{73453F56-509E-4C13-A7ED-5F1ABDC7514C}"
 	ProjectSection(SolutionItems) = preProject
@@ -68,10 +68,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microsoft_Architecture_Clea
 		About_Architecture_Engineering_DDD_ORM_DataBase-CleanArchitecture(Examples)\Microsoft_Architecture_CleanArchitecture\ReadMe.txt = About_Architecture_Engineering_DDD_ORM_DataBase-CleanArchitecture(Examples)\Microsoft_Architecture_CleanArchitecture\ReadMe.txt
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About_ASP.Net_MVC_DeliverAndRun_PublishAndRun(Example)", "About_ASP.Net_MVC_DeliverAndRun_PublishAndRun(Example)", "{9948C501-D6FB-48C1-87BC-FA1685922F7D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OneOfThreeViews_BuildWithOneBlazorAssemblyProjectTypeInstance[Blazor_WebAssembly_PWA_YuQin]--TwoOfThreeViews_BuildInFoldersInASP.NetMVCProjectTypeInstance[ASPDotNet_Mvc_Yuqin]", "OneOfThreeViews_BuildWithOneBlazorAssemblyProjectTypeInstance[Blazor_WebAssembly_PWA_YuQin]--TwoOfThreeViews_BuildInFoldersInASP.NetMVCProjectTypeInstance[ASPDotNet_Mvc_Yuqin]", "{AE184E18-375D-49F1-B7CD-BFD94F89282A}"
 	ProjectSection(SolutionItems) = preProject
-		About_Architecture_Engineering_DDD_ORM_DataBase-CleanArchitecture(Examples)\About_ASP.Net_MVC_DeliverAndRun_PublishAndRun\ReadMe.txt = About_Architecture_Engineering_DDD_ORM_DataBase-CleanArchitecture(Examples)\About_ASP.Net_MVC_DeliverAndRun_PublishAndRun\ReadMe.txt
+		OneOfThreeViews_BuildWithOneBlazorAssemblyProjectTypeInstance[Blazor_WebAssembly_PWA_YuQin]--TwoOfThreeViews_BuildInFoldersInASP.NetMVCProjectTypeInstance[ASPDotNet_Mvc_Yuqin\ReadMe.txt = OneOfThreeViews_BuildWithOneBlazorAssemblyProjectTypeInstance[Blazor_WebAssembly_PWA_YuQin]--TwoOfThreeViews_BuildInFoldersInASP.NetMVCProjectTypeInstance[ASPDotNet_Mvc_Yuqin\ReadMe.txt
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASPDotNet_MVC_YuQin", "ASPDotNet_MVC_YuQin", "{550AA377-3508-4A30-9433-E9A987824D2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -222,11 +224,15 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6B8CD9CC-AB2A-4A70-9172-5C95DF649036} = {5009EFB8-F4C1-4254-8988-5A3690D35714}
 		{2C2152E7-5F24-4AB7-8A4E-E92CBB080BAD} = {7134BB69-848C-490D-B404-6C3ECDF31E92}
+		{01B9A6D6-C7ED-460E-9F8F-2F4E82F61A66} = {AE184E18-375D-49F1-B7CD-BFD94F89282A}
 		{5F783A69-208F-44F5-B0E5-316D382BAADF} = {D75B38BA-5641-449F-8738-93F318875D39}
 		{F1C8D265-B05E-4235-BA02-E963BFDE26CA} = {D75B38BA-5641-449F-8738-93F318875D39}
 		{1A843230-8224-4FCC-88F2-883E71E1A82E} = {D75B38BA-5641-449F-8738-93F318875D39}
 		{6219BBA4-6240-48A2-8392-FEA2EF585247} = {D75B38BA-5641-449F-8738-93F318875D39}
 		{1165E11F-3D77-4B49-AE5F-1B3FCA8FDCAC} = {D75B38BA-5641-449F-8738-93F318875D39}
+		{B385B127-75CF-4DD4-ADEB-DE9B8B0393C6} = {550AA377-3508-4A30-9433-E9A987824D2A}
+		{5009EFB8-F4C1-4254-8988-5A3690D35714} = {550AA377-3508-4A30-9433-E9A987824D2A}
+		{7134BB69-848C-490D-B404-6C3ECDF31E92} = {550AA377-3508-4A30-9433-E9A987824D2A}
 		{65152665-D1B1-4142-8C30-5C29BD1DDC0E} = {7134BB69-848C-490D-B404-6C3ECDF31E92}
 		{AE9210B8-181D-4218-BAA9-1A06C3486505} = {7134BB69-848C-490D-B404-6C3ECDF31E92}
 		{73453F56-509E-4C13-A7ED-5F1ABDC7514C} = {1D44C7F6-B7EB-4E7A-99CC-FCE4161D7347}
@@ -236,7 +242,7 @@ Global
 		{B940F52C-945E-466C-A82B-5A806972C669} = {7134BB69-848C-490D-B404-6C3ECDF31E92}
 		{2D63EABE-2BB8-46DE-A0D5-F7B25560D3D7} = {7134BB69-848C-490D-B404-6C3ECDF31E92}
 		{711F3F0F-B868-4DE0-A258-880DC64DEE2E} = {1D44C7F6-B7EB-4E7A-99CC-FCE4161D7347}
-		{9948C501-D6FB-48C1-87BC-FA1685922F7D} = {1D44C7F6-B7EB-4E7A-99CC-FCE4161D7347}
+		{AE184E18-375D-49F1-B7CD-BFD94F89282A} = {550AA377-3508-4A30-9433-E9A987824D2A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3704B709-ACA0-443A-9D6F-6359321FB596}
