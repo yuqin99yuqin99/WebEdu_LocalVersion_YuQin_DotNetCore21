@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedCS", "SharedCS\Shared
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedRazorCS", "SharedRazorClassLibrary\SharedRazorCS.csproj", "{2C2152E7-5F24-4AB7-8A4E-E92CBB080BAD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About-Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)", "About-Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)", "{D75B38BA-5641-449F-8738-93F318875D39}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)", "About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)", "{D75B38BA-5641-449F-8738-93F318875D39}"
 	ProjectSection(SolutionItems) = preProject
-		About-Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)\Binary_ASM_CPP_CS(CS_WindowsApplicationExample)\Binary_ASM_CPP_CS(CS_WindowsApplicationExample).csproj = About-Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)\Binary_ASM_CPP_CS(CS_WindowsApplicationExample)\Binary_ASM_CPP_CS(CS_WindowsApplicationExample).csproj
+		About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\ReadMe.txt = About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\ReadMe.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_WebAssembly_PWA_YuQin", "Blazor_WebAssembly_PWA_YuQin\Blazor_WebAssembly_PWA_YuQin.csproj", "{01B9A6D6-C7ED-460E-9F8F-2F4E82F61A66}"
@@ -68,13 +68,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OneOfThreeViews_BuildWithOn
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASPDotNet_MVC_YuQin", "ASPDotNet_MVC_YuQin", "{550AA377-3508-4A30-9433-E9A987824D2A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Binary_ASM_CPP_CS(ASM_ConsoleApplicationExample)", "About-Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)\Binary_ASM_CPP_CS(ASM_ConsoleApplicationExample)\CPP_ASM_Binary_Application.vcxproj", "{61EB0756-B91B-441A-8C0A-07A9834FB9B0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Binary_ASM_CPP_CS(ASM_ConsoleApplicationExample)", "About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\Binary_ASM_CPP_CS(ASM_ConsoleApplicationExample)\CPP_ASM_Binary_Application.vcxproj", "{61EB0756-B91B-441A-8C0A-07A9834FB9B0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Binary_ASM_CPP_CS(CPP_ConsoleApplicationExample)", "About-Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)\Binary_ASM_CPP_CS(CPP_ConsoleApplicationExample)\ConsoleApplicationExample_CPP.vcxproj", "{76F8F689-68A9-4DDF-B1BF-07604722223D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Binary_ASM_CPP_CS(CPP_ConsoleApplicationExample)", "About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\Binary_ASM_CPP_CS(CPP_ConsoleApplicationExample)\ConsoleApplicationExample_CPP.vcxproj", "{76F8F689-68A9-4DDF-B1BF-07604722223D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Binary_ASM_CPP_CS(CPP_WindowsApplicationExample)", "About-Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)\Binary_ASM_CPP_CS(CPP_WindowsApplicationExample)\WindowsProjectExample_CPP.vcxproj", "{D5AC8599-4D1A-44DD-B1E1-C1DBF2DCB048}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Binary_ASM_CPP_CS(CPP_WindowsApplicationExample)", "About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\Binary_ASM_CPP_CS(CPP_WindowsApplicationExample)\WindowsProjectExample_CPP.vcxproj", "{D5AC8599-4D1A-44DD-B1E1-C1DBF2DCB048}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Binary_ASM_CPP_CS(CS_ConsoleApplicationExample)", "About-Binary_ASM_CPP_CS-FourPlatformExpansionLanguge(Examples)\Binary_ASM_CPP_CS(CS_ConsoleApplicationExample)\Binary_ASM_CPP_CS(CS_ConsoleApplicationExample).csproj", "{0CFCF29B-BA1C-4575-9DE6-596D6E3AF675}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Binary_ASM_CPP_CS(CS_ConsoleApplicationExample)", "About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\Binary_ASM_CPP_CS(CS_ConsoleApplicationExample)\Binary_ASM_CPP_CS(CS_ConsoleApplicationExample).csproj", "{0CFCF29B-BA1C-4575-9DE6-596D6E3AF675}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About-HostGuestLanguages_In_FourPlatforms(Examples)", "About-HostGuestLanguages_In_FourPlatforms(Examples)", "{D9CBD220-38C2-4ED5-8FAD-76781A930D25}"
+	ProjectSection(SolutionItems) = preProject
+		About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\About-HostGuestLanguages_In_FourPlatforms(Examples)\ReadMe.txt = About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\About-HostGuestLanguages_In_FourPlatforms(Examples)\ReadMe.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About-Structure_Relation_Pattern_AchitectureLanguages_In_FourPlatforms(Examples)", "About-Structure_Relation_Pattern_AchitectureLanguages_In_FourPlatforms(Examples)", "{340A6068-91E5-4392-8A1A-B28E9702A7C8}"
+	ProjectSection(SolutionItems) = preProject
+		About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\About-Structure_Relation_Pattern_AchitectureLanguages_In_FourPlatforms(Examples)\ReadMe.txt = About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\About-Structure_Relation_Pattern_AchitectureLanguages_In_FourPlatforms(Examples)\ReadMe.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Binary_ASM_CPP_CS(CS_WindowsApplicationExample)", "About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\Binary_ASM_CPP_CS(CS_WindowsApplicationExample)\Binary_ASM_CPP_CS(CS_WindowsApplicationExample).csproj", "{8901C22F-D7B0-4934-86BE-8326A9BE27FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -206,6 +218,18 @@ Global
 		{0CFCF29B-BA1C-4575-9DE6-596D6E3AF675}.Release|x64.Build.0 = Release|Any CPU
 		{0CFCF29B-BA1C-4575-9DE6-596D6E3AF675}.Release|x86.ActiveCfg = Release|Any CPU
 		{0CFCF29B-BA1C-4575-9DE6-596D6E3AF675}.Release|x86.Build.0 = Release|Any CPU
+		{8901C22F-D7B0-4934-86BE-8326A9BE27FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8901C22F-D7B0-4934-86BE-8326A9BE27FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8901C22F-D7B0-4934-86BE-8326A9BE27FC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8901C22F-D7B0-4934-86BE-8326A9BE27FC}.Debug|x64.Build.0 = Debug|Any CPU
+		{8901C22F-D7B0-4934-86BE-8326A9BE27FC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8901C22F-D7B0-4934-86BE-8326A9BE27FC}.Debug|x86.Build.0 = Debug|Any CPU
+		{8901C22F-D7B0-4934-86BE-8326A9BE27FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8901C22F-D7B0-4934-86BE-8326A9BE27FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8901C22F-D7B0-4934-86BE-8326A9BE27FC}.Release|x64.ActiveCfg = Release|Any CPU
+		{8901C22F-D7B0-4934-86BE-8326A9BE27FC}.Release|x64.Build.0 = Release|Any CPU
+		{8901C22F-D7B0-4934-86BE-8326A9BE27FC}.Release|x86.ActiveCfg = Release|Any CPU
+		{8901C22F-D7B0-4934-86BE-8326A9BE27FC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -231,6 +255,9 @@ Global
 		{76F8F689-68A9-4DDF-B1BF-07604722223D} = {D75B38BA-5641-449F-8738-93F318875D39}
 		{D5AC8599-4D1A-44DD-B1E1-C1DBF2DCB048} = {D75B38BA-5641-449F-8738-93F318875D39}
 		{0CFCF29B-BA1C-4575-9DE6-596D6E3AF675} = {D75B38BA-5641-449F-8738-93F318875D39}
+		{D9CBD220-38C2-4ED5-8FAD-76781A930D25} = {D75B38BA-5641-449F-8738-93F318875D39}
+		{340A6068-91E5-4392-8A1A-B28E9702A7C8} = {D75B38BA-5641-449F-8738-93F318875D39}
+		{8901C22F-D7B0-4934-86BE-8326A9BE27FC} = {D75B38BA-5641-449F-8738-93F318875D39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3704B709-ACA0-443A-9D6F-6359321FB596}

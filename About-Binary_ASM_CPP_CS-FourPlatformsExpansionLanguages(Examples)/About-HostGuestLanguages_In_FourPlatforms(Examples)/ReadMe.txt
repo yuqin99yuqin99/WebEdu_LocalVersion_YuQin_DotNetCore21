@@ -1,0 +1,1 @@
+本解决方案中将涉及众多宿主宿客语言。例如，浏览器宿主的HTML/SVG/X3D/CSS/JS/CSHTML/Razor宿客语言、数据库AIGC宿主的SQL/MDX/DMX/Prompt宿客语言。
