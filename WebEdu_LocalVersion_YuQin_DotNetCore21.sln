@@ -66,12 +66,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Binary_ASM_CPP_CS(CS_Consol
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About-HostGuestLanguages_In_FourPlatforms-Binary_ASM_CPP_CS(Examples)", "About-HostGuestLanguages_In_FourPlatforms-Binary_ASM_CPP_CS(Examples)", "{D9CBD220-38C2-4ED5-8FAD-76781A930D25}"
 	ProjectSection(SolutionItems) = preProject
-		About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\About-HostGuestLanguages_In_FourPlatforms(Examples)\ReadMe.txt = About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\About-HostGuestLanguages_In_FourPlatforms(Examples)\ReadMe.txt
+		About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\About-HostGuestLanguages_In_FourPlatforms-Binary_ASM_CPP_CS(Examples)\ReadMe.txt = About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\About-HostGuestLanguages_In_FourPlatforms-Binary_ASM_CPP_CS(Examples)\ReadMe.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About-Structure_Relation_Pattern_AchitectureLanguages_In_FourPlatforms-Binary_ASM_CPP_CS(Examples)", "About-Structure_Relation_Pattern_AchitectureLanguages_In_FourPlatforms-Binary_ASM_CPP_CS(Examples)", "{340A6068-91E5-4392-8A1A-B28E9702A7C8}"
 	ProjectSection(SolutionItems) = preProject
-		About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\About-Structure_Relation_Pattern_AchitectureLanguages_In_FourPlatforms(Examples)\ReadMe.txt = About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\About-Structure_Relation_Pattern_AchitectureLanguages_In_FourPlatforms(Examples)\ReadMe.txt
+		About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\About-Structure_Relation_Pattern_AchitectureLanguages_In_FourPlatforms-Binary_ASM_CPP_CS(Examples)\ReadMe.txt = About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\About-Structure_Relation_Pattern_AchitectureLanguages_In_FourPlatforms-Binary_ASM_CPP_CS(Examples)\ReadMe.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Binary_ASM_CPP_CS(CS_WindowsApplicationExample)", "About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\Binary_ASM_CPP_CS(CS_WindowsApplicationExample)\Binary_ASM_CPP_CS(CS_WindowsApplicationExample).csproj", "{8901C22F-D7B0-4934-86BE-8326A9BE27FC}"
