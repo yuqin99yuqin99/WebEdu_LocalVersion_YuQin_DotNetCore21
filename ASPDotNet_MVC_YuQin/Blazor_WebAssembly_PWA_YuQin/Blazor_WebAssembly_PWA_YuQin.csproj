@@ -46,10 +46,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter\src\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.csproj" />
-    <ProjectReference Include="..\..\Microsoft.AspNetCore.Components.QuickGrid\src\Microsoft.AspNetCore.Components.QuickGrid.csproj" />
-    <ProjectReference Include="..\SharedCS\SharedCS.csproj" />
-    <ProjectReference Include="..\SharedRazorClassLibrary\SharedRazorCS.csproj" />
+    <ProjectReference Include="..\..\..\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter\src\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.csproj" />
+    <ProjectReference Include="..\..\..\Microsoft.AspNetCore.Components.QuickGrid\src\Microsoft.AspNetCore.Components.QuickGrid.csproj" />
+    <ProjectReference Include="..\SharedCS\SharedCS\SharedCS.csproj" />
+    <ProjectReference Include="..\SharedRazor_SharedCSHTML\SharedRazorClassLibrary\SharedRazorCS.csproj" />
   </ItemGroup>
 
   <ItemGroup>
