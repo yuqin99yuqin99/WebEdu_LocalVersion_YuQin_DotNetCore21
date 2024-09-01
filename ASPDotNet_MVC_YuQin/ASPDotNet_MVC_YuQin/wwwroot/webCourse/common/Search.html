@@ -7,7 +7,10 @@
 <body>
     <div>
         <input type="text" value="计算" style="width:90%" id="idSearchedKeywords" />
-        <input type="button" value="确定" onclick='fnAjaxForGet();' />
+        <p></p>
+        <input type="button" value="系统内搜索（必须同时发布本案例的服务端）" onclick='fnAjaxForGet();' />
+        <input type="button" value="AIGC回答(字符)（目前调用免费的他创方的AIGC服务端）" onclick='fnAIGCAnswerCharactor();' />
+        <input type="button" value="AIGC回答(图像)（目前调用免费的他创方的AIGC服务端）" onclick='fnAIGCAnswerImage();' />
         <!--<iframe src="blank.html" name="nameSearchingResult" id="idSearchingResult"  style="width:90%;height:90%" scrolling="auto" />-->
     </div>
     <div id="idSerchReturned"></div>
@@ -120,10 +123,28 @@ xmlHttpRequest.open('GET',sURL , true);
         }
         function fnBeforeunload() {
             opener.sWillHighLightedStringInContent = "";
-           // alert(opener.sWillHighLightedStringInContent);
+            // alert(opener.sWillHighLightedStringInContent);
         }
         window.onunload = function () { EV_closeAlert(); }//窗口关闭时去掉遮罩效果;
         window.addEventListener("beforeunload", fnBeforeunload, false);
+    </script>
+    <script>
+        function fnAIGCAnswerCharactor() {
+            var sSearchedKeywords = document.getElementById("idSearchedKeywords").value;
+            var url = "/QWen/index?queryString=" + sSearchedKeywords;
+            // var url = "https://localhost:5001/QWen/index?queryString=" + sSearchedKeywords;
+            open(url, "AIGCAnswerCharactor");
+            
+        }
+    </script>
+    <script>
+        function fnAIGCAnswerImage() {
+            var sSearchedKeywords = document.getElementById("idSearchedKeywords").value;
+            var url = "/QWen/indexImage?queryString" + sSearchedKeywords;
+           // var url = "https://localhost:5001/QWen/indexImage?queryString=" + sSearchedKeywords;
+            open(url, "AIGCAnswerImage");
+            
+        }
     </script>
 </body>
 
