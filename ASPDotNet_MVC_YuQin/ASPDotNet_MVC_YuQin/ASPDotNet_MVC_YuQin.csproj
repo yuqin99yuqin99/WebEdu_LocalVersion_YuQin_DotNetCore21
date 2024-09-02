@@ -23,6 +23,7 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <Copyright>渔琴</Copyright>
     <PackageReleaseNotes>（注：后续将开发一键启动软件。即：将开发一个.exe文件，双击运行该.exe文件，将自动启动“服务器”窗口、“浏览器”窗口，“浏览器”自动获取“服务器”的URL地址，并访问“服务器”！）</PackageReleaseNotes>
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <UserSecretsId>385510f7-1d5c-4d38-be01-e5800912154d</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -44,8 +45,7 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <Compile Remove="Models\ServicesForIdentity\**" />
     <Compile Remove="StudyHardDayDayUp\**" />
     <Compile Remove="Views\BroweringOfTextbook\**" />
-    <Compile Remove="wwwroot\jiaoyujishuxinshengdaolun_files\**" />
-    <Compile Remove="wwwroot\Publised_For_Blazor_WebAssembly_PWA\**" />
+    <Compile Remove="wwwroot\TryPWA\**" />
     <Content Remove="Areas\Admin\**" />
     <Content Remove="Controllers\RESTless\Identity\**" />
     <Content Remove="Controllers\RESTless\samples\**" />
@@ -56,8 +56,7 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <Content Remove="Models\ServicesForIdentity\**" />
     <Content Remove="StudyHardDayDayUp\**" />
     <Content Remove="Views\BroweringOfTextbook\**" />
-    <Content Remove="wwwroot\jiaoyujishuxinshengdaolun_files\**" />
-    <Content Remove="wwwroot\Publised_For_Blazor_WebAssembly_PWA\**" />
+    <Content Remove="wwwroot\TryPWA\**" />
     <EmbeddedResource Remove="Areas\Admin\**" />
     <EmbeddedResource Remove="Controllers\RESTless\Identity\**" />
     <EmbeddedResource Remove="Controllers\RESTless\samples\**" />
@@ -68,8 +67,7 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <EmbeddedResource Remove="Models\ServicesForIdentity\**" />
     <EmbeddedResource Remove="StudyHardDayDayUp\**" />
     <EmbeddedResource Remove="Views\BroweringOfTextbook\**" />
-    <EmbeddedResource Remove="wwwroot\jiaoyujishuxinshengdaolun_files\**" />
-    <EmbeddedResource Remove="wwwroot\Publised_For_Blazor_WebAssembly_PWA\**" />
+    <EmbeddedResource Remove="wwwroot\TryPWA\**" />
     <None Remove="Areas\Admin\**" />
     <None Remove="Controllers\RESTless\Identity\**" />
     <None Remove="Controllers\RESTless\samples\**" />
@@ -80,8 +78,7 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <None Remove="Models\ServicesForIdentity\**" />
     <None Remove="StudyHardDayDayUp\**" />
     <None Remove="Views\BroweringOfTextbook\**" />
-    <None Remove="wwwroot\jiaoyujishuxinshengdaolun_files\**" />
-    <None Remove="wwwroot\Publised_For_Blazor_WebAssembly_PWA\**" />
+    <None Remove="wwwroot\TryPWA\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -100,7 +97,9 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
 
   <ItemGroup>
     <Content Remove="web.config" />
+    <Content Remove="wwwroot\favicon.ico" />
     <Content Remove="wwwroot\webCourse\common\script\content - Copy %283%29.js" />
+    <Content Remove="wwwroot\渔琴.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -154,6 +153,7 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
@@ -247,6 +247,8 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <None Include="wwwroot\deliveryMap.js" />
     <None Include="wwwroot\Digital-Intelligence-Calendar-Driven-TeachingProcessManagement.pdf" />
     <None Include="wwwroot\ExcellentTeachingCasesofIdeologicalandPoliticalCoursesinJiangxiNormalUniversity.docx" />
+    <None Include="wwwroot\jiaoyujishuxinshengdaolun.docx" />
+    <None Include="wwwroot\jiaoyujishuxinshengdaolun_files\themedata.thmx" />
     <None Include="wwwroot\js\site.js" />
     <None Include="wwwroot\leaflet\leaflet.js" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
@@ -300,15 +302,6 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <None Include="wwwroot\sxyt\sxyt_files\themedata.thmx" />
     <None Include="wwwroot\TeachingEngineers.mht" />
     <None Include="wwwroot\TheEssenceOfEducationIsToConstructHumanBrain.pdf" />
-    <None Include="wwwroot\TryPWA\images\Home.svg" />
-    <None Include="wwwroot\TryPWA\images\ic_refresh_white_24px.svg" />
-    <None Include="wwwroot\TryPWA\js\app.js" />
-    <None Include="wwwroot\TryPWA\js\latest.js" />
-    <None Include="wwwroot\TryPWA\js\menu.js" />
-    <None Include="wwwroot\TryPWA\js\notification.js" />
-    <None Include="wwwroot\TryPWA\js\offline.js" />
-    <None Include="wwwroot\TryPWA\js\toast.js" />
-    <None Include="wwwroot\TryPWA\ServiceWorkers.js" />
     <None Include="wwwroot\webCourse\common\addNote\addnote.aspx" />
     <None Include="wwwroot\webCourse\common\addNote\img.asp" />
     <None Include="wwwroot\webCourse\common\addNote\upImage.asp" />
@@ -551,6 +544,8 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <None Include="wwwroot\webCourse\options\pause.wrl" />
     <None Include="wwwroot\webCourse\options\Thumbs.db" />
     <None Include="wwwroot\ZHDC\sxyt_files\themedata.thmx" />
+    <None Include="wwwroot\favicon.ico" />
+    <None Include="wwwroot\渔琴.ico" />
   </ItemGroup>
 
   <ItemGroup>

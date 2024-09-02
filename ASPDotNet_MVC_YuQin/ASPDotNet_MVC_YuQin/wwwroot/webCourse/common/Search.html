@@ -8,9 +8,13 @@
     <div>
         <input type="text" value="计算" style="width:90%" id="idSearchedKeywords" />
         <p></p>
-        <input type="button" value="系统内搜索（必须同时发布本案例的服务端）" onclick='fnAjaxForGet();' />
-        <input type="button" value="AIGC回答(字符)（目前调用免费的他创方的AIGC服务端）" onclick='fnAIGCAnswerCharactor();' />
-        <input type="button" value="AIGC回答(图像)（目前调用免费的他创方的AIGC服务端）" onclick='fnAIGCAnswerImage();' />
+        <input type="button" value="系统内搜索（必须同时发布本案例的服务端）（基本实现...）" onclick='fnAjaxForGet();' />
+        <input type="button" value="AIGC回答(字符)（调用免费的他创方的AIGC服务端）（基本实现...）" onclick='fnAIGCAnswerCharactor();' />
+        <input type="button" value="AIGC回答(图像)（调用免费的他创方的AIGC服务端）（开发之中...）" onclick='fnAIGCAnswerImage();' />
+        <input type="button" value="AIGC回答(视频)（调用免费的他创方的AIGC服务端）（开发之中...）" onclick='fnAIGCAnswerVideo();' />
+        <input type="button" value="AIGC回答(2D)（调用免费的他创方的AIGC服务端）（开发之中...）" onclick='fnAIGCAnswer2D();' />
+        <input type="button" value="AIGC回答(3D)（调用免费的他创方的AIGC服务端）（开发之中...）" onclick='fnAIGCAnswer3D();' />
+        <input type="button" value="AIGC回答(音频)(MIDI器乐)（调用免费的他创方的AIGC服务端）（开发之中...）" onclick='fnAIGCAnswerAudio();' />
         <!--<iframe src="blank.html" name="nameSearchingResult" id="idSearchingResult"  style="width:90%;height:90%" scrolling="auto" />-->
     </div>
     <div id="idSerchReturned"></div>
@@ -20,6 +24,8 @@
 
         function fnAjaxForGet() {
             var sSearchedKeywords = document.getElementById("idSearchedKeywords").value;
+            alert("您将搜素的关键词是：" + sSearchedKeywords);
+            document.getElementById("idSerchReturned").innerHTML = "";
             var sURL = "/Search/Get?SearchedKeywords=" + sSearchedKeywords;
             // var sSearched = "";
             var xmlHttpRequest = new XMLHttpRequest();
@@ -45,7 +51,12 @@
                             }
                         }
 
-                        document.getElementById("idSerchReturned").innerHTML = sSearched;
+                        if (sSearched == "") {
+                            alert("未能搜索到您键入的\"" + sSearchedKeywords + "\"" + "的相关内容！请重新键入");
+                        }
+                        else {
+                            document.getElementById("idSerchReturned").innerHTML = sSearched;
+                        }
 
                     }
                     else {
@@ -131,19 +142,56 @@ xmlHttpRequest.open('GET',sURL , true);
     <script>
         function fnAIGCAnswerCharactor() {
             var sSearchedKeywords = document.getElementById("idSearchedKeywords").value;
+            alert("您将AICG生成字符回答的Prompt是：" + sSearchedKeywords);
             var url = "/QWen/index?queryString=" + sSearchedKeywords;
             // var url = "https://localhost:5001/QWen/index?queryString=" + sSearchedKeywords;
             open(url, "AIGCAnswerCharactor");
-            
+
         }
     </script>
     <script>
         function fnAIGCAnswerImage() {
             var sSearchedKeywords = document.getElementById("idSearchedKeywords").value;
-            var url = "/QWen/indexImage?queryString" + sSearchedKeywords;
-           // var url = "https://localhost:5001/QWen/indexImage?queryString=" + sSearchedKeywords;
+            alert("您将AICG生成图像回答的Prompt是：" + sSearchedKeywords);
+            var url = "/QWenTextToImage/index?queryString=" + sSearchedKeywords;
+            // var url = "https://localhost:5001/QWen/indexImage?queryString=" + sSearchedKeywords;
             open(url, "AIGCAnswerImage");
-            
+        }
+    </script>
+    <script>
+        function fnAIGCAnswerVideo() {
+            var sSearchedKeywords = document.getElementById("idSearchedKeywords").value;
+            alert("您将AICG生成视频回答的Prompt是：" + sSearchedKeywords);
+            var url = "/QWenTextToImage/index?queryString=" + sSearchedKeywords;
+            // var url = "https://localhost:5001/QWen/indexImage?queryString=" + sSearchedKeywords;
+            open(url, "AIGCAnswerVideo");
+        }
+    </script>
+    <script>
+        function fnAIGCAnswer2D() {
+            var sSearchedKeywords = document.getElementById("idSearchedKeywords").value;
+            alert("您将AICG生成2D回答的Prompt是：" + sSearchedKeywords);
+            var url = "/QWenTextToImage/index?queryString=" + sSearchedKeywords;
+            // var url = "https://localhost:5001/QWen/indexImage?queryString=" + sSearchedKeywords;
+            open(url, "AIGCAnswer2D");
+        }
+    </script>
+    <script>
+        function fnAIGCAnswer3D() {
+            var sSearchedKeywords = document.getElementById("idSearchedKeywords").value;
+            alert("您将AICG生成3D回答的Prompt是：" + sSearchedKeywords);
+            var url = "/QWenTextToImage/index?queryString=" + sSearchedKeywords;
+            // var url = "https://localhost:5001/QWen/indexImage?queryString=" + sSearchedKeywords;
+            open(url, "AIGCAnswer3D");
+        }
+    </script>
+    <script>
+        function fnAIGCAnswerAudio() {
+            var sSearchedKeywords = document.getElementById("idSearchedKeywords").value;
+            alert("您将AICG生成音频回答的Prompt是：" + sSearchedKeywords);
+            var url = "/QWenTextToImage/index?queryString=" + sSearchedKeywords;
+            // var url = "https://localhost:5001/QWen/indexImage?queryString=" + sSearchedKeywords;
+            open(url, "AIGCAnswerAudio");
         }
     </script>
 </body>

@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace WebEdu_LocalVersion_YuQin_DotNetCore21.Controllers
 {
-    [Authorize()]
+    //[Authorize()]
     public class SearchController : Controller
     {
         private IHostingEnvironment _hostingEnvironment { get; }
@@ -34,7 +34,9 @@ namespace WebEdu_LocalVersion_YuQin_DotNetCore21.Controllers
             string webRootPath = _hostingEnvironment.WebRootPath;
           //  string contentRootPath = _hostingEnvironment.ContentRootPath;
             String sSearchedKeyWords = this.Request.Query["SearchedKeywords"];
+            Console.WriteLine("sFolderPathOfTextbookResources" + sSearchedKeyWords);
             String sFolderPathOfTextbookResources = webRootPath + "\\webCourse\\lessons\\content\\book";
+            
             //IEnumerable<String> sEnumDirectoriesOfTextbookResources = Directory.EnumerateDirectories(sFolderPathOfTextbookResources);//返回文件夹的绝对路径
              IEnumerable<String> sEnumerateFilesOfTextbookResources = Directory.EnumerateFiles(sFolderPathOfTextbookResources,"",System.IO.SearchOption.AllDirectories);//返回文件夹下所有文件的绝对路径
              // IEnumerable<String> sEnumFilesOfTextbookResources = Directory.EnumerateFiles(sFolderPathOfTextbookResources,System.IO.EnumerationOptions);//返回文件夹的绝对路径

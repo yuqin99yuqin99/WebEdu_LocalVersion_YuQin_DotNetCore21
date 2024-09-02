@@ -5,13 +5,14 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+    <UserSecretsId>6cee9220-ef79-4187-ade4-99a2a381d055</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Pages\QuickGrid\DataSources\**" />
-    <Content Remove="Pages\QuickGrid\DataSources\**" />
-    <EmbeddedResource Remove="Pages\QuickGrid\DataSources\**" />
-    <None Remove="Pages\QuickGrid\DataSources\**" />
+    <Compile Remove="SharedRazor\**" />
+    <Content Remove="SharedRazor\**" />
+    <EmbeddedResource Remove="SharedRazor\**" />
+    <None Remove="SharedRazor\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,10 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\QuickGrid\Paging.razor" />
+    <Content Remove="Pages\QuickGrid\DataSources\WebAPIData.razor" />
+    <Content Remove="Pages\QuickGrid\paging.razor" />
     <Content Remove="Pages\student\Shared\Detail.razor" />
     <Content Remove="Pages\student\Shared\Edit.razor" />
     <Content Remove="wwwroot\css\CounterPartialClass.css" />
+    <Content Remove="wwwroot\渔琴.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +41,7 @@
     <None Include="wwwroot\css\open-iconic\font\fonts\open-iconic.svg" />
     <None Include="wwwroot\css\open-iconic\ICON-LICENSE" />
     <None Include="wwwroot\css\open-iconic\README.md" />
+    <None Include="wwwroot\渔琴.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -46,14 +50,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\QuickGrid\DataSources\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\..\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter\src\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.csproj" />
     <ProjectReference Include="..\..\..\Microsoft.AspNetCore.Components.QuickGrid\src\Microsoft.AspNetCore.Components.QuickGrid.csproj" />
     <ProjectReference Include="..\SharedCS\SharedCS\SharedCS.csproj" />
     <ProjectReference Include="..\SharedRazor_SharedCSHTML\SharedRazorClassLibrary\SharedRazorCS.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
   </ItemGroup>
 
 </Project>
