@@ -304,8 +304,41 @@ namespace WebEdu_LocalVersion_YuQin_DotNetCore21
                 options.UseSqlServer(connectionString));
             webApplicationBuilder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            webApplicationBuilder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            webApplicationBuilder.Services.AddDefaultIdentity<IdentityUser>(options =>
+           { options.SignIn.RequireConfirmedAccount = true;
+               // Password settings.
+               /**
+               options.Password.RequireDigit = true;
+               options.Password.RequireLowercase = true;
+               options.Password.RequireNonAlphanumeric = true;
+               options.Password.RequireUppercase = true;
+               options.Password.RequiredLength = 6;
+               options.Password.RequiredUniqueChars = 1;
+               **/
+               // Lockout settings.
+               /**
+               options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+               options.Lockout.MaxFailedAccessAttempts = 5;
+               options.Lockout.AllowedForNewUsers = true;
+               **/
+               // User settings.
+               /**
+               options.User.AllowedUserNameCharacters =
+               "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+               options.User.RequireUniqueEmail = false;
+               **/
+           }
+            ).AddEntityFrameworkStores<ApplicationDbContext>();
+
+            webApplicationBuilder.Services.ConfigureApplicationCookie(options =>
+            {
+                // Cookie settings
+                //options.Cookie.HttpOnly = true;
+               // options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+                options.LoginPath = "/Identity/Account/Login"; //如果用户没有登录，并尝试访问被[Authorize]属性保护的资源，他们将会被重定向到你在AddCookie中指定的LoginPath
+                options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+                //options.SlidingExpiration = true;
+            });
             webApplicationBuilder.Services.AddControllersWithViews().AddJsonOptions(delegate (JsonOptions jsonOptions)
             {
                 jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = null;
