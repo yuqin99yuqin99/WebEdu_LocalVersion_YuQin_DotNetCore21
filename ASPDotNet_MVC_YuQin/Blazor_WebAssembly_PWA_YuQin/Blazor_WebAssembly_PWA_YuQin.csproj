@@ -41,6 +41,7 @@
     <None Include="wwwroot\css\open-iconic\font\fonts\open-iconic.svg" />
     <None Include="wwwroot\css\open-iconic\ICON-LICENSE" />
     <None Include="wwwroot\css\open-iconic\README.md" />
+    <None Include="wwwroot\Program.xml" />
     <None Include="wwwroot\渔琴.ico" />
   </ItemGroup>
 

@@ -1,7 +1,39 @@
 ﻿@page "/"
 
+@*
+@inject Program program
+*@
+@inject Microsoft.AspNetCore.Components.WebAssembly.Hosting.IWebAssemblyHostEnvironment iWebAssemblyHostEnvironment
+
+@inject Blazor_WebAssembly_PWA_YuQin.ProgramJson programJson
+@inject Blazor_WebAssembly_PWA_YuQin.ProgramJsonTemp programJsonTemp
+@inject HttpClient httpClient
+
+
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
+<p/>
+@*
+   @Blazor_WebAssembly_PWA_YuQin.ProgramJsonTemp.BaseAddress
+   @programJson.BaseAddress
+*@
+<p />
+iWebAssemblyHostEnvironment.BaseAddress:
+@iWebAssemblyHostEnvironment.BaseAddress
+<p />
+programJsonTemp.BaseAddressOfClient:
+@programJsonTemp.BaseAddressOfClient
+<p />
+programJsonTemp.BaseAddressOfServer:
+@programJsonTemp.BaseAddressOfServer
+<p />
+programJson.BaseAddress:
+@programJson.BaseAddress
+<p />
+httpClient.BaseAddress:
+@httpClient.BaseAddress
+
+

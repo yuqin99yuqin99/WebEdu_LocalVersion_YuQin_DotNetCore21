@@ -43,7 +43,8 @@ In the preceding example, the {TFM} placeholder is the Target Framework Moniker 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blazor_WebAssembly_PWA_Sample</title>
-    <base href="/" />
+    <!-- <base href="/" /> -->
+    <base href="https://localhost:4001/" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
 
@@ -54,31 +55,135 @@ In the preceding example, the {TFM} placeholder is the Target Framework Moniker 
     <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
 </head>
 
-<body>
-    <div>
-        下述是.html/.svg/.x3d/.css/.js文件的视图V，将不断尝试改写成为.html/.svg/.x3d/.css/.js/.razor.cs文件的视图V。
-    </div>
-    <div>
-        <iframe src="https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/iframeInitial.html?iWidth=1024&iHeight=738" width="100%" height="768" align="middle"></iframe>
-    </div>
-    <div id="app">
-        <!--承接Blazor WebAssembly的.dll文件入口文件program.cs中的如下代码：builder.RootComponents.Add<App>("#app")-->
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
-    </div>
+    <!--
+        https://learn.microsoft.com/zh-cn/aspnet/core/blazor/fundamentals/startup?view=aspnetcore-8.0
+    blazor webassembly 读取index.html中的数据
+    在 Blazor WebAssembly 应用程序中，由于 index.html 不是在客户端运行时直接访问的文件，因此不能直接通过 JavaScript 读取 index.html 中的数据。但是，你可以通过以下方法来获取类似的信息：
 
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
+    使用 Blazor 的 @inject 指令注入 IWebAssemblyHostEnvironment 服务，这个服务可以提供当前环境的信息。
+
+    使用 Blazor 的 localStorage 或 sessionStorage 来存储信息，并在 Blazor 应用程序中读取。
+
+    下面是一个示例代码，展示如何使用 IWebAssemblyHostEnvironment 服务来获取环境信息：
+
+    @inject IWebAssemblyHostEnvironment Environment
+
+    <h1>Environment Information</h1>
+    <p>IsDevelopment: @Environment.IsDevelopment()</p>
+    <p>EnvironmentName: @Environment.EnvironmentName</p>
+    如果你需要从 index.html 读取特定的数据，并且这些数据是在页面加载时设置的，你可以使用 Blazor.start 方法来传递初始数据：
+
+    <script>
+        function getDataFromIndexHtml() {
+            var data = {
+                customData: 'Your custom data here'
+            };
+            Blazor.start({ data: data });
+        }
+    </script>
+
+
+    Blazor.start 方法来传递初始数据:
+    在Blazor应用程序中，您可以使用Blazor.start方法来传递初始数据。这通常在页面加载时进行。以下是一个示例代码：
+
+    const initialData = {
+        firstParameter: 'value1',
+        secondParameter: 'value2'
+    };
+
+    Blazor.start({
+        initialData: initialData
+    });
+    在这个例子中，initialData对象包含了两个属性，这些属性将作为初始数据传递给Blazor应用程序。在Blazor应用程序的C#代码中，您可以通过IJSRuntime接口来访问这些数据。
+
+    @inject IJSRuntime JSRuntime
+
+    protected override async Task OnInitializedAsync()
+    {
+        var initialData = await JSRuntime.InvokeAsync<InitialData>("blazorExtensions.getInitialData");
+        // 使用initialData中的数据
+    }
+
+    public class InitialData
+    {
+        public string FirstParameter { get; set; }
+        public string SecondParameter { get; set; }
+    }
+    在这段C#代码中，我们注入了IJSRuntime接口，并在组件初始化时调用InvokeAsync方法来从JavaScript获取初始数据。这里假设有一个JavaScript函数blazorExtensions.getInitialData可以获取这些数据，但实际的函数名称和结构可能会根据您的具体实现而有所不同。C#中的InitialData类型用于映射接收到的初始数据结构。
+
+    在 Blazor 应用程序中，你可以通过 NavigationManager 获取传递的数据：
+
+    @inject NavigationManager NavigationManager
+
+    protected override async Task OnInitializedAsync()
+    {
+        var customData = NavigationManager.AppBaseUri.Split('/').Last();
+        // 处理你的数据
+    }
+
+        我正在开发一个基于任务的应用程序，我想在用户看到应用程序之前加载“上下文”数据，比如任务名称，用户信息，语言和其他东西。
+
+    在哪里可以做到这一点？如果我在App.razor的OnInitializedAsync中加载数据，那么只有在应用程序可见之后，数据才会出现。如果我根据接收到的语言设置区域性，则组件已经使用错误的区域性呈现。每个教程都提到Program类，将其作为从一开始就设置“区域性”的位置。有没有办法发出和等待这个WebApi调用，并在设置区域性对初始呈现产生影响的点上填充此数据？
+        将其放入MainLayout.razor的OnInitializedAsync()方法中
+
+    您的代码可能如下所示
+
+    MainLayout.razor
+
+    代码语言：javascript
+    复制
+    <CascadingParameter Value="@mandate">
+    <div class="p-4">
+     @if(loading)
+     {
+        <p> Loading .... </p>
+
+     }else
+     {
+        @Body
+     }
     </div>
-    <!--加载Blazor WebAssembly的.dll文件。一旦Blazor WebAssembly代码加载完成，就会运行入口文件program.cs中的如下代码：builder.RootComponents.Add<App>("#app");告诉Renderer，App类组件是RenderTree的根组件，并将它的DOM加载到浏览器DOM中的App元素（Id为App的元素）-->
-    <script src="_framework/blazor.webassembly.js"></script>
-    <!--加载PWA相关的环境-->
-    <script>navigator.serviceWorker.register('service-worker.js');</script>
-</body>
+    </CascadingParameter>
+
+    @code
+    {
+       Mandate mandate; // Assuming some Mandate class which holds information
+       bool loading;
+       protected override Task OnInitializedAsync()
+       {
+         loading = true;
+         mandate = await LoadMandate(); /// load preferences from the database etc
+         loading = false;
+       }
+
+    }
+    理想情况下，将此部分推送到服务并在那里加载它。
+        -->
+    <body>
+        <div>
+            下述是.html/.svg/.x3d/.css/.js文件的视图V，将不断尝试改写成为.html/.svg/.x3d/.css/.js/.razor.cs文件的视图V。
+        </div>
+        <div>
+            <iframe src="https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/iframeInitial.html?iWidth=1024&iHeight=738" width="100%" height="768" align="middle"></iframe>
+        </div>
+        <div id="app">
+            <!--承接Blazor WebAssembly的.dll文件入口文件program.cs中的如下代码：builder.RootComponents.Add<App>("#app")-->
+            <svg class="loading-progress">
+                <circle r="40%" cx="50%" cy="50%" />
+                <circle r="40%" cx="50%" cy="50%" />
+            </svg>
+            <div class="loading-progress-text"></div>
+        </div>
+
+        <div id="blazor-error-ui">
+            An unhandled error has occurred.
+            <a href="" class="reload">Reload</a>
+            <a class="dismiss">🗙</a>
+        </div>
+        <!--加载Blazor WebAssembly的.dll文件。一旦Blazor WebAssembly代码加载完成，就会运行入口文件program.cs中的如下代码：builder.RootComponents.Add<App>("#app");告诉Renderer，App类组件是RenderTree的根组件，并将它的DOM加载到浏览器DOM中的App元素（Id为App的元素）-->
+        <script src="_framework/blazor.webassembly.js"></script>
+        <!--加载PWA相关的环境-->
+        <script>navigator.serviceWorker.register('service-worker.js');</script>
+    </body>
 
 </html>
