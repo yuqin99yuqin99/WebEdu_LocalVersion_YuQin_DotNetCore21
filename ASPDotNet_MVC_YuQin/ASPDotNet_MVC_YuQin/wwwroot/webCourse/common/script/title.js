@@ -1,4 +1,5 @@
 ﻿//////////////所有全局对象
+window.sBaseAddress = "https://localhost:5001"; //JIT编译地配置控制C模型M交付的URL的基地址。
 window.sBackgroundColorForsContentsEditable = "rgb(0,255,0)";
 window.sBackgroundColorForsContentEditable = "rgb(0,255,0)";
 window.oSrcElement = new Object();
