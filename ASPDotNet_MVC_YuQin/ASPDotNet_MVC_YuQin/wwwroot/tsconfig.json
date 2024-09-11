@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5",
+    "outDir": "js_from_ts" //ts编译出js的输出目录
+  },
+  "include": [ "ts/**/*" ] //ts所在位置。“**/”为任意层级目录，“？”和“*”为一般通配符。
+}

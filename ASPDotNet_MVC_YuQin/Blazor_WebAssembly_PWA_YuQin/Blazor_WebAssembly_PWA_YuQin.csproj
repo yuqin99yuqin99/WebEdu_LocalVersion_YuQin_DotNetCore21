@@ -25,6 +25,7 @@
     <Content Remove="Pages\student\Shared\Detail.razor" />
     <Content Remove="Pages\student\Shared\Edit.razor" />
     <Content Remove="wwwroot\css\CounterPartialClass.css" />
+    <Content Remove="wwwroot\ts\try\file2.ts" />
     <Content Remove="wwwroot\渔琴.ico" />
   </ItemGroup>
 
@@ -48,6 +49,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.6.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -63,6 +68,10 @@
     <ProjectReference Include="..\..\..\Microsoft.AspNetCore.Components.QuickGrid\src\Microsoft.AspNetCore.Components.QuickGrid.csproj" />
     <ProjectReference Include="..\SharedCS\SharedCS\SharedCS.csproj" />
     <ProjectReference Include="..\SharedRazor_SharedCSHTML\SharedRazorClassLibrary\SharedRazorCS.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\ts\try\file2.ts" />
   </ItemGroup>
 
 </Project>
