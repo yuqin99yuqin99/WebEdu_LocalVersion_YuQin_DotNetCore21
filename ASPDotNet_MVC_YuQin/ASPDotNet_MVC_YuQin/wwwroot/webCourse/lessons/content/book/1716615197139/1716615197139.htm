@@ -41,11 +41,14 @@
 	{font-family:"Arial Unicode MS";
 	panose-1:2 11 6 4 2 2 2 2 2 4;}
 @font-face
-	{font-family:楷体_GB2312;}
+	{font-family:楷体_GB2312;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
 @font-face
-	{font-family:̥_GB2312;}
+	{font-family:̥_GB2312;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
 @font-face
-	{font-family:DFKai-SB;}
+	{font-family:DFKai-SB;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
 @font-face
 	{font-family:华文新魏;
 	panose-1:2 1 8 0 4 1 1 1 1 1;}
@@ -68,27 +71,35 @@
 	{font-family:"Segoe UI";
 	panose-1:2 11 5 2 4 2 4 2 2 3;}
 @font-face
-	{font-family:ˎ̥;}
+	{font-family:ˎ̥;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
 @font-face
-	{font-family:"Courier New 宋体";}
+	{font-family:"Courier New 宋体";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
 @font-face
 	{font-family:"Lucida Console";
 	panose-1:2 11 6 9 4 5 4 2 2 4;}
 @font-face
-	{font-family:"Segoe UI regular";}
+	{font-family:"Segoe UI regular";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
 @font-face
-	{font-family:"Seoge ui";}
+	{font-family:"Seoge ui";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
 @font-face
-	{font-family:"Myriad Pro";}
+	{font-family:"Myriad Pro";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
 @font-face
-	{font-family:"Courier New ����";}
+	{font-family:"Courier New ����";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
 @font-face
 	{font-family:Cambria;
 	panose-1:2 4 5 3 5 4 6 3 2 4;}
 @font-face
-	{font-family:be;}
+	{font-family:be;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
 @font-face
-	{font-family:zm;}
+	{font-family:zm;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
 @font-face
 	{font-family:楷体;
 	panose-1:2 1 6 9 6 1 1 1 1 1;}
@@ -120,11 +131,11 @@
 	{font-family:"\@Arial Unicode MS";
 	panose-1:2 11 6 4 2 2 2 2 2 4;}
 @font-face
-	{font-family:"\@楷体_GB2312";}
+	{font-family:"\@楷体_GB2312";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
 @font-face
-	{font-family:"\@Myriad Pro";}
-@font-face
-	{font-family:"\@Courier New 宋体";}
+	{font-family:"\@Courier New 宋体";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{margin:0cm;
@@ -178,6 +189,22 @@ h3
 	font-family:"Times New Roman",serif;
 	color:windowtext;
 	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"页眉 字符2";
+	margin:0cm;
+	text-align:center;
+	text-indent:21.0pt;
+	layout-grid-mode:char;
+	border:none;
+	padding:0cm;
+	font-size:9.0pt;
+	font-family:"Times New Roman",serif;
+	color:windowtext;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin:0cm;
+	font-size:12.0pt;
+	font-family:宋体;
+	color:windowtext;}
 span.21
 	{mso-style-name:"标题 2 字符1\,Heading 2 Hidden 字符1\,Heading 2 CCBS 字符1\,Titre3 字符1\,HD2 字符1\,H2 字符1\,h2 字符1\,Level 2 Topic Heading 字符1\,Heading 2 Hidden1 字符1\,Heading 2 CCBS1 字符1\,Titre31 字符1\,HD21 字符1\,H21 字符1\,h21 字符1\,Level 2 Topic Heading1 字符1\,节题 字符1";
 	mso-style-link:"标题 2\,Heading 2 Hidden\,Heading 2 CCBS\,Titre3\,HD2\,H2\,h2\,Level 2 Topic Heading\,Heading 2 Hidden1\,Heading 2 CCBS1\,Titre31\,HD21\,H21\,h21\,Level 2 Topic Heading1\,节题";
@@ -187,6 +214,9 @@ span.11
 	{mso-style-name:"标题 1 字符1\,h1 字符1\,Level 1 Topic Heading 字符1\,h11 字符1\,Level 1 Topic Heading1 字符1\,实例名称 字符1";
 	mso-style-link:"标题 1\,h1\,Level 1 Topic Heading\,h11\,Level 1 Topic Heading1\,实例名称";
 	font-weight:bold;}
+span.2
+	{mso-style-name:"页眉 字符2";
+	mso-style-link:页眉;}
 p.4142515, li.4142515, div.4142515
 	{mso-style-name:"样式 标题 4 + 段前\: 14\.25 磅 段后\: 15 磅";
 	margin-top:0cm;
@@ -204,10 +234,16 @@ p.4142515, li.4142515, div.4142515
  /* Page Definitions */
  @page WordSection1
 	{size:21.0cm 808.0pt;
-	margin:78.0pt 2.0cm 78.0pt 2.0cm;
+	margin:77.95pt 2.0cm 70.9pt 2.0cm;
 	layout-grid:14.45pt;}
 div.WordSection1
 	{page:WordSection1;}
+@page WordSection2
+	{size:21.0cm 808.0pt;
+	margin:77.95pt 2.0cm 70.9pt 2.0cm;
+	layout-grid:14.45pt;}
+div.WordSection2
+	{page:WordSection2;}
  /* List Definitions */
  ol
 	{margin-bottom:0cm;}
@@ -226,9 +262,10 @@ punctuation'>
 <h1 align=left style='margin-top:7.2pt;margin-right:0cm;margin-bottom:7.2pt;
 margin-left:21.25pt;text-align:left;text-indent:-21.25pt;line-height:133%'><a
 name="_Ref120294910"></a><a name="_Toc120361012"></a><a name="_Toc120361059"></a><a
-name="_Toc120361428"></a><a name="_Ref125382297"></a><a name="_Toc177996383"><span
-lang=EN-US style='font-size:18.0pt;line-height:133%;font-family:黑体'>第7章</span><span
-style='font-size:18.0pt;line-height:133%;font-family:黑体'>研究结语与展望</span></a></h1>
+name="_Toc120361428"></a><a name="_Ref125382297"></a><a name="_Toc182413518"><span
+lang=EN-US style='font-size:18.0pt;line-height:133%;font-family:黑体'>第10章<span
+style='font:7.0pt "Times New Roman"'> </span></span><span style='font-size:
+18.0pt;line-height:133%;font-family:黑体'>研究结语与展望</span></a></h1>
 
 <div align=right>
 
@@ -238,15 +275,16 @@ style='font-size:18.0pt;line-height:133%;font-family:黑体'>研究结语与展�
   <td width=478 valign=top style='width:358.35pt;border:dashed windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='text-indent:21.1pt;line-height:150%'><span
-  style='line-height:150%;font-family:楷体_GB2312'>“不忘初心、方得始终”</span></p>
+  style='line-height:150%;font-family:"楷体_GB2312",serif'>“不忘初心、方得始终”</span></p>
   <p class=MsoNormal align=right style='text-align:right;layout-grid-mode:char'><span
-  lang=EN-US style='font-family:楷体_GB2312'>--------------------------</span><span
-  style='font-family:楷体_GB2312'>中国古词名句</span></p>
+  lang=EN-US style='font-family:"楷体_GB2312",serif'>--------------------------</span><span
+  style='font-family:"楷体_GB2312",serif'>中国古词名句</span></p>
   <p class=MsoNormal style='text-indent:21.1pt;line-height:150%'><span
-  style='line-height:150%;font-family:楷体_GB2312'>“立足当下，展望未来……” </span></p>
+  style='line-height:150%;font-family:"楷体_GB2312",serif'>“立足当下，展望未来……” </span></p>
   <p class=MsoNormal align=right style='text-align:right;layout-grid-mode:char'><span
-  lang=EN-US style='font-family:楷体_GB2312'>----------------------</span><span
-  style='font-family:楷体_GB2312'>网络资源及其</span><span style='font-family:楷体_GB2312'>思辨</span></p>
+  lang=EN-US style='font-family:"楷体_GB2312",serif'>----------------------</span><span
+  style='font-family:"楷体_GB2312",serif'>网络资源及其</span><span style='font-family:
+  "楷体_GB2312",serif'>思辨</span></p>
   </td>
  </tr>
 </table>
@@ -258,21 +296,23 @@ style='font-size:18.0pt;line-height:133%;font-family:黑体'>研究结语与展�
 <h2 style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
 1.0cm;line-height:normal;layout-grid-mode:char'><a name="_Toc120361013"></a><a
 name="_Toc120361060"></a><a name="_Toc120361429"></a><a name="_Ref157710522"></a><a
-name="_Toc177996384"><span lang=EN-US style='font-size:14.0pt;font-family:黑体'>7.1<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='font-size:14.0pt;font-family:黑体'>研究结语：教育内容方法的创新追求</span></a></h2>
+name="_Toc182413519"><span lang=EN-US style='font-size:14.0pt;font-family:黑体'>10.1<span
+style='font:7.0pt "Times New Roman"'> </span></span><span style='font-size:
+14.0pt;font-family:黑体'>研究的创新追求：教育的内容<span lang=EN-US>/</span>方法的创新、</span></a><span
+style='font-size:14.0pt;font-family:黑体'>教育工具软件的继承利用</span><span lang=EN-US
+style='font-size:14.0pt'>/</span><span style='font-size:14.0pt;font-family:
+黑体'>创新研发的创新</span></h2>
 
 <p class=MsoNormal style='margin-top:3.0pt;text-indent:21.55pt;layout-grid-mode:
-char'><span style='font-size:11.0pt;font-family:宋体'>当前<b>“教育</b>数字化时代<span
-lang=EN-US>/</span><b>教育</b>数字化计算时代<span lang=EN-US>/</span><b>教育</b>数字人工智能时代<span
-lang=EN-US>/</span><b>教育</b>数智时代”，本书贯彻二十大教育数字化、贯彻国家的《提升全民数字素养与技能行动纲要》于教育领域，坚持系统观念、守正创新地探究“</span><span
-style='font-size:11.0pt;font-family:宋体'>教育框架与案例—</span><span style='font-size:
-11.0pt;font-family:黑体'>—数字化计算思维与人工智能统一的视角</span><span lang=EN-US
-style='font-size:11.0pt;font-family:宋体'>”</span><b><span style='font-size:11.0pt;
-font-family:宋体'>（</span></b><span style='font-size:11.0pt;font-family:宋体'>又称</span><b><span
-style='font-size:11.0pt;font-family:宋体'>教育数字思维的本质框架视角的“教育框架与案例”</span></b><b><span
-style='font-size:11.0pt;font-family:宋体'>）</span></b><span style='font-size:
-11.0pt;font-family:宋体'>。</span><span style='font-size:11.0pt;font-family:宋体'>研究表明，<b>“教育数字思维”</b>期望促进<b>“现有教育思维”</b>的时代性</span><span
+char'><span style='font-size:11.0pt;font-family:宋体'>当前“教育数字化时代<span lang=EN-US>/</span>教育数字化计算时代<span
+lang=EN-US>/</span>教育数字人工智能时代<span lang=EN-US>/</span>教育数智时代”，本书贯彻二十大教育数字化、贯彻国家的《提升全民数字素养与技能行动纲要》于教育领域，坚持系统观念、守正创新地探究“</span><span
+style='font-size:11.0pt;font-family:宋体'>教育框架与案例——人机统一的数字人工智能思维的视角</span><span
+lang=EN-US style='font-size:11.0pt;font-family:宋体'>”</span><span
+style='font-size:11.0pt;font-family:宋体'>（又称</span><span style='font-size:11.0pt;font-family:宋体'>教育数字思维的本质框架视角的“教育框架与案例”</span><span
+style='font-size:11.0pt;font-family:宋体'>）。</span></p>
+
+<p class=MsoNormal style='margin-top:3.0pt;text-indent:21.55pt;layout-grid-mode:
+char'><span style='font-size:11.0pt;font-family:宋体'>研究表明，<b>“教育数字思维”</b>期望促进<b>“现有教育思维”</b>的时代性</span><span
 lang=EN-US style='font-size:11.0pt;font-family:"Cambria",serif'>/</span><span
 style='font-size:11.0pt;font-family:宋体'>数字化</span><span lang=EN-US
 style='font-size:11.0pt;font-family:"Cambria",serif'>/</span><span
@@ -283,18 +323,26 @@ style='font-size:11.0pt;font-family:"Cambria",serif'>/</span><span
 style='font-size:11.0pt;font-family:宋体'>数智化发展。期望促进全民数字素养与技能的提升。</span></p>
 
 <p class=MsoNormal style='margin-top:3.0pt;text-indent:21.55pt;layout-grid-mode:
-char'><span style='font-size:11.0pt;font-family:宋体'>本书追求</span><span
-style='font-size:11.0pt;font-family:宋体'>教育内容方法创新如</span><span style='font-size:11.0pt;font-family:宋体'>表 <span lang=EN-US>7‑1</span></span><span
+char'><span style='font-size:11.0pt;font-family:宋体'>本书追求教育内容</span><span
+lang=EN-US style='font-size:11.0pt;font-family:"Cambria",serif'>/</span><span
+style='font-size:11.0pt;font-family:宋体'>教育方法的与时俱进的创新、</span><span
+style='font-size:11.0pt;font-family:宋体'>教育工具软件继承利用<span lang=EN-US>/</span>教育工具软件创新研发的</span><span
+style='font-size:11.0pt;font-family:宋体'>与时俱进的</span><span style='font-size:
+11.0pt;font-family:宋体'>创新，如</span><span
+style='font-size:11.0pt;font-family:宋体'>表 <span lang=EN-US>10‑1</span></span><span
 style='font-size:11.0pt;font-family:宋体'>所示。</span></p>
 
-<p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
-text-indent:20.6pt;layout-grid-mode:char'><a name="_Toc177996435"></a><a
-name="_Ref157711833"><span style='font-family:黑体'>表 </span></a><span lang=EN-US style='font-family:黑体'>7</span><span lang=EN-US style='font-family:
+<p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:21.25pt;
+margin-bottom:0cm;margin-left:21.3pt;margin-bottom:.0001pt;text-align:center;
+text-indent:0cm;layout-grid-mode:char'><a name="_Toc180710608"></a><a
+name="_Toc180710748"></a><a name="_Toc182386338"></a><a name="_Ref157711833"><span
+style='font-family:黑体'>表 </span></a><span
+lang=EN-US style='font-family:黑体'>10</span><span lang=EN-US style='font-family:
 黑体'>‑</span><span
 lang=EN-US style='font-family:黑体'>1</span><span lang=EN-US style='font-family:
 黑体'> </span><span
-style='font-family:黑体'>研究结语：教育内容方法的创新追求</span><span lang=EN-US
-style='font-family:黑体'> </span></p>
+style='font-family:黑体'>研究的创新追求：教育的内容<span lang=EN-US>/</span>方法的创新、教育工具软件的继承利用<span
+lang=EN-US>/</span>创新研发的创新</span><span lang=EN-US style='font-family:黑体'> </span></p>
 
 <div align=center>
 
@@ -311,7 +359,7 @@ style='font-family:黑体'> </span></p>
   <span lang=EN-US>3‑3 </span></span><span style='font-size:10.0pt;font-family:
   楷体'>→</span><span
   style='font-size:9.0pt;font-family:宋体'>表</span><span style='font-size:9.0pt'>
-  <span lang=EN-US>3‑4  </span></span><span style='font-size:10.0pt;font-family:
+  <span lang=EN-US>3‑4 </span></span><span style='font-size:10.0pt;font-family:
   楷体'>→</span><span
   style='font-size:10.0pt;font-family:黑体'>表 <span lang=EN-US>3‑5</span></span><span
   style='font-size:10.0pt;font-family:楷体'>→</span><span style='font-size:9.0pt;font-family:宋体'>表</span><span lang=EN-US style='font-size:9.0pt'>3‑6 
@@ -324,7 +372,7 @@ style='font-family:黑体'> </span></p>
   <span lang=EN-US>3‑9  </span></span></p>
   <p class=MsoNormal align=left style='margin-top:3.0pt;text-align:left;
   text-indent:0cm;layout-grid-mode:char'><span style='font-size:10.0pt;
-  font-family:楷体'>（<b><span style='color:#00B050'>理论创新</span></b>：</span><span
+  font-family:楷体'>【<b><span style='color:#00B050'>理论创新</span></b>：</span><span
   style='font-size:10.0pt;font-family:楷体'>表 <span lang=EN-US>3‑1</span></span><span
   style='font-size:10.0pt;font-family:楷体'>→</span><span style='font-size:10.0pt;font-family:楷体'>表 <span lang=EN-US>3‑9</span></span><span
   style='font-size:10.0pt;font-family:楷体'>所示构建了“</span><span
@@ -332,13 +380,13 @@ style='font-family:黑体'> </span></p>
   style='font-size:10.0pt;font-family:楷体'>”。主线中的</span><span style='font-size:10.0pt;font-family:楷体'>表 <span lang=EN-US>3‑9</span></span><span
   style='font-size:10.0pt;font-family:楷体'>所示的“</span><span
   style='font-size:10.0pt;font-family:楷体'>教育数字思维的本质框架</span><span
-  style='font-size:10.0pt;font-family:楷体'>”是核心、是终点、是本质，<b>是当前数智时代需求的教育思维框架的迭代粒度，是教育数字化这一国家要求的贯彻。</b></span></p>
+  style='font-size:10.0pt;font-family:楷体'>”是核心、是终点、是本质，<b>是当前数智时代需求的教育思维框架的迭代粒度，是教育数字化这一国家要求的贯彻】</b></span></p>
   <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><span
   lang=EN-US style='font-size:9.0pt'>↕</span></p>
   </td>
  </tr>
  <tr>
-  <td width=255 valign=top style='width:191.15pt;border:dashed windowtext 1.0pt;
+  <td width=160 valign=top style='width:120.25pt;border:dashed windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='text-align:center;text-indent:0cm;
   layout-grid-mode:char'><b><span lang=EN-US style='font-family:"Cambria Math",serif'>⤢</span></b></p>
@@ -348,52 +396,98 @@ style='font-family:黑体'> </span></p>
   style='font-size:10.0pt;font-family:楷体'>、</span><span
   style='font-size:10.0pt;font-family:楷体'>案例 <span lang=EN-US>4‑2</span></span></p>
   <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
-  char'><span style='font-size:10.0pt;font-family:楷体'>（<b><span
+  char'><span style='font-size:10.0pt;font-family:楷体'>【<b><span
   style='color:#00B050'>实践创新</span></b>： </span><span style='font-size:10.0pt;font-family:楷体'>表 <span lang=EN-US>3‑9</span></span><span
   style='font-size:10.0pt;font-family:楷体'>所示“</span><span
   style='font-size:10.0pt;font-family:楷体'>教育数字思维的本质框架</span><span
-  style='font-size:10.0pt;font-family:楷体'>”的创新，应用成为</span><span
-  style='font-size:10.0pt;font-family:楷体'>案例 <span lang=EN-US>4‑1</span></span><span
-  style='font-size:10.0pt;font-family:楷体'>所示的</span><span
-  style='font-size:10.0pt;font-family:楷体'>教育数字思维的本质框架视角的“教育框架与案例”</span><span
-  style='font-size:10.0pt;font-family:楷体'>之一的创新、</span><span
-  style='font-size:10.0pt;font-family:楷体'>案例 <span lang=EN-US>4‑2</span></span><span
-  style='font-size:10.0pt;font-family:楷体'>所示的</span><span
-  style='font-size:10.0pt;font-family:楷体'>教育数字思维的本质框架视角的“教育框架与案例”</span><span
-  style='font-size:10.0pt;font-family:楷体'>之二的创新）</span></p>
+  style='font-size:10.0pt;font-family:楷体'>”的创新，应用成为如下创新】</span></p>
+  <p class=MsoListParagraph style='margin-left:22.95pt;text-indent:-18.0pt;
+  layout-grid-mode:char'><span lang=EN-US style='font-size:10.0pt;font-family:
+  Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span
+  style='font-size:10.0pt'>案例 <span lang=EN-US>4‑1</span></span><span
+  style='font-size:10.0pt'>所示的</span><span
+  style='font-size:10.0pt'>教育数字思维的本质框架视角的“教育框架与案例”</span><span
+  style='font-size:10.0pt'>之一的创新。</span></p>
+  <p class=MsoListParagraph style='margin-left:22.95pt;text-indent:-18.0pt;
+  layout-grid-mode:char'><span lang=EN-US style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style='font-size:10.0pt'>案例 <span lang=EN-US>4‑2</span></span><span
+  style='font-size:10.0pt'>所示的</span><span
+  style='font-size:10.0pt'>教育数字思维的本质框架视角的“教育框架与案例”</span><span
+  style='font-size:10.0pt'>之二的创新。</span></p>
   </td>
-  <td width=66 style='width:49.6pt;border-top:none;border-left:none;border-bottom:
+  <td width=76 style='width:2.0cm;border-top:none;border-left:none;border-bottom:
   dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;background:#E7E6E6;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='text-indent:0cm;layout-grid-mode:char;word-break:
-  break-all'><span style='font-family:宋体;color:black'>←</span><span
-  style='font-size:10.0pt;font-family:宋体;color:black;background:#D9D9D9'>（人机统一）</span><span
-  style='font-family:宋体;color:black'>→</span></p>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm;
+  layout-grid-mode:char;word-break:break-all'><span style='font-family:宋体;
+  color:black'>←</span><span style='font-size:10.0pt;font-family:宋体;color:black;
+  background:#D9D9D9'>（人机统一）</span><span style='font-family:宋体;color:black'>→</span></p>
   <p class=MsoNormal align=left style='text-align:left;layout-grid-mode:char'><b><span
   lang=EN-US>&nbsp;</span></b></p>
   </td>
-  <td width=255 valign=top style='width:191.35pt;border-top:none;border-left:
-  none;border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+  <td width=340 valign=top style='width:9.0cm;border-top:none;border-left:none;
+  border-bottom:dashed windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='text-align:center;text-indent:0cm;
   layout-grid-mode:char'><b><span lang=EN-US style='font-family:"Cambria Math",serif'>⤡</span></b></p>
   <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
   text-indent:0cm;layout-grid-mode:char'><span
   style='font-size:10.0pt;font-family:黑体'>案例 <span lang=EN-US>5-1</span></span><span
-  style='font-size:10.0pt;font-family:黑体'>、</span><span style='font-size:10.0pt;font-family:楷体'>案例<span lang=EN-US>6‑1</span></span></p>
+  style='font-size:10.0pt;font-family:黑体'>、</span><span style='font-size:10.0pt;font-family:楷体'>案例<span lang=EN-US>6‑1</span></span><span
+  style='font-size:10.0pt;font-family:楷体'>、</span><span
+  style='font-size:10.0pt;font-family:楷体'>案例 <span lang=EN-US>7‑1</span></span><span
+  style='font-size:10.0pt;font-family:楷体'>、</span><span
+  style='font-size:10.0pt;font-family:楷体'>案例 <span lang=EN-US>8‑1</span></span><span
+  style='font-size:10.0pt;font-family:楷体'>、</span><span
+  style='font-size:10.0pt;font-family:楷体'>案例 <span lang=EN-US>9‑1</span></span></p>
   <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-  layout-grid-mode:char'><span style='font-size:10.0pt;font-family:楷体'>（<b><span
+  layout-grid-mode:char'><span style='font-size:10.0pt;font-family:楷体'>【<b><span
   style='color:#00B050'>实践创新</span></b>： </span><span style='font-size:10.0pt;font-family:楷体'>表 <span lang=EN-US>3‑9</span></span><span
   style='font-size:10.0pt;font-family:楷体'>所示“</span><span
   style='font-size:10.0pt;font-family:楷体'>教育数字思维的本质框架</span><span
-  style='font-size:10.0pt;font-family:楷体'>”的创新，应用成为</span><span
+  style='font-size:10.0pt;font-family:楷体'>”的创新，应用成为如下创新】</span></p>
+  <p class=MsoListParagraph style='margin-left:22.95pt;text-indent:-18.0pt;
+  layout-grid-mode:char'><span lang=EN-US style='font-size:10.0pt;font-family:
+  Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span
   style='font-size:10.0pt;font-family:楷体'>案例 <span lang=EN-US>5-1</span></span><span
   style='font-size:10.0pt;font-family:楷体'>所示的</span><span
   style='font-size:10.0pt;font-family:楷体'>教育数字思维的本质框架视角的“教育软件继承利用的框架与案例”</span><span
-  style='font-size:10.0pt;font-family:楷体'>的创新、 </span><span style='font-size:10.0pt;font-family:楷体'>案例<span lang=EN-US>6‑1</span></span><span
+  style='font-size:10.0pt;font-family:楷体'>的创新。</span></p>
+  <p class=MsoListParagraph style='margin-left:22.95pt;text-indent:-18.0pt;
+  layout-grid-mode:char'><span lang=EN-US style='font-size:10.0pt;font-family:
+  Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span
+  style='font-size:10.0pt;font-family:楷体'>案例<span lang=EN-US>6‑1</span></span><span
   style='font-size:10.0pt;font-family:楷体'>所示的</span><span
   style='font-size:10.0pt;font-family:楷体'>教育数字思维的本质框架视角的“教育软件创新研发的框架与案例<span
-  lang=EN-US>”</span></span><span style='font-size:10.0pt;font-family:楷体'>的创新）</span></p>
+  lang=EN-US>”</span></span><span style='font-size:10.0pt;font-family:楷体'>的创新。</span></p>
+  <p class=MsoListParagraph style='margin-left:22.95pt;text-indent:-18.0pt;
+  layout-grid-mode:char'><span lang=EN-US style='font-size:10.0pt;font-family:
+  Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span
+  style='font-size:10.0pt;font-family:楷体'>案例 <span lang=EN-US>7‑1</span></span><span
+  lang=EN-US style='font-size:10.0pt;font-family:楷体'> </span><span
+  style='font-size:10.0pt;font-family:楷体'>教育数字思维的本质框架视角的“教育软件创新研发的框架与案例”（浏览器<span
+  lang=EN-US>Blazor.Net</span>的<span lang=EN-US>JS</span>对比<span lang=EN-US>C#</span>）</span><span
+  style='font-size:10.0pt;font-family:楷体'>。</span></p>
+  <p class=MsoListParagraph style='margin-left:22.95pt;text-indent:-18.0pt;
+  layout-grid-mode:char'><span lang=EN-US style='font-size:10.0pt;font-family:
+  Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span
+  style='font-size:10.0pt;font-family:楷体'>案例 <span lang=EN-US>8‑1</span></span><span
+  style='font-size:10.0pt;font-family:楷体'>所示的</span><span
+  style='font-size:10.0pt;font-family:楷体'>教育数字思维的本质框架视角的“教育软件创新研发的框架与案例<span
+  lang=EN-US>”</span>之一（信息学奥赛的<span lang=EN-US>C/C++</span>对比<span lang=EN-US>C#</span>）</span><span
+  style='font-size:10.0pt;font-family:楷体'>。</span></p>
+  <p class=MsoListParagraph style='margin-left:22.95pt;text-indent:-18.0pt;
+  layout-grid-mode:char'><span lang=EN-US style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:10.0pt;font-family:楷体'>案例 <span lang=EN-US>9‑1</span></span><span
+  style='font-size:10.0pt;font-family:楷体'>教育数字思维的本质框架视角的“教育软件创新研发的框架与案例”（基础教育的<span
+  lang=EN-US>Python</span>对比<span lang=EN-US>C#</span>）</span><span
+  style='font-size:10.0pt;font-family:楷体'>。</span></p>
   </td>
  </tr>
  <tr>
@@ -405,7 +499,7 @@ style='font-family:黑体'> </span></p>
   style='font-size:10.0pt;font-family:黑体'>案例<span lang=EN-US>A‑1</span></span><span
   lang=EN-US style='font-size:10.0pt;font-family:黑体'> </span></p>
   <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
-  layout-grid-mode:char'><span style='font-family:宋体'>（<b><span
+  layout-grid-mode:char'><span style='font-family:宋体'>【<b><span
   style='color:#00B050'>实践创新</span></b>：</span><span style='font-family:"Cambria Math",serif'>
   </span><span
   style='font-family:宋体'>表</span><span style='font-family:"Cambria Math",serif'>
@@ -414,7 +508,26 @@ style='font-family:黑体'> </span></p>
   style='font-family:宋体'>案例</span><span lang=EN-US style='font-family:"Cambria Math",serif'>A‑1</span><span
   style='font-family:宋体'>所示的</span><span
   style='font-family:宋体'>教育数字思维的本质框架视角的“教育过程管理框架与案例”</span><span
-  style='font-family:宋体'>的创新）</span></p>
+  style='font-family:宋体'>的创新】</span></p>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><span
+  lang=EN-US style='font-size:9.0pt'>↕</span></p>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm;
+  layout-grid-mode:char'><span
+  style='font-size:11.0pt;font-family:宋体'>案例</span><span lang=EN-US
+  style='font-size:11.0pt'>B‑1</span></p>
+  <p class=MsoNormal align=left style='text-align:left;text-indent:0cm;
+  layout-grid-mode:char'><span style='font-size:10.0pt;font-family:宋体'>【<b><span
+  style='color:#00B050'>实践创新</span></b>：</span><span style='font-size:10.0pt;
+  font-family:"Cambria Math",serif'> </span><span
+  style='font-size:10.0pt;font-family:宋体'>表</span><span style='font-size:10.0pt;
+  font-family:"Cambria Math",serif'> <span lang=EN-US>3‑9</span></span><span
+  style='font-size:10.0pt;font-family:宋体'>所示“</span><span
+  style='font-size:10.0pt;font-family:宋体'>教育数字思维的本质框架</span><span
+  style='font-size:10.0pt;font-family:宋体'>”的创新，应用成为</span><span style='font-size:11.0pt;font-family:宋体'>案例</span><span lang=EN-US style='font-size:11.0pt'>B‑1</span><span
+  style='font-size:10.0pt;font-family:宋体'>所示的</span><span
+  style='font-size:10.0pt;font-family:黑体'>“本书选用<span lang=EN-US>C#</span>”“<span
+  lang=EN-US>JS</span>”“信息学奥赛<span lang=EN-US>C++</span>”“基础教育<span lang=EN-US>Python</span>”的比较思维</span><span
+  style='font-size:10.0pt;font-family:宋体'>的创新】</span></p>
   </td>
  </tr>
 </table>
@@ -427,22 +540,24 @@ lang=EN-US style='font-size:11.0pt'>&nbsp;</span></p>
 <h2 style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
 1.0cm;line-height:normal;layout-grid-mode:char'><a name="_Toc120361015"></a><a
 name="_Toc120361062"></a><a name="_Toc120361431"></a><a name="_Ref160140716"></a><a
-name="_Toc177996385"><span lang=EN-US style='font-size:14.0pt;font-family:黑体'>7.2<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='font-size:14.0pt;font-family:黑体'>研究展望：教师机器人的研究展望</span></a></h2>
+name="_Toc182413520"><span lang=EN-US style='font-size:14.0pt;font-family:黑体'>10.2<span
+style='font:7.0pt "Times New Roman"'> </span></span><span style='font-size:
+14.0pt;font-family:黑体'>研究的今后展望：教育数字人工智能思维的研究展望、教师机器人的研究展望</span></a></h2>
 
 <p class=MsoNormal style='margin-top:3.0pt;text-indent:21.55pt;layout-grid-mode:
 char'><span style='font-size:11.0pt;font-family:宋体'>本书的研究展望如</span><span
-style='font-size:11.0pt;font-family:宋体'>表 <span lang=EN-US>7‑2</span></span><span
+style='font-size:11.0pt;font-family:宋体'>表 <span lang=EN-US>10‑2</span></span><span
 style='font-size:11.0pt;font-family:宋体'>所示。</span></p>
 
 <p class=MsoNormal align=center style='margin-top:3.0pt;text-align:center;
-text-indent:20.6pt;layout-grid-mode:char'><a name="_Toc177996436"></a><a
-name="_Ref160140752"><span style='font-family:黑体'>表 </span></a><span lang=EN-US style='font-family:黑体'>7</span><span lang=EN-US style='font-family:
+text-indent:0cm;layout-grid-mode:char'><a name="_Toc180710609"></a><a
+name="_Toc180710749"></a><a name="_Toc182386339"></a><a name="_Ref160140752"><span
+style='font-family:黑体'>表 </span></a><span
+lang=EN-US style='font-family:黑体'>10</span><span lang=EN-US style='font-family:
 黑体'>‑</span><span
 lang=EN-US style='font-family:黑体'>2</span><span lang=EN-US style='font-family:
 黑体'> </span><span
-style='font-family:黑体'>研究展望：教师机器人的研究展望</span></p>
+style='font-family:黑体'>研究的今后展望：教育数字人工智能思维的研究展望、教师机器人的研究展望</span></p>
 
 <div align=center>
 
@@ -459,7 +574,7 @@ style='font-family:黑体'>研究展望：教师机器人的研究展望</span><
   <span lang=EN-US>3‑3 </span></span><span style='font-size:10.0pt;font-family:
   楷体'>→</span><span
   style='font-size:9.0pt;font-family:宋体'>表</span><span style='font-size:9.0pt'>
-  <span lang=EN-US>3‑4  </span></span><span style='font-size:10.0pt;font-family:
+  <span lang=EN-US>3‑4 </span></span><span style='font-size:10.0pt;font-family:
   楷体'>→</span><span
   style='font-size:10.0pt;font-family:黑体'>表 <span lang=EN-US>3‑5</span></span><span
   style='font-size:10.0pt;font-family:楷体'>→</span><span style='font-size:9.0pt;font-family:宋体'>表</span><span lang=EN-US style='font-size:9.0pt'>3‑6 
@@ -522,9 +637,16 @@ style='font-family:黑体'>研究展望：教师机器人的研究展望</span><
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='text-align:center;text-indent:0cm;
   layout-grid-mode:char'><b><span lang=EN-US style='font-family:"Cambria Math",serif'>⤡</span></b></p>
-  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><span
+  <p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center;
+  text-indent:0cm;layout-grid-mode:char'><span
   style='font-size:10.0pt;font-family:黑体'>案例 <span lang=EN-US>5-1</span></span><span
-  style='font-size:10.0pt;font-family:黑体'>、</span><span style='font-size:10.0pt;font-family:楷体'>案例<span lang=EN-US>6‑1</span></span></p>
+  style='font-size:10.0pt;font-family:黑体'>、</span><span style='font-size:10.0pt;font-family:楷体'>案例<span lang=EN-US>6‑1</span></span><span
+  style='font-size:10.0pt;font-family:楷体'>、</span><span
+  style='font-size:10.0pt;font-family:楷体'>案例 <span lang=EN-US>7‑1</span></span><span
+  style='font-size:10.0pt;font-family:楷体'>、</span><span
+  style='font-size:10.0pt;font-family:楷体'>案例 <span lang=EN-US>8‑1</span></span><span
+  style='font-size:10.0pt;font-family:楷体'>、</span><span
+  style='font-size:10.0pt;font-family:楷体'>案例 <span lang=EN-US>9‑1</span></span></p>
   <p class=MsoNormal style='margin-top:3.0pt;text-indent:0cm;layout-grid-mode:
   char'><span style='font-size:10.0pt;font-family:楷体'>（<b><span
   style='color:#00B050'>研究展望</span></b>： </span><span style='font-size:10.0pt;font-family:楷体'>案例<span lang=EN-US>6‑1</span></span><span
@@ -579,27 +701,29 @@ lang=EN-US>3‑9</span></span></b><b><span style='line-height:150%;font-family:
 宋体'>所示“数字</span></b><b><span lang=EN-US style='line-height:150%'>(</span></b><b><span
 style='line-height:150%;font-family:宋体'>化计算</span></b><b><span lang=EN-US
 style='line-height:150%'>)</span></b><b><span style='line-height:150%;
-font-family:宋体'>思维本质”“人工智能”之间，纸面上只有一页纸的距离，实现上却是人类几千年漫长时光的距离</span></b><b><span
-lang=EN-US style='line-height:150%'>……</span></b></p>
-
-<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
-style='line-height:150%'>“</span></b><b><span style='line-height:150%;
-font-family:宋体'>坚持系统观念，守正创新</span></b><b><span lang=EN-US style='line-height:
-150%'>”</span></b><b><span style='line-height:150%;font-family:宋体'>地进行教育研究</span></b><b><span
+font-family:宋体'>思维本质”与“人工智能”之间，纸面上只有一页纸的距离，实现上却是人类几千年漫长时光的距离</span></b><b><span
 lang=EN-US style='line-height:150%'>……</span></b></p>
 
 <p class=MsoNormal style='line-height:150%'><b><span style='line-height:150%;
+font-family:宋体'>“坚持系统观念，守正创新”地进行教育研究</span></b><b><span lang=EN-US
+style='line-height:150%'>……</span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='line-height:150%;
 font-family:宋体'>教育数字思维视角的教育研究，永远在途中</span></b><b><span lang=EN-US
-style='line-height:150%'>…… </span></b></p>
+style='line-height:150%'>……</span></b></p>
+
+<p class=MsoNormal style='text-indent:0cm;line-height:150%'><b><span
+lang=EN-US style='line-height:150%'>&nbsp;</span></b></p>
+
+</div>
 
 <b><span lang=EN-US style='font-size:10.5pt;line-height:150%;font-family:"Times New Roman",serif'><br
 clear=all style='page-break-before:always'>
 </span></b>
 
-<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
-style='line-height:150%'>&nbsp;</span></b></p>
+<div class=WordSection2 style='layout-grid:14.45pt'>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='text-indent:0cm'><span lang=EN-US>&nbsp;</span></p>
 
 </div>
 
