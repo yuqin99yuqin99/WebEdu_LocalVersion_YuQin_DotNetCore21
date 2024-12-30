@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6219bba4-6240-48a2-8392-fea2ef585247}</ProjectGuid>
-    <RootNamespace>ConsoleApplicationExampleCPP</RootNamespace>
+    <ProjectGuid>{0f48df69-5cfe-477e-8a4d-79777a37917a}</ProjectGuid>
+    <RootNamespace>Finalliver</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Binary_ASM_CPP_CS(CPP_ConsoleApplicationExample)</ProjectName>
+    <ProjectName>Binary_ASM_CPP_CS(CPP_ConsoleApplicationIOI)</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,9 +128,51 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApplicationExample_CPP.cpp" />
+    <ClCompile Include="IOI_DataStructure.cpp">
+      <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</SDLCheck>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="10 qy.h" />
+    <ClInclude Include="11 xbr.h" />
+    <ClInclude Include="12 lrh.h" />
+    <ClInclude Include="13 lwr.h" />
+    <ClInclude Include="14 rbgl.h" />
+    <ClInclude Include="15 lhf.h" />
+    <ClInclude Include="16 lyn.h" />
+    <ClInclude Include="17 zy.h" />
+    <ClInclude Include="18 yy.h" />
+    <ClInclude Include="19 lzb.h" />
+    <ClInclude Include="20 thx.h" />
+    <ClInclude Include="21 zc.h" />
+    <ClInclude Include="22 ln.h" />
+    <ClInclude Include="23 sjs.h" />
+    <ClInclude Include="24 ymx.h" />
+    <ClInclude Include="25 lxy.h" />
+    <ClInclude Include="26 fyd.h" />
+    <ClInclude Include="27 ysj.h" />
+    <ClInclude Include="28 xm.h" />
+    <ClInclude Include="29 fx.h" />
+    <ClInclude Include="30 zyy.h" />
+    <ClInclude Include="31 hjy.h" />
+    <ClInclude Include="32 yj.h" />
+    <ClInclude Include="33 liuzb.h" />
+    <ClInclude Include="34 bmrm.h" />
+    <ClInclude Include="35 qwj.h" />
+    <ClInclude Include="36 dxq.h" />
+    <ClInclude Include="37 lsq.h" />
+    <ClInclude Include="38 kjy.h" />
+    <ClInclude Include="39 abltp.h" />
+    <ClInclude Include="4 xyx.h" />
+    <ClInclude Include="6 wxy.h" />
+    <ClInclude Include="7 gjy.h" />
+    <ClInclude Include="8 hyx.h" />
+    <ClInclude Include="9 pql.h" />
+    <ClInclude Include="huizong.h" />
+    <ClInclude Include="3 cyr.h" />
+    <ClInclude Include="1 psl.h" />
+    <ClInclude Include="2 zyr.h" />
+    <ClInclude Include="5 cx.h" />
     <ClInclude Include="TryReferenceHJB.h" />
     <ClInclude Include="TryReferenceWSY.h" />
   </ItemGroup>

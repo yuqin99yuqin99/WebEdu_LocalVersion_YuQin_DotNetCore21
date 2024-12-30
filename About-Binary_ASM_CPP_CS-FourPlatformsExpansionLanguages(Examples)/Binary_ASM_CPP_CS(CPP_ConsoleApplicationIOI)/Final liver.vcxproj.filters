@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IOI_DataStructure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="1 psl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="2 zyr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3 cyr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="5 cx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="huizong.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="7 gjy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="8 hyx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="9 pql.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="10 qy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="11 xbr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="12 lrh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="13 lwr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="15 lhf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="14 rbgl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="16 lyn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="17 zy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="18 yy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="20 thx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="21 zc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="22 ln.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="24 ymx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="26 fyd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="27 ysj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="28 xm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="29 fx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="30 zyy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="31 hjy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="32 yj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="33 liuzb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="35 qwj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="36 dxq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="37 lsq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="38 kjy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="39 abltp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="34 bmrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="4 xyx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="6 wxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="19 lzb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="23 sjs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="25 lxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TryReferenceHJB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TryReferenceWSY.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
