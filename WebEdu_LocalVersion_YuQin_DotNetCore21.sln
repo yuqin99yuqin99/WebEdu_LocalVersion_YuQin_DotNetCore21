@@ -93,6 +93,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Compon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter", "..\Yuqin_Referenced\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter\src\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.csproj", "{D877C45A-FE94-49B0-80BF-7201F05E9F6D}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Binary_ASM_CPP_Python(Python_ConsoleApplicationK12Edu)", "About-Binary_ASM_CPP_CS-FourPlatformsExpansionLanguages(Examples)\Binary_ASM_CPP_Python(Python_ConsoleApplicationK12Edu)\Binary_ASM_CPP_Python(Python_ConsoleApplicationK12Edu).pyproj", "{BF4A1965-FB2F-4154-8F45-68147B0BAD0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -235,6 +237,12 @@ Global
 		{D877C45A-FE94-49B0-80BF-7201F05E9F6D}.Release|x64.Build.0 = Release|Any CPU
 		{D877C45A-FE94-49B0-80BF-7201F05E9F6D}.Release|x86.ActiveCfg = Release|Any CPU
 		{D877C45A-FE94-49B0-80BF-7201F05E9F6D}.Release|x86.Build.0 = Release|Any CPU
+		{BF4A1965-FB2F-4154-8F45-68147B0BAD0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF4A1965-FB2F-4154-8F45-68147B0BAD0B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BF4A1965-FB2F-4154-8F45-68147B0BAD0B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BF4A1965-FB2F-4154-8F45-68147B0BAD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF4A1965-FB2F-4154-8F45-68147B0BAD0B}.Release|x64.ActiveCfg = Release|Any CPU
+		{BF4A1965-FB2F-4154-8F45-68147B0BAD0B}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -263,6 +271,7 @@ Global
 		{0F48DF69-5CFE-477E-8A4D-79777A37917A} = {D75B38BA-5641-449F-8738-93F318875D39}
 		{A1D7F4A5-4351-4059-B30F-CB2298BF91A6} = {7134BB69-848C-490D-B404-6C3ECDF31E92}
 		{D877C45A-FE94-49B0-80BF-7201F05E9F6D} = {7134BB69-848C-490D-B404-6C3ECDF31E92}
+		{BF4A1965-FB2F-4154-8F45-68147B0BAD0B} = {D75B38BA-5641-449F-8738-93F318875D39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3704B709-ACA0-443A-9D6F-6359321FB596}
