@@ -992,11 +992,11 @@ function fnContentFrameworkNotification(sStringTitle, sStringBody, sStringIcon) 
 	}
 }
 function fnHelp() {
-	open("https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/", target = "_blank");
+	open("https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/", target = "_blank");
 }
 //document.getElementsByTagName("body").item(0).onload = fnOnLoad;
 function fnNewWindowAdvertisement() {
-		var sURL = "/WebEdu_LocalVersion_YuQin_DotNetCore21/wwwroot/renshichu/lunwensongshen.htm";
+	var sURL = "/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/renshichu/lunwensongshen.htm";
 		window.open(sURL);//容易被浏览器默认被拦截
 		if (window.confirm('搜索相关资源?')) {
 			window.location.href = sURL;
