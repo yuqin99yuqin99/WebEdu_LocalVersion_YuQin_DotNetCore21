@@ -425,7 +425,31 @@ function fnInitailContents() {
         ;
     }
 
-    cLi[0].getElementsByTagName("SPAN").item(1).click();
+    var sSearch = new URLSearchParams(parent.location.search);
+    if (sSearch.has("text")) //因为https://localhost:5001/webCourse/common/Initial.html，打开了https://localhost:5001/webCourse/common/iframeInitial.html?iWidth=1024&iHeight=738，parent返回的总是https://localhost:5001/webCourse/common/Initial.html，待后续解决返回https://localhost:5001/webCourse/common/iframeInitial.html?iWidth=1024&iHeight=738。当前暂时https://localhost:5001/webCourse/common/Initial.html?text=1676365357375之类解决下述需求。
+    {
+        var sText = sSearch.get("text");//获取URL中的text参数值
+        var iLiLength = cLi.length;
+        var intTargetPassInItem = 0;
+        for (intN = 0; intN < iLiLength; intN++) {
+            var sStringTemp = cLi[intN].getElementsByTagName("A").item(0).attributes.getNamedItem("text").nodeValue;
+            if (sStringTemp == sText) {
+                intTargetPassInItem = intN;
+                break;
+            }
+        }
+        if (intTargetPassInItem == 0) {
+            alert("您指定的是第一个条目，或者，您指定的" + sSearch.get("text") + "这一条目不存在！将自动定位到开始条目，即，将自动定位到整个目录的第一个条目！");
+            cLi[0].getElementsByTagName("SPAN").item(1).click();
+        }
+        else {
+            cLi[intTargetPassInItem].getElementsByTagName("SPAN").item(1).click()
+        }
+    }
+    else {
+        alert("您URL中没有指定?text=的搜索条目！将自动定位到开始条目，即，将自动定位到整个目录的第一个条目！");
+        cLi[0].getElementsByTagName("SPAN").item(1).click();
+    }
 }
 
 function fnContentsRefreshAFromAlreadyAutoNumbered() {//准备改为fnContentsRefreshAFromAlreadyAutoNumbered,因为刷新了编号,还刷新了A的事件特性。

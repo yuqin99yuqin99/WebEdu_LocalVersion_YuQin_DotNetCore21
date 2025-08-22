@@ -14,6 +14,7 @@ window.sDivForContentEditInnerHTML = "";//可用于判断该内容框架是否�
     //document.body.onbeforeunload=fnIsSaved;//检查内容框架是否因编辑而有变化而提示保存等,由于有图象等链接时相对URL会变为绝对，一时无法处理，只好暂时关闭该功能！！！！！！
 //////////////////
 function fnOnLoad() {
+	/**因为可以直接导航到目录的具体条目了，所以下述功能已取消
 	document.title = "欢迎联系QQ：43930878。教与学_本机版_渔琴(Teaching&Learning_LocalVersion_YuQin)";
 	try {
 		var tempTitle = opener.parent.parent.document.title;
@@ -32,6 +33,7 @@ function fnOnLoad() {
 		fnContentFrameworkNotification('欢迎浏览：', '单击此处可浏览整个系统。使用帮助，请咨询：QQ：43930878；。EMail:43930878@qq.com', '/favicon.ico');
 
 	}
+	**/
 	/**
 	finally {
 		fnContentFrameworkNotification('欢迎使用内容：', '使用帮助，请咨询：QQ：43930878；。EMail:43930878@qq.com', '/favicon.ico');
@@ -996,7 +998,7 @@ function fnHelp() {
 }
 //document.getElementsByTagName("body").item(0).onload = fnOnLoad;
 function fnNewWindowAdvertisement() {
-	var sURL = "/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/renshichu/lunwensongshen.htm";
+	var sURL = "../../../../../renshichu/lunwensongshen.htm";
 		window.open(sURL);//容易被浏览器默认被拦截
 		if (window.confirm('搜索相关资源?')) {
 			window.location.href = sURL;
