@@ -101,6 +101,7 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <Content Remove="wwwroot\ts\try\file2.ts" />
     <Content Remove="wwwroot\webCourse\common\script\content - Copy %283%29.js" />
     <Content Remove="wwwroot\webCourse\common\script\content - 复制.js" />
+    <Content Remove="wwwroot\webCourse\common\script\contents - 复制%282%29.js" />
     <Content Remove="wwwroot\webCourse\common\script\contents - 复制.js" />
     <Content Remove="wwwroot\渔琴.ico" />
   </ItemGroup>
@@ -435,6 +436,7 @@ xcopy  /S /E /C /Y "D:\YuQinWebEdu\WebEdu_LocalVersion_YuQin\\RBAC\Scripts" "\Ar
     <None Include="wwwroot\webCourse\common\script\content.js" />
     <None Include="wwwroot\webCourse\common\script\contentExtented.js" />
     <None Include="wwwroot\webCourse\common\script\contents - 勿删.js" />
+    <None Include="wwwroot\webCourse\common\script\contents - 复制(2).js" />
     <None Include="wwwroot\webCourse\common\script\contents - 复制.js" />
     <None Include="wwwroot\webCourse\common\script\contents.js" />
     <None Include="wwwroot\webCourse\common\script\contentsForBatchUploadFlash.js" />

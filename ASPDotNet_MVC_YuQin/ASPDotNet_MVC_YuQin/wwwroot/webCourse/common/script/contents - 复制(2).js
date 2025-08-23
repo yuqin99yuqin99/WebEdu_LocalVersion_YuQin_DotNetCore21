@@ -441,17 +441,14 @@ function fnInitailContents() {
         if (intTargetPassInItem == 0) {
             alert("您指定的是第一个条目，或者，您指定的" + sSearch.get("text") + "这一条目不存在！将自动定位到开始条目，即，将自动定位到整个目录的第一个条目！");
             cLi[0].getElementsByTagName("SPAN").item(1).click();
-            cLi[0].scrollIntoView();
         }
         else {
-            cLi[intTargetPassInItem].getElementsByTagName("SPAN").item(1).click();
-            cLi[intTargetPassInItem].scrollIntoView();
+            cLi[intTargetPassInItem].getElementsByTagName("SPAN").item(1).click()
         }
     }
     else {
         alert("您URL中没有指定?text=的搜索条目！将自动定位到开始条目，即，将自动定位到整个目录的第一个条目！");
         cLi[0].getElementsByTagName("SPAN").item(1).click();
-        cLi[0].scrollIntoView();
     }
 }
 
