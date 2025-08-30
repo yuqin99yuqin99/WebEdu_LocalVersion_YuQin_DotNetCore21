@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>查看教学3D：.x3dv文件</title>
+    <script>function fnViewTeachingPPT() {
+          //  document.getElementById("idHrefOfTeachingPPT").href = "/webcourse/lessons/" + opener.sTeachingPlan;
+              document.getElementById("idHrefOfTeachingPPT").href =  opener.sTeachingPlan;
+             // var sZip = opener.sTeachingPlan.replace(".x3dv",".zip");  
+              document.getElementById("idHrefOfTeachingPPT2").href =  opener.sTeachingPlan.replace(".x3dv",".zip");
+            // document.getElementById("idHrefOfVideo").href = "/webcourse/lessons/"+opener.sVideoOfTeachingPlan;
+            //document.getElementById("idVideo").src = "../lessons/"+opener.sVideoOfTeachingPlan;
+           // document.getElementById("idVideo").src = "/webcourse/lessons/" + opener.sVideoOfTeachingPlan;
+            document.getElementById("idVideo").src =opener.sVideoOfTeachingPlan;
+          //  alert(document.getElementById("idHrefOfTeachingPPT").href + ";" + document.getElementById("idVideo").src);
+        }</script>
+</head>
+<body onload="fnViewTeachingPPT()">
+    <div>
+        请事先安装BS Contact浏览器插件！
+        <video src="" id="idVideo" style="width:100%;height:70%" autoplay="autoplay" loop="loop" controls="controls" />
+    </div>
+    <div>
+        请注意：如果上述未能正常呈现，只能离线查看教学3D：
+        <p>
+            （1）<a href="" id="idHrefOfTeachingPPT">请单击下载教学3D文件的.x3dv格式。</a> 然后双击.x3dv文件，操作系统将打开BS Contact查看。
+        </p>
+        <p>
+            （2）<a href="" id="idHrefOfTeachingPPT2">请单击下载教学3D文件的.zip格式。</a>然后将文件的扩展名修改成为.x3dv。然后双击.x3dv文件，操作系统将打开BS Contact查看。
+        </p>
+    </div>
+</body>
+</html>

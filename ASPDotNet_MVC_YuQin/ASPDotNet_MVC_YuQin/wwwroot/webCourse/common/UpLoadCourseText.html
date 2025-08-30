@@ -33,21 +33,20 @@
     </script>
 </head>
 <body onload="fnForm();">
-    <div>  
-        
+    <div>
+
         <form action="/CreateText/Post?FolderAndFileName=" method="post" enctype="multipart/form-data" id="uploadCourseText">
             <p>
                 <label>选择文件(.doc或docx文件)： </label>
                 <input type="file" name="FileUpload" id="idFileUpload" />
                 <input type="submit" value="提交" id="idSubmit" />
 
-                <div />
-                <div />
-                <!--<div>注：课文最好基于长文档模板编辑制作好以便维护<a href="/webCourse/Templates/LongDocNavigatorWithContents_Book.doc" target="_blank">（长文档模板之一）</a>、<a href="/webCourse/Templates/LongDocNavigatorWithContents_Paper.doc" target="_blank">（长文档模板之二）</a></div>-->
-                <!--上述在具有虚拟目录时href出错-->
-                <div>注：课文最好基于长文档模板编辑制作好以便维护<a href="../Templates/LongDocNavigatorWithContents_Book.doc" target="_blank">（长文档模板之一）</a>、<a href="../Templates/LongDocNavigatorWithContents_Paper.doc" target="_blank">（长文档模板之二）</a></div>
             </p>
         </form>
-</div>
+
+        <!--<div>注：课文最好基于长文档模板编辑制作好以便维护<a href="/webCourse/Templates/LongDocNavigatorWithContents_Book.doc" target="_blank">（长文档模板之一）</a>、<a href="/webCourse/Templates/LongDocNavigatorWithContents_Paper.doc" target="_blank">（长文档模板之二）</a></div>-->
+        <!--上述在具有虚拟目录时href出错-->
+        <div><a href="EduResourceTemplates.html" target="_blank">注：教材资源最好基于长文档模板编辑制作，以便维护</a></div>
+    </div>
 </body>
 </html>

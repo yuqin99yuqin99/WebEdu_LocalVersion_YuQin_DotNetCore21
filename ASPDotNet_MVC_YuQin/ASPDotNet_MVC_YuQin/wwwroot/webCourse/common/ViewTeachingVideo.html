@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>查看教学视频：.mp4文件</title>
+    <script>
+        function fnViewTeachingPPT() {
+          //  document.getElementById("idHrefOfTeachingPPT").href = "/webcourse/lessons/" + opener.sTeachingPlan;
+            //  document.getElementById("idHrefOfTeachingPPT").href =  opener.sTeachingPlan;
+            // document.getElementById("idHrefOfVideo").href = "/webcourse/lessons/"+opener.sVideoOfTeachingPlan;
+            //document.getElementById("idVideo").src = "../lessons/"+opener.sVideoOfTeachingPlan;
+           // document.getElementById("idVideo").src = "/webcourse/lessons/" + opener.sVideoOfTeachingPlan;
+            document.getElementById("idVideo").src =opener.sTeachingPlan;
+          //  alert(document.getElementById("idHrefOfTeachingPPT").href + ";" + document.getElementById("idVideo").src);
+        }
+    </script>
+</head>
+<body onload="fnViewTeachingPPT()">
+    <div>
+        <video src="" id="idVideo" style="width:100%;height:70%" autoplay="autoplay" loop="loop" controls="controls" />
+    </div>
+</body>
+</html>

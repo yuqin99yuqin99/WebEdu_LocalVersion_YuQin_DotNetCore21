@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>查看教学2D：.svgz文件</title>
+    <script>
+        function fnViewTeachingPPT() {
+          //  document.getElementById("idHrefOfTeachingPPT").href = "/webcourse/lessons/" + opener.sTeachingPlan;
+              document.getElementById("idHrefOfTeachingPPT").href =  opener.sTeachingPlan;
+            // document.getElementById("idHrefOfVideo").href = "/webcourse/lessons/"+opener.sVideoOfTeachingPlan;
+            //document.getElementById("idVideo").src = "../lessons/"+opener.sVideoOfTeachingPlan;
+           // document.getElementById("idVideo").src = "/webcourse/lessons/" + opener.sVideoOfTeachingPlan;
+            document.getElementById("idVideo").src =opener.sTeachingPlan;
+          //  alert(document.getElementById("idHrefOfTeachingPPT").href + ";" + document.getElementById("idVideo").src);
+        }
+    </script>
+</head>
+<body onload="fnViewTeachingPPT()">
+    <div>
+        <!-- <video src="" id="idVideo" style="width:100%;height:80%" autoplay="autoplay" loop="loop" />-->
+        <!--  <iframe src="" id="idVideo" style="width:100%;height:80%" /> -->
+            <img src="" id="idVideo" style="width:100%;height:70%" />
+        </div>
+        <div>如果上述未能正常显示，那么只能离线查看教学2D：
+        <a href="" id="idHrefOfTeachingPPT" >请单击下载教学2D，离线查看</a>
+        </div>
+    </body>
+    </html>

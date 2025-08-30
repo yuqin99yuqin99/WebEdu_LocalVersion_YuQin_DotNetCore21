@@ -424,35 +424,52 @@ function fnInitailContents() {
     else {
         ;
     }
-
-    var sSearch = new URLSearchParams(parent.location.search);
-    if (sSearch.has("text")) //因为https://localhost:5001/webCourse/common/Initial.html，打开了https://localhost:5001/webCourse/common/iframeInitial.html?iWidth=1024&iHeight=738，parent返回的总是https://localhost:5001/webCourse/common/Initial.html，待后续解决返回https://localhost:5001/webCourse/common/iframeInitial.html?iWidth=1024&iHeight=738。当前暂时https://localhost:5001/webCourse/common/Initial.html?text=1676365357375之类解决下述需求。
-    {
-        var sText = sSearch.get("text");//获取URL中的text参数值
-        var iLiLength = cLi.length;
-        var intTargetPassInItem = 0;
-        for (intN = 0; intN < iLiLength; intN++) {
-            var sStringTemp = cLi[intN].getElementsByTagName("A").item(0).attributes.getNamedItem("text").nodeValue;
-            if (sStringTemp == sText) {
-                intTargetPassInItem = intN;
-                break;
-            }
-        }
-        if (intTargetPassInItem == 0) {
-            alert("您指定的是第一个条目，或者，您指定的" + sSearch.get("text") + "这一条目不存在！将自动定位到开始条目，即，将自动定位到整个目录的第一个条目！");
+    /** 
+    const params = {};
+    const searchParams = new URLSearchParams(parent.location.search);
+    for (const [key, value] of searchParams.entries()) {
+        params[key] = value;
+    }
+   // const searchString1 =window.location.search;
+    //const searchString2 = new URLSearchParams(parent.location.search);
+   // const searchParams = new URLSearchParams();
+   // searchParams.append('tags', 'vue');
+   window.alert(params.toString());
+    window.alert(searchParams);
+     window.alert(parent.document.URL);
+     **/
+    //window.alert(parent.location.search.lastIndexOf("?text="));
+   // window.alert(parent.location.search);
+   var sSearch =new URLSearchParams(parent.location.search);
+       if(sSearch.has("text")) //因为https://localhost:5001/webCourse/common/Initial.html，打开了https://localhost:5001/webCourse/common/iframeInitial.html?iWidth=1024&iHeight=738，parent返回的总是https://localhost:5001/webCourse/common/Initial.html，待后续解决返回https://localhost:5001/webCourse/common/iframeInitial.html?iWidth=1024&iHeight=738。当前暂时https://localhost:5001/webCourse/common/Initial.html?text=1676365357375之类解决下述需求。
+        {
+         var sText=sSearch.get("text");//获取URL中的text参数值
+         var iLiLength = cLi.length;
+         var intTargetPassInItem = 0;
+         for (intN = 0; intN < iLiLength; intN++) {
+         var sStringTemp = cLi[intN].getElementsByTagName("A").item(0).attributes.getNamedItem("text").nodeValue;
+         if (sStringTemp == sText) {
+            intTargetPassInItem = intN;
+            break;
+                                    }
+                                 }
+         if (intTargetPassInItem == 0) {
+             alert("您指定的是第一个条目，或者，您指定的"+sSearch.get("text")+"这一条目不存在！将自动定位到开始条目，即，将自动定位到整个目录的第一个条目！");
+             cLi[0].getElementsByTagName("SPAN").item(1).click();
+             cLi[0].scrollIntoView();
+                                 }
+          else {
+         cLi[intTargetPassInItem].getElementsByTagName("SPAN").item(1).click();
+         cLi[intTargetPassInItem].scrollIntoView();
+         }
+         }
+         else
+        {
+            alert("您URL中没有指定?text=的搜索条目！将自动定位到开始条目，即，将自动定位到整个目录的第一个条目！");
             cLi[0].getElementsByTagName("SPAN").item(1).click();
             cLi[0].scrollIntoView();
-        }
-        else {
-            cLi[intTargetPassInItem].getElementsByTagName("SPAN").item(1).click();
-            cLi[intTargetPassInItem].scrollIntoView();
-        }
-    }
-    else {
-        alert("您URL中没有指定?text=的搜索条目！将自动定位到开始条目，即，将自动定位到整个目录的第一个条目！");
-        cLi[0].getElementsByTagName("SPAN").item(1).click();
-        cLi[0].scrollIntoView();
-    }
+            }
+       
 }
 
 function fnContentsRefreshAFromAlreadyAutoNumbered() {//准备改为fnContentsRefreshAFromAlreadyAutoNumbered,因为刷新了编号,还刷新了A的事件特性。
@@ -1471,6 +1488,8 @@ function fnFindAndView(sResourceType, sResourcePathPart,sResourceName, sResource
                 case "TEXT": { return; break; }
                 case "PLAY": {fnViewTeachingVideo(); break; }
                 case "TEACHINGPLAN": { fnViewTeachingPlan(); break;}
+                case "S2D": { fnViewTeaching2D(); break; }
+                case "S3D": { fnViewTeaching3D(); break;}
                 case "HOMEWORKANDTEST": { fnViewHomeworkAndTest(); break;}
                 case "TEACHINGENGINEERING": { fnViewTeachingEngineering(); break;}
                 default: { var win = open("../common/blank.html", "NoResult", "width=400,height=300,top=" + (screen.height - 300) / 2 + ",left=" + (screen.width - 400) / 2); win.document.write("<p style='text-align:center'>没有查询到相关资源！</p>"); }//alert窗口容易被遮挡。所以没选用  
@@ -1519,7 +1538,8 @@ function fnViewText() {
         }
         else {
             alert('教材资源默认在“内容框架”中显示，而不象教学PPT、动画、教/学笔记那样在独立窗口中显示。当前操作将在独立窗口中显示教材资源，主要用于多部分教材资源比较时使用。此时右键菜单中提供的在线编辑等功能将被禁用！但仍然可试验按住Ctrl,Shift,Alt键滚动鼠标而放缩、移动课文等功能！');
-            var sHeadUrl = "/webcourse/lessons/";
+            //var sHeadUrl = "/webcourse/lessons/";//因为github发布可能增加路径部分，所以改写。
+            var sHeadUrl = "../lessons/";
             var sText = sHeadUrl + "content/book" + sPathPartForText + "/" + sTextName + "/" + sTextName + ".htm";
             //showModelessDialog(sText, window,"help:0;resizable:1;dialogWidth:"+screen.width*0.8+"px;dialogHeight:"+screen.height*0.8+"px;status:0;");//scroll:1?
             //open(sText, window, "help:0;resizable:1;dialogWidth:" + screen.width * 0.8 + "px;dialogHeight:" + screen.height * 0.8 + "px;status:0;");
@@ -1552,12 +1572,79 @@ function fnViewTeachingVideo() {
             window.oSrcElement.childNodes.item(0).nodeValue = window.oSrcElement.parentNode.attributes.getNamedItem("sN").nodeValue;
             //parent.frames("sIframeTitle").document.getElementById("sIdLanguage").childNodes.item(0).nodeValue=window.sNativeLanguage;//因为无法获取Title框架，暂时注释，需改写。								
            // var sHeadUrl = "";
-            var sHeadUrl = "/webcourse/lessons/";
+             //var sHeadUrl = "/webcourse/lessons/";//因为github发布可能增加路径部分，所以改写。
+            var sHeadUrl = "../lessons/";
             var sTeachingPlanName = window.oSrcElement.parentNode.attributes.getNamedItem("play").nodeValue;
             //window.sTeachingPlan=sHeadUrl+"content/teachingPlan/"+sTeachingPlanName+"/"+sTeachingPlanName+".htm";				 
             window.sTeachingPlan = sHeadUrl + "content/teachingVideo/" + sTeachingPlanName + "/" + sTeachingPlanName + ".mp4"
             //showModelessDialog("../common/windowOrFullScreen_techingPlan.aspx", window,"help:0;resizable:1;dialogWidth:"+screen.width*0.8+"px;dialogHeight:"+screen.height*0.5+"px;status:0;");//已不支持，改写
-            var win=open(window.sTeachingPlan, "TeachingVideo", "help:0;resizable:1;dialogWidth:" + screen.width * 0.8 + "px;dialogHeight:" + screen.height * 0.5 + "px;status:0;");
+            var win=open("../common/ViewTeachingVideo.html", "TeachingVideo", "help:0;resizable:1;dialogWidth:" + screen.width * 0.8 + "px;dialogHeight:" + screen.height * 0.5 + "px;status:0;");
+            window.childWindow = win;
+        }
+    }
+
+    function fnViewTeaching2D() {
+    fnTooManyModelDialog(); 
+    window.oSrcElement.click();
+    //if(window.oSrcElement.parentNode.parentNode===window.oSrcElement.parentNode.parentNode.parentNode.childNodes.item(0)&&window.oSrcElement.parentNode.parentNode.parentNode.parentNode.tagName.toUpperCase()==="DIV")
+    //{
+    //		alert("该条目是根条目，没有教学视频!");		
+    //}
+    //else
+    //{
+        var sTeachingPlanName = window.oSrcElement.parentNode.attributes.getNamedItem("s2d").nodeValue;
+        if (sTeachingPlanName == "") {
+            var bBoolean = confirm('该条目"' + window.oSrcElement.childNodes.item(0).nodeValue + '"暂时没有教学2D!单击"确定"将打开“资源概览”窗口查看教学2D；单击"取消"将退出，然后可通过右键菜单中的命令为该条目上传教学2D');
+            if (bBoolean) {
+                fnGeneral();                              
+            }
+        }
+        else {
+            window.oSrcElement.parentNode.setAttribute("sFId", "");
+            window.oSrcElement.childNodes.item(0).nodeValue = window.oSrcElement.parentNode.attributes.getNamedItem("sN").nodeValue;
+            //parent.frames("sIframeTitle").document.getElementById("sIdLanguage").childNodes.item(0).nodeValue=window.sNativeLanguage;//因为无法获取Title框架，暂时注释，需改写。								
+           // var sHeadUrl = "";
+            //var sHeadUrl = "/webcourse/lessons/";//因为github发布可能增加路径部分，所以改写。
+            var sHeadUrl = "../lessons/";
+            var sTeachingPlanName = window.oSrcElement.parentNode.attributes.getNamedItem("s2d").nodeValue;
+            //window.sTeachingPlan=sHeadUrl+"content/teachingPlan/"+sTeachingPlanName+"/"+sTeachingPlanName+".htm";				 
+            window.sTeachingPlan = sHeadUrl + "content/teaching2D/" + sTeachingPlanName + "/" + sTeachingPlanName + ".svgz"
+            //showModelessDialog("../common/windowOrFullScreen_techingPlan.aspx", window,"help:0;resizable:1;dialogWidth:"+screen.width*0.8+"px;dialogHeight:"+screen.height*0.5+"px;status:0;");//已不支持，改写
+            var win=open("../common/ViewTeaching2D.html", "Teaching2D", "help:0;resizable:1;dialogWidth:" + screen.width * 0.8 + "px;dialogHeight:" + screen.height * 0.5 + "px;status:0;");
+            window.childWindow = win;
+        }
+    }
+
+        function fnViewTeaching3D() {
+    fnTooManyModelDialog(); 
+    window.oSrcElement.click();
+    //if(window.oSrcElement.parentNode.parentNode===window.oSrcElement.parentNode.parentNode.parentNode.childNodes.item(0)&&window.oSrcElement.parentNode.parentNode.parentNode.parentNode.tagName.toUpperCase()==="DIV")
+    //{
+    //		alert("该条目是根条目，没有教学视频!");		
+    //}
+    //else
+    //{
+  
+        var sTeachingPlanName = window.oSrcElement.parentNode.attributes.getNamedItem("s3d").nodeValue;
+        if (sTeachingPlanName == "") {
+            var bBoolean = confirm('该条目"' + window.oSrcElement.childNodes.item(0).nodeValue + '"暂时没有教学3D!单击"确定"将打开“资源概览”窗口查看教学3D；单击"取消"将退出，然后可通过右键菜单中的命令为该条目上传教学3D');
+            if (bBoolean) {
+                fnGeneral();                              
+            }
+        }
+        else {
+            window.oSrcElement.parentNode.setAttribute("sFId", "");
+            window.oSrcElement.childNodes.item(0).nodeValue = window.oSrcElement.parentNode.attributes.getNamedItem("sN").nodeValue;
+            //parent.frames("sIframeTitle").document.getElementById("sIdLanguage").childNodes.item(0).nodeValue=window.sNativeLanguage;//因为无法获取Title框架，暂时注释，需改写。								
+           // var sHeadUrl = "";
+           //var sHeadUrl = "/webcourse/lessons/";//因为github发布可能增加路径部分，所以改写。
+            var sHeadUrl = "../lessons/";
+            var sTeachingPlanName = window.oSrcElement.parentNode.attributes.getNamedItem("s3d").nodeValue;
+            //window.sTeachingPlan=sHeadUrl+"content/teachingPlan/"+sTeachingPlanName+"/"+sTeachingPlanName+".htm";				 
+            window.sTeachingPlan = sHeadUrl + "content/teaching3D/" + sTeachingPlanName + "/" + sTeachingPlanName + ".x3dv"
+            //showModelessDialog("../common/windowOrFullScreen_techingPlan.aspx", window,"help:0;resizable:1;dialogWidth:"+screen.width*0.8+"px;dialogHeight:"+screen.height*0.5+"px;status:0;");//已不支持，改写
+           // var win=open(window.sTeachingPlan, "Teaching3D", "help:0;resizable:1;dialogWidth:" + screen.width * 0.8 + "px;dialogHeight:" + screen.height * 0.5 + "px;status:0;");
+           var win=open("../common/ViewTeaching3D.html", "Teaching3D", "help:0;resizable:1;dialogWidth:" + screen.width * 0.8 + "px;dialogHeight:" + screen.height * 0.5 + "px;status:0;");
             window.childWindow = win;
         }
     }
@@ -1584,7 +1671,8 @@ function fnViewTeachingPlan() {
             window.oSrcElement.childNodes.item(0).nodeValue = window.oSrcElement.parentNode.attributes.getNamedItem("sN").nodeValue;
             //parent.frames("sIframeTitle").document.getElementById("sIdLanguage").childNodes.item(0).nodeValue=window.sNativeLanguage;//因为无法获取Title框架，暂时注释，需改写。								
             //var sHeadUrl = "";
-            var sHeadUrl = "/webcourse/lessons/";
+           //var sHeadUrl = "/webcourse/lessons/";//因为github发布可能增加路径部分，所以改写。
+            var sHeadUrl = "../lessons/";
             var sTeachingPlanName = window.oSrcElement.parentNode.attributes.getNamedItem("teachingPlan").nodeValue;
             //window.sTeachingPlan=sHeadUrl+"content/teachingPlan/"+sTeachingPlanName+"/"+sTeachingPlanName+".htm";				 
             window.sTeachingPlan = sHeadUrl + "content/teachingPlan/" + sTeachingPlanName + "/" + sTeachingPlanName + ".pptx"
@@ -1618,7 +1706,8 @@ function fnViewHomeworkAndTest() {
         window.oSrcElement.childNodes.item(0).nodeValue = window.oSrcElement.parentNode.attributes.getNamedItem("sN").nodeValue;
         //parent.frames("sIframeTitle").document.getElementById("sIdLanguage").childNodes.item(0).nodeValue=window.sNativeLanguage;//因为无法获取Title框架，暂时注释，需改写。								
         // var sHeadUrl = "";
-        var sHeadUrl = "/webcourse/lessons/";
+        //var sHeadUrl = "/webcourse/lessons/";//因为github发布可能增加路径部分，所以改写。
+         var sHeadUrl = "../lessons/";
         //var sTeachingPlanName = window.oSrcElement.parentNode.getAttribute("homeworkAndTest");
         //window.sTeachingPlan=sHeadUrl+"content/teachingPlan/"+sTeachingPlanName+"/"+sTeachingPlanName+".htm";				 
         window.sHomeworkAndTest = sHeadUrl + "content/HomeworkAndTest/" + sHomeworkAndTest + "/" + sHomeworkAndTest + ".htm"
@@ -1650,7 +1739,8 @@ function fnViewTeachingEngineering() {
         window.oSrcElement.childNodes.item(0).nodeValue = window.oSrcElement.parentNode.attributes.getNamedItem("sN").nodeValue;
         //parent.frames("sIframeTitle").document.getElementById("sIdLanguage").childNodes.item(0).nodeValue=window.sNativeLanguage;//因为无法获取Title框架，暂时注释，需改写。								
         // var sHeadUrl = "";
-        var sHeadUrl = "/webcourse/lessons/";
+           //var sHeadUrl = "/webcourse/lessons/";//因为github发布可能增加路径部分，所以改写。
+           var sHeadUrl = "../lessons/";
         //var sTeachingPlanName = window.oSrcElement.parentNode.getAttribute("homeworkAndTest");
         //window.sTeachingPlan=sHeadUrl+"content/teachingPlan/"+sTeachingPlanName+"/"+sTeachingPlanName+".htm";				 
         window.sTeachingEngineering = sHeadUrl + "content/teachingEngineering/" + sTeachingEngineering + "/" + sTeachingEngineering + ".htm"
@@ -2375,23 +2465,23 @@ function fnUploadTeachingPlan() {
         var sTeachingPlan = "";
         var sFId = window.oSrcElement.parentNode.attributes.getNamedItem("sFId").nodeValue;//判断是国语还是外语,sFId=""是国语,sFId="1"是外语
         if (sFId == "") {
-            if (window.oSrcElement.parentNode.attributes.getNamedItem("teachingPlan").nodeValue == "") {
+            if (window.oSrcElement.parentNode.attributes.getNamedItem("teachingplan").nodeValue == "") {
                 var oDate = new Date();
                 sTeachingPlan = oDate.getTime();
-                window.oSrcElement.parentNode.setAttribute("teachingPlan", sTeachingPlan);
+                window.oSrcElement.parentNode.setAttribute("teachingplan", sTeachingPlan);
             }
             else {
-                sTeachingPlan = window.oSrcElement.parentNode.attributes.getNamedItem("teachingPlan").nodeValue;
+                sTeachingPlan = window.oSrcElement.parentNode.attributes.getNamedItem("teachingplan").nodeValue;
             }
         }
         else {
-            if (window.oSrcElement.parentNode.attributes.getNamedItem("teachingPlanF").nodeValue == "") {
+            if (window.oSrcElement.parentNode.attributes.getNamedItem("teachingplanF").nodeValue == "") {
                 var oDate = new Date();
                 sTeachingPlan = oDate.getTime();
-                window.oSrcElement.parentNode.setAttribute("teachingPlanF", sTeachingPlan);
+                window.oSrcElement.parentNode.setAttribute("teachingplanF", sTeachingPlan);
             }
             else {
-                sTeachingPlan = window.oSrcElement.parentNode.attributes.getNamedItem("teachingPlanF").nodeValue;
+                sTeachingPlan = window.oSrcElement.parentNode.attributes.getNamedItem("teachingplanF").nodeValue;
             }
         }
         //alert('修改为如果是国语状态(即sFId=""),上传到teachingPlan文件夹下,同时DOC源文件传到teachingPlan_origin下，PPT源文件和转化后的文件使用相同的时间序号，因为是绑定在一起的(界面中提示用户PPT源文件已同时上传);否则传到teachingPlan_foreign文件夹下,同时DOC源文件传到teachingPlan_origin_foreign下，DOC源文件和转化后的文件使用相同的时间序号，因为是绑定在一起的(界面中提示用户DOC源文件已同时上传)。');
@@ -3360,12 +3450,12 @@ function fnUpLoadPresentation() {
         return;
     }
 
-    if (window.oSrcElement.parentNode.getAttribute("teachingPlan").nodeValue === null || window.oSrcElement.parentNode.getAttribute("teachingPlan") == "") {
+    if (window.oSrcElement.parentNode.getAttribute("teachingplan").nodeValue === null || window.oSrcElement.parentNode.getAttribute("teachingplan") == "") {
         var oDate = new Date();
         var sFileName = oDate.getTime();
-        window.oSrcElement.parentNode.setAttribute("teachingPlan", sFileName);
+        window.oSrcElement.parentNode.setAttribute("teachingplan", sFileName);
     }
-    window.presentationPathPart = window.oSrcElement.parentNode.getAttribute("teachingPlan");
+    window.presentationPathPart = window.oSrcElement.parentNode.getAttribute("teachingplan");
     alert(window.presentationPathPart);
     var win = open("../common/UpLoadPresentation.html", "UpLoadPresentation", "width=500,height=350,top=" + (screen.height - 350) / 2 + ",left=" + (screen.width - 500) / 2);
     window.childWindow = win;
@@ -3387,6 +3477,44 @@ function fnUpLoadTeachingVideo() {
     window.TeachingVideoPathPart = window.oSrcElement.parentNode.getAttribute("play");
     alert(window.TeachingVideoPathPart);
     var win = open("../common/UpLoadTeachingVideo.html", "UpLoadTeachingVideo", "width=500,height=350,top=" + (screen.height - 350) / 2 + ",left=" + (screen.width - 500) / 2);
+    window.childWindow = win;
+}
+
+function fnUpLoad2D() {
+    fnTooManyModelDialog(); 
+    window.oSrcElement.click();
+    if (window.oSrcElement.parentNode.parentNode === window.oSrcElement.parentNode.parentNode.parentNode.childNodes.item(0) && window.oSrcElement.parentNode.parentNode.parentNode.parentNode.tagName.toUpperCase() === "DIV") {
+        alert("该条目是根条目，不能被修改!");
+        return;
+    }
+    //if (window.oSrcElement.parentNode.attributes.getNamedItem("play").nodeValue == "") {
+    if (window.oSrcElement.parentNode.getAttribute("s2D") === null || window.oSrcElement.parentNode.getAttribute("s2D") == "") {//如果特性不存在
+        var oDate = new Date();
+        var sFileName = oDate.getTime();
+        window.oSrcElement.parentNode.setAttribute("s2D", sFileName);
+    }
+    window.TeachingVideoPathPart = window.oSrcElement.parentNode.getAttribute("s2D");
+    alert(window.TeachingVideoPathPart);
+    var win = open("../common/UpLoadTeaching2D.html", "UpLoadTeaching2D", "width=500,height=350,top=" + (screen.height - 350) / 2 + ",left=" + (screen.width - 500) / 2);
+    window.childWindow = win;
+}
+
+function fnUpLoad3D() {
+    fnTooManyModelDialog(); 
+    window.oSrcElement.click();
+    if (window.oSrcElement.parentNode.parentNode === window.oSrcElement.parentNode.parentNode.parentNode.childNodes.item(0) && window.oSrcElement.parentNode.parentNode.parentNode.parentNode.tagName.toUpperCase() === "DIV") {
+        alert("该条目是根条目，不能被修改!");
+        return;
+    }
+    //if (window.oSrcElement.parentNode.attributes.getNamedItem("play").nodeValue == "") {
+    if (window.oSrcElement.parentNode.getAttribute("s3D") === null || window.oSrcElement.parentNode.getAttribute("s3D") == "") {//如果特性不存在
+        var oDate = new Date();
+        var sFileName = oDate.getTime();
+        window.oSrcElement.parentNode.setAttribute("s3D", sFileName);
+    }
+    window.TeachingVideoPathPart = window.oSrcElement.parentNode.getAttribute("s3D");
+    alert(window.TeachingVideoPathPart);
+    var win = open("../common/UpLoadTeaching3D.html", "UpLoadTeaching3D", "width=500,height=350,top=" + (screen.height - 350) / 2 + ",left=" + (screen.width - 500) / 2);
     window.childWindow = win;
 }
 
@@ -3520,24 +3648,39 @@ function fnGeneral() {
    // var sAOnclickAttribute = '<a href="" onclick="event.returnValue=false;opener.parent.document.getElementById(\'sIFrameContents\').contentWindow.fnFindAndView("1","2","3","4");alert();" ';
     var sAOnclickAttribute = '<a href="" onclick="event.returnValue=false;opener.fnFindAndView(event.srcElement.getAttribute(\'attrResourceType\'),event.srcElement.innerText,event.srcElement.getAttribute(\'attrResourceName\'),event.srcElement.getAttribute(\'attrResourceFileExtentionWithDot\'))" ';
     var oDivTemp = document.getElementById("sDiv");//引用整个SDIV对象
-    var cATemp = oDivTemp.getElementsByTagName("A");//引用所有A对象    
+    var cATemp = oDivTemp.getElementsByTagName("A");//引用所有A对象 
     for (var i = 0; i < cATemp.length; i++) {
         sRowOfGeneral +=
             sSeperationLeft + cATemp[i].textContent + sSeperationRight + sSeperationLine
             + sSeperationLeft + "教材资源：" + sAOnclickAttribute + " title='单击将跳转到对应的目录条目' attrResourceType='text' attrResourceName='教材资源' attrResourceFileExtentionWithDot='.htm'>" + cATemp[i].getAttribute("text") + "</a>" + sSeperation + sSeperationRight + sSeperationLine
+            + sSeperationLeft + "教学工程文档：" + sAOnclickAttribute + " title='单击将跳转到对应的目录条目' attrResourceType='teachingEngineering' attrResourceName='教学工程文档' attrResourceFileExtentionWithDot='.htm'>" + cATemp[i].getAttribute("teachingEngineering") + "</a>" + sSeperation + sSeperationRight + sSeperationLine 
         + sSeperationLeft + "教学视频：" + sAOnclickAttribute + " title='单击将跳转到对应的目录条目' attrResourceType='play' attrResourceName='教学视频' attrResourceFileExtentionWithDot='.mp4'>" + cATemp[i].getAttribute("play") + "</a>" + sSeperation + sSeperationRight + sSeperationLine
         + sSeperationLeft + "教学PPT：" + sAOnclickAttribute + " title='单击将跳转到对应的目录条目' attrResourceType='teachingPlan' attrResourceName='教学PPT' attrResourceFileExtentionWithDot='.pptx'>" + cATemp[i].getAttribute("teachingplan") + "</a>" + sSeperation + sSeperationRight + sSeperationLine
-        + sSeperationLeft + "作业与测试：" + sAOnclickAttribute + " title='单击将跳转到对应的目录条目' attrResourceType='homeworkAndTest' attrResourceName='作业与测试' attrResourceFileExtentionWithDot='.htm'>" + cATemp[i].getAttribute("homeworkAndTest") + "</a>" + sSeperation + sSeperationRight + sSeperationLine
-        + sSeperationLeft + "教学工程文档：" + sAOnclickAttribute + " title='单击将跳转到对应的目录条目' attrResourceType='teachingEngineering' attrResourceName='教学工程文档' attrResourceFileExtentionWithDot='.htm'>" + cATemp[i].getAttribute("teachingEngineering") + "</a>" + sSeperation + sSeperationRight
-            + sSeperationLine + sSeperationLine;
+        + sSeperationLeft + "教学2D：" + sAOnclickAttribute + " title='单击将跳转到对应的目录条目' attrResourceType='s2d' attrResourceName='教学2D' attrResourceFileExtentionWithDot='.svgz'>" + cATemp[i].getAttribute("s2d") + "</a>" + sSeperation + sSeperationRight + sSeperationLine
+        + sSeperationLeft + "教学3D：" + sAOnclickAttribute + " title='单击将跳转到对应的目录条目' attrResourceType='s3d' attrResourceName='教学3D' attrResourceFileExtentionWithDot='.x3dv'>" + cATemp[i].getAttribute("s3d") + "</a>" + sSeperation + sSeperationRight + sSeperationLine
+        + sSeperationLeft + "作业与测试：" + sAOnclickAttribute + " title='单击将跳转到对应的目录条目' attrResourceType='homeworkAndTest' attrResourceName='作业与测试' attrResourceFileExtentionWithDot='.htm'>" + cATemp[i].getAttribute("homeworkAndTest") + "</a>" + sSeperation + sSeperationRight + sSeperationLine+ sSeperationLine
+       ;
     }
-    //console.log(sRowOfGeneral);
-
-    var win = open("../common/blank.html", "General", "scrollbars=yes,width=800,height=600,top=" + (screen.height - 600) / 2 + ",left=" + (screen.width - 800) / 2);
-    // win.document.body.innerHTML=sRowOfGeneral;
-    win.document.write(sRowOfGeneral);//实现了预期，但是好像违背了安全性封装规则？难道是open打开的窗口就可以违背？（因为此时的窗口菜单栏由浏览器控制，无法JS控制，而无法欺骗用户？）
+   
+  
+  //  console.log(sRowOfGeneral);
+  // alert(sRowOfGeneral);
+  
+window.alert("迫不得已选用了内容窗口呈现，而不是新开窗口呈现（因为不知是否浏览器的Bug！新开窗口无法滚动查看所有条目！）");
+parent.document.getElementById("sIframeContent").contentWindow.document.write(sRowOfGeneral);//实现了预期，但是好像违背了安全性封装规则？难道是open打开的窗口就可以违背？（因为此时的窗口菜单栏由浏览器控制，无法JS控制，而无法欺骗用户？）
+    var win = open("../common/blank.html", "General", "scrollbars=,width=800,height=600,top=" + (screen.height - 600) / 2 + ",left=" + (screen.width - 800) / 2);
+    win.onload = function() {
+  try {
+    win.document.body.style.overflow = 'scroll';
+  } catch (e) {}
+};
+   // var win = open("../common/blank.html", "General",  "help:0;resizable:1;dialogWidth:" + screen.width * 0.8 + "px;dialogHeight:" + screen.height * 0.8 + "px;status:0;");
+  //win.document.body.innerHTML=sRowOfGeneral;
+   
+ // win.document.write('<body  style="overflow:scroll;">'+sRowOfGeneral+'<body>');//实现了预期，但是好像违背了安全性封装规则？难道是open打开的窗口就可以违背？（因为此时的窗口菜单栏由浏览器控制，无法JS控制，而无法欺骗用户？）
+ win.document.write(sRowOfGeneral);//实现了预期，但是好像违背了安全性封装规则？难道是open打开的窗口就可以违背？（因为此时的窗口菜单栏由浏览器控制，无法JS控制，而无法欺骗用户？）
+  win.document.body.style.overflow = 'scroll';
     window.childWindow = win;
- 
 }
 function fnSearch() {
     
@@ -3555,25 +3698,15 @@ function fnAdvertisement() {
         var advertisement = open("../../../renshichu/lunwensongshen.htm", "advertisement");
     }
     else {
-        var advertisement = open("/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/renshichu/lunwensongshen.htm");//网站
+        var advertisement = open("/WebEdu_LocalVersion_YuQin_DotNetCore2.1/WebEdu_LocalVersion_YuQin_DotNetCore21/wwwroot/renshichu/lunwensongshen.htm");//网站
     }
 }
 function fnMargee() {
     fnTooManyModelDialog();
     //EV_modeAlert();//弹出屏蔽层.好像没起什么作用！
    // var advertisement = open("../../../renshichu/lunwensongshen.htm", "advertisement");
-    if (window.confirm('搜素相关资源?')) {
-        if (window.document.URL.toString().toUpperCase().indexOf("://LOCALHOST")>=0) { //本机
-            var advertisement = open("../../../renshichu/lunwensongshen.htm", "advertisement");
-        }
-        else {
-            var advertisement = open("/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/renshichu/lunwensongshen.htm");//网站
-        }
-    }
-    else {
-    var winSearch = open('https://www.baidu.com/s?wd=%E6%95%99%E8%82%B2%E6%A1%86%E6%9E%B6%E4%B8%8E%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E2%80%9C%E6%95%B0%E5%AD%97%E5%8C%96%E8%AE%A1%E7%AE%97%E6%80%9D%E7%BB%B4%E2%80%9D%E2%80%9C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E2%80%9D%E7%BB%9F%E4%B8%80%E7%9A%84%E8%A7%86%E8%A7%92&rsv_bp=0&n=2&inputT=2611', "search");
-}
-       
+    var winSearch = open('https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1689408797769', "search");
+
    // var win = open("../common/Marquee.html", "Marquee", "scrollbars=yes,width=400,height=300,top=" + (screen.height - 300) / 2 + ",left=" + (screen.width - 400) / 2);   
     window.childWindow = winSearch;
     //window.childWindow.focus();//子窗口获取焦点

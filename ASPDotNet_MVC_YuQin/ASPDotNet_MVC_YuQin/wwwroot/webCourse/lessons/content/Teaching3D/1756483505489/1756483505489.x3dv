@@ -1,0 +1,277 @@
+#VRML V2.0 utf8
+Viewpoint{
+	position -5 0 50
+	}
+DEF C6H6 Transform{
+children[
+Transform{	#c1
+	children [
+		DEF carbon Shape{
+			appearance Appearance{
+				material Material{ diffuseColor 1 0 0 }
+						}
+			geometry Sphere{ radius 1.2 }
+				}
+		]
+	}
+Transform{
+	translation 2 0 -3.464
+	children [ USE carbon ]
+	}
+Transform{
+	translation 6 0 -3.464
+	children [ USE carbon ]
+	}
+Transform{
+	translation 8 0 0
+	children [ USE carbon ]
+	}
+Transform{
+	translation 6 0 3.464
+	children [ USE carbon ]
+	}
+Transform{
+	translation 2 0 3.464
+	children [ USE carbon ]
+	}
+Transform{	#c_cBond
+	translation 1 0 -1.732
+	rotation .866 0 .5 1.57079635
+	children [
+		DEF c_cBond Shape{
+			appearance Appearance{
+				material Material{ diffuseColor 0 1 0 }
+						}
+			geometry Cylinder{
+				radius .25 
+				height 4
+					}
+				}
+		]
+	}
+Transform{
+	translation 4 0 -3.464
+	rotation 0 0 1 1.57079635
+	children [ USE c_cBond ]
+	}
+Transform{
+	translation 7 0 -1.732
+	rotation .866 0 -.5 1.57079635
+	children [ USE c_cBond ]
+	}
+Transform{
+	translation 7 0 1.732
+	rotation 0.866 0 .5 1.57079635
+	children [ USE c_cBond ]
+	}
+Transform{
+	translation 4 0 3.464
+	rotation 0 0 1 1.57079635
+	children [ USE c_cBond ]
+	}
+Transform{
+	translation 1 0 1.732
+	rotation .866 0 -.5 1.57079635
+	children [ USE c_cBond ]
+	}
+Transform{	#c_cBond2
+	translation 1.5 0 -1.5
+	rotation .866 0 .5 1.57079635
+	children [
+		DEF c_cBond2 Shape{
+			appearance Appearance{
+				material Material{ diffuseColor 0 0 1 }
+						}
+			geometry Cylinder{
+				radius .25
+				height 1.6 
+					}
+				}
+		]
+	}
+Transform{
+	translation 6.5 0 -1.5
+	rotation .866 0 -.5 1.57079635
+	children [ USE c_cBond2 ]
+	}
+Transform{
+	translation 4 0 2.9
+	rotation 0 0 1 1.57079635
+	children [ USE c_cBond2 ]
+	}
+Transform{	#c_hBond
+	translation -1.7 0 0
+	rotation 0 0 1 1.57079635
+	children [
+		Shape{
+			appearance Appearance{
+				material Material{ diffuseColor 1 1 0 }
+						}
+			geometry Cylinder{
+					radius .25
+					height 1
+					}
+			}
+		]
+	}
+DEF touchSensor TouchSensor{}	
+]
+}
+
+
+DEF hAndBond Transform{
+	translation -40 0 0
+	children [
+		 Transform{
+			translation -1.5 0 0 
+			rotation 0 0 1 1.57079635
+			children [
+				Shape{
+					appearance Appearance{
+					material Material{ diffuseColor 1 1 0 }
+								}
+					geometry Cylinder{
+							radius .25
+							height 3
+							}
+					}
+
+				]
+					}
+		
+		Transform{
+			translation -2.8 0 0
+			children [
+				Shape{
+					appearance Appearance{
+					material Material{ diffuseColor 1 0 1 }
+								}
+					geometry Sphere{}
+					}
+				]
+					}
+		]
+}
+
+
+DEF brandbr Transform{
+	translation -40 0 0
+	children [
+DEF brAndBond1 Transform{	#BrAndBond
+	children [
+		Transform{
+			translation -2.3 0 0
+			children [
+				Shape{
+					appearance Appearance{
+						material Material{ diffuseColor 1 1 1 }
+								}
+					geometry Sphere{ radius 1.5 }
+					}
+				]
+			}
+		Transform{
+			translation -1 0 0
+			rotation 0 0 1 1.57079635
+			children [
+				Shape{
+					appearance Appearance{
+						material Material{ diffuseColor 1 .8 .6 }
+								}
+					geometry Cylinder{
+							radius .25
+							height 2
+							}
+					}
+				]
+			}
+		]
+	}
+DEF brAndBond2 Transform{	#BrAndBond
+	children [
+		Transform{
+			translation 2.3 0 0
+			children [
+				Shape{
+					appearance Appearance{
+						material Material{ diffuseColor 1 1 1 }
+								}
+					geometry Sphere{ radius 1.5 }
+					}
+				]
+			}
+		Transform{
+			translation 1 0 0
+			rotation 0 0 1 1.57079635
+			children [
+				Shape{
+					appearance Appearance{
+						material Material{ diffuseColor 1 .8 .6 }
+								}
+					geometry Cylinder{
+							radius .25
+							height 2
+							}
+					}
+				]
+			}
+		]
+	}
+	]
+}
+
+DEF timeSensor TimeSensor{
+	cycleInterval 16
+	enabled TRUE
+	loop TRUE
+			}
+ROUTE touchSensor.isOver TO timeSensor.enabled
+
+DEF brAndBond1OrientationInterpolator OrientationInterpolator{
+		key[0,  .25 , .5, .75, 1]
+		keyValue[0 0 -1 0,0 0 -1 3.14,0 0 -1 6.28,0 0 -1 6.28,0 0 -1 6.28]
+						}
+
+DEF brAndBond1PositionInterpolator PositionInterpolator{
+	key[0,.4,.5,.75,1]
+		keyValue[0 0 0,32 0 0,37.8 0 0,37.8 0 0,37.8 0 0]
+						}
+
+ROUTE timeSensor.fraction_changed TO brAndBond1OrientationInterpolator.set_fraction
+ROUTE brAndBond1OrientationInterpolator.value_changed TO brAndBond1.set_rotation
+
+
+ROUTE timeSensor.fraction_changed TO brAndBond1PositionInterpolator.set_fraction
+ROUTE brAndBond1PositionInterpolator.value_changed TO brAndBond1.set_translation
+
+DEF brAndBond2OrientationInterpolator OrientationInterpolator{
+		key[0, .25, .5, .75,.85, 1]
+		keyValue[0 0 -1 0,0 0 -1 3.14,0 0 -1 6.28,0 0 -1 9.42,0 0 -1 12.56,0 0 -1 12.56]
+						}
+
+DEF brAndBond2PositionInterpolator PositionInterpolator{
+	key[0,.4,.5,.75,.90,.999,1]
+		keyValue[0 0 0,32 0 0,40 0 0,37.8 0 2,20 0 3,20 0 3,20 0 3]
+						}
+
+ROUTE timeSensor.fraction_changed TO brAndBond2OrientationInterpolator.set_fraction
+ROUTE brAndBond2OrientationInterpolator.value_changed TO brAndBond2.set_rotation
+
+
+ROUTE timeSensor.fraction_changed TO brAndBond2PositionInterpolator.set_fraction
+ROUTE brAndBond2PositionInterpolator.value_changed TO brAndBond2.set_translation
+
+DEF hAndBondOrientationInterpolator OrientationInterpolator{
+	key[0, .25, .5, .75,.85, 1]
+	keyValue[	0 0 -1 0,0 0 -1 0,0 0 -1 0,0 0 -1 3.14,0 0 -1 6.28,0 0 -1 6.28]
+						}
+DEF hAndBondPositionInterpolator PositionInterpolator{
+	key[0,.5,.75,.90,.999,1]
+	keyValue[0 0 0,0 0 0,-2.2 0 2,-20 0 3,-20 0 3,-20 0 3]
+						}
+
+ROUTE timeSensor.fraction_changed TO hAndBondPositionInterpolator.set_fraction
+ROUTE  hAndBondPositionInterpolator.value_changed TO hAndBond.set_translation
+
+ROUTE timeSensor.fraction_changed TO hAndBondOrientationInterpolator.set_fraction
+ROUTE hAndBondOrientationInterpolator.value_changed TO hAndBond.set_rotation

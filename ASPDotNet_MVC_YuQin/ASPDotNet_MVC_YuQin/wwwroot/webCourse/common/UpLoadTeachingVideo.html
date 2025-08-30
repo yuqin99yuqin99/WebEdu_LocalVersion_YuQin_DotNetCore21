@@ -38,15 +38,17 @@
     </script>
 </head>
 <body onload="fnForm()">
-    <div>    
-       <form action="/UpLoadTeachingVideo/Post?FolderAndFileName=" method="post" enctype="multipart/form-data" id="idUpLoadTeachingVideo">
-             <p>
+    <div>
+        <form action="/UpLoadTeachingVideo/Post?FolderAndFileName=" method="post" enctype="multipart/form-data" id="idUpLoadTeachingVideo">
+            <p>
                 <label>选择文件（.mp4格式）： </label>
-                <input type="file" name="FileUpload" id="idFileUpload"/>
+                <input type="file" name="FileUpload" id="idFileUpload" />
             </p>
             <input type="submit" value="提交" id="idFileSubmit" />
 
+
         </form>
-</div>
+        <div><a href="EduResourceTemplates.html">(建议使用系统提供的教学视频模板文件)</a>，以便标准化交流。当然，教学视频属于宽泛性的文档，您也可能根据自己的思路进行文档记录。</div>
+    </div>
 </body>
 </html>
