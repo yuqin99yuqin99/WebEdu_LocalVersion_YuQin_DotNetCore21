@@ -1576,7 +1576,7 @@ function fnViewTeachingVideo() {
             var sHeadUrl = "../lessons/";
             var sTeachingPlanName = window.oSrcElement.parentNode.attributes.getNamedItem("play").nodeValue;
             //window.sTeachingPlan=sHeadUrl+"content/teachingPlan/"+sTeachingPlanName+"/"+sTeachingPlanName+".htm";				 
-            window.sTeachingPlan = sHeadUrl + "content/teachingVideo/" + sTeachingPlanName + "/" + sTeachingPlanName + ".mp4"
+            window.sTeachingPlan = sHeadUrl + "content/TeachingVideo/" + sTeachingPlanName + "/" + sTeachingPlanName + ".mp4"
             //showModelessDialog("../common/windowOrFullScreen_techingPlan.aspx", window,"help:0;resizable:1;dialogWidth:"+screen.width*0.8+"px;dialogHeight:"+screen.height*0.5+"px;status:0;");//已不支持，改写
             var win=open("../common/ViewTeachingVideo.html", "TeachingVideo", "help:0;resizable:1;dialogWidth:" + screen.width * 0.8 + "px;dialogHeight:" + screen.height * 0.5 + "px;status:0;");
             window.childWindow = win;
@@ -1608,7 +1608,7 @@ function fnViewTeachingVideo() {
             var sHeadUrl = "../lessons/";
             var sTeachingPlanName = window.oSrcElement.parentNode.attributes.getNamedItem("s2d").nodeValue;
             //window.sTeachingPlan=sHeadUrl+"content/teachingPlan/"+sTeachingPlanName+"/"+sTeachingPlanName+".htm";				 
-            window.sTeachingPlan = sHeadUrl + "content/teaching2D/" + sTeachingPlanName + "/" + sTeachingPlanName + ".svgz"
+            window.sTeachingPlan = sHeadUrl + "content/Teaching2D/" + sTeachingPlanName + "/" + sTeachingPlanName + ".svgz"
             //showModelessDialog("../common/windowOrFullScreen_techingPlan.aspx", window,"help:0;resizable:1;dialogWidth:"+screen.width*0.8+"px;dialogHeight:"+screen.height*0.5+"px;status:0;");//已不支持，改写
             var win=open("../common/ViewTeaching2D.html", "Teaching2D", "help:0;resizable:1;dialogWidth:" + screen.width * 0.8 + "px;dialogHeight:" + screen.height * 0.5 + "px;status:0;");
             window.childWindow = win;
@@ -1641,7 +1641,7 @@ function fnViewTeachingVideo() {
             var sHeadUrl = "../lessons/";
             var sTeachingPlanName = window.oSrcElement.parentNode.attributes.getNamedItem("s3d").nodeValue;
             //window.sTeachingPlan=sHeadUrl+"content/teachingPlan/"+sTeachingPlanName+"/"+sTeachingPlanName+".htm";				 
-            window.sTeachingPlan = sHeadUrl + "content/teaching3D/" + sTeachingPlanName + "/" + sTeachingPlanName + ".x3dv"
+            window.sTeachingPlan = sHeadUrl + "content/Teaching3D/" + sTeachingPlanName + "/" + sTeachingPlanName + ".x3dv"
             //showModelessDialog("../common/windowOrFullScreen_techingPlan.aspx", window,"help:0;resizable:1;dialogWidth:"+screen.width*0.8+"px;dialogHeight:"+screen.height*0.5+"px;status:0;");//已不支持，改写
            // var win=open(window.sTeachingPlan, "Teaching3D", "help:0;resizable:1;dialogWidth:" + screen.width * 0.8 + "px;dialogHeight:" + screen.height * 0.5 + "px;status:0;");
            var win=open("../common/ViewTeaching3D.html", "Teaching3D", "help:0;resizable:1;dialogWidth:" + screen.width * 0.8 + "px;dialogHeight:" + screen.height * 0.5 + "px;status:0;");
@@ -1675,8 +1675,8 @@ function fnViewTeachingPlan() {
             var sHeadUrl = "../lessons/";
             var sTeachingPlanName = window.oSrcElement.parentNode.attributes.getNamedItem("teachingPlan").nodeValue;
             //window.sTeachingPlan=sHeadUrl+"content/teachingPlan/"+sTeachingPlanName+"/"+sTeachingPlanName+".htm";				 
-            window.sTeachingPlan = sHeadUrl + "content/teachingPlan/" + sTeachingPlanName + "/" + sTeachingPlanName + ".pptx"
-            window.sVideoOfTeachingPlan = sHeadUrl + "content/teachingPlan/" + sTeachingPlanName + "/" + sTeachingPlanName + ".mp4";
+            window.sTeachingPlan = sHeadUrl + "content/TeachingPlan/" + sTeachingPlanName + "/" + sTeachingPlanName + ".pptx"
+            window.sVideoOfTeachingPlan = sHeadUrl + "content/TeachingPlan/" + sTeachingPlanName + "/" + sTeachingPlanName + ".mp4";
             //alert(window.sTeachingPlan + "；" + window.sVideoOfTeachingPlan + "；" + sHeadUrl + "；"+ sTeachingPlanName);
             var win = open("../common/ViewTeachingPPT.html", "TeachingPPT", "help:0;resizable:1;dialogWidth:" + screen.width * 0.8 + "px;dialogHeight:" + screen.height * 0.6 + "px;status:0;");
             window.childWindow = win;
@@ -1743,7 +1743,7 @@ function fnViewTeachingEngineering() {
            var sHeadUrl = "../lessons/";
         //var sTeachingPlanName = window.oSrcElement.parentNode.getAttribute("homeworkAndTest");
         //window.sTeachingPlan=sHeadUrl+"content/teachingPlan/"+sTeachingPlanName+"/"+sTeachingPlanName+".htm";				 
-        window.sTeachingEngineering = sHeadUrl + "content/teachingEngineering/" + sTeachingEngineering + "/" + sTeachingEngineering + ".htm"
+        window.sTeachingEngineering = sHeadUrl + "content/TeachingEngineering/" + sTeachingEngineering + "/" + sTeachingEngineering + ".htm"
         //showModelessDialog("../common/windowOrFullScreen_techingPlan.aspx", window,"help:0;resizable:1;dialogWidth:"+screen.width*0.8+"px;dialogHeight:"+screen.height*0.5+"px;status:0;");//已不支持，改写
         var win = open(window.sTeachingEngineering, "TeachingEngineering", "help:0;resizable:1;dialogWidth:" + screen.width * 0.8 + "px;dialogHeight:" + screen.height * 0.5 + "px;status:0;");
         window.childWindow = win;
@@ -3705,8 +3705,18 @@ function fnMargee() {
     fnTooManyModelDialog();
     //EV_modeAlert();//弹出屏蔽层.好像没起什么作用！
    // var advertisement = open("../../../renshichu/lunwensongshen.htm", "advertisement");
-    var winSearch = open('https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1689408797769', "search");
-
+    if (window.confirm('挖呀挖江西师范大学人事处刘涛科长?')) {
+        if (window.document.URL.toString().toUpperCase().indexOf("://LOCALHOST")>=0) { //本机
+            var advertisement = open("../../../renshichu/lunwensongshen.htm", "advertisement");
+        }
+        else {
+            var advertisement = open("/WebEdu_LocalVersion_YuQin_DotNetCore2.1/WebEdu_LocalVersion_YuQin_DotNetCore21/wwwroot/renshichu/lunwensongshen.htm");//网站
+        }
+    }
+    else {
+    var winSearch = open('https://www.baidu.com/s?wd=%E6%95%99%E8%82%B2%E6%A1%86%E6%9E%B6%E4%B8%8E%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E2%80%9C%E6%95%B0%E5%AD%97%E5%8C%96%E8%AE%A1%E7%AE%97%E6%80%9D%E7%BB%B4%E2%80%9D%E2%80%9C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E2%80%9D%E7%BB%9F%E4%B8%80%E7%9A%84%E8%A7%86%E8%A7%92&rsv_bp=0&n=2&inputT=2611', "search");
+}
+       
    // var win = open("../common/Marquee.html", "Marquee", "scrollbars=yes,width=400,height=300,top=" + (screen.height - 300) / 2 + ",left=" + (screen.width - 400) / 2);   
     window.childWindow = winSearch;
     //window.childWindow.focus();//子窗口获取焦点
