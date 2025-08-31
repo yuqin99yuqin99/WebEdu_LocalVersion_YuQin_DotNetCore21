@@ -4,18 +4,18 @@
 <head>
 
     <title>查看教学视频：.mp4文件</title>
-    <script>
-        function fnViewTeachingPPT() {
-          //  document.getElementById("idHrefOfTeachingPPT").href = "/webcourse/lessons/" + opener.sTeachingPlan;
-            //  document.getElementById("idHrefOfTeachingPPT").href =  opener.sTeachingPlan;
+    <script>function fnViewTeachingPPT() {
+          //  document.getElementById("idHrefOfTeachingPPT").href = "/webcourse/lessons/" + opener.sTeachingVideo;
+            //  document.getElementById("idHrefOfTeachingPPT").href =  opener.sTeachingVideo;
             // document.getElementById("idHrefOfVideo").href = "/webcourse/lessons/"+opener.sVideoOfTeachingPlan;
             //document.getElementById("idVideo").src = "../lessons/"+opener.sVideoOfTeachingPlan;
-           // document.getElementById("idVideo").src = "/webcourse/lessons/" + opener.sVideoOfTeachingPlan;
-           document.getElementById("idVideo").src =opener.sTeachingPlan;
+           // document.getElementById("idVideo").src = "/webcourse/lessons/" + opener.sVideoOfTeaching;
+          
+           document.getElementById("idVideo").src =opener.sTeachingVideo;
+
        // alert(document.getElementById("idVideo").src);
           //  alert(document.getElementById("idHrefOfTeachingPPT").href + ";" + document.getElementById("idVideo").src);
-        }
-    </script>
+        }</script>
 </head>
 <body onload="fnViewTeachingPPT()">
     <div>

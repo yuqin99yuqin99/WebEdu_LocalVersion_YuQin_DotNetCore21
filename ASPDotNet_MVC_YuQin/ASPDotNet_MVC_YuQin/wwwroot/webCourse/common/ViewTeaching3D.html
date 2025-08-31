@@ -4,17 +4,20 @@
 <head>
 
     <title>查看教学3D：.x3dv文件</title>
-    <script>function fnViewTeachingPPT() {
+    <script>
+    function fnViewTeachingPPT() {
           //  document.getElementById("idHrefOfTeachingPPT").href = "/webcourse/lessons/" + opener.sTeachingPlan;
-              document.getElementById("idHrefOfTeachingPPT").href =  opener.sTeachingPlan;
-             // var sZip = opener.sTeachingPlan.replace(".x3dv",".zip");  
-              document.getElementById("idHrefOfTeachingPPT2").href =  opener.sTeachingPlan.replace(".x3dv",".zip");
+         // alert(opener.sTeaching3D);
+              document.getElementById("idHrefOfTeachingPPT").href =  opener.sTeaching3D;
+             // var sZip = opener.sTeachingPlan.replace(".x3dv",".zip");
+              document.getElementById("idHrefOfTeachingPPT2").href =  opener.sTeaching3D.replace(".x3dv",".zip");
             // document.getElementById("idHrefOfVideo").href = "/webcourse/lessons/"+opener.sVideoOfTeachingPlan;
             //document.getElementById("idVideo").src = "../lessons/"+opener.sVideoOfTeachingPlan;
            // document.getElementById("idVideo").src = "/webcourse/lessons/" + opener.sVideoOfTeachingPlan;
-            document.getElementById("idVideo").src =opener.sVideoOfTeachingPlan;
+            document.getElementById("idVideo").src =opener.sTeaching3D;
           //  alert(document.getElementById("idHrefOfTeachingPPT").href + ";" + document.getElementById("idVideo").src);
-        }</script>
+        }
+    </script>
 </head>
 <body onload="fnViewTeachingPPT()">
     <div>
