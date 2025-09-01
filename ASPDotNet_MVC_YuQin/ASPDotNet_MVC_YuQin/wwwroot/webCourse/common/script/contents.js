@@ -3723,6 +3723,7 @@ function fnSearch() {
    //window.childWindow.focus();//子窗口获取焦点
 }
 
+/*
 function fnAdvertisement() {
     fnTooManyModelDialog();
     //EV_modeAlert();//弹出屏蔽层.好像没起什么作用！
@@ -3733,6 +3734,8 @@ function fnAdvertisement() {
         var advertisement = open("/WebEdu_LocalVersion_YuQin_DotNetCore2.1/WebEdu_LocalVersion_YuQin_DotNetCore21/wwwroot/renshichu/lunwensongshen.htm");//网站
     }
 }
+*/
+/*老的保留广告功能的Marquee
 function fnMargee() {
     fnTooManyModelDialog();
     //EV_modeAlert();//弹出屏蔽层.好像没起什么作用！
@@ -3752,6 +3755,12 @@ function fnMargee() {
    // var win = open("../common/Marquee.html", "Marquee", "scrollbars=yes,width=400,height=300,top=" + (screen.height - 300) / 2 + ",left=" + (screen.width - 400) / 2);   
     window.childWindow = winSearch;
     //window.childWindow.focus();//子窗口获取焦点
+}
+*/
+function fnMargee() {
+    fnTooManyModelDialog();
+    var winSearch = open('https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1689408797769', "search", "width=500,height=350,top=" + (screen.height - 350) / 2 + ",left=" + (screen.width - 500)/2);
+    window.childWindow = winSearch; 
 }
 
 /** function fnTooManyModelDialog1() {

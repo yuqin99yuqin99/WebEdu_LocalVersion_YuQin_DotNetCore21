@@ -1,0 +1,359 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	font-size:10.5pt;
+	font-family:"Times New Roman",serif;}
+span.MsoEndnoteReference
+	{vertical-align:super;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:宋体;}
+.MsoChpDefault
+	{font-size:10.5pt;
+	font-family:"Calibri",sans-serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 56.65pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal><span lang=ZH-CN style='font-family:宋体'>五层</span>MVC<span
+lang=ZH-CN style='font-family:宋体'>的视图</span>V<span lang=ZH-CN style='font-family:
+宋体'>，</span><span lang=ZH-CN style='font-size:10.0pt;font-family:宋体'>【注：视媒的字符</span><span
+style='font-size:10.0pt;font-family:宋体'>/<span lang=ZH-CN>图像</span>/<span
+lang=ZH-CN>视频</span>/2D/3D<span lang=ZH-CN>的视角，建议：字符（</span>Word/VS<span
+lang=ZH-CN>编辑或变换</span>.txt/.docx/.html/.css/.js/.razor/.cs/.xaml/.mhtml<span
+lang=ZH-CN>等等文件）</span>/<span lang=ZH-CN>图像（</span>PS<span lang=ZH-CN>编辑或变换</span>.psd/.gif/.png/.jpg<span
+lang=ZH-CN>等等文件）</span>/<span lang=ZH-CN>视频 （</span>PPT/PR<span lang=ZH-CN>编辑或变换</span>.pptx/.mp4<span
+lang=ZH-CN>等等文件）</span>/2D<span lang=ZH-CN>（</span>PPT<span lang=ZH-CN>编辑或变换</span>.pptx/.svgz<span
+lang=ZH-CN>等等文件）</span>/3D<span lang=ZH-CN>（</span>Maya<span lang=ZH-CN>等等编辑或变换</span>.ma/.mb/.x3dv<span
+lang=ZH-CN>等等文件）】</span></span><span class=MsoEndnoteReference><span
+style='font-family:宋体'>[<a name="_Ref184392665"></a><a href="#_edn1"
+name="_ednref1" title=""><span class=MsoEndnoteReference><span
+style='font-size:10.5pt;font-family:宋体'>[i]</span></span></a>]</span></span></p>
+
+</div>
+
+<div><br clear=all>
+
+<hr align=left size=1 width="33%">
+
+<div id=edn1>
+
+<p class=MsoNormal align=left style='margin-left:18.0pt;text-align:left;
+text-indent:-18.0pt;layout-grid-mode:char;word-break:break-all'><a
+href="#_ednref1" name="_edn1" title=""></a><span style='font-size:9.0pt'>[<span
+style='font-size:9.0pt;font-family:"Times New Roman",serif'>[i]</span>] </span><span
+lang=ZH-CN style='font-size:9.0pt;font-family:宋体'>计算机领域的视图</span><span
+style='font-size:9.0pt;font-family:宋体'>V<span lang=ZH-CN>的思维语言，虽然可能可以继承利用</span>VS<span
+lang=ZH-CN>进行编辑，但是一般继承利用视图</span>V<span lang=ZH-CN>的专业软件进行编辑，例如：（</span>1<span
+lang=ZH-CN>）<b>视媒</b></span>{<b><span lang=ZH-CN>字符</span></b>   <span
+lang=ZH-CN>编辑软件</span>Word/<b><span lang=ZH-CN>图像</span></b><span lang=ZH-CN>编辑软件</span>PS/<b><span
+lang=ZH-CN>视频</span></b><span lang=ZH-CN>编辑软件</span>PR/<b>2D</b><span
+lang=ZH-CN>编辑软件</span>PPT/<b>3D</b><span lang=ZH-CN>编辑软件</span>Maya}<span
+lang=ZH-CN>（</span>2<span lang=ZH-CN>）<b>听媒</b>编辑软件本书无需深入（</span>3<span
+lang=ZH-CN>）<b>触媒</b>编辑目前尚难实现（</span>4<span lang=ZH-CN>）<b>嗅媒</b>编辑目前尚难实现（</span>5<span
+lang=ZH-CN>）<b>味媒</b>编辑目前尚难实现【注：还可能继承利用面向学科的软件进行编辑，例如本书只需了解的：面向生物医学的</span>BioRender<span
+lang=ZH-CN>、面向计算机线路等等各种图表的</span>Visio<span lang=ZH-CN>、面向数学公式的</span>Word<span
+lang=ZH-CN>内置的公式插件、面向数学数据</span>/<span lang=ZH-CN>数学函数作图的</span>Excel<span
+lang=ZH-CN>、面向几何数学的</span>GeoGebra<span lang=ZH-CN>、面向综合科学计算的</span>WolframAlpha<span
+lang=ZH-CN>、面向化学的</span>ChemSketch<span lang=ZH-CN>、面向地理的</span>ArcGIS<span
+lang=ZH-CN>，等等。</span></span></p>
+
+<p class=MsoNormal align=left style='margin-top:3.0pt;margin-right:0cm;
+margin-bottom:3.0pt;margin-left:17.95pt;text-align:left;text-indent:-3.8pt;
+layout-grid-mode:char;word-break:break-all'><span lang=ZH-CN style='font-size:
+9.0pt;font-family:宋体'>本书“视媒”的迭代细化，选用了比较简洁的“字符</span><span style='font-size:
+9.0pt'>/</span><span lang=ZH-CN style='font-size:9.0pt;font-family:宋体'>图像</span><span
+style='font-size:9.0pt'>/</span><span lang=ZH-CN style='font-size:9.0pt;
+font-family:宋体'>视频</span><span style='font-size:9.0pt'>/2D/3D</span><span
+lang=ZH-CN style='font-size:9.0pt;font-family:宋体'>”。其中：</span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:0cm;text-indent:0cm;layout-grid-mode:char;word-break:break-all'><span
+style='font-size:9.0pt'>（A）</span><span lang=ZH-CN style='font-size:9.0pt'>“字符”的最本质的术语是“</span><span
+style='font-size:9.0pt'>0/1<span lang=ZH-CN>序列唯一编码映射的符号”，也可更直观地理解成为</span>“<span
+lang=ZH-CN>键盘能够敲出来的符号</span>”<span lang=ZH-CN>，也常翻译成为</span>“<span lang=ZH-CN>文字</span>”<span
+lang=ZH-CN>。本书选用“字符”这一术语，是为了吻合当前数字计算机领域的术语（</span></span><span
+style='font-size:9.0pt'>6.2.2</span><span style='font-size:9.0pt'><span
+lang=ZH-CN>节），也吻合字典、字符典籍这些术语。建议基于</span>VS<span lang=ZH-CN>编程软件、</span>Word<span
+lang=ZH-CN>排版软件，理解字符的本质。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“字符”用作更加视觉直观的</span><span
+style='font-size:9.0pt'>“<span lang=ZH-CN>图像</span>/<span lang=ZH-CN>视频</span>/2D/3D”<span
+lang=ZH-CN>的根基。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“字符内容”追求教育数字思维内容（</span><span
+class=MsoHyperlink><span style='font-size:9.0pt'><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1694025990522">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1694025990522</a></span></span><span
+lang=ZH-CN style='font-size:9.0pt'>）。</span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“字符方法”主选</span><span style='font-size:
+9.0pt'>HTML/CSS/JS/C#<span lang=ZH-CN>，追求</span>“Word<span lang=ZH-CN>宿主的树体结构的目录的</span>.docx<span
+lang=ZH-CN>文件宿客</span>”<span lang=ZH-CN>变换成为</span>“Edge<span lang=ZH-CN>宿主的树体结构的目录但又支持互动的</span>.html/.css/.js/.razor/.xaml/.cs<span
+lang=ZH-CN>文件宿客</span>”<span lang=ZH-CN>（</span><span class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1731555066519">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1731555066519</a></span><span
+lang=ZH-CN>）。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:0cm;text-indent:0cm;layout-grid-mode:char;word-break:break-all'><span
+style='font-size:9.0pt'>（B）</span><span lang=ZH-CN style='font-size:9.0pt'>“图像”的最本质的术语是“单帧的比特位图</span><span
+style='font-size:9.0pt'>BitMap<span lang=ZH-CN>”“单帧的像素图</span>PixcelMap<span
+lang=ZH-CN>”，这是因为大众所说的“图像”的最小单位是</span>0/1<span lang=ZH-CN>比特位描述的</span>1<span
+lang=ZH-CN>个像素。本书选用“图像”这一术语，主要是为了简洁表述。建议基于</span>PS<span lang=ZH-CN>图像编辑软件，理解图像的本质。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“图像”用作辅助，以便“字符</span><span
+style='font-size:9.0pt'>/2D”<span lang=ZH-CN>引用。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“图像内容”追求教育数字思维内容（</span><span
+class=MsoHyperlink><span style='font-size:9.0pt'><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1694025990522">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1694025990522</a></span></span><span
+lang=ZH-CN style='font-size:9.0pt'>）。</span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“图像方法”主选</span><span style='font-size:
+9.0pt'>PS<span lang=ZH-CN>，追求</span>“PS<span lang=ZH-CN>宿主的的</span>.psd<span
+lang=ZH-CN>文件宿客</span>”<span lang=ZH-CN>变换成为“</span>Edge<span lang=ZH-CN>宿主的</span>.gif/.jpg/.png<span
+lang=ZH-CN>等等文件宿客”，如果需要，还可</span>PR<span lang=ZH-CN>变换成为</span>.mp4<span
+lang=ZH-CN>视频（</span><span class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1731555066519">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1731555066519</a></span><span
+lang=ZH-CN>）</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>案例：（</span><span style='font-size:9.0pt'>PPT<span
+class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingPlan/1190967377078/1190967377078.pptx">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingPlan/1190967377078/1190967377078.pptx</a></span>→<span
+lang=ZH-CN>视频</span><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingVideo/1568733524774/1568733524774.mp4">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingVideo/1568733524774/1568733524774.mp4</a><span
+lang=ZH-CN>）。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:0cm;text-indent:0cm;layout-grid-mode:char;word-break:break-all'><span
+style='font-size:9.0pt'>（C）</span><span lang=ZH-CN style='font-size:9.0pt'>“视频”的最本质的术语是“多帧的比特位图</span><span
+style='font-size:9.0pt'>BitMap<span lang=ZH-CN>”“多帧的像素图</span>PixcelMap<span
+lang=ZH-CN>”，因为大众所说的“视频”是一帧一帧的图像序列。“视频”这一术语的选用，基本不会存在争议。建议基于</span>PR<span
+lang=ZH-CN>视频编辑软件，理解视频的本质。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“视频”用作辅助，以便“字符</span><span
+style='font-size:9.0pt'>/2D”<span lang=ZH-CN>引用。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“视频内容”追求教育数字思维内容（</span><span
+class=MsoHyperlink><span style='font-size:9.0pt'><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1694025990522">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1694025990522</a></span></span><span
+lang=ZH-CN style='font-size:9.0pt'>）。</span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“视频方法”主选</span><span style='font-size:
+9.0pt'>MP4<span lang=ZH-CN>，追求</span>“PPT<span lang=ZH-CN>宿主的具有</span>.mp4<span
+lang=ZH-CN>视频文件的时间轴但又支持互动的</span>.pptx<span lang=ZH-CN>文件宿客</span>”<span
+lang=ZH-CN>变换成为“</span>Edge<span lang=ZH-CN>宿主的</span>.mp4<span lang=ZH-CN>文件宿客”，然后</span>PR<span
+lang=ZH-CN>添加配音。（</span><span class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1731555066519">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1731555066519</a></span><span
+lang=ZH-CN>）。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>案例：（</span><span style='font-size:9.0pt'>PPT<span
+class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingPlan/1190967377078/1190967377078.pptx">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingPlan/1190967377078/1190967377078.pptx</a></span>→<span
+lang=ZH-CN>视频</span><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingVideo/1568733524774/1568733524774.mp4">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingVideo/1568733524774/1568733524774.mp4</a><span
+lang=ZH-CN>）</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:0cm;text-indent:0cm;layout-grid-mode:char;word-break:break-all'><span
+style='font-size:9.0pt'>（D）</span><span lang=ZH-CN style='font-size:9.0pt'>“</span><span
+style='font-size:9.0pt'>2D<span lang=ZH-CN>”的最本质的术语是“二维点线面体的图形动画”，也大众地称为“二维图形动画”。本书选用“</span>2D<span
+lang=ZH-CN>”这一术语，主要是为了简洁表述。建议基于</span>SVGDeveloper<span lang=ZH-CN>、</span>PPT<span
+lang=ZH-CN>等等</span>2D<span lang=ZH-CN>编辑软件，理解</span>2D<span lang=ZH-CN>的本质。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“</span><span style='font-size:9.0pt'>2D<span
+lang=ZH-CN>”用作主导辅助，但是尚未发现合适的编辑宿主。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“</span><span style='font-size:9.0pt'>2D<span
+lang=ZH-CN>内容”追求教育数字思维内容（</span><span class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1694025990522">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1694025990522</a></span><span
+lang=ZH-CN>）。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“</span><span style='font-size:9.0pt'>2D<span
+lang=ZH-CN>方法”主选</span>SVG<span lang=ZH-CN>，追求“</span>PPT<span lang=ZH-CN>宿主的具有</span>.mp4<span
+lang=ZH-CN>视频文件的时间轴的</span>.pptx<span lang=ZH-CN>文件</span>”<span lang=ZH-CN>变换成为</span>“Edge<span
+lang=ZH-CN>宿主的具有</span>.mp4<span lang=ZH-CN>视频文件的时间轴但又支持互动的</span>.svgz<span
+lang=ZH-CN>文件宿客</span>”<span lang=ZH-CN>（</span><span class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1731555066519">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1731555066519</a></span><span
+lang=ZH-CN>）</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>案例：（</span><span style='font-size:9.0pt'>PPT<span
+class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingPlan/1190967377078/1190967377078.pptx">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingPlan/1190967377078/1190967377078.pptx</a></span>→<span
+lang=ZH-CN>视频</span><span class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingVideo/1568733524774/1568733524774.mp4">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingVideo/1568733524774/1568733524774.mp4</a></span><span
+lang=ZH-CN>）（</span><span class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/Teaching2D/1756436345195/1756436345195.svg"><span
+lang=ZH-CN>尚不合适的</span>SVG<span lang=ZH-CN>的</span>2D<span lang=ZH-CN>案例</span></a></span><span
+lang=ZH-CN>，合适的案例尚在开发之中</span>......<span lang=ZH-CN>感谢关注，期待您的合作参与！！！）。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:0cm;text-indent:0cm;layout-grid-mode:char;word-break:break-all'><span
+style='font-size:9.0pt'>（E）</span><span lang=ZH-CN style='font-size:9.0pt'>“</span><span
+style='font-size:9.0pt'>3D<span lang=ZH-CN>”的最本质的术语是“三维点线面体的图形动画”，也大众地称为“三维图形动画”。本书选用“</span>3D<span
+lang=ZH-CN>”这一术语，主要是为了简洁表述。建议基于</span>Maya<span lang=ZH-CN>等等</span>3D<span
+lang=ZH-CN>编辑软件，理解</span>3D<span lang=ZH-CN>的本质。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“</span><span style='font-size:9.0pt'>3D<span
+lang=ZH-CN>”用作辅助，以便“字符</span>/2D”<span lang=ZH-CN>引用，或者变换成为</span>“3D<span
+lang=ZH-CN>的字符</span>/<span lang=ZH-CN>图像</span>/<span lang=ZH-CN>视频</span>/2D”<span
+lang=ZH-CN>。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“</span><span style='font-size:9.0pt'>3D<span
+lang=ZH-CN>内容”追求教育数字思维内容（</span><span class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1694025990522">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1694025990522</a></span><span
+lang=ZH-CN>）。</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>本书“</span><span style='font-size:9.0pt'>3D<span
+lang=ZH-CN>方法”主选</span>X3D<span lang=ZH-CN>，追求“</span>Maya<span lang=ZH-CN>宿主的具有</span>.mp4<span
+lang=ZH-CN>视频文件的时间轴的</span>.ma<span lang=ZH-CN>文件宿客</span>”<span lang=ZH-CN>变换成为</span>“Contact<span
+lang=ZH-CN>宿主具有</span>.mp4<span lang=ZH-CN>视频文件的时间轴但又支持互动的</span>.x3dv<span
+lang=ZH-CN>文件宿客</span>”<span lang=ZH-CN>（</span><span class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1731555066519">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/common/initial.html?text=1731555066519</a></span><span
+lang=ZH-CN>））</span></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:36.0pt;text-indent:-18.0pt;layout-grid-mode:char;word-break:
+break-all'><span style='font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ZH-CN style='font-size:9.0pt'>案例：（</span><span class=MsoHyperlink><span
+style='font-size:9.0pt'><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/Teaching3D/1756483505489/1756483505489.x3dv"><span
+lang=ZH-CN>尚不合适的</span>X3D<span lang=ZH-CN>的</span>3D<span lang=ZH-CN>案例</span></a></span></span><span
+lang=ZH-CN style='font-size:9.0pt'>，合适的案例尚在开发之中</span><span style='font-size:
+9.0pt'>......<span lang=ZH-CN>感谢关注，期待您的合作参与！！！）（</span>PPT<span
+class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingPlan/1190967377078/1190967377078.pptx">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingPlan/1190967377078/1190967377078.pptx</a></span>→<span
+lang=ZH-CN>视频</span><span class=MsoHyperlink><a
+href="https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingVideo/1568733524774/1568733524774.mp4">https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/webCourse/lessons/content/TeachingVideo/1568733524774/1568733524774.mp4</a></span><span
+lang=ZH-CN>）。</span></span><span class=MsoHyperlink><span style='font-size:
+9.0pt'><a href="https://zhuanlan.zhihu.com/p/1944353102607152368">https://zhuanlan.zhihu.com/p/1944353102607152368</a></span></span><span
+lang=ZH-CN style='font-size:9.0pt'>。</span></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
