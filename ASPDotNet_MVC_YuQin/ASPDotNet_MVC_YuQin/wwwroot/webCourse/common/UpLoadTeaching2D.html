@@ -3,7 +3,7 @@
 <html>
 <head>
 
-    <title>上传教学2D：.svgz文件</title>
+    <title>上传教学2D：.svg/.svgz文件</title>
     <script>
                 
         function fnOnSubmit() {
@@ -16,13 +16,13 @@
                 event.returnValue = false;//事件调用函数时，用return返回值实际上是对event.returnValue进行设置而该值决定当前操作是否继续，true是继续 false中断
                 return;
             }
-            else if (sTemp.lastIndexOf(".svgz") >0)
+            else if (sTemp.lastIndexOf(".svg") >0)
             {
                 event.returnValue = true;
                 document.getElementById("idFileSubmit").value = "正在提交，请耐心等待...";               
             }
             else {
-                alert("您选择的文件可能不是.svgz文件！请选择.svgz文件");
+                alert("您选择的文件可能不是.svg文件！请选择.svg文件");
                 event.returnValue = false;
               return;
             }
@@ -39,9 +39,9 @@
 </head>
 <body onload="fnForm()">
     <div>
-        <form action="/UpLoadTeaching2D/Post?FolderAndFileName=" method="post" enctype="multipart/form-data" id="idUpLoadTeachingVideo">
+        <form action="/UpLoad2D/Post?FolderAndFileName=" method="post" enctype="multipart/form-data" id="idUpLoadTeachingVideo">
             <p>
-                <label>选择文件（.svgz格式）： </label>
+                <label>选择文件（.svg格式）： </label>
                 <input type="file" name="FileUpload" id="idFileUpload" />
             </p>
             <input type="submit" value="提交" id="idFileSubmit" />

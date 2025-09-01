@@ -3,7 +3,7 @@
 <html>
 <head>
 
-    <title>上传教学3D：.x3dv文件</title>
+    <title>上传教学3D：.vrml/.wrl/.x3d/.x3dv文件</title>
     <script>
                 
         function fnOnSubmit() {
@@ -39,7 +39,7 @@
 </head>
 <body onload="fnForm()">
     <div>
-        <form action="/UpLoadTeaching3D/Post?FolderAndFileName=" method="post" enctype="multipart/form-data" id="idUpLoadTeachingVideo">
+        <form action="/UpLoad3D/Post?FolderAndFileName=" method="post" enctype="multipart/form-data" id="idUpLoadTeachingVideo">
             <p>
                 <label>选择文件（.x3dv格式）： </label>
                 <input type="file" name="FileUpload" id="idFileUpload" />
