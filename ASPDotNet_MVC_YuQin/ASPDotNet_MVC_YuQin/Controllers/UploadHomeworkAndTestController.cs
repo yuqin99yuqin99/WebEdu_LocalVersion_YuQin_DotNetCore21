@@ -122,6 +122,9 @@ public ActionResult<string> Get(int id)
                             {
                                 ex.ToString();
                             }
+
+                            //删除已转化成为了.htm的.docx文件。
+                            System.IO.File.Delete(filePath);
                         }
 
 
@@ -129,7 +132,7 @@ public ActionResult<string> Get(int id)
                         {
                             throw new Exception(Ex.Message);
                         }
-
+                        
 
                     }
                     else
