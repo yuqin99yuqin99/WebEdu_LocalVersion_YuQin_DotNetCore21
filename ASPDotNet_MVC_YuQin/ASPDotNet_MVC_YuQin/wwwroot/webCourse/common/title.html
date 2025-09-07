@@ -90,11 +90,11 @@
                 <lable style="font-weight:bold">|</lable>
                 <a href="" id="sDefaultZoom" onclick="fnDefaultZoom();" title="单击将教学系统的放缩恢复为默认（请注意：本系统的放缩是基于浏览器放缩之上的放缩！）" unselectable="on" style="color:brown;">默认放缩</a>
                 <!--<lable style="font-weight:bold">|</lable>
-    <img border="1" src="image/vertical.gif" width="24" height="19" id="sScrollIcon" onclick="fnChangeIcon();" title="单击将在鼠标中键滚动方式之间切换,也可直接使用快捷键:Alt+鼠标滚动将上下移动视图!Shift+鼠标滚动将左右平移视图!Ctrl+鼠标滚动将放缩视图!">-->
+        <img border="1" src="image/vertical.gif" width="24" height="19" id="sScrollIcon" onclick="fnChangeIcon();" title="单击将在鼠标中键滚动方式之间切换,也可直接使用快捷键:Alt+鼠标滚动将上下移动视图!Shift+鼠标滚动将左右平移视图!Ctrl+鼠标滚动将放缩视图!">-->
                 <lable style="font-weight:bold">|</lable>
                 <!--<a href="" id="idEnlargeVolume" onclick="fnEnlargeVolume();" title="如果还没有打开默认的背景音乐,单击将打开背景音乐,注意音乐的打开根据网速的情况可能会有一定的延迟!如果已经打开了默认的背景音乐,单击将逐渐增加背景音乐的音量，双击将音量增到最大" ondblclick="fnLoudestSound();" unselectable="on">  音量增 </a>
-    <a href="" id="idReduceVolume" onclick="fnReduceVolume();" title="单击逐渐减弱背景音乐的音量，双击将音量减到最弱" ondblclick="fnWeakestSound();" unselectable="on">音量降</a>
-    <lable style="font-weight:bold">|</lable>-->
+        <a href="" id="idReduceVolume" onclick="fnReduceVolume();" title="单击逐渐减弱背景音乐的音量，双击将音量减到最弱" ondblclick="fnWeakestSound();" unselectable="on">音量降</a>
+        <lable style="font-weight:bold">|</lable>-->
                 <a href="" id="next" title="单击按照目录条目，逐次向下查看资源。也可按↓键实现（内容面板全屏时）" onclick="fnNext();" unselectable="on" style="color:brown;">下翻</a>
                 <a href="" id="previous" title="单击按照目录条目，逐次向上查看资源。也可按↑键实现（内容面板全屏时）" onclick="fnPre();" unselectable="on" style="color:brown;">上翻</a>
                 <lable style="font-weight:bold">|</lable>
@@ -111,7 +111,8 @@
                 <a href="" id="idReload" onclick="event.returnValue=false,location.reload();" title="单击将依次重载刷新标题、目录、内容三个面板" style="color:brown;">刷新</a>
             </div>
 
-            <div style="color:#800000;width:60%;float:right" id="idForPanelToolbar"></div>
+           <!-- <div style="color:#800000;width:60%;float:right" id="idForPanelToolbar"></div> -->
+            <div style="color: #800000; width: 60%; float: right; max-height: 40px; overflow-y: auto;  overflow-x: hidden; " id="idForPanelToolbar"></div>
         </div>
     </div>
     <!--右键菜单开始 -->

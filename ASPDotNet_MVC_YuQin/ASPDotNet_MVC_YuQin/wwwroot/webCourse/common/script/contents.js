@@ -3667,8 +3667,9 @@ function fnDeleteHomeworkAndTest()
 function fnWindowOnFocus() {
     var sPopupMenu = document.getElementById("idPopupMenu").innerHTML.replace(new RegExp("<div", "g"), "<span").replace(new RegExp("</div>", "g"), "</span>").replace(new RegExp('onclick="', "g"), 'onclick="parent.document.getElementById('+"'"+'sIframeContents'+"'"+').contentWindow.');
  // console.log(sPopupMenu);
-
-    parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("idForPanelToolbar").innerHTML = '<div id="popupDiv" onmouseover="parent.document.getElementById(' + "'" + 'sIFrameTitle' + "'" + ').contentWindow.fnPopupMouseOver(); " onmouseout="parent.document.getElementById(' + "'" + 'sIFrameTitle' + "'" + ').contentWindow.fnPopupMouseOut(); " style=" font-size: 9px;font-family:Times New Roman; cursor: default ">' + '<span  style="font-weight:bold">目录面板右键菜单：</span>' +sPopupMenu+"</div>";
+// window.alert("contents");
+    parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("idForPanelToolbar").innerHTML = '<div id="popupDiv" onmouseover="parent.document.getElementById(' + "'" + 'sIFrameTitle' + "'" + ').contentWindow.fnPopupMouseOver(); " onmouseout="parent.document.getElementById(' + "'" + 'sIFrameTitle' + "'" + ').contentWindow.fnPopupMouseOut(); " style=" font-size: 9px;font-family:Times New Roman; cursor: default;overflow: scroll; ">' + '<span  style="font-weight:bold">目录面板右键菜单：</span>' +sPopupMenu+"</div>";
+    
 }
 function fnGeneral() {
     fnTooManyModelDialog();  
