@@ -496,7 +496,13 @@ function fnInitailContents() {
          else{
          fnViewTeaching3D();
          }
-
+            
+         var sHomeworkandtest= window.oSrcElement.parentNode.getAttribute("homeworkandtest");
+            if ( sHomeworkandtest == "" ||  sHomeworkandtest == null)
+            {;}
+         else{
+         fnViewHomeworkAndTest();
+         }
          }
          }
 
