@@ -1,5 +1,5 @@
 ﻿//////////////所有全局对象
-window.sBaseAddress = "https://localhost:5001"; //JIT编译地配置控制C模型M交付的URL的基地址。
+window.sBaseAddress = "https://localhost:5001";//JIT编译地配置控制C模型M交付的URL的基地址。
 window.sBackgroundColorForsContentsEditable = "rgb(0,255,0)";
 window.sBackgroundColorForsContentEditable = "rgb(0,255,0)";
 window.oSrcElement = new Object();
@@ -123,7 +123,7 @@ window.document.body.scroll="no";
     document.body.onmousewheel = fnMouseWheel;//通过滚动条不显示实现
     window.onmousewheel = fnMouseWheel;
     fnShowTime();
-    fnNotification('欢迎合作：', '使用帮助，请咨询：QQ：43930878；。如果正使用手机浏览，请设置横屏！', '/favicon.ico');
+    fnNotification('欢迎合作：', '使用帮助，请咨询：QQ：43930878；如果正使用手机浏览，请设置横屏！', '/favicon.ico');
 }
 
 
@@ -720,8 +720,10 @@ function fnWindowOnFocus() {
     //console.log(parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("popupDiv").innerHTML);
     var sPopupMenu = parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("popupDiv").innerHTML.replace(new RegExp("<div", "g"), "<span").replace(new RegExp("</div>", "g"), "</span>");
     //console.log(sPopupMenu);
-
-    parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("idForPanelToolbar").innerHTML = '<div id="popupDiv" onmouseover="parent.document.getElementById(' + "'" + 'sIFrameTitle' + "'" + ').contentWindow.fnPopupMouseOver(); " onmouseout="parent.document.getElementById(' + "'" + 'sIFrameTitle' + "'" + ').contentWindow.fnPopupMouseOut(); " style=" font-size: 9px;font-family:Times New Roman; cursor: default ">' + '<span  style="font-weight:bold">标题面板右键菜单：</span>' + sPopupMenu + "</div>";
+    alert("");
+   parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("idForPanelToolbar").innerHTML = '<div id="popupDiv" onmouseover="parent.document.getElementById(' + "'" + 'sIFrameTitle' + "'" + ').contentWindow.fnPopupMouseOver(); " onmouseout="parent.document.getElementById(' + "'" + 'sIFrameTitle' + "'" + ').contentWindow.fnPopupMouseOut(); " style=" font-size: 9px;font-family:Times New Roman; cursor: default;overflow: auto ">' + '<span  style="font-weight:bold">标题面板右键菜单：</span>' + sPopupMenu + "</div>";
+   //  parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("idForPanelToolbar").innerHTML = '<div id="popupDiv" style="overflow: auto" onmouseover="parent.document.getElementById(' + "'" + 'sIFrameTitle' + "'" + ').contentWindow.fnPopupMouseOver(); " onmouseout="parent.document.getElementById(' + "'" + 'sIFrameTitle' + "'" + ').contentWindow.fnPopupMouseOut(); " style=" font-size: 9px;font-family:Times New Roman; cursor: default ">' + '<span  style="font-weight:bold">标题面板右键菜单：</span>' + sPopupMenu + "</div>";
+    
 }
 
 function fnContentsGetFocus() {
@@ -858,6 +860,47 @@ function fnNotification(sStringTitle, sStringBody, sStringIcon) {  //不知为�
         alert('浏览器不支持通知功能');
     }
 }
+
+function fnTTS_Play() {
+    if(!("speechSynthesis" in window)) {
+		throw alert("对不起，您的浏览器不支持");
+		}
+       /** 
+        var sTextToSpeak = "";
+    if (parent.document.getElementById("sIframeContent").contentWindow.getSelection) {
+        sTextToSpeak = parent.document.getElementById("sIframeContent").contentWindow.getSelection().toString();
+    } else if (parent.document.getElementById("sIframeContent").contentWindow.document.selection) {
+        sTextToSpeak = parent.document.getElementById("sIframeContent").contentWindow.document.selection.createRange().text;
+    }
+    if (sTextToSpeak == "") {
+        alert("请先选定要朗读的文本！");
+        return;
+    }
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = sTextToSpeak;
+    msg.lang = 'zh-CN'; //中文
+    //msg.lang = 'en-US'; //英文
+    msg.volume = 1; // 0 to 1
+    msg.rate = 1; // 0.1 to 10
+    msg.pitch = 1; //0 to 2
+    window.speechSynthesis.speak(msg);
+    **/
+   const utterance = new SpeechSynthesisUtterance(parent.document.getElementById("sIframeContent").contentWindow.document.body.textContent);
+   window.speechSynthesis.speak(utterance);
+}
+
+function fnTTS_Pause() {
+    window.speechSynthesis.pause();
+}
+
+function fnTTS_Resume() {
+    window.speechSynthesis.resume();
+}
+
+function fnTTS_Cancel() {
+    window.speechSynthesis.cancel();
+}
+
 
 // Usage
 

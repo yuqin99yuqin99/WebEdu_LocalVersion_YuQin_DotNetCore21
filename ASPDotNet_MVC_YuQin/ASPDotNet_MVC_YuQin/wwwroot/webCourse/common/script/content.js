@@ -14,8 +14,8 @@ window.sDivForContentEditInnerHTML = "";//可用于判断该内容框架是否�
     //document.body.onbeforeunload=fnIsSaved;//检查内容框架是否因编辑而有变化而提示保存等,由于有图象等链接时相对URL会变为绝对，一时无法处理，只好暂时关闭该功能！！！！！！
 //////////////////
 function fnOnLoad() {
-	/**因为可以直接导航到目录的具体条目了，所以下述功能已取消
-	document.title = "欢迎联系QQ：43930878。教与学_本机版_渔琴(Teaching&Learning_LocalVersion_YuQin)";
+
+document.title = "欢迎联系QQ：43930878。教与学_本机版_渔琴(Teaching&Learning_LocalVersion_YuQin)";
 	try {
 		var tempTitle = opener.parent.parent.document.title;
 		//alert(tempTitle);
@@ -25,18 +25,18 @@ function fnOnLoad() {
 		}
 		else {
 			fnNewWindowAdvertisement();
-			fnContentFrameworkNotification('欢迎浏览：', '单击此处可浏览整个系统。使用帮助，请咨询：QQ：43930878；。EMail:43930878@qq.com', '/favicon.ico');
+			fnContentFrameworkNotification('欢迎浏览：', '单击此处可浏览整个系统。使用帮助，请咨询：QQ：43930878；EMail:43930878@qq.com', '/favicon.ico');
 		}
 	}
 	catch (e) {
 		fnNewWindowAdvertisement();
-		fnContentFrameworkNotification('欢迎浏览：', '单击此处可浏览整个系统。使用帮助，请咨询：QQ：43930878；。EMail:43930878@qq.com', '/favicon.ico');
+		fnContentFrameworkNotification('欢迎浏览：', '单击此处可浏览整个系统。使用帮助，请咨询：QQ：43930878；EMail:43930878@qq.com', '/favicon.ico');
 
 	}
-	**/
+	
 	/**
 	finally {
-		fnContentFrameworkNotification('欢迎使用内容：', '使用帮助，请咨询：QQ：43930878；。EMail:43930878@qq.com', '/favicon.ico');
+		fnContentFrameworkNotification('欢迎使用内容：', '使用帮助，请咨询：QQ：43930878；EMail:43930878@qq.com', '/favicon.ico');
     }
 	**/
 	
@@ -78,6 +78,15 @@ function fnOnLoad() {
     //window.click();//不知为什么总是自动弹出右键菜单，暂时通过此使右键菜单消失。
     window.document.body.click();//不知为什么总是自动弹出右键菜单，暂时通过此使右键菜单消失。
 	fnHighLight();
+	/** 本来想获取"sIframeTitle"的TTS功能，但是暂时无法"sIframeContent"获取"sIframeTitle"，不知为什么
+	alert(opener.parent.document.body.outerHTML);
+	opener.parent.document.getElementById("sIframeTitle").contentWindow.fnTTS_Play();
+	alert();
+	parent.document.getElementById("sIframeTitle").contentWindow.document.getElementById("id_TTS_Play").click();
+	alert();
+	**/
+
+
 }
 
 function fnMouseWheel(){
@@ -975,7 +984,7 @@ function fnContentFrameworkNotification(sStringTitle, sStringBody, sStringIcon) 
 				var notification = new Notification(sStringTitle, { body: sStringBody, icon: sStringIcon });
 
 				notification.onclick = function () {
-					open("https://jbhuang99.github.io/webedu_localversion_yuqin_dotnetcore21/wwwroot/",target="_blank");
+					open("https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/",target="_blank");
 					notification.close();
 				};
 			}
@@ -994,13 +1003,13 @@ function fnContentFrameworkNotification(sStringTitle, sStringBody, sStringIcon) 
 	}
 }
 function fnHelp() {
-	open("https://yuqin99yuqin99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore21/ASPDotNet_MVC_YuQin/ASPDotNet_MVC_YuQin/wwwroot/", target = "_blank");
+	open("https://jbhuang99.github.io/WebEdu_LocalVersion_YuQin_DotNetCore2.1/wwwroot/", target = "_blank");
 }
 //document.getElementsByTagName("body").item(0).onload = fnOnLoad;
 function fnNewWindowAdvertisement() {
-	var sURL = "../../../../../renshichu/lunwensongshen.htm";
+	var sURL = "../../../../renshichu/lunwensongshen.htm";
 		window.open(sURL);//容易被浏览器默认被拦截
-		if (window.confirm('搜索相关资源?')) {
+		if (window.confirm('挖呀挖江西师范大学人事处刘涛科长?')) {
 			window.location.href = sURL;
 		}
 }
