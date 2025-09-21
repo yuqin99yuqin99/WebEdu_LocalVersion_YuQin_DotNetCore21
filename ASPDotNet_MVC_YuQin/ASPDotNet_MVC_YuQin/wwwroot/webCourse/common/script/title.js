@@ -865,6 +865,7 @@ function fnTTS_Play() {
     if(!("speechSynthesis" in window)) {
 		throw alert("对不起，您的浏览器不支持");
 		}
+        window.speechSynthesis.cancel();
        /** 
         var sTextToSpeak = "";
     if (parent.document.getElementById("sIframeContent").contentWindow.getSelection) {
@@ -886,7 +887,12 @@ function fnTTS_Play() {
     window.speechSynthesis.speak(msg);
     **/
    const utterance = new SpeechSynthesisUtterance(parent.document.getElementById("sIframeContent").contentWindow.document.body.textContent);
+   if(utterance==null||utterance==""){
+       window.speechSynthesis.speak("您好，当前条目没有字符自动朗诵");
+   }
+   else{
    window.speechSynthesis.speak(utterance);
+   }
 }
 
 function fnTTS_Pause() {

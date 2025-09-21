@@ -78,14 +78,13 @@ document.title = "欢迎联系QQ：43930878。教与学_本机版_渔琴(Teachin
     //window.click();//不知为什么总是自动弹出右键菜单，暂时通过此使右键菜单消失。
     window.document.body.click();//不知为什么总是自动弹出右键菜单，暂时通过此使右键菜单消失。
 	fnHighLight();
-	/** 本来想获取"sIframeTitle"的TTS功能，但是暂时无法"sIframeContent"获取"sIframeTitle"，不知为什么
-	alert(opener.parent.document.body.outerHTML);
-	opener.parent.document.getElementById("sIframeTitle").contentWindow.fnTTS_Play();
-	alert();
-	parent.document.getElementById("sIframeTitle").contentWindow.document.getElementById("id_TTS_Play").click();
-	alert();
-	**/
-
+	
+	parent.document.getElementById("sIFrameTitle").contentWindow.fnTTS_Cancel();
+	if(parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("id_TTS").style.display=="none")
+	{		
+		parent.document.getElementById("sIFrameTitle").contentWindow.fnTTS_Play();
+		//parent.document.getElementById("sIframeTitle").contentWindow.document.getElementById("id_TTS_Play").click();
+	}
 
 }
 
