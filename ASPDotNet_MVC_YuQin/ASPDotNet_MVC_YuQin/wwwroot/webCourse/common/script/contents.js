@@ -464,42 +464,42 @@ function fnInitailContents() {
 
          var sTeachingEngineering = window.oSrcElement.parentNode.getAttribute("teachingEngineering");
     if (sTeachingEngineering == "" || sTeachingEngineering == null || !(sSearch.has("teachingEngineering")))
-    {alert("本条目课文，没能查询到teachingEngineering即工程文档！");}
+    {alert("本条目课文，您没查询，或，没能查询到teachingEngineering即工程文档！");}
     else{
          fnViewTeachingEngineering();
          }
 
            var sTeachingVideo = window.oSrcElement.parentNode.getAttribute("play");
            if (sTeachingVideo == "" || sTeachingVideo == null || !(sSearch.has("play")))
-           {alert("本条目课文，没能查询到play即视频！");}
+           {alert("本条目课文，您没查询，或，没能查询到play即视频！");}
          else{
          fnViewTeachingVideo();
          }
 
             var sTeachingPPT = window.oSrcElement.parentNode.getAttribute("teachingplan");
             if (sTeachingPPT == "" || sTeachingPPT == null || !(sSearch.has("teachingplan")))
-            {alert("本条目课文，没能查询到teachingplan即PPT！");}
+            {alert("本条目课文，您没查询，或，没能查询到teachingplan即PPT！");}
          else{
         fnViewTeachingPlan();
         }
 
             var sTeaching2D = window.oSrcElement.parentNode.getAttribute("s2d");
             if (sTeaching2D == "" || sTeaching2D == null || !(sSearch.has("s2d")))
-            {alert("本条目课文，没能查询到s2d即2D动画！");}
+            {alert("本条目课文，您没查询，或，没能查询到s2d即2D动画！");}
         else{
         fnViewTeaching2D();
         }
 
             var sTeaching3D = window.oSrcElement.parentNode.getAttribute("s3d");
             if (sTeaching3D == "" || sTeaching3D == null || !(sSearch.has("s3d")))
-            {alert("本条目课文，没能查询到s3d即3D动画！");}
+            {alert("本条目课文，您没查询，或，没能查询到s3d即3D动画！");}
          else{
          fnViewTeaching3D();
          }
             
          var sHomeworkandtest= window.oSrcElement.parentNode.getAttribute("homeworkandtest");
             if ( sHomeworkandtest == "" ||  sHomeworkandtest == null || !(sSearch.has("homeworkandtest")))
-            {alert("本条目课文，没能查询到homeworkandtest即作业与测验！");}
+            {alert("本条目课文，您没查询，或，没能查询到homeworkandtest即作业与测验！");}
          else{
          fnViewHomeworkAndTest();
          }
