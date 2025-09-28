@@ -1,5 +1,20 @@
-﻿function fnHomeworkAndTest() {
-   
+﻿
+function fnHomeworkAndTest() {
+   // fnTooManyModelDialog();  
+   if(!("speechSynthesis" in window)) {throw alert("对不起，您的浏览器不支持");} 
+   if(opener.TTSToggle=="none")
+	{
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(document.body.textContent);
+        window.speechSynthesis.speak(utterance);
+   }
+  
+ /**
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(document.body.textContent);
+  window.speechSynthesis.speak(utterance);
+  **/
+
     fnValidationHomeworkAndTest();
     var oDate = new Date();
     var sTimeStamp=oDate.getTime();

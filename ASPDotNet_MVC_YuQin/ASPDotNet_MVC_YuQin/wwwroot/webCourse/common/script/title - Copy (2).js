@@ -122,7 +122,7 @@ window.document.body.scroll="no";
     document.body.onmousewheel = fnMouseWheel;//通过滚动条不显示实现
     window.onmousewheel = fnMouseWheel;
     fnShowTime();
-    fnNotification('欢迎合作：', '使用帮助，请咨询：QQ：43930878；。如果正使用手机浏览，请设置横屏！', '/favicon.ico');
+    fnNotification('欢迎合作：', '使用帮助，请咨询：QQ：43930878；电话：18279142396。如果正使用手机浏览，请设置横屏！', '/favicon.ico');
 }
 
 

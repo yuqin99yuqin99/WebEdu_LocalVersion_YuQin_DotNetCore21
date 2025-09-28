@@ -5,6 +5,7 @@ window.sBackgroundColorForsContentEditable = "rgb(0,255,0)";
 window.oSrcElement = new Object();
 window.oDiv = new Object();
 window.sURLHeader;
+//window.sHTMLTextFromHomeworkAndTestForTTS;
 
 //////////////////
 // 判断是否为chrome内核浏览器
@@ -82,6 +83,19 @@ function fnLoadJs(url) {//动态添加JS;
 }
 **/
 ///////
+function fnRunningFrom() {
+    var sRunFrom = location.href;
+    switch (true) {
+        case sRunFrom.indexOf("://localhost:") >= 0:
+      // case sRunFrom.indexOf(".github.io/") >= 0://便于本机网站发布测试免费网站发布
+            return "本系统当前是本机网站发布";
+         case sRunFrom.indexOf(".github.io/") >= 0:
+       // case sRunFrom.indexOf("://localhost:") >= 0://便于本机网站发布测试免费网站发布
+            return "本系统当前是免费网站发布，可能无法正确使用本功能！请单击本系统第一个条目，该条目的内容框架中，超链接的源码下载到本机运行实现！";
+        default:
+            return "本系统当前是付费网站发布";
+    }
+}
 
 function fnOnload() {
 //在线框架修改为框架后的修改代码断，因为框架文档无法直接使用JScript编程，只好在title中间接赋予，而尽量避免在线框架修改为框架后不修改代码。
@@ -124,6 +138,7 @@ window.document.body.scroll="no";
     window.onmousewheel = fnMouseWheel;
     fnShowTime();
     fnNotification('欢迎合作：', '使用帮助，请咨询：QQ：43930878；如果正使用手机浏览，请设置横屏！', '/favicon.ico');
+
 }
 
 

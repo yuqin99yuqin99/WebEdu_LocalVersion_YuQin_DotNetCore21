@@ -52,10 +52,11 @@
     
     <div style="position: absolute; width: 100%; height: 100px; left: 0px; top: 0px;text-align:right;background-image:url(../options/background_title.gif);background-repeat:no-repeat;background-size:cover">
         <div style="position: static; width: 100%; height: 20px; left: 0px; top: 0px">
-            <marquee id="sMarqueeLogo" direction="left" scrolldelay="200" style="left:-50%;font-weight:bold;font-size:13px;color:rgb(0,255,0)" onMouseOut="this.start()" onmouseover='this.stop()' onclick='parent.document.getElementById("sIframeContents").contentWindow.fnMargee()'>
+            <marquee id="sMarqueeLogo" direction="left" scrolldelay="200" style="left:-50%;font-weight:bold;font-size:13px;color:rgb(0,255,0)" onMouseOut="this.start()" onmouseover='this.stop();
+//parent.document.getElementById("sIframeContents").contentWindow.fnAdvertisement()' 
+                     onclick='parent.document.getElementById("sIframeContents").contentWindow.fnMargee()'>
                 <span class="blink">
-                    <sapn style="font-size:18px">请使用<a href="https://browser.360.cn/ee/" title="单击可下载安装360极速浏览器">“360极速浏览器”浏览</a>（默认webkit内核）！！！今日箴言：“博学之,审问之,慎思之,明辨之,笃行之...”（辨之、乐之、研之、用之、行之...）（哲学、情意、科学、技术、实践...）“浏览器使用：F11键可全屏！Ctrl+滚动鼠标可放缩内容！Shift+滚动鼠标可左右滚动未见的内容”</sapn>
-                    <!--您好，欢迎您！939977175@qq.com 教育计算思维研究工作室<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=43930878&amp;site=qq&amp;menu=yes" target="Margee" title="点击这里给我发消息">联系方式：43930878@qq.com</a><a href="WeiXinGongZhongHao.html" target="_blank" title="扫一扫关注微信公众号">微信公众号</a><a href="http://blog.sina.com.cn/jiaoyuxinxijishu" target="_blank" title="点击这里查看博客">博客：教育信息技术</a></span>-->
+                    <sapn style="font-size:18px">今日头条！单击百度搜索！请选用Edge浏览器浏览！！！“浏览器使用：F11键可全屏！Ctrl+滚动鼠标可放缩内容！Shift+滚动鼠标可左右滚动未见的内容”</sapn>
             </marquee>
         </div>
 
@@ -68,8 +69,8 @@
     //event.srcElement.style.marginLeft = parseInt(event.srcElement.style.marginLeft) - 20 + "px";
     //event.srcElement.style.marginTop = parseInt(event.srcElement.style.marginTop) - 20 + "px";//没实现
     event.srcElement.style.fontWeight = "normal";'>
-                <label id="LogIn" style="margin-left:0px;margin-top:0px" onclick='open("../../Identity/Account/LogIn.html","_blank","channelmode=yes,width=80%,height=50%,menubar=no,toolbar=no, status=no,scrollbars=yes")' title="如果已经注册了用户账号，单击将可登录">登录</label>
-                <label id="Register" style="margin-left:0px;margin-top:0px" onclick='open("../../Identity/Account/Register.html","_blank","channelmode=yes,width=80%,height=50%,menubar=no,toolbar=no, status=no,scrollbars=yes")' title="如果尚未注册用户账号，单击将可注册">注册</label>
+                <label id="LogIn" style="margin-left:0px;margin-top:0px" onclick='open("/Identity/Account/LogIn","_blank","channelmode=yes,width=80%,height=50%,menubar=no,toolbar=no, status=no,scrollbars=yes")' title="如果已经注册了用户账号，单击将可登录">登录</label>
+                <label id="Register" style="margin-left:0px;margin-top:0px" onclick='open("/Identity/Account/Register","_blank","channelmode=yes,width=80%,height=50%,menubar=no,toolbar=no, status=no,scrollbars=yes")' title="如果尚未注册用户账号，单击将可注册">注册</label>
                 <label id="help" style="margin-left:0px;margin-top:0px" onclick='fnSystemInfo();' title="单击将查看本系统的一些信息，例如版本、运行目录、IP地址，等等">系统信息</label><!--原来http://116.62.103.103:8084/-->
                 <label id="help" style="margin-left:0px;margin-top:0px" onclick='alert("需要连接服务版！");//open("https://yuqin.chinacloudsites.cn/index.html","_blank","channelmode=yes,width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes")' title="单击将打开关于本系统使用的帮助文档">帮助</label><!--原来http://116.62.103.103:8084/-->
                 <label id="Options" style="margin-left:0px;margin-top:0px" onclick='alert("需要连接服务版！");//open("https://yuqin.chinacloudsites.cn/index.html","_blank","channelmode=yes,width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes")' title="单击将打开本系统的配置选项界面">配置</label>
@@ -77,6 +78,8 @@
                 <label style="margin-left:0px;margin-top:0px" onclick='alert("需要连接服务版！");//open("https://yuqin.chinacloudsites.cn/index.html","_blank","channelmode=yes,width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes")' id="sOnlineUpdate" title="单击将在线升级本机版。开发完善之中！">在线升级</label>
                 <label style="margin-left:0px;margin-top:0px" onclick='if (document.getElementById("sendmessageLable").style.display == "none") document.getElementById("sendmessageLable").style.display = "inline";else document.getElementById("sendmessageLable").style.display ="none";' id="sPushNotification" title="单击可切换是否显示推送。可推送通知给所有在线用户、已本地安装本应用的用户！(在此只是试验，产力环境请连接服务版使用本功能！)">推送通知</label>
                 <label id="sendmessageLable" style="display:none"> <input type="text" id="message" /> <input type="button" id="sendmessage" value="推送" /></label>
+                <label style="margin-left:0px;margin-top:0px" id="sMyLittleShop" title="单击可打开我的小店（渔琴-数智文化与木茶书）。诚信为本。追求数智科技与中国用藏品文化的融合"><a href="../../MyLittleShop/index.html" target="_blank">我的小店</a></label>
+                <label style="margin-left:0px;margin-top:0px" id="sMyFutureBlazor" title="单击可打开Blazor WebAssembly新技术的视图V，将是本案例的新技术追求"><a href="https://yuqinpublishblazorongithubpages.github.io/Blazor_WebAssembly_PWA_YuQin/" target="_blank">未来视图Blazor</a></label>
                 <label id="studyTime" style="color:green">0</label>
             </div>
             <div style="color:brown;">
@@ -100,7 +103,7 @@
                 <a href="" id="sBackword" onclick="fnBackword();" title="单击将按照浏览资源的历史记录，往后重看资源。此功能类似浏览器的后退功能！" style="color:brown;">后退</a>
                 <a href="" id="sForword" onclick="fnForword();" title="单击将按照浏览资源的历史记录，往前重看资源。此功能类似浏览器的前进功能！" style="color:brown;">前进</a>
                 <lable style="font-weight:bold">|</lable>
-                <a href="" id="idSearch" onclick='event.returnValue=false;parent.document.getElementById("sIframeContents").contentWindow.fnSearch();' title="搜索查找系统内的资源，主要搜索教材资源中的文本资源，搜索到的资源关联目录条目，然后可进一步导航到教学视频、教学PPT、作业与测试、教学工程文档等各种资源" style="color:brown;">搜索</a>
+                <a href="" id="idSearchAndAIGC_RAG" onclick='event.returnValue=false;parent.document.getElementById("sIframeContents").contentWindow.fnSearch();' title="搜索查找系统内的资源，主要搜索教材资源中的文本资源，搜索到的资源关联目录条目，然后可进一步导航到教学视频、教学PPT、作业与测试、教学工程文档等各种资源。同时，调用人工智能生成相关内容，以供参考！" style="color:brown;">搜索与AIGC(RAG)</a>
                 <!-- <a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E7%BD%91%E7%BB%9C%E6%95%99%E4%B8%8E%E5%AD%A6&oq=%25E7%25B3%25BB%25E7%25BB%259F%25E5%258F%258A%25E5%2585%25B6%25E6%2589%25A9%25E5%25B1%2595&rsv_pq=814a72a200009c9a&rsv_t=2e55rtiHp0QrJdZmVa%2F%2FavGwZnKned4DwQqw0vYe3vdiuBA3fGPTeHbh3%2Fc&rqlang=cn&rsv_enter=0&rsv_sug3=58&rsv_sug1=47&rsv_sug7=101&rsv_sug2=0&inputT=5884&rsv_sug4=5884" target="_blank" title="本系统追求系统化资源，整个互联网则是扩展式资源，两种资源互为补充">扩展资源搜索</a>-->
                 <lable style="font-weight:bold">|</lable>
                 <a href="" id="idGeneral" onclick='event.returnValue=false,parent.document.getElementById("sIframeContents").contentWindow.fnGeneral();' title="概览所有资源。概览资源关联目录条目，然后可进一步导航到教学视频、教学PPT、作业与测试、教学工程文档等各种资源（开发优化之中！）" style="color:brown;">概览</a>
