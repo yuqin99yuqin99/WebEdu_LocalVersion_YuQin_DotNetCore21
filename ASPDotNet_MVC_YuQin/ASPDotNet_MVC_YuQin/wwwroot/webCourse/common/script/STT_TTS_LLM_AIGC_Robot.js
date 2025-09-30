@@ -1,10 +1,36 @@
 ﻿//注：API 密钥建议通过后端代理转发请求,不要将密钥直接暴露在前端代码。不同LLM的API请参考官方文档调整。
+
+ function fnBtnSystemInternalOnClick() {
+                window.speechSynthesis.cancel();
+                recognition = new window.SpeechRecognition();recognition.stop();
+               // if (recognition) {  recognition.stop();  }
+                document.getElementById('btnSystemInternal').disabled=true;
+                 document.getElementById('btnSystemExternal').disabled=false;
+                document.getElementById('startBtnSystemInternal').disabled=false;
+                document.getElementById('stopBtnSystemInternal').disabled=true; 
+                document.getElementById('startBtnSystemExternal').disabled=true; 
+                document.getElementById('stopBtnSystemExternal').disabled=true; 
+                }
+function fnBtnSystemExternalOnClick() {
+               window.speechSynthesis.cancel();
+              recognition = new window.SpeechRecognition();recognition.stop();
+            // if (recognition) {  recognition.stop();  }
+                document.getElementById('btnSystemExternal').disabled=true;
+                document.getElementById('btnSystemInternal').disabled=false;
+                document.getElementById('startBtnSystemInternal').disabled=true;
+                document.getElementById('stopBtnSystemInternal').disabled=true; 
+                document.getElementById('startBtnSystemExternal').disabled=false; 
+                document.getElementById('stopBtnSystemExternal').disabled=true; 
+                    }
 function updateTranscript() {
                 // 将speechContent对象格式化为JSON字符串，并显示在页面上
                document.getElementById('transcript').textContent = JSON.stringify(speechContent, null, 2); 
             }
 
-function fnOnLoad() {                     
+function fnOnLoad() {
+     
+       document.getElementById('btnSystemInternal').disabled=true;
+       document.getElementById('btnSystemExternal').disabled=false;
             var isRecognizing = false; // 是否正在识别
             var recognition = null; // 语音识别实例
            var speechContent = {  paragraphs: []   }; // 存储识别内容
@@ -96,7 +122,11 @@ function fnOnLoad() {
                
             };
             
-
+              // btnSystemInternal、btnSystemExternal按钮的单击事件
+          
+           document.getElementById('btnSystemInternal').addEventListener("click", fnBtnSystemInternalOnClick, false);
+           document.getElementById('btnSystemExternal').addEventListener("click", fnBtnSystemExternalOnClick, false);
+           //startBtnSystemInternal录音按钮的单击事件
            
             document.getElementById('startBtnSystemInternal').addEventListener('click', () => {
                  window.speechSynthesis.cancel();
@@ -114,8 +144,8 @@ function fnOnLoad() {
                 }
             });
             
-            // 停止录音按钮的点击事件
 
+           // stopBtnSystemInternal录音按钮的单击事件
              document.getElementById('stopBtnSystemInternal').addEventListener('click', () => {
                   window.speechSynthesis.cancel();
                    document.getElementById('transcript').innerText= '"段落": []'; // 清空显示区域
@@ -133,10 +163,12 @@ function fnOnLoad() {
             });
              document.getElementById('startBtnSystemExternal').addEventListener('click', () => {
                   window.speechSynthesis.cancel();
+                  recognition = new window.SpeechRecognition();recognition.stop();
                   alert("需要连接AIGC服务，尚在开发之中...");
             });
             document.getElementById('stopBtnSystemExternal').addEventListener('click', () => {
                   window.speechSynthesis.cancel();
+                  recognition = new window.SpeechRecognition();recognition.stop();
                   alert("需要连接AIGC服务，尚在开发之中...");
             });
         document.getElementById('startBtnSystemInternal').click(); // 页面加载后自动点击开始录音按钮

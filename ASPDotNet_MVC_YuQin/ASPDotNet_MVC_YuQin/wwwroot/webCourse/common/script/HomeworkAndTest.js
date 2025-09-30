@@ -1,13 +1,7 @@
 ﻿
 function fnHomeworkAndTest() {
    // fnTooManyModelDialog();  
-   if(!("speechSynthesis" in window)) {throw alert("对不起，您的浏览器不支持");} 
-   if(opener.TTSToggle=="none")
-	{
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(document.body.textContent);
-        window.speechSynthesis.speak(utterance);
-   }
+  
   
  /**
   window.speechSynthesis.cancel();
@@ -39,6 +33,13 @@ function fnHomeworkAndTest() {
        // }
     }
     //alert(cTr[8].getElementsByTagName("td").item(0).innerHTML + ";" + cTr[9].getElementsByTagName("td").item(0).innerHTML + ";" + cTr[10].getElementsByTagName("td").item(0).innerHTML);
+     if(!("speechSynthesis" in window)) {throw alert("对不起，您的浏览器不支持");} 
+   if(opener.TTSToggle=="none")
+	{
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(document.body.textContent);
+        window.speechSynthesis.speak(utterance);
+   }
 }
 
 function fnValidationHomeworkAndTest() {
