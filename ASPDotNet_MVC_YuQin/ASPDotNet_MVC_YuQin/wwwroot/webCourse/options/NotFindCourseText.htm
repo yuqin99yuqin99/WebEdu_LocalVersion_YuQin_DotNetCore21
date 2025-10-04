@@ -1,0 +1,46 @@
+﻿
+
+<html>
+
+<head>
+    <script src="../common/script/content.js"></script>
+    <script src="../common/script/Popup.js"></script>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <title>正在保存</title>
+</head>
+
+<body onload="fnOnLoad();">
+
+    <table border="0" width="100%" id="table1" height="100%">
+        <tr>
+            <td style="color:green">
+                <p align="center">“课文框架”这里默认显示当前条目的课文，没能打开，请考虑如下可能性（单击“标题框架”中的“概览”可以查看当前条目是否具有“课文”、“作业测验”等等各种文档。它们可能进一步链接字符媒体/多媒体文档）<span style="color:brown;font-weight:bold">（单击“标题框架”的“内容切换”可以切换显示条目课文/条目作业测验）</span>：</p>
+                <p align="center">1. 当前条目的课文还没有上传本系统。</p>
+                <p align="center">2. 当前条目的课文已嵌入在祖先条目中，没有迭代细化成为当前条目的课文上传本系统。</p>
+            </td>
+        </tr>
+    </table>
+    <!--右键菜单开始 -->
+
+    <div id="popupDiv" onclick="fnPopupClosePopup();" oncontextmenu="fnPopupContextMenu();" style="position:fixed;z-Index:1000;margin: 2px; border: 1px;   overflow:visible;  font-size: 11px; cursor: default;display:none;">
+        <div style="position: relative;" onmouseover="fnPopupMouseOver();" onmouseout="fnPopupMouseOut();">
+            <div title='刷新标题面板' onclick="location.reload();">刷新</div>
+            <div title='转到服务版' onclick='parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("sGoServer").click();'>服务版</div>
+            <div title='单击将内容框架和目录框架的放缩还原为默认' onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('sDefaultZoom').click();">默认放缩</div>
+            <div title='单击将内容框架和目录框架的宽度还原为默认' onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('sDefaultWidth').click();">默认宽度</div>
+            <div title='按历史记录往前翻页' onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('sForword').click();">前进</div>
+            <div title='按历史记录往后翻页' onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('sBackword').click();">后退</div>
+            <div title='按目录中的条目往下翻页' onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('next').click();">下翻</div>
+            <div title='按目录中的条目往上翻页' onclick="parent.parent.frames.item('sIFrameTitle').document.getElementById('previous').click();">上翻</div>
+            <div title='在是否全屏显示内容之间切换' onclick='parent.fnToggleScreen();'>内容全屏切换</div>
+            <div title='在内容框架中查找' onclick='parent.findContent()'>查找(在当前框架)</div>
+            <div title='切换是否显示滚动条' onclick='parent.fnToggleScrollBar();' id="sToggleScrollBar">滚动条切换</div>
+            <div title='打开帮助' onclick='parent.document.getElementById("sIFrameTitle").contentWindow.document.getElementById("help").click();'>&#169;帮助</div>
+        </div>
+    </div>
+    <!--右键菜单结束-->
+</body>
+
+</html>
+

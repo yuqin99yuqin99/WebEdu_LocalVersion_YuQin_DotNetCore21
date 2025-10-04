@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>语音对话机器人(查找Search_人工智能AIGC_检索增强生成RAG_智能代理Agent)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+        }
+
+        #transcriptSystemInternal {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            min-height: 100px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            white-space: pre-wrap;
+            background-color: #f9f9f9;
+            overflow-y: auto;
+            vertical-align: top;
+        }
+        #transcriptSystemExternal {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            min-height: 100px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            white-space: pre-wrap;
+            background-color: #f9f9f9;
+            overflow-y: auto;
+            vertical-align: top;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+            button:disabled {
+                background-color: #ccc;
+                cursor: not-allowed;
+            }
+    </style>
+    <script src="script/TTS_STT_LLM_AIGC_Robot.js"></script>
+</head>
+
+<body onload="fnOnLoad()">
+    <div style="font-size:24px;font-weight:bolder">语音对话机器人<span style="font-size:16px">（面向远程听觉的麦克风扬声器/忽略近程视觉的屏幕键盘鼠标）</span></div>
+    
+    <table style="width:100%; border:dashed">
+        <tr>
+            <td id="tdSystemInternal" style="width: 50%; border: dashed;vertical-align:top">
+                <div style="font-size:24px;font-weight:bolder;color:goldenrod" id="btnSystemInternal">系统内部语音对话<span style="font-size: 16px; font-weight: normal">【我们←（严谨准确性学科专业）语音互动（匹配本系统的静态存储的而非接受训练学习生成的预期操作）→本系统】</span>
+                <button id="closeSTTSystemInternal" onclick="window.close();">单击关闭当前语音互动，切换回到面向视觉的屏幕键盘鼠标互动本系统</button>
+                </div>
+                <button id="startBtnSystemInternal" title="单击将开始打开麦克风录音，系统将自动根据您录音的停顿状态，识别语音，返回对话。非流式语音对话、流式语音对话。期待本系统语音识别您的语音指令，然后打开“作业测验”，进行语音识别答题、评分等等....正在完善之中...">开始录音对话</button>
+                <button id="stopBtnSystemInternal" title="单击将停止录音对话" disabled>停止录音对话</button>
+                <div id="transcriptSystemInternal">
+                    {
+                    "段落": [期待本系统语音识别您的语音指令，然后打开“作业测验”，进行语音识别答题、评分等等....正在完善之中...]
+                    }
+                </div>
+            </td>
+            <td id="tdSystemExternal" style="width: 50%; border: dashed;vertical-align:top">
+
+                <div style="font-size:24px;font-weight:bolder;color:goldenrod" id="btnSystemExternal">
+                    系统外部语音对话<span style="font-size:16px;font-weight:normal">【我们←（宽泛概率性闲聊日常）语音互动（追问AIGC的接受训练学习生成的而非静态存储的期望答案）→AIGC】</span></div>
+                <div>
+                    <button id="idQwenAPIKeyConfirm"  style="width:100px;white-space: normal;">请输入您登录Qwen千问的API Key</button> <input id="idQwenAPIKeyInput" type="password" placeholder="请输入您登录Qwen千问的API Key，然后单击按钮" />
+
+                    <button id="closeSTTSystemExternal" onclick='if(document.getElementById("sVisionAIGC_RAG_Agent").style.display=="none"){document.getElementById("sVisionAIGC_RAG_Agent").style.display="block"} else{document.getElementById("sVisionAIGC_RAG_Agent").style.display="none"}' style="width: 120px;white-space: normal;">单击切换面向视觉的屏幕键盘鼠标互动AIGC</button>
+                </div>
+                <div id="sVisionAIGC_RAG_Agent" style="display:none">
+                    <input type="text" value="计算" style="width:90%" id="idAIGCKeywords" />
+                    <p></p>
+                    <input type="button" value="AIGC回答(视觉字符)（调用免费的他创方的AIGC服务端）（基本实现...）" onclick='if(document.getElementById("AIGCCharactor").style.display=="none"){document.getElementById("AIGCCharactor").style.display="block"} else{document.getElementById("AIGCCharactor").style.display="none"}' />
+                    <div id="AIGCCharactor" style="display: none">
+                        <div>AIGC生成字符序列：</div>
+                        <div>对比字符序列：</div>
+                        <div>准确性相似度：</div>
+                    </div>
+                    <input type="button" value="AIGC回答(视觉图像)（调用免费的他创方的AIGC服务端）（.jpg文件为例）（开发之中...）" onclick='if(document.getElementById("AIGCPixelImage").style.display=="none"){document.getElementById("AIGCPixelImage").style.display="block"} else{document.getElementById("AIGCPixelImage").style.display="none"}' />
+                    <div id="AIGCPixelImage" style="display: none">
+                        <div>AIGC生成文件：</div>
+                        <div>对比文件：</div>
+                        <div>准确性相似度：</div>
+                    </div>
+                    <input type="button" value="AIGC回答(视觉视频)（调用免费的他创方的AIGC服务端）（.mp4文件为例）（开发之中...）" onclick='if(document.getElementById("AIGCVideo").style.display=="none"){document.getElementById("AIGCVideo").style.display="block"} else{document.getElementById("AIGCVideo").style.display="none"}' />
+                    <div id="AIGCVideo" style="display: none">
+                        <div>AIGC生 成文件：</div>
+                        <div>对比文件：</div>
+                        <div>准确性相似度：</div>
+                    </div>
+                    <input type="button" value="AIGC回答(视觉2D)（调用免费的他创方的AIGC服务端）（.svg文件为例）（开发之中...）" onclick='if(document.getElementById("AIGC2D").style.display=="none"){document.getElementById("AIGC2D").style.display="block"} else{document.getElementById("AIGC2D").style.display="none"}' />
+                    <div id="AIGC2D" style="display: none">
+                        <div>AIGC生成文件：</div>
+                        <div>对比文件：</div>
+                        <div>准确性相似度：</div>
+                    </div>
+                    <input type="button" value="AIGC回答(视觉3D)（调用免费的他创方的AIGC服务端）（.vx3d文件为例）（开发之中...）" onclick='if(document.getElementById("AIGC3D").style.display=="none"){document.getElementById("AIGC3D").style.display="block"} else{document.getElementById("AIGC3D").style.display="none"}' />
+                    <div id="AIGC3D" style="display:none">
+                        <div>AIGC生成文件：</div>
+                        <div>对比文件：</div>
+                        <div>准确性相似度：</div>
+                    </div>
+                    <input type="button" value="AIGC回答(听觉音频)（调用免费的他创方的AIGC服务端）（.mp3文件、.midi文件为例）（开发之中...）" onclick='if(document.getElementById("AIGCAudio").style.display=="none"){document.getElementById("AIGCAudio").style.display="block"} else{document.getElementById("AIGCAudio").style.display="none"}' />
+                    <div id="AIGCAudio" style="display: none">
+                        <div>AIGC生成文件：</div>
+                        <div>对比文件：</div>
+                        <div>准确性相似度：</div>
+                    </div>
+                    <div><input type="button" value="AIGC回答(触觉)（目前尚无法实现...）" /></div>
+                    <div><input type="button" value="AIGC回答(嗅觉)（目前尚无法实现...）" /></div>
+                    <div><input type="button" value="AIGC回答(味觉)（目前尚无法实现...）" /></div>
+                    </div>
+
+
+                        <button id="startBtnSystemExternal" title="需要连接AIGC服务，需要付费AIGC...！单击将开始打开麦克风录音，系统将自动根据您录音的停顿状态，识别语音，返回对话。非流式语音对话、流式语音对话。期待本系统语音识别您的语音指令，然后连接AIGC，进行语音识别互动追问AIGC的回答，思辨自己想要的答案....">开始录音对话</button>
+                        <button id="stopBtnSystemExternal" title="需要连接AIGC服务，需要付费AIGC...！单击将停止录音对话" disabled>停止录音对话</button>
+                        <div id="transcriptSystemExternal">
+                            {
+                            "段落": [期待本系统语音识别您的语音指令，然后连接AIGC，进行语音识别互动追问AIGC的回答，思辨自己想要的答案....需要付费AIGC...]
+                            }
+                        </div>
+</td>
+
+        </tr>
+    </table>
+
+    <!--系统外部的调用AIGC的语音对话注意事项：API 密钥安全性 不要将密钥直接暴露在前端代码中，建议通过后端代理转发请求。兼容性处理 不同大模型（例如，ChatGPT、Qwen）的 API 参数可能略有不同，请参考官方文档调整。
+
+        <script>
+    const fetchData = async (prompt) => {
+    const response = await fetch('https://api.openai.com/v1/completions', {
+    method: 'POST',
+    headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer YOUR_API_KEY`
+    },
+    body: JSON.stringify({
+    model: 'gpt-4',
+    prompt: prompt,
+    max_tokens: 100,
+    temperature: 0.7
+    //stream: true // 如果启用流式响应
+    })
+    });
+
+    if (!response.ok) {
+    throw new Error('Network response was not ok');
+    }
+
+    const data = await response.json();
+    console.log(data.choices[0].text); // 输出生成的文本
+    };
+
+    fetchData("请为一家餐厅起一个名字");
+
+        </script>
+        <script>
+    const fetchStreamData = async (prompt) => {
+    const response = await fetch('https://api.openai.com/v1/completions', {
+    method: 'POST',
+    headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer YOUR_API_KEY`
+    },
+    body: JSON.stringify({
+    model: 'gpt-4',
+    prompt: prompt,
+    stream: true // 启用流式响应
+    })
+    });
+
+    if (!response.ok) {
+    throw new Error('Network response was not ok');
+    }
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder('utf-8');
+    let done = false;
+
+    while (!done) {
+    const { value, done: readerDone } = await reader.read();
+    done = readerDone;
+    const chunk = decoder.decode(value, { stream: true });
+    console.log(chunk); // 实时输出每块数据
+    }
+    };
+
+    fetchStreamData("请生成一段关于人工智能的介绍");
+        </script>
+          -->
+</body>
+
+</html>

@@ -7,7 +7,10 @@
     <frame src="title.html" name="sIFrameTitle" id="sIFrameTitle" scrolling="no" noresize target="sIframeContents" style="border: 0px dotted #008000; border-collapse:collapse">
         <frameset cols="25%,*" id="sFramesetMiddle" name="sFramesetMiddle">
             <frame src="../lessons/Tempcontents.htm" name="sIframeContents" id="sIframeContents" scrolling="yes" target="sIframeContent" style="border-right-style: dotted; border-right-width: 1px;border-right-color:#800000;">
-            <frame src="../options/TempcontentStart.htm" name="sIframeContent" id="sIframeContent" scrolling="yes" target="_self">
+				<frameset rows="0%,*" id="sFramesetContentAndHomeworkAndTest" name="sFramesetContentAndHomeworkAndTest" style="border: 0px ; padding-bottom: 1px; border-collapse:collapse" framespacing="0" border="1" frameborder="0">
+					<frame src="../options/TempcontentStart.htm" name="sIframeContent" id="sIframeContent" scrolling="yes" target="_self">
+					<frame src="../options/TempHomeworkAndTestStart.htm" name="sIframeHomeworkAndTest" id="sIframeHomeworkAndTest" scrolling="yes" target="_self" style="border-top:dashed">
+				</frameset>
         </frameset>
         <!--<frame src="../options/bottom.aspx" name="sIframeBottom" id="sIframeBottom" scrolling="no" noresize target="_self">-->
 </frameset>

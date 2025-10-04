@@ -1,4 +1,28 @@
 ﻿
+function fnToggleScreen() {
+    try {
+        window.event.returnValue = false;//去除双击时的默认选定文本效果
+    }
+    catch (e) {//考虑目录框架的右键菜单中的命令。
+        return;
+    }
+    finally {
+        //if (parent.document.getElementById("sFramesetMiddle").cols == "1022,*") {
+        
+        if (parent.document.getElementById("sFramesetBook").rows == "100,*,20") {
+            parent.sFramesetMiddleColsTemp = parent.document.getElementById("sFramesetMiddle").cols;           
+            parent.document.getElementById("sFramesetBook").rows = "0,*,20" 
+            parent.document.getElementById("sFramesetMiddle").cols = "0%,*";
+        }
+        else {                       
+            parent.document.getElementById("sFramesetBook").rows = "100,*,20" 
+            parent.document.getElementById("sFramesetMiddle").cols = parent.sFramesetMiddleColsTemp;  
+            //parent.document.getElementById("sFramesetMiddle").cols = "1022,*";
+            //parent.document.getElementById("sFramesetMiddle").cols = "0%,*";           
+        }
+    }
+}
+
 function fnHomeworkAndTest() {
    // fnTooManyModelDialog();  
   
@@ -33,14 +57,20 @@ function fnHomeworkAndTest() {
        // }
     }
     //alert(cTr[8].getElementsByTagName("td").item(0).innerHTML + ";" + cTr[9].getElementsByTagName("td").item(0).innerHTML + ";" + cTr[10].getElementsByTagName("td").item(0).innerHTML);
+    /**
      if(!("speechSynthesis" in window)) {throw alert("对不起，您的浏览器不支持");} 
-   if(opener.TTSToggle=="none")
+     //alert(parent.document.getElementById("sFramesetContentAndHomeworkAndTest").rows=="0%,*");
+   if(parent.document.getElementById("sFramesetContentAndHomeworkAndTest").rows=="0%,*")
 	{
         window.speechSynthesis.cancel();
         const utterance = new SpeechSynthesisUtterance(document.body.textContent);
         window.speechSynthesis.speak(utterance);
    }
+   **/
+  document.body.ondblclick=fnToggleScreen;
 }
+
+
 
 function fnValidationHomeworkAndTest() {
     try {
